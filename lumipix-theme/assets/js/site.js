@@ -51,15 +51,19 @@
 			item.classList.toggle('is-open', open);
 			trigger.setAttribute('aria-expanded', String(open));
 		};
-		trigger.addEventListener('click', function (e) {
-			e.stopPropagation();
-			setOpen(!item.classList.contains('is-open'));
-		});
 		var hoverable = window.matchMedia('(hover: hover) and (min-width: 921px)');
 		var timer;
+		var hoverOpenedAt = 0;
+		trigger.addEventListener('click', function (e) {
+			e.stopPropagation();
+			// A click right after hovering open should keep the menu open, not close it.
+			if (hoverable.matches && Date.now() - hoverOpenedAt < 600) return;
+			setOpen(!item.classList.contains('is-open'));
+		});
 		item.addEventListener('mouseenter', function () {
 			if (!hoverable.matches) return;
 			clearTimeout(timer);
+			if (!item.classList.contains('is-open')) hoverOpenedAt = Date.now();
 			setOpen(true);
 		});
 		item.addEventListener('mouseleave', function () {

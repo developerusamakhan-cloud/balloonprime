@@ -65,7 +65,7 @@
 		return out;
 	}
 
-	L.register('bg', function (el) {
+	L.register('bg', function (el, config) {
 		var status = el.querySelector('[data-model-status]');
 		var statusText = el.querySelector('[data-model-text]');
 		var bar = el.querySelector('[data-model-progress]');
@@ -205,6 +205,20 @@
 			custom.addEventListener('input', function () {
 				selectSwatch(null, custom.value);
 			});
+		}
+
+		// Preset background from the page config (e.g. the white background tool).
+		if (config && config.background) {
+			var preset = null;
+			swatches.forEach(function (sw) {
+				if ((sw.getAttribute('data-bg') || '').toLowerCase() === config.background.toLowerCase()) preset = sw;
+			});
+			if (preset) {
+				selectSwatch(preset, config.background);
+			} else if (custom) {
+				custom.value = config.background;
+				selectSwatch(null, config.background);
+			}
 		}
 	});
 })();

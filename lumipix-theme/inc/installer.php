@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 2 );
+define( 'LUMIPIX_PACK_REV', 3 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );

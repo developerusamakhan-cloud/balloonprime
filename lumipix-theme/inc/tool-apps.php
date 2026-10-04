@@ -101,7 +101,7 @@ function lumipix_render_compress_options( $c, $id ) {
 		<span class="field__label" id="<?php echo esc_attr( $id ); ?>-quick"><?php esc_html_e( 'Target size', 'lumipix' ); ?></span>
 		<div class="segmented" role="group" aria-labelledby="<?php echo esc_attr( $id ); ?>-quick">
 			<?php foreach ( $quick as $q ) : ?>
-				<button type="button" class="segmented__btn<?php echo ( 'KB' === $unit && (float) $q === $target ) ? ' is-active' : ''; ?>" data-quick="<?php echo esc_attr( $q ); ?>"><?php echo esc_html( $q ); ?>KB</button>
+				<button type="button" class="segmented__btn<?php echo ( 'KB' === $unit && (float) $q === $target ) ? ' is-active' : ''; ?>" data-quick="<?php echo esc_attr( $q ); ?>"><?php echo esc_html( $q >= 1000 ? ( $q / 1000 ) . 'MB' : $q . 'KB' ); ?></button>
 			<?php endforeach; ?>
 		</div>
 	</div>
