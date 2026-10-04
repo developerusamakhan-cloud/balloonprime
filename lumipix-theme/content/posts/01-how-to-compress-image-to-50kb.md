@@ -54,6 +54,60 @@ If your form has a different limit, the same method works:
 - [Compress to 100KB](tool:compress-image-to-100kb) for most application forms
 - [Compress to 200KB](tool:compress-image-to-200kb) for scanned documents
 
+## Step by step on Android and iPhone
+
+Most people need a 50KB photo while filling in a form on their phone, so here is the exact flow on mobile.
+
+**On Android (Chrome):**
+
+1. Open the [compress to 50KB tool](tool:compress-image-to-50kb) in Chrome.
+2. Tap **Choose files**. Pick **Gallery** or **Files**, then select the photo.
+3. Wait a second or two until the result shows **Fits target**.
+4. Tap **Download**. The file is saved to your Downloads folder with "-compressed" added to the name.
+5. In the form, tap upload and choose the file from Downloads.
+
+**On iPhone (Safari):**
+
+1. Open the tool in Safari and tap **Choose files**.
+2. Choose **Photo Library**, then the photo. Safari converts HEIC photos automatically.
+3. When the result appears, tap **Download**, then **Download** again in the prompt.
+4. The file is saved in the **Files** app, in the Downloads folder. Forms on iPhone let you pick it from **Browse**.
+
+## Step by step on Windows and Mac
+
+On a computer it is even quicker. Open the tool, drag the photo from File Explorer or Finder straight onto the drop area, and click **Download**. If you have a whole folder of photos, select them all and drag them in together; each one is compressed to 50KB and **Download all** saves them in one go.
+
+## Real examples
+
+To show what to expect, here is how typical photos behave when compressed to 50KB:
+
+| Original photo | Original size | Result |
+|---|---|---|
+| Phone portrait, 4032×3024 | 3.8MB | about 48KB at around 900 px wide |
+| Scanned passport photo, 1200×1600 | 900KB | about 49KB at full size |
+| Busy outdoor scene, 4000×3000 | 5.1MB | about 47KB at around 700 px wide |
+| Screenshot of a document | 1.2MB | about 46KB, text still readable |
+
+The busier the picture, the smaller the final dimensions. Faces against plain walls keep the most detail.
+
+## What to do if the result looks soft
+
+If you zoom in and the photo looks blurry, the image has had to shrink a lot. You can improve it in three ways:
+
+- **Crop tighter before compressing.** A head-and-shoulders crop instead of a half-body photo gives the face more pixels.
+- **Retake the photo with a plain background.** Patterned walls, curtains and bookshelves use up bytes.
+- **Check whether the form allows more.** Some forms accept up to 100KB; if so, use [compress to 100KB](tool:compress-image-to-100kb) instead.
+
+## Common mistakes to avoid
+
+- **Compressing a photo that has already been sent through WhatsApp.** It is already heavily compressed, so details break up faster.
+- **Taking a screenshot of the photo and compressing that.** Screenshots add borders and lose quality.
+- **Uploading a PNG.** Even a small PNG photo is often over 50KB. The tool saves a JPG, which most forms want.
+- **Renaming a file to .jpg.** Changing the extension does not convert the file; use the tool so the format is genuinely JPG.
+
+If you are preparing a full application, our step-by-step guide to [compressing photos for online application forms](post:compress-photo-for-online-forms) covers the signature and documents as well.
+
+<!-- expanded -->
 ## Frequently asked questions
 
 ### Can I compress a photo to 50KB on my phone?
@@ -67,3 +121,11 @@ It will be at or just under 50KB. The tool picks the best quality that fits the 
 ### Does compressing to 50KB reduce the resolution?
 
 Only if needed. The tool first lowers the JPG quality and reduces the pixel size only when quality alone cannot reach 50KB.
+
+### What resolution is a 50KB photo?
+
+It depends on the content, but a clear portrait at 50KB is usually between 600 and 900 pixels wide, which is plenty for any online form.
+
+### Can I compress several photos to 50KB at once?
+
+Yes. Drop up to 20 photos together. Each one is compressed to the 50KB target, and Download all saves them in one go.

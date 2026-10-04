@@ -51,6 +51,65 @@ Keep the file somewhere private. A signature image is personal, which is one rea
 
 If your signature is on a patterned or textured background, or on a photo rather than paper, the colour-based method may struggle. Try the [Background Remover](tool:background-remover), which uses AI to separate the subject. Our [guide to removing backgrounds](post:how-to-remove-background-from-image) compares the options.
 
+## Signing on paper vs signing digitally
+
+There are two ways to get a signature image:
+
+| Method | Pros | Cons |
+|---|---|---|
+| Sign on paper and photograph it | Looks exactly like your real signature | Needs good light and a clean background |
+| Draw on a phone or tablet screen | Already on a clean background | Finger signatures can look shaky |
+
+For official documents, a photographed paper signature usually looks more natural. A stylus on a tablet is a good middle ground.
+
+## Fixing common signature problems
+
+**Grey or uneven paper.** Raise the **Tolerance** slider until the paper disappears. If the ink starts to fade, lower it again and instead brighten the photo in your phone's editor before removing the background.
+
+**Shadows across the page.** Retake the photo with light coming from the side, or near a window, and hold the phone higher.
+
+**Thin or broken lines.** The ink is too light. Re-sign with a gel or felt-tip pen.
+
+**Blue lines from ruled paper.** Use plain paper. If you only have ruled paper, pick the line colour with **Pick from image** first, download, then run the result through again picking white.
+
+**Edges look jagged.** Increase **Edge softness** a little. The tool blends edge pixels so the signature looks smooth on any background.
+
+## Sizes that work well
+
+| Use | Suggested width |
+|---|---|
+| Email signature | 200–300 px |
+| Word or Google Docs | 400–600 px |
+| PDF signing | 500–800 px |
+| Printing on a letter | Around 1000 px, at 300 DPI |
+
+You can resize the transparent PNG with the [Image Resizer](tool:image-resizer). Choose **PNG** under **Save as** so the transparency is kept.
+
+## Keeping your signature safe
+
+A signature image can be misused if it falls into the wrong hands. A few habits help:
+
+- Do not upload your signature to websites you do not trust.
+- Store the PNG in a private folder, not on a shared desktop.
+- Use a version with a lower resolution for email signatures.
+- Delete copies from shared or public computers after use.
+
+Because Lumi Pix processes the image in your browser, the signature is never sent to our servers.
+
+## Signature for forms vs for documents
+
+For online application forms, you usually need a **JPG on white**, often under 20KB, which you can make with the [signature resizer](tool:resize-signature). For documents, letters and PDFs, a **transparent PNG** lets the signature sit naturally on the page. It is worth keeping both versions in the same folder, along with the original photo, so you never have to start from scratch. For other cut-out jobs, the [AI Background Remover](tool:background-remover) handles photos with busy backgrounds.
+
+## Key takeaways
+
+- **Sign on plain white paper** with a bold, dark pen, and photograph it from directly above in good light.
+- **Crop tightly** before removing the background; less paper means cleaner results.
+- **Adjust tolerance** to remove grey paper, and **edge softness** to smooth jagged lines.
+- **Download as PNG** to keep the transparency; JPG always fills it with a colour.
+- **Keep two versions**: a transparent PNG for documents and a small JPG on white for online forms.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I make my signature transparent?
@@ -64,3 +123,11 @@ The file was probably saved as JPG, which cannot store transparency. Download as
 ### What is the best format for a signature?
 
 PNG for a transparent signature on documents. JPG with a white background when an online form asks for it.
+
+### Can I use a transparent signature in Google Docs?
+
+Yes. Insert the PNG image and set it to appear in front of text so you can place it over the signature line.
+
+### What pen is best for a signature scan?
+
+A black or dark blue gel or felt-tip pen gives bold, even lines that stay clear after background removal and compression.

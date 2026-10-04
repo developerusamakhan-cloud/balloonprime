@@ -63,6 +63,55 @@ If the background is already a single flat colour, such as a scanned signature o
 
 Need a plain background for an ID photo? Remove the background, choose white, then follow our [passport photo size guide](post:passport-photo-size-guide) to crop it correctly.
 
+## Getting better results from AI background removal
+
+AI tools are good, but the photo you start with makes a big difference.
+
+- **Contrast helps.** A dark subject on a light background, or the other way round, gives cleaner edges than similar colours.
+- **Keep the subject in focus.** Blurry edges confuse the model.
+- **Avoid busy backgrounds touching the subject.** A plant growing out of someone's head is hard for any tool to separate.
+- **Use the largest original.** More pixels give the model more edge detail to work with.
+
+If a result is close but not perfect, try a slightly different crop of the same photo. The model sometimes performs better when the subject fills more of the frame.
+
+## Hair, fur and fine details
+
+Hair and fur are the hardest parts of any cut-out because individual strands mix with the background. For the best result:
+
+1. Photograph the subject against a plain background that contrasts with the hair colour.
+2. Use the AI remover and check the edges at 100% zoom.
+3. If a few strands look rough, place the cut-out on a background colour similar to the original. Small imperfections disappear.
+
+For professional work such as product catalogues or print, a manual touch-up in Photoshop or GIMP may still be worthwhile.
+
+## Replacing the background
+
+Removing the background is often the first step to something else:
+
+- **Profile pictures:** a solid brand colour looks clean on LinkedIn, Slack and email.
+- **ID photos:** white or light grey, then crop with the [passport photo maker](tool:passport-size-photo).
+- **Product photos:** pure white for marketplaces.
+- **Social media:** a bold colour or gradient to stand out in the feed. The [Instagram resizer](tool:resize-image-for-instagram) can then fit it to the right size.
+
+In the Lumi Pix remover, pick a swatch or a custom colour before downloading. Choose **transparent** if you want to design the background yourself in another app.
+
+## PNG or JPG after removing the background?
+
+| You need | Download as |
+|---|---|
+| Transparent background for designs and logos | PNG |
+| White or coloured background for uploads | JPG |
+| Smallest file for a website | JPG, or WebP if your site supports it |
+
+A transparent PNG of a large photo can be several megabytes. If you need it smaller, resize it first with the [Image Resizer](tool:image-resizer) and choose PNG under Save as to keep the transparency.
+
+## Privacy when removing backgrounds
+
+Most online background removers upload your image to a server for processing. For family photos, children, ID photos and unreleased products, that may not be acceptable. The Lumi Pix remover downloads its AI model to your browser once and then processes images locally, so the photo never leaves your device. You can even use it offline after the first run.
+
+For a comparison of services, including what each offers for free, read our guide to [remove.bg alternatives](post:remove-bg-alternatives).
+
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I remove a background for free without losing quality?
@@ -76,3 +125,11 @@ It was probably saved as JPG, which cannot store transparency. Save or download 
 ### Can I replace the background with a colour?
 
 Yes. Pick a colour before downloading, or keep it transparent and place the cut-out on any background later.
+
+### Can I remove a background on my phone?
+
+Yes. Open the Background Remover in your mobile browser, choose a photo and download the PNG or JPG. Recent iPhones can also lift the subject in the Photos app.
+
+### Does the background remover work offline?
+
+After the AI model has been downloaded once, it is cached by your browser, so later images can be processed without an internet connection.

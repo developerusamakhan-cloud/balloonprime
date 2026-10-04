@@ -59,6 +59,56 @@ The size details are explained in our [passport photo size guide](post:passport-
 - Background not plain or not the required colour
 - Wrong size or proportions
 
+## A quick checklist before you shoot
+
+- Plain, light background with nothing behind your head.
+- Soft, even light on your face, ideally from a window in front of you.
+- Camera at eye level, about 1–1.5 metres away.
+- Neutral expression, mouth closed, eyes open.
+- Hair away from the face; glasses off if the rules require it.
+- Clothing that contrasts with the background (avoid white on white).
+- Several shots, so you can choose the sharpest.
+
+## Fixing common problems after the shoot
+
+| Problem | Fix |
+|---|---|
+| Background not plain | Use the [Background Remover](tool:background-remover) and choose white |
+| Face too small in the frame | Crop closer before choosing the passport size |
+| Slight tilt | Rotate in your phone's editor before cropping |
+| Too dark | Increase brightness slightly; avoid heavy filters |
+| Shadows behind the head | Retake further from the wall |
+
+Avoid beauty filters and heavy retouching. Many authorities reject photos that have been altered.
+
+## Photos for babies and children
+
+Children's passport photos usually have relaxed rules about expression and eyes, but the background and lighting rules still apply. Lay a baby on a plain white sheet and photograph from above, or have the child sit in front of a light wall. Take many photos quickly and pick the best one. Check the specific rules for children with the issuing office.
+
+## Digital photo codes and online applications
+
+Some countries' online passport services accept a photo you upload yourself, while others require a photo from an approved shop that provides a digital code. If your service accepts self-taken photos, follow its upload guidance for dimensions and file size. Make the photo with the [passport photo maker](tool:passport-size-photo), then reduce the file size if needed with the [Image Compressor](tool:compress-image), which keeps the 300 DPI value.
+
+## Printing at home or at a shop
+
+If you print at home, use glossy or matte photo paper and a good-quality printer. Set the print size to 100% (not "fit to page") so the photo prints at exactly 35×45 mm or 2×2 inches. If you use a photo shop, a standard 4×6 inch print is cheapest; arrange several photos on one sheet to save money.
+
+## Why some home photos get rejected
+
+The most common reasons are shadows, an uneven background, the head being too small or too large, a tilted head, glare on glasses and heavy editing. Taking a little more care with lighting and position solves most of them. Our [passport photo size guide](post:passport-photo-size-guide) lists the common sizes, and if you need a white background for other uses, see [how to remove the background from an image](post:how-to-remove-background-from-image).
+
+## Keeping your photo for later
+
+Save the final passport photo and the original in a folder. Many applications, including visas, ID cards, exam registrations and job portals, ask for a similar photo. With the original saved, you can quickly resize or compress it for each new form. For online forms, read [how to compress a photo for online application forms](post:compress-photo-for-online-forms).
+
+## Key takeaways
+
+- **Plain light wall, soft light, camera at eye level** are the three essentials.
+- **Crop and size** with a passport photo maker at 300 DPI.
+- **Print at 100% scale**, never "fit to page".
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### Can I take a passport photo with my phone?
@@ -72,3 +122,11 @@ A plain white or off-white background is the most common requirement. Some count
 ### How do I make my photo 35×45 mm?
 
 Use a passport photo maker that crops to 35×45 mm at 300 DPI, which is 413×531 pixels.
+
+### Can I smile in a passport photo?
+
+Most authorities ask for a neutral expression with the mouth closed. Check the rules of your issuing office.
+
+### How should I print a passport photo at home?
+
+Print at 100% scale on photo paper so the photo comes out at the exact size, such as 35×45 mm. Do not use "fit to page".

@@ -57,6 +57,54 @@ For passport and ID photos, the [passport photo maker](tool:passport-size-photo)
 | PPI | Pixels per inch at a physical size | Printing, displays |
 | DPI | Printer dots per inch (often used to mean PPI) | Printing |
 
+## DPI myths, explained
+
+**"Images for the web must be 72 DPI."** This is a leftover from early computer screens. Browsers ignore the DPI value completely; only pixel dimensions matter on screen.
+
+**"A 300 DPI image is higher quality."** Not by itself. A 600×400 image at 300 DPI has exactly the same detail as the same image labelled 72 DPI.
+
+**"Increasing DPI makes a photo sharper."** Changing the label does nothing to sharpness. Adding pixels can make a print larger, but the extra pixels are estimated, not real detail.
+
+**"Phones take low-resolution photos because they say 72 DPI."** Phone photos have millions of pixels. The 72 is just a default label.
+
+## Screen resolution: PPI on displays
+
+Screens also have a pixel density. A typical laptop has around 100–150 pixels per inch, while phones often exceed 400. That is why the same image looks smaller and sharper on a phone. It also explains why websites use images at about twice the displayed size: high-density screens show more pixels in the same space.
+
+## DPI for different jobs
+
+| Job | What to set |
+|---|---|
+| Website, social media, email | Ignore DPI; set pixel dimensions |
+| Online form asking for "300 DPI" | Correct pixel size for the stated print size, and 300 in the file |
+| Photo prints and passport photos | 300 DPI at the exact print size |
+| Posters and canvases | 150–200 DPI is usually enough |
+| Scanning documents | 300 DPI; 600 DPI for fine detail or enlargement |
+
+## Calculating DPI quickly
+
+Divide the image width in pixels by the print width in inches. For centimetres, divide the pixels by the centimetres and multiply by 2.54.
+
+- 2400 px over 8 inches = 300 DPI
+- 1800 px over 15 cm = 120 pixels per cm × 2.54 ≈ 305 DPI
+
+If the result is 300 or higher, the print will be sharp when held in the hand.
+
+## Setting DPI correctly in practice
+
+The simplest approach is to work in the units of the final job. In the [Image Resizer](tool:image-resizer), switch the unit to **cm**, **mm** or **inch**, enter the print size and the DPI, and save as **JPG**. The tool calculates the pixels and writes the DPI value into the file, so printers and photo labs size it correctly.
+
+For passport and ID photos, the [passport photo maker](tool:passport-size-photo) does this automatically. If the file then needs to be smaller for an online form, the [Image Compressor](tool:compress-image) keeps the DPI value.
+
+## When DPI is not the problem
+
+If a print looks blurry even at 300 DPI, the cause is usually elsewhere: the photo was out of focus, it was heavily compressed earlier, or it was enlarged from a small original. Check the source image at 100% zoom on screen. If it is soft there, it will be soft in print too. Our guide on [how to lower image file size](post:how-to-lower-image-file-size) explains how compression affects detail.
+
+## Summary
+
+Pixels are the real resolution. DPI is an instruction for printing. Set pixels for screens, set DPI and print size together for paper, and do not worry about the 72 DPI label on phone photos.
+
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What does DPI mean?
@@ -70,3 +118,11 @@ Only if the image also has more pixels. Changing the DPI label alone does not ch
 ### What DPI should I use for screens?
 
 It does not matter. Screens only care about pixel dimensions.
+
+### Why do websites say images should be 72 DPI?
+
+It is an old convention. Browsers ignore DPI; only the pixel dimensions affect how an image appears on screen.
+
+### Is 300 DPI the same as 300 PPI?
+
+In everyday use, yes. Strictly, PPI describes image pixels and DPI describes printer dots, but software uses the terms interchangeably for the value stored in a file.

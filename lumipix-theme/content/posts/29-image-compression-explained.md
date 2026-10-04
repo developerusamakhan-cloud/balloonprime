@@ -55,6 +55,64 @@ For a strict limit, the best result usually comes from a combination: a sensible
 
 WebP and AVIF use more advanced techniques to get smaller files at the same visual quality and support both lossy and lossless modes. Our [WebP vs JPG guide](post:webp-vs-jpg) explains when to use them.
 
+## How file size relates to what is in the picture
+
+Compression works by finding patterns and removing detail the eye will not miss. That means the content of an image strongly affects its final size:
+
+| Image content | Compresses | Why |
+|---|---|---|
+| Clear sky, plain wall, studio background | Very well | Large smooth areas |
+| Portrait with soft background | Well | Smooth skin and blur |
+| City street, foliage, gravel | Poorly | Fine detail everywhere |
+| Screenshot with flat colours | Very well as PNG | Repeated identical pixels |
+| Photo noise from low light | Poorly | Random detail is hard to compress |
+
+This is why two photos with the same dimensions can produce very different file sizes, and why a plain background helps when you need to hit a strict limit.
+
+## Chroma subsampling in plain English
+
+One trick JPG uses is called chroma subsampling. The eye notices changes in brightness far more than changes in colour, so JPG stores colour at a lower resolution than brightness. For photos this is invisible. For images with thin coloured lines or red text on blue, it can cause slight colour fringing, which is another reason to save graphics as PNG.
+
+## Compression artefacts and how to spot them
+
+- **Blocking:** visible 8×8 squares in smooth areas such as skies.
+- **Ringing:** halos around sharp edges and text.
+- **Banding:** smooth gradients turning into visible steps.
+- **Smearing:** fine textures such as hair or grass becoming mushy.
+
+If you see these at normal viewing size, the image has been compressed too hard. The fix is usually to reduce the dimensions a little and use a higher quality.
+
+## How a target-size compressor works
+
+When you ask the [Image Compressor](tool:compress-image) for, say, 100KB, it does not simply pick a quality number. It:
+
+1. tries a high quality first and checks the size;
+2. if the file is too large, searches for the highest quality that fits;
+3. if that quality would be too low, reduces the dimensions slightly and searches again.
+
+This is the same process an expert would follow by hand, done in a second. The presets, such as [compress to 50KB](tool:compress-image-to-50kb) and [compress to 200KB](tool:compress-image-to-200kb), run the same logic with the target already set.
+
+## Compression in everyday apps
+
+Many apps compress images without asking. Messaging apps reduce photos to save data, social networks recompress uploads, and some cloud services offer "storage saver" modes. This is why a photo forwarded several times looks worse each time. When quality matters, share the original file as a document, or compress it yourself once to a sensible size before sending.
+
+## Choosing the right approach
+
+- **For a strict upload limit:** use a target-size compressor.
+- **For a website:** resize to the displayed width, then compress to around 100–300KB, or use WebP. See [WebP vs JPG](post:webp-vs-jpg).
+- **For archiving:** keep the originals untouched.
+- **For graphics and screenshots:** use PNG, which is lossless. See [PNG vs JPG](post:png-vs-jpg).
+
+Understanding the trade-off between pixels and quality lets you make smaller files that still look great, which is the whole point of compression.
+
+## Key takeaways
+
+- **Lossless** keeps every pixel; **lossy** removes detail you are unlikely to see.
+- **Fewer pixels plus moderate quality** beats many pixels at very low quality.
+- **Avoid re-saving JPGs repeatedly**; always start from the original.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### Does compressing an image reduce its quality?
@@ -68,3 +126,11 @@ Lossy for photos where small files matter. Lossless for graphics, text and image
 ### Why does my compressed image look blocky?
 
 The quality setting was too low for the image's size. Reduce the dimensions a little so a higher quality fits the same file size.
+
+### Why do some photos compress much smaller than others?
+
+Smooth areas such as skies and plain walls compress very well, while detailed textures such as leaves or gravel need many more bytes.
+
+### Does sending photos on messaging apps reduce their quality?
+
+Usually yes. Many apps compress photos to save data. Send the original as a document if quality matters.

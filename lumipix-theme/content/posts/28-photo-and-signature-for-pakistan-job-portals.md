@@ -59,6 +59,72 @@ CNIC copies, degrees, transcripts and domicile certificates should be flat, well
 
 Your CNIC, signature and certificates are sensitive. Lumi Pix processes files on your own device and never uploads them, so you can prepare everything safely, even on a shared computer, as long as you delete the downloaded files afterwards.
 
+## Preparing everything on a phone, step by step
+
+Many candidates apply from a phone. Here is a full routine that works in any mobile browser:
+
+1. **Photo:** ask someone to take your photo against a plain light wall using the rear camera. Crop to head and shoulders in your gallery app.
+2. **Signature:** sign on white paper, photograph it from above in daylight, and crop tightly.
+3. **Documents:** use your phone's document scanner (Notes on iPhone, Google Drive on Android) for each certificate and both sides of your CNIC.
+4. Open the relevant Lumi Pix tools and set each file to its limit.
+5. Download each result and rename it clearly, for example `photo.jpg`, `signature.jpg`, `cnic-front.jpg`.
+6. Upload from the **Downloads** folder (Android) or the **Files** app (iPhone).
+
+## Typical requirements to look for
+
+Each organisation and advertisement sets its own rules. When reading the instructions, look for these items and note them down:
+
+| Item | What to note |
+|---|---|
+| Photograph | Maximum KB, format, dimensions, background colour |
+| Signature | Maximum KB, format, sometimes dimensions |
+| CNIC / domicile / degrees | Maximum KB per file, format, colour or greyscale |
+| Experience letters | Maximum KB, whether multiple pages are allowed |
+| Fee challan | Usually a scan or photo of the paid receipt |
+
+If anything is unclear, the organisation's help desk or FAQ page is the authoritative source.
+
+## Photo do's and don'ts
+
+**Do:**
+
+- use a recent photo
+- face the camera with a neutral expression
+- wear clothing that contrasts with the background
+- keep the image sharp and evenly lit
+
+**Don't:**
+
+- use selfies taken at arm's length
+- apply beauty filters
+- crop from a group photo
+- upload a photo of a printed photo
+
+## Avoiding last-day problems
+
+Portals are often busiest just before the closing date. To avoid trouble:
+
+- Prepare all files at least a few days early.
+- Keep the files in one folder on your phone and on a computer.
+- Create your account and test the upload step early, even if you submit later.
+- Save or screenshot the confirmation page and fee receipt.
+
+## Reusing files for future applications
+
+Once you have a clean set of files, keep the **originals** (not just the compressed versions). Next time, limits may be different; re-compressing the original to the new limit gives a better result than compressing an already compressed file. Our guides on [compressing to 20KB](post:compress-image-to-20kb-guide), [compressing to 100KB](post:compress-image-to-100kb-guide) and [compressing document scans to 200KB](post:compress-document-scan-to-200kb) cover each limit in detail.
+
+## A note on official information
+
+This guide gives general, practical advice for preparing files. It does not replace the official instructions, which can change between advertisements. Always rely on the organisation's own website and advertisement for current requirements, and use the [Image Compressor](tool:compress-image) to match whatever limits they specify.
+
+## Key takeaways
+
+- **Read the official instructions** for each advertisement and note every limit.
+- **Prepare photo, signature and documents early**, before the portal gets busy.
+- **Keep originals** and re-compress them for each new application.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What photo size is required for PPSC, FPSC or NTS?
@@ -72,3 +138,11 @@ Yes. All Lumi Pix tools work in mobile browsers, so you can crop, resize and com
 ### Is Lumi Pix an official PPSC, FPSC or NTS tool?
 
 No. Lumi Pix is an independent image tool and is not affiliated with any of these organisations.
+
+### Can I use the same photo for different job portals?
+
+Often yes, if it is recent and meets each portal's rules. Keep the original and re-compress it to each new limit.
+
+### What should I do if the portal is not accepting my upload near the deadline?
+
+Busy portals can be slow. Prepare files early, try again later, and contact the organisation's help desk if the problem continues.

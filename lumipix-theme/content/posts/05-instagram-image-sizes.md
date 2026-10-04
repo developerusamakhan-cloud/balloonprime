@@ -55,6 +55,60 @@ If you would rather fill the frame, choose **Fill – crop edges** instead. The 
 
 For other resizing jobs, the general [Image Resizer](tool:image-resizer) covers any size in pixels, centimetres or inches. If you are new to resizing tools, our comparison of [resizing in Photoshop versus a free browser tool](post:resize-image-without-photoshop) explains the options.
 
+## Carousels: keep every slide the same shape
+
+Carousel posts use the shape of the **first** image for every slide. If the first image is 4:5 portrait and a later one is square, the square one gets cropped or padded. To keep control:
+
+1. Decide on one shape for the whole carousel, usually 1080×1350.
+2. Drop all the images into the [Instagram resizer](tool:resize-image-for-instagram) together.
+3. Choose **Instagram portrait 1080×1350** and **Fit – add background** so nothing is cut off.
+4. Click **Download all** and upload them in order.
+
+## Profile picture tips
+
+Your profile picture appears as a small circle, often under 110 pixels on screen. Upload a square image of at least 320×320 pixels, keep your face in the centre, and leave some space around it so the circle does not cut off your hair or chin. A plain or softly blurred background makes the picture readable at small sizes. If you want a clean background, the [Background Remover](tool:background-remover) can replace it with a solid colour.
+
+## Safe zones for stories and reels
+
+Stories and reels show your profile name and buttons on top of the image. As a rule of thumb:
+
+| Area | What covers it | Keep clear |
+|---|---|---|
+| Top 250 px | Profile name, progress bar | Text and faces |
+| Bottom 340 px | Reply bar, captions, buttons | Calls to action, small text |
+| Right edge | Like, comment and share icons on reels | Important details |
+
+Design within the central area and your message will be visible on any phone.
+
+## Text on images
+
+Instagram compresses images, which can make small text fuzzy. For quote posts and infographics:
+
+- use large, bold fonts
+- keep at least 60 pixels of margin from the edges
+- export as PNG before uploading if the design has flat colours, since PNG keeps edges sharper before Instagram converts it
+
+## A quick workflow for a week of posts
+
+1. Collect the photos in one folder.
+2. Drop them into the resizer and pick the portrait preset.
+3. Choose **Fill** for photos that should fill the frame, or **Fit** for products and screenshots.
+4. Download all and schedule them in the app or a planning tool.
+
+For more general resizing, see [how to resize an image without Photoshop](post:resize-image-without-photoshop), and if you need to shrink file sizes for messaging or email, read [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
+
+## Key takeaways
+
+- **1080 pixels wide** is the width Instagram displays, so there is no benefit in uploading larger files.
+- **Portrait 1080×1350** takes up the most space in the feed and is the best default for photos.
+- **Stories and reels use 1080×1920**; keep text and faces out of the top and bottom areas.
+- **Carousels follow the first slide's shape**, so resize every slide to the same size.
+- **Use Fit with a background colour** to post a whole photo without Instagram cropping it.
+- **Upload clean originals**, not screenshots or images forwarded through messaging apps, for the sharpest result.
+- **Profile pictures** should be square, at least 320×320, with the face centred and space around it.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What is the best image size for Instagram?
@@ -68,3 +122,11 @@ Usually because the upload was much larger or smaller than 1080 pixels wide, or 
 ### How do I fit a whole picture on Instagram?
 
 Resize it to 1080 × 1350 or 1080 × 1080 using a fit mode that adds a background around the photo, so nothing is cropped.
+
+### What size is an Instagram carousel?
+
+Use the same size for every slide, usually 1080×1350 for portrait or 1080×1080 for square. The first image sets the shape for all of them.
+
+### How do I stop Instagram cropping my profile picture?
+
+Upload a square image with your face centred and some space around it, at least 320×320 pixels.

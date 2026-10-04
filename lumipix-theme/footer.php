@@ -37,40 +37,20 @@ defined( 'ABSPATH' ) || exit;
 
 			<div class="site-footer__col">
 				<p class="site-footer__title"><?php esc_html_e( 'Company', 'lumipix' ); ?></p>
-				<?php
-				if ( has_nav_menu( 'footer' ) ) {
-					wp_nav_menu(
-						array(
-							'theme_location' => 'footer',
-							'container'      => false,
-							'depth'          => 1,
-						)
-					);
-				} else {
-					echo '<ul>';
-					foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $company_key ) {
-						$company_id = lumipix_installer_page_id( $company_key );
-						if ( $company_id ) {
-							echo '<li><a href="' . esc_url( get_permalink( $company_id ) ) . '">' . esc_html( get_the_title( $company_id ) ) . '</a></li>';
-						}
-					}
-					echo '</ul>';
-				}
-				?>
+				<ul>
+					<?php foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $company_key ) : ?>
+						<?php $company_id = lumipix_installer_page_id( $company_key ); ?>
+						<?php if ( $company_id ) : ?>
+							<li><a href="<?php echo esc_url( get_permalink( $company_id ) ); ?>"><?php echo esc_html( get_the_title( $company_id ) ); ?></a></li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
 				<?php $contact_email = lumipix_contact_email(); ?>
 				<?php if ( $contact_email ) : ?>
 					<p class="site-footer__email"><a href="mailto:<?php echo esc_attr( antispambot( $contact_email ) ); ?>"><?php echo esc_html( antispambot( $contact_email ) ); ?></a></p>
 				<?php endif; ?>
 			</div>
 
-			<div class="site-footer__col">
-				<p class="site-footer__title"><?php esc_html_e( 'Legal', 'lumipix' ); ?></p>
-				<ul>
-					<?php foreach ( lumipix_legal_links() as $legal ) : ?>
-						<li><a href="<?php echo esc_url( $legal[1] ); ?>"><?php echo esc_html( $legal[0] ); ?></a></li>
-					<?php endforeach; ?>
-				</ul>
-			</div>
 		</div>
 
 		<div class="site-footer__bottom">

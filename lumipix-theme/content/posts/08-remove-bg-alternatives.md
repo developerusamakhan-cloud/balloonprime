@@ -67,6 +67,63 @@ For logos, signatures and scans on white paper, AI is overkill. The [white backg
 
 For a step-by-step look at each method, see our guide on [how to remove the background from an image](post:how-to-remove-background-from-image).
 
+## How we compare background removers
+
+When you test tools yourself, use the same three photos in each one so the comparison is fair:
+
+1. **A portrait with hair** against a busy background, to test fine edges.
+2. **A product** on a table, to test straight edges and shadows.
+3. **A logo or signature** on white paper, to test flat backgrounds.
+
+For each result, check the edges at 100% zoom, the resolution of the download, whether you needed an account, and how long it took. Note which tools uploaded your image. You will quickly see which one suits your work.
+
+## Free vs paid: what you actually get
+
+Background removal services usually differ more in **what you can download** than in raw quality:
+
+| Feature | Often free | Often paid or credit-based |
+|---|---|---|
+| Preview of the cut-out | Yes | – |
+| Small or medium resolution download | Often | – |
+| Full-resolution download | Sometimes | Often |
+| Batch processing many images | Rarely | Often |
+| API for developers | Rarely | Often |
+
+Lumi Pix gives the full-resolution result for free because the AI runs on your device, so there is no server cost per image.
+
+## Which option for which job
+
+**Online shop owners** usually want white backgrounds and consistent sizes. Use an AI remover, then the [Image Resizer](tool:image-resizer) to make every product the same square size. Our guide to [removing the background from an image](post:how-to-remove-background-from-image) covers the steps.
+
+**Students and job seekers** often need a plain background for an ID or application photo. Remove the background, choose white, and crop with the [passport photo maker](tool:passport-size-photo).
+
+**Designers** may prefer Photoshop for its masking control, but a quick AI pass is a good starting point that saves time.
+
+**Anyone handling sensitive images** should prefer tools that do not upload files.
+
+## Questions to ask before choosing a service
+
+- Does it keep my image after processing, and for how long?
+- Is the free download the full resolution, or a preview?
+- Do I need an account or a subscription?
+- Can I change the background colour, or only remove it?
+- Does it work on my phone?
+
+The answers matter more than small differences in edge quality, which are often hard to notice at normal viewing size.
+
+## Moving from one tool to another
+
+If you have used a particular service for years, switching is simple: the output of any background remover is just a PNG with transparency. Your existing cut-outs keep working in your designs, and new ones from another tool will look the same. Keep a few test images handy so you can compare tools whenever your needs change.
+
+## Key takeaways
+
+- Compare tools on **resolution, signup, privacy and edge quality**, not only on the preview.
+- **On-device tools** keep sensitive photos private; most online services upload them.
+- **Design suites** are convenient if you are already building a post there.
+- **Flat backgrounds** such as logos and signatures need a colour-key tool, not AI.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### Is there a free alternative to remove.bg with HD download?
@@ -80,3 +137,11 @@ Tools that run the AI in your browser, such as Lumi Pix, and built-in features o
 ### Which tool is best for product photos?
 
 An AI remover that exports full resolution and lets you set a white background is ideal for most online shops.
+
+### Do background removers keep my photos?
+
+Policies differ. Tools that upload images may store them for a period. Lumi Pix processes images on your device and never receives them.
+
+### Which background remover is best for hair?
+
+Results vary by photo. Test the same portrait in a few tools and compare the edges at 100% zoom. Photoshop gives the most control for difficult hair.

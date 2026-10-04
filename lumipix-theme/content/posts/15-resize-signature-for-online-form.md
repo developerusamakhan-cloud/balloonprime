@@ -62,6 +62,61 @@ Our guide on [removing the white background from a signature](post:remove-white-
 
 For the full application process, including photos and documents, see [how to compress a photo for online application forms](post:compress-photo-for-online-forms).
 
+## Step by step on a phone
+
+Most people prepare their signature on a phone, so here is the whole flow:
+
+1. Sign on plain white paper with a dark pen.
+2. Open the camera, hold the phone directly above the paper, and take the photo in good light.
+3. Open the photo in your gallery app and use **Crop** to cut closely around the signature.
+4. If the paper looks grey, increase **Brightness** and **Contrast** slightly in the editor.
+5. Open the [signature resizer](tool:resize-signature) in your browser and tap the size limit from the form.
+6. Tap **Choose files**, pick the cropped photo, and download the result.
+7. Upload the downloaded file (not the original) in the form.
+
+## Signature dimensions some forms ask for
+
+Some portals specify exact pixel dimensions in addition to a file size. Common requests look like:
+
+| Requirement | What to do |
+|---|---|
+| A wide rectangle, e.g. 300×80 pixels | Resize with the [Image Resizer](tool:image-resizer), lock off, Fit with white |
+| Maximum width only | Set **Maximum width** under Advanced options in the signature resizer |
+| A size in cm, e.g. 3.5 × 1.5 cm | Use the resizer with unit **cm** at the stated DPI |
+| Only a file size | Just choose the KB limit |
+
+When both dimensions and file size are given, resize first and then compress to the KB limit.
+
+## Black ink or blue ink?
+
+Follow the form's instructions if it specifies a colour. Otherwise, black ink gives the strongest contrast and survives compression best. Blue ink is fine too, as long as it is dark. Avoid pencil, light blue and coloured gel pens, which can fade into the background after compression.
+
+## Making a clean signature reusable
+
+Once you have a good signature file, save it in a folder together with your photo and document scans. Keep:
+
+- the **original photo** of the signature
+- a **JPG on white** for forms, compressed to a common limit such as 20KB
+- a **transparent PNG** for documents, made with the [white background remover](tool:remove-white-background)
+
+Next time a form asks for a signature, you can simply re-compress the original to the new limit instead of signing again.
+
+## Privacy reminder
+
+Your signature is personal. Avoid uploading it to random online tools that store files on their servers. Lumi Pix processes the image in your browser, so it never leaves your device. If you prepare files on a shared or public computer, delete them from the Downloads folder afterwards.
+
+For a complete application checklist, including your photograph and ID scans, read our guide on [compressing photos for online application forms](post:compress-photo-for-online-forms), and for transparent signatures for documents, see [removing the white background from a signature](post:remove-white-background-from-signature).
+
+## Key takeaways
+
+- **Read the form's limits first**: file size, format and any dimensions.
+- **Sign boldly** with a dark pen on plain white paper.
+- **Crop tightly** and brighten the paper before compressing.
+- **Resize first, then compress** when both dimensions and KB limits are given.
+- **Keep the original** so you can re-compress it for the next form.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I reduce my signature to 20KB?
@@ -75,3 +130,15 @@ Follow the form's instructions. A width of 300–600 pixels is typically plenty 
 ### Can I use a transparent PNG signature on a form?
 
 Only if the form allows PNG. Most application portals ask for a JPG on a white background.
+
+### Can I use a digital signature drawn on my phone?
+
+If the form accepts it, yes. Many forms expect a scanned handwritten signature, so check the instructions first.
+
+### Why is my signature rejected even though it is under the size limit?
+
+The form may also check dimensions or format. Make sure the file is a JPG and matches any stated pixel or cm size.
+
+### Should I sign larger or smaller for a scanned signature?
+
+Sign at your normal, comfortable size, slightly larger if anything. A signature that is too small loses detail when compressed, while a larger one can always be reduced cleanly by the tool.

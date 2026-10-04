@@ -93,6 +93,11 @@ function lumipix_meta_description() {
 		}
 		return $desc;
 	}
+	if ( is_author() ) {
+		$author = get_queried_object();
+		/* translators: %s: author name */
+		return $author ? ( get_the_author_meta( 'description', $author->ID ) ? get_the_author_meta( 'description', $author->ID ) : sprintf( __( 'Guides by %s on Lumi Pix.', 'lumipix' ), $author->display_name ) ) : '';
+	}
 	if ( is_home() ) {
 		return __( 'Short, practical guides to compressing, resizing and editing images, from exact KB sizes to passport photos, with free tools to finish the job.', 'lumipix' );
 	}
@@ -243,8 +248,10 @@ function lumipix_schema() {
 			'datePublished'    => get_the_date( 'c', $post ),
 			'dateModified'     => get_the_modified_date( 'c', $post ),
 			'author'           => array(
-				'@type' => 'Person',
-				'name'  => get_the_author_meta( 'display_name', $post->post_author ),
+				'@type'       => 'Person',
+				'name'        => get_the_author_meta( 'display_name', $post->post_author ),
+				'url'         => get_author_posts_url( (int) $post->post_author ),
+				'description' => get_the_author_meta( 'description', $post->post_author ),
 			),
 			'mainEntityOfPage' => get_permalink( $post ),
 			'image'            => has_post_thumbnail( $post ) ? get_the_post_thumbnail_url( $post, 'lumipix-hero' ) : null,

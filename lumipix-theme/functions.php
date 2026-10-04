@@ -18,6 +18,8 @@ require LUMIPIX_DIR . '/inc/setup.php';
 require LUMIPIX_DIR . '/inc/template-tags.php';
 require LUMIPIX_DIR . '/inc/tool-apps.php';
 require LUMIPIX_DIR . '/inc/content.php';
+require LUMIPIX_DIR . '/inc/comments.php';
+require LUMIPIX_DIR . '/inc/authors.php';
 require LUMIPIX_DIR . '/inc/seo.php';
 require LUMIPIX_DIR . '/inc/customizer.php';
 require LUMIPIX_DIR . '/inc/markdown.php';

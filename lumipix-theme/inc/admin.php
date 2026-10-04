@@ -85,7 +85,23 @@ function lumipix_setup_screen() {
  * Nudge admins to run setup after activating the theme.
  */
 function lumipix_setup_notice() {
-	if ( get_option( 'lumipix_setup_done' ) || ! current_user_can( 'manage_options' ) ) {
+	if ( ! current_user_can( 'manage_options' ) ) {
+		return;
+	}
+	if ( get_option( 'lumipix_setup_done' ) ) {
+		if ( (int) get_option( 'lumipix_pack_rev_done', 1 ) < LUMIPIX_PACK_REV ) {
+			$screen = get_current_screen();
+			if ( $screen && 'appearance_page_lumipix-setup' === $screen->id ) {
+				return;
+			}
+			printf(
+				'<div class="notice notice-warning"><p><strong>%s</strong> %s <a class="button button-primary" href="%s">%s</a></p></div>',
+				esc_html__( 'Lumi Pix update:', 'lumipix' ),
+				esc_html__( 'this version includes longer articles, new tool page content and author profiles. Run Setup to apply them. Pages and posts you edited yourself are not changed.', 'lumipix' ),
+				esc_url( admin_url( 'themes.php?page=lumipix-setup' ) ),
+				esc_html__( 'Run setup', 'lumipix' )
+			);
+		}
 		return;
 	}
 	$screen = get_current_screen();

@@ -200,11 +200,12 @@ function lumipix_render_resize_options( $c, $id ) {
 		</div>
 		<div class="field">
 			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-fmt"><?php esc_html_e( 'Save as', 'lumipix' ); ?></label>
+			<?php $fmt = isset( $c['format'] ) ? $c['format'] : 'auto'; ?>
 			<select class="select" id="<?php echo esc_attr( $id ); ?>-fmt" data-opt="format">
-				<option value="auto"><?php esc_html_e( 'Same as original', 'lumipix' ); ?></option>
-				<option value="image/jpeg">JPG</option>
-				<option value="image/png">PNG</option>
-				<option value="image/webp">WebP</option>
+				<option value="auto" <?php selected( $fmt, 'auto' ); ?>><?php esc_html_e( 'Same as original', 'lumipix' ); ?></option>
+				<option value="image/jpeg" <?php selected( $fmt, 'image/jpeg' ); ?>>JPG</option>
+				<option value="image/png" <?php selected( $fmt, 'image/png' ); ?>>PNG</option>
+				<option value="image/webp" <?php selected( $fmt, 'image/webp' ); ?>>WebP</option>
 			</select>
 		</div>
 	</div>

@@ -56,6 +56,48 @@ Open the downloaded file and zoom in. Faces and text should be clear. Check the 
 - **Over the limit by a few bytes:** some portals count 1KB as 1,000 bytes. Lumi Pix aims under the stricter limit.
 - **Browser issue:** try a different browser or clear the form and upload again.
 
+## A worked example: one application, three uploads
+
+Imagine a recruitment form that asks for:
+
+- a photograph: JPG, maximum 50KB
+- a signature: JPG, maximum 20KB
+- a CNIC copy: JPG, maximum 200KB
+
+Here is how to prepare all three in about five minutes:
+
+1. **Photo.** Take a portrait against a plain wall. If dimensions are specified, crop it with the [passport size photo maker](tool:passport-size-photo). Then open [compress to 50KB](tool:compress-image-to-50kb) and drop the photo.
+2. **Signature.** Sign on white paper, photograph it from above, crop tightly, and use the [signature resizer](tool:resize-signature) with the 20KB option.
+3. **ID card.** Photograph both sides flat on a dark table, crop to the card, and use [compress to 200KB](tool:compress-image-to-200kb).
+4. **Name the files clearly**, for example `photo.jpg`, `signature.jpg` and `cnic-front.jpg`, so you upload the right one in each field.
+
+Keep these files in one folder. Many forms ask for the same set again, and you can reuse them as long as the photo is recent enough.
+
+## How to read file size limits correctly
+
+Forms describe limits in different ways, and misreading them is a common cause of rejection.
+
+| What the form says | What it means |
+|---|---|
+| "Max 50KB" | The file must be 50KB or smaller |
+| "Between 20KB and 50KB" | There is also a minimum: do not compress below 20KB |
+| "Less than 1MB" | 1MB is about 1,000KB, so most photos only need light compression |
+| "200×230 pixels" | Exact dimensions in pixels, separate from the file size |
+| "3.5×4.5 cm" | Print dimensions; use 35×45 mm with the passport tool |
+
+If a form states a **minimum** size, choose a target close to the maximum instead, for example 45KB for a 20–50KB range, so the photo is not rejected for being too small.
+
+## Doing it all on a phone
+
+You can complete the whole process on a phone. Take the photos with the rear camera (it is sharper than the selfie camera), open the tools in your mobile browser, and download the results. On Android they go to **Downloads**; on iPhone they are saved in the **Files** app. When the form asks you to upload, choose **Browse** or **Files** and pick the compressed version, not the original from the gallery.
+
+## Keep a record
+
+Before you submit, take a screenshot of the confirmation page or save the PDF of the completed form. If there is a problem later, you have proof of what you uploaded and when. It also helps to note the size limits in case you need to apply again.
+
+For more on hitting a specific number, see [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb) and the detailed [50KB guide](post:how-to-compress-image-to-50kb).
+
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What photo size do most online forms accept?
@@ -69,3 +111,11 @@ Yes. Drop both files into the compressor and set the limit. If the photo and sig
 ### Is it safe to compress ID documents online?
 
 With Lumi Pix, yes: files are processed on your device and never uploaded. Avoid tools that upload sensitive documents to unknown servers.
+
+### What if the form says the photo is too small?
+
+Some forms have a minimum file size. Compress to a target just under the maximum, for example 45KB for a 20–50KB range.
+
+### Should I use the front or back camera for form photos?
+
+The rear camera is sharper and handles light better. Ask someone to take the photo, or use a tripod and timer.

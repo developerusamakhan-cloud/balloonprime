@@ -37,7 +37,6 @@ function lumipix_setup() {
 	register_nav_menus(
 		array(
 			'primary' => __( 'Primary navigation', 'lumipix' ),
-			'footer'  => __( 'Footer – company links', 'lumipix' ),
 		)
 	);
 
@@ -63,23 +62,6 @@ function lumipix_content_width() {
 }
 add_action( 'after_setup_theme', 'lumipix_content_width', 0 );
 
-/**
- * Sidebar for blog posts.
- */
-function lumipix_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => __( 'Blog sidebar', 'lumipix' ),
-			'id'            => 'blog-sidebar',
-			'description'   => __( 'Shown beside blog posts, below the free tools card.', 'lumipix' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'lumipix_widgets_init' );
 
 /**
  * Asset version helper.
@@ -99,10 +81,6 @@ function lumipix_asset_ver( $rel ) {
 function lumipix_enqueue() {
 	wp_enqueue_style( 'lumipix', LUMIPIX_URI . '/assets/css/main.css', array(), lumipix_asset_ver( 'assets/css/main.css' ) );
 	wp_enqueue_script( 'lumipix-site', LUMIPIX_URI . '/assets/js/site.js', array(), lumipix_asset_ver( 'assets/js/site.js' ), array( 'strategy' => 'defer', 'in_footer' => true ) );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 
 	// Classic-theme block styles are enough; drop the global styles bloat we do not use.
 	wp_dequeue_style( 'classic-theme-styles' );

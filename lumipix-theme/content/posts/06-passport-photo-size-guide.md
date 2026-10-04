@@ -57,6 +57,56 @@ Online forms often add a **file size limit** on top of the dimensions. After mak
 
 Most photo labs print on 4×6 inch (10×15 cm) paper. You can place several passport photos on one sheet with a photo editor, or print a single photo and trim it carefully along the edges.
 
+## Common passport and ID photo sizes
+
+Beyond the two main standards, these sizes come up often. Always check the current rules with the issuing office, because requirements are updated from time to time.
+
+| Size | Typical use | Pixels at 300 DPI |
+|---|---|---|
+| 35 × 45 mm | Passports and visas in many countries | 413 × 531 |
+| 2 × 2 in (51 × 51 mm) | US passports and visas | 600 × 600 |
+| 30 × 40 mm | Some ID cards and forms | 354 × 472 |
+| 33 × 48 mm | Some visa applications | 390 × 567 |
+| 40 × 50 mm | Some national ID documents | 472 × 591 |
+
+If your size is not in the presets of the [passport photo maker](tool:passport-size-photo), use the [Image Resizer](tool:image-resizer) instead: set the unit to **mm**, the DPI to 300, type the width and height, and choose **Fill – crop edges**.
+
+## Getting the head size right
+
+Many authorities specify how large the head should be inside the frame, measured from chin to the top of the head. A practical way to get close:
+
+1. Take the photo from about 1–1.5 metres away, not close up, so the face is not distorted.
+2. Leave space above the head and around the shoulders.
+3. When the tool crops to the passport shape, the face should fill roughly two thirds to three quarters of the height for most standards.
+
+If the crop cuts too close to your hair, start from a photo taken from slightly further away so there is more room around you.
+
+## Background colour by requirement
+
+Most standards ask for plain white or light grey, but some ask for other colours, such as light blue for certain visa applications. To change the background:
+
+1. Open the [Background Remover](tool:background-remover) and drop the photo.
+2. Pick **white**, or choose a custom colour that matches the requirement.
+3. Download as JPG, then open it in the passport photo maker to crop to size.
+
+Always use a soft, even colour. Gradients, shadows and textures can lead to rejection.
+
+## Digital submissions vs printed photos
+
+| | Printed photo | Digital upload |
+|---|---|---|
+| What matters | Physical size and print quality | Pixel size, file size, format |
+| DPI | 300 for a sharp print | Usually not checked |
+| File size | Not relevant | Often limited, e.g. 50–240KB |
+| Format | Glossy or matte photo paper | Usually JPG |
+
+For online applications, check both the pixel dimensions and the KB limit. Make the photo first, then compress it with the [Image Compressor](tool:compress-image) if needed. The compressor keeps the 300 DPI value, so the same file still prints correctly.
+
+## Printing several photos on one sheet
+
+Many forms ask for two to six identical photos. Instead of printing one photo per sheet, place several 35×45 mm photos on a single 4×6 inch (10×15 cm) canvas in a photo editor, leaving a thin gap to cut along. At 300 DPI, a 4×6 sheet is 1200×1800 pixels, which fits up to six 35×45 mm photos (two across, three down) with room to cut.
+
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What size is a passport photo in pixels?
@@ -70,3 +120,11 @@ In many countries, yes, as long as it meets the official rules for size, backgro
 ### Does the tool check face position and expression?
 
 No. It handles size and resolution. You are responsible for making sure the photo meets the biometric rules of your authority.
+
+### What size is a passport photo in the UK and EU?
+
+Most use 35×45 mm. That is 413×531 pixels at 300 DPI.
+
+### Can I wear glasses in a passport photo?
+
+Many authorities now ask you to remove glasses to avoid glare. Check the current rules of the office you are applying to.

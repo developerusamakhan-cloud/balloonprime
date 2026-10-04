@@ -315,7 +315,7 @@ function lumipix_tools() {
 			'title'   => __( 'Passport Size Photo Maker – 35×45 mm at 300 DPI, Free', 'lumipix' ),
 			'desc'    => __( 'Resize any photo to passport size (35×45 mm, 2×2 inch and more) at 300 DPI, ready to print or upload. Free and private.', 'lumipix' ),
 			'lead'    => __( 'Crop and resize to standard passport and ID photo sizes, with the correct DPI for printing.', 'lumipix' ),
-			'config'  => array( 'width' => 35, 'height' => 45, 'unit' => 'mm', 'dpi' => 300, 'fit' => 'cover', 'presets' => array( 'passport', 'us-passport', 'id-card' ) ),
+			'config'  => array( 'width' => 35, 'height' => 45, 'unit' => 'mm', 'dpi' => 300, 'fit' => 'cover', 'format' => 'image/jpeg', 'presets' => array( 'passport', 'us-passport', 'id-card' ) ),
 			'related' => array( 'compress-image-to-50kb', 'background-remover', 'image-resizer' ),
 			'faqs'    => array(
 				__( 'What size is a passport photo?', 'lumipix' ) => __( 'Many countries use 35 × 45 mm. The United States and some others use 2 × 2 inches (51 × 51 mm). Always confirm the rules of the authority you are applying to.', 'lumipix' ),

@@ -15,11 +15,20 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 | **Performance** | No jQuery, no page builder, tool scripts load only on tool pages, fonts preloaded, emoji script removed |
 | **Monetisation ready** | AdSense slots (below tool, in article, sidebar), **off by default** |
 
+## What's new in 1.3
+
+- **Longer content:** every article is 1,100–1,500 words, and every tool page has long-form copy (stored in `content/tools/<key>.md`), with more internal links.
+- **Authors:** four author profiles (Ayesha Khan, Hamza Iqbal, Daniel Brooks, Sara Malik) with avatars, an author box under each article and author archive pages. Articles are assigned by category. Edit names and bios in **Users**, or replace the profiles with your real team.
+- **Comments are switched off** site-wide: no forms, no pingbacks, no comments menu.
+- **Design:** full-width featured images, a sticky article sidebar 20px below the header, cleaner tables, and a simpler footer (legal links live in the bottom bar).
+
+After updating, open **Appearance → Lumi Pix Setup** and run it once. Articles and tool pages you have not edited are refreshed with the new content; their dates and schedule stay the same. Anything you edited yourself is left alone.
+
 ## Content pack (new in 1.1)
 
 Setup also installs ready-made content from the `content/` folder:
 
-- **30 articles** (`content/posts/*.md`). The first 15 are published right away; the other 15 are **scheduled every 2 days at 09:00** (site timezone). Every article has an SEO title, meta description, excerpt, category, related tool, internal links to tool pages and earlier articles, an FAQ section (with FAQPage schema) and a 1200×630 featured image that doubles as its social share image.
+- **30 articles** (`content/posts/*.md`, 1,100–1,500 words each). The first 15 are published right away; the other 15 are **scheduled every 2 days at 09:00** (site timezone). Every article has an SEO title, meta description, excerpt, category, related tool, internal links to tool pages and earlier articles, an FAQ section (with FAQPage schema) and a 1200×630 featured image that doubles as its social share image.
 - **Page content with FAQs** for Home (about 1,700 words), All tools, About, Contact, Privacy Policy, Terms of Use, Cookie Policy and Disclaimer.
 - **Social share images** for the home page and every tool page (`assets/og/`). Regenerate them with `node tools/og-images.js` (see the script header) after changing titles.
 

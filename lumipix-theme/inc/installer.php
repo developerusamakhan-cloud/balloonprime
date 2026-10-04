@@ -15,6 +15,9 @@ defined( 'ABSPATH' ) || exit;
 /** How many pack articles are published immediately; the rest are scheduled. */
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
+/** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
+define( 'LUMIPIX_PACK_REV', 2 );
+
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
 
@@ -287,7 +290,7 @@ function lumipix_run_installer() {
 				'post_status'  => 'publish',
 				'post_title'   => $tool['h1'],
 				'post_name'    => $tool['slug'],
-				'post_content' => $tool['content'],
+				'post_content' => isset( $tool['content'] ) ? $tool['content'] : '',
 				'menu_order'   => $order,
 				'meta_input'   => array( '_lumipix_tool' => $key ),
 			)
@@ -310,6 +313,9 @@ function lumipix_run_installer() {
 
 	// Articles: create every post first (so cross-links resolve), then fill content.
 	$log = array_merge( $log, lumipix_install_pack_posts() );
+
+	// Long-form tool page copy (after the articles exist, so its links resolve).
+	$log = array_merge( $log, lumipix_refresh_tool_pages() );
 
 	// Page content and FAQs from the bundled Markdown (only for untouched pages).
 	foreach ( lumipix_installer_pages() as $key => $page ) {
@@ -342,31 +348,14 @@ function lumipix_run_installer() {
 		$log[] = sprintf( __( 'Added content and FAQs: %s', 'lumipix' ), $post->post_title );
 	}
 
-	// Footer menu with company pages (only if none assigned yet).
-	$locations = get_theme_mod( 'nav_menu_locations', array() );
-	if ( empty( $locations['footer'] ) ) {
-		$menu_id = wp_create_nav_menu( __( 'Lumi Pix company', 'lumipix' ) );
-		if ( ! is_wp_error( $menu_id ) ) {
-			foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $key ) {
-				if ( ! empty( $ids[ $key ] ) ) {
-					wp_update_nav_menu_item(
-						$menu_id,
-						0,
-						array(
-							'menu-item-object-id' => (int) $ids[ $key ],
-							'menu-item-object'    => 'page',
-							'menu-item-type'      => 'post_type',
-							'menu-item-status'    => 'publish',
-						)
-					);
-				}
-			}
-			$locations['footer'] = $menu_id;
-			set_theme_mod( 'nav_menu_locations', $locations );
-			$log[] = __( 'Created the footer menu.', 'lumipix' );
-		}
+	// Comments are disabled by the theme; close them in the database too.
+	$removed = lumipix_close_comments_everywhere();
+	if ( $removed ) {
+		/* translators: %d: number of pingbacks */
+		$log[] = sprintf( __( 'Removed %d pingbacks created by internal links.', 'lumipix' ), $removed );
 	}
 
+	update_option( 'lumipix_pack_rev_done', LUMIPIX_PACK_REV );
 	flush_rewrite_rules();
 
 	if ( ! $log ) {
@@ -391,36 +380,47 @@ function lumipix_install_pack_posts() {
 	$tz        = wp_timezone();
 	$now       = new DateTimeImmutable( 'now', $tz );
 	$first_day = $now->setTime( 9, 0 );
-	$created   = array();
+	$create    = array(); // New posts (or untouched placeholder drafts): full install.
+	$refresh   = array(); // Pack posts from an older content revision: update text, keep date and status.
 
-	// Pass 1: make sure every post exists (as draft) so links between them resolve.
+	// Pass 1: make sure every post exists so links between them resolve.
 	foreach ( $items as $index => $item ) {
 		$post = get_page_by_path( $item['slug'], OBJECT, 'post' );
 		if ( $post && ! lumipix_is_untouched( $post ) ) {
-			continue;
+			continue; // Edited by someone: never overwrite.
 		}
-		if ( $post && in_array( $post->post_status, array( 'publish', 'future' ), true ) && get_post_meta( $post->ID, '_lumipix_pack', true ) ) {
+		$is_pack = $post && in_array( $post->post_status, array( 'publish', 'future' ), true ) && get_post_meta( $post->ID, '_lumipix_pack', true );
+		if ( $is_pack ) {
+			if ( (int) get_post_meta( $post->ID, '_lumipix_pack_rev', true ) < LUMIPIX_PACK_REV ) {
+				$refresh[ $index ] = (int) $post->ID;
+			}
 			continue;
 		}
 		$parsed = lumipix_md_parse( (string) file_get_contents( $item['file'] ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
-		$meta   = $parsed['meta'];
 		$id     = $post ? $post->ID : wp_insert_post(
 			array(
 				'post_type'   => 'post',
 				'post_status' => 'draft',
-				'post_title'  => $meta['title'] ?? $item['slug'],
+				'post_title'  => $parsed['meta']['title'] ?? $item['slug'],
 				'post_name'   => $item['slug'],
 			)
 		);
 		if ( $id && ! is_wp_error( $id ) ) {
-			$created[ $index ] = (int) $id;
+			$create[ $index ] = (int) $id;
 		}
 	}
 
-	// Pass 2: content, meta, images and dates.
+	// Pass 2: content, meta, author, image and (for new posts) dates.
 	$scheduled_n = 0;
-	foreach ( $created as $index => $id ) {
-		$item   = $items[ $index ];
+	foreach ( $items as $index => $item ) {
+		if ( ! isset( $create[ $index ] ) && ! isset( $refresh[ $index ] ) ) {
+			if ( $index >= LUMIPIX_PACK_PUBLISH_NOW ) {
+				++$scheduled_n; // Keep the schedule slots of existing posts.
+			}
+			continue;
+		}
+		$is_new = isset( $create[ $index ] );
+		$id     = $is_new ? $create[ $index ] : $refresh[ $index ];
 		$parsed = lumipix_md_parse( (string) file_get_contents( $item['file'] ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 		$meta   = $parsed['meta'];
 
@@ -436,39 +436,47 @@ function lumipix_install_pack_posts() {
 			}
 		}
 
-		if ( $index < LUMIPIX_PACK_PUBLISH_NOW ) {
-			// Published now, oldest first, a few minutes apart so the order is stable.
-			$date   = $now->modify( '-' . ( ( LUMIPIX_PACK_PUBLISH_NOW - $index ) * 7 ) . ' minutes' );
-			$status = 'publish';
+		$postarr = array(
+			'ID'            => $id,
+			'post_title'    => $meta['title'] ?? get_the_title( $id ),
+			'post_content'  => $parsed['html'],
+			'post_excerpt'  => $meta['excerpt'] ?? '',
+			'post_category' => $cat_ids,
+		);
+		if ( $is_new ) {
+			if ( $index < LUMIPIX_PACK_PUBLISH_NOW ) {
+				// Published now, oldest first, a few minutes apart so the order is stable.
+				$date   = $now->modify( '-' . ( ( LUMIPIX_PACK_PUBLISH_NOW - $index ) * 7 ) . ' minutes' );
+				$status = 'publish';
+			} else {
+				++$scheduled_n;
+				$date   = $first_day->modify( '+' . ( $scheduled_n * LUMIPIX_PACK_INTERVAL_DAYS ) . ' days' );
+				$status = 'future';
+			}
+			$postarr['post_status']   = $status;
+			$postarr['post_date']     = $date->format( 'Y-m-d H:i:s' );
+			$postarr['post_date_gmt'] = get_gmt_from_date( $postarr['post_date'] );
+			$postarr['edit_date']     = true;
 		} else {
-			++$scheduled_n;
-			$date   = $first_day->modify( '+' . ( $scheduled_n * LUMIPIX_PACK_INTERVAL_DAYS ) . ' days' );
-			$status = 'future';
+			if ( $index >= LUMIPIX_PACK_PUBLISH_NOW ) {
+				++$scheduled_n;
+			}
+			$status = get_post_status( $id );
 		}
+		wp_update_post( $postarr );
 
-		wp_update_post(
-			array(
-				'ID'            => $id,
-				'post_title'    => $meta['title'] ?? get_the_title( $id ),
-				'post_content'  => $parsed['html'],
-				'post_excerpt'  => $meta['excerpt'] ?? '',
-				'post_status'   => $status,
-				'post_date'     => $date->format( 'Y-m-d H:i:s' ),
-				'post_date_gmt' => get_gmt_from_date( $date->format( 'Y-m-d H:i:s' ) ),
-				'edit_date'     => true,
-				'post_category' => $cat_ids,
-			)
-		);
-		// Make modified == date so the post still counts as untouched.
+		// Author and "untouched" marker (modified = published date) without bumping the modified time.
+		$author = ! empty( $meta['category'] ) ? lumipix_author_for_category( $meta['category'] ) : 0;
+		$fresh  = get_post( $id );
 		global $wpdb;
-		$wpdb->update( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-			$wpdb->posts,
-			array(
-				'post_modified'     => $date->format( 'Y-m-d H:i:s' ),
-				'post_modified_gmt' => get_gmt_from_date( $date->format( 'Y-m-d H:i:s' ) ),
-			),
-			array( 'ID' => $id )
+		$fields = array(
+			'post_modified'     => $fresh->post_date,
+			'post_modified_gmt' => $fresh->post_date_gmt,
 		);
+		if ( $author ) {
+			$fields['post_author'] = $author;
+		}
+		$wpdb->update( $wpdb->posts, $fields, array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
 		clean_post_cache( $id );
 
 		if ( ! empty( $meta['tool'] ) && lumipix_get_tool( $meta['tool'] ) ) {
@@ -482,17 +490,25 @@ function lumipix_install_pack_posts() {
 		}
 		update_post_meta( $id, '_lumipix_faqs', $parsed['faqs'] );
 		update_post_meta( $id, '_lumipix_pack', LUMIPIX_VERSION );
+		update_post_meta( $id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
 
-		$thumb = lumipix_import_image( 'assets/og/post-' . $item['slug'] . '.jpg', $meta['title'] ?? '', $id );
-		if ( $thumb ) {
-			set_post_thumbnail( $id, $thumb );
+		if ( ! has_post_thumbnail( $id ) ) {
+			$thumb = lumipix_import_image( 'assets/og/post-' . $item['slug'] . '.jpg', $meta['title'] ?? '', $id );
+			if ( $thumb ) {
+				set_post_thumbnail( $id, $thumb );
+			}
 		}
 
-		$log[] = 'publish' === $status
+		if ( ! $is_new ) {
 			/* translators: %s: post title */
-			? sprintf( __( 'Published: %s', 'lumipix' ), $meta['title'] ?? '' )
+			$log[] = sprintf( __( 'Updated article content: %s', 'lumipix' ), $meta['title'] ?? '' );
+		} elseif ( 'publish' === $status ) {
+			/* translators: %s: post title */
+			$log[] = sprintf( __( 'Published: %s', 'lumipix' ), $meta['title'] ?? '' );
+		} else {
 			/* translators: 1: post title, 2: date */
-			: sprintf( __( 'Scheduled: %1$s (%2$s)', 'lumipix' ), $meta['title'] ?? '', $date->format( 'j M Y, H:i' ) );
+			$log[] = sprintf( __( 'Scheduled: %1$s (%2$s)', 'lumipix' ), $meta['title'] ?? '', $date->format( 'j M Y, H:i' ) );
+		}
 	}
 	return $log;
 }
@@ -512,4 +528,56 @@ function lumipix_pack_category_descriptions() {
 		'Formats & Printing' => __( 'JPG, PNG, WebP and DPI explained in plain English, with print size charts and conversion guides.', 'lumipix' ),
 		'Comparisons'        => __( 'Honest comparisons of image tools and methods, so you can pick the right one for the job.', 'lumipix' ),
 	);
+}
+
+/**
+ * Long-form body copy for a tool page: content/tools/<key>.md when present,
+ * otherwise the short copy from the tool registry.
+ *
+ * @param string               $key  Tool key.
+ * @param array<string, mixed> $tool Tool definition.
+ * @return string Block markup.
+ */
+function lumipix_tool_pack_content( $key, $tool ) {
+	$file = LUMIPIX_DIR . '/content/tools/' . sanitize_file_name( $key ) . '.md';
+	if ( file_exists( $file ) ) {
+		$parsed = lumipix_md_parse( (string) file_get_contents( $file ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+		if ( '' !== trim( $parsed['html'] ) ) {
+			return $parsed['html'];
+		}
+	}
+	return isset( $tool['content'] ) ? (string) $tool['content'] : '';
+}
+
+/**
+ * Fill untouched tool pages with the long-form copy of the current content revision.
+ *
+ * @return array<int, string> Log lines.
+ */
+function lumipix_refresh_tool_pages() {
+	global $wpdb;
+	$log = array();
+	foreach ( lumipix_tools() as $key => $tool ) {
+		$page_id = lumipix_tool_page_id( $key );
+		if ( ! $page_id ) {
+			continue;
+		}
+		$page = get_post( $page_id );
+		if ( ! lumipix_is_untouched( $page ) || (int) get_post_meta( $page_id, '_lumipix_pack_rev', true ) >= LUMIPIX_PACK_REV ) {
+			continue;
+		}
+		wp_update_post(
+			array(
+				'ID'           => $page_id,
+				'post_content' => lumipix_tool_pack_content( $key, $tool ),
+			)
+		);
+		$fresh = get_post( $page_id );
+		$wpdb->update( $wpdb->posts, array( 'post_modified' => $fresh->post_date, 'post_modified_gmt' => $fresh->post_date_gmt ), array( 'ID' => $page_id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		clean_post_cache( $page_id );
+		update_post_meta( $page_id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
+		/* translators: %s: page title */
+		$log[] = sprintf( __( 'Added long-form content: %s', 'lumipix' ), $tool['h1'] );
+	}
+	return $log;
 }

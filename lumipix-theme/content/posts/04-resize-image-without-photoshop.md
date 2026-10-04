@@ -55,6 +55,64 @@ It also handles a few things that take extra steps in Photoshop:
 
 If the file also needs to meet a KB limit, resize first, then use the [Image Compressor](tool:compress-image). Our guide on [reducing image size in KB](post:how-to-reduce-image-size-in-kb) explains why that order gives the best result.
 
+## Resizing for common tasks, compared
+
+Here is how the same jobs look in Photoshop and in the browser.
+
+| Task | In Photoshop | In the browser |
+|---|---|---|
+| 1200 px wide for a blog | Image Size, type 1200, export | Type 1200 with the lock on, download |
+| 1080×1350 for Instagram | Crop at 4:5, then Image Size | Tap the Instagram portrait preset |
+| Passport photo 35×45 mm | New canvas at 300 ppi, place and crop | Open the passport photo maker, choose the size |
+| 20 product photos to 1000×1000 | Record an action, run a batch | Drop 20 photos, set 1000×1000, Download all |
+| Print at 6×4 inches | Image Size in inches at 300 ppi | Unit inch, DPI 300, type 6×4 |
+
+Photoshop gives you more control at every step, but for these everyday jobs the browser route takes a fraction of the time.
+
+## Photoshop batch resizing with actions
+
+If you do use Photoshop for many files, an action saves repetition:
+
+1. Open one image, then open the **Actions** panel and click **Create new action**.
+2. Perform the resize with **Image → Image Size** and save the file.
+3. Stop recording.
+4. Choose **File → Automate → Batch**, pick your action and the source folder, and run it.
+
+The [Image Resizer](tool:image-resizer) does the same for up to 20 images without recording anything: drop them, set the size and click **Download all**.
+
+## Keeping quality when you resize
+
+Whatever tool you use, these rules protect quality:
+
+- **Resize from the original.** Each round of resizing and saving loses a little detail.
+- **Reduce rather than enlarge.** Making an image smaller keeps it sharp; enlarging can only stretch existing pixels.
+- **Use the right format.** JPG for photos, PNG for graphics and text. See [PNG vs JPG](post:png-vs-jpg) for the details.
+- **Sharpen lightly after a big reduction.** Photoshop's **Unsharp Mask** at a low amount restores crispness; browser tools apply high-quality resampling automatically.
+
+## Free alternatives to Photoshop
+
+Besides browser tools, there are free desktop editors:
+
+- **GIMP** (Windows, Mac, Linux): **Image → Scale Image** works much like Photoshop's Image Size.
+- **Paint** (Windows): **Resize** by percentage or pixels, best for quick jobs.
+- **Preview** (Mac): **Tools → Adjust Size**, with a handy list of common sizes.
+
+These are good options when you also need to draw or annotate. For pure resizing, a dedicated tool is simpler.
+
+## When the file also needs to be small
+
+Resizing reduces file size, but not always enough for strict limits. After resizing, use the [Image Compressor](tool:compress-image) to reach a target such as 100KB. Our guide on [reducing image size in KB](post:how-to-reduce-image-size-in-kb) explains why resizing first and compressing second gives the best result.
+
+## Key takeaways
+
+- **Image → Image Size** is the Photoshop command for resizing; keep the chain linked to avoid distortion.
+- **Crop first** when the new shape differs from the original, then resize.
+- **Reduce rather than enlarge** wherever possible; enlarging cannot add real detail.
+- **For everyday jobs**, a browser resizer is faster and handles presets, print sizes and batches without a licence.
+- **Resize first, compress second** when a file also has to meet a KB limit.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I resize an image in Photoshop without losing quality?
@@ -68,3 +126,11 @@ Keep the chain icon linked in Image Size. If you need a different shape, crop to
 ### Is there a free alternative to Photoshop for resizing?
 
 Yes. Browser tools such as the Lumi Pix Image Resizer resize in pixels, centimetres or inches with DPI for free, without uploading your photos.
+
+### What is the shortcut for Image Size in Photoshop?
+
+Alt+Ctrl+I on Windows and Option+Cmd+I on Mac.
+
+### Can I resize images in Photoshop Express or on my phone?
+
+Yes, mobile editors offer basic resizing. For exact pixel or print sizes, a browser tool with units and DPI is often quicker.

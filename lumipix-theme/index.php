@@ -16,6 +16,10 @@ if ( is_home() ) {
 	/* translators: %s: search query */
 	$heading = sprintf( __( 'Results for “%s”', 'lumipix' ), get_search_query() );
 	$lead    = '';
+} elseif ( is_author() ) {
+	$author_obj = get_queried_object();
+	$heading    = $author_obj ? $author_obj->display_name : '';
+	$lead       = $author_obj ? (string) get_the_author_meta( 'description', $author_obj->ID ) : '';
 } elseif ( is_archive() ) {
 	$heading = wp_strip_all_tags( get_the_archive_title() );
 	$lead    = wp_strip_all_tags( get_the_archive_description() );
@@ -28,7 +32,17 @@ if ( is_home() ) {
 	<div class="hero__bg" aria-hidden="true"><span class="glow glow--a"></span><span class="grid-lines"></span></div>
 	<div class="container">
 		<?php lumipix_breadcrumbs(); ?>
-		<h1 class="page-hero__title"><?php echo esc_html( $heading ? $heading : __( 'Guides', 'lumipix' ) ); ?></h1>
+		<?php if ( is_author() && ! empty( $author_obj ) ) : ?>
+			<div class="author-hero">
+				<?php echo get_avatar( $author_obj->ID, 176, '', $author_obj->display_name ); ?>
+				<div>
+					<p class="kicker"><?php esc_html_e( 'Author', 'lumipix' ); ?></p>
+					<h1 class="page-hero__title" style="margin-top:0"><?php echo esc_html( $heading ); ?></h1>
+				</div>
+			</div>
+		<?php else : ?>
+			<h1 class="page-hero__title"><?php echo esc_html( $heading ? $heading : __( 'Guides', 'lumipix' ) ); ?></h1>
+		<?php endif; ?>
 		<?php if ( $lead ) : ?>
 			<p class="page-hero__lead"><?php echo esc_html( $lead ); ?></p>
 		<?php endif; ?>

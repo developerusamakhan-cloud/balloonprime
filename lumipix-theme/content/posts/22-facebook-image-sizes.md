@@ -52,6 +52,66 @@ Profile pictures are shown as a circle. Centre your face, leave a little space a
 
 For resizing to exact dimensions in general, see [how to resize a picture in pixels](post:resize-picture-in-pixels).
 
+## Facebook ads and boosted posts
+
+Ads appear in many placements: the feed, stories, the right column and the Audience Network. Rather than designing for each, most advertisers create two versions:
+
+| Version | Size | Used for |
+|---|---|---|
+| Square or 4:5 | 1080 × 1080 or 1080 × 1350 | Feed placements |
+| Vertical 9:16 | 1080 × 1920 | Stories and reels |
+
+Keep text short and away from the edges, and check Meta's current ads guidelines before launching a campaign, since recommended specs change.
+
+## Group cover photos
+
+Facebook group covers use a wide format, commonly cited as 1640 × 856 pixels. As with page covers, the edges are cropped differently on phones and desktops, so keep the title and faces in the centre.
+
+## Facebook event covers
+
+Event covers appear in event listings, invitations and the event page. Use a wide image around 1920 × 1005 pixels, keep text large, and include the date in the image only if the event will not move.
+
+## How Facebook compresses images
+
+Facebook re-compresses every image you upload. To keep quality as high as possible:
+
+- Upload at the recommended size, not huge camera originals.
+- Use **sRGB** colour; most phones and browser tools do this automatically.
+- Use PNG for images with text or logos, JPG for photos.
+- Avoid uploading an image that has already been through several apps.
+
+If images still look soft, try exporting at a slightly higher JPG quality, or switch to PNG for graphics.
+
+## A simple workflow for page managers
+
+1. Create one master image for each post at a generous size.
+2. Use the [Image Resizer](tool:image-resizer) to produce the square, portrait and story versions. Turn the link off, type the size, and choose **Fill** or **Fit**.
+3. For text-heavy graphics, choose **PNG** under **Save as**.
+4. Keep the versions in one folder so they are easy to reuse on Instagram, which uses the same feed sizes. See the [Instagram image sizes guide](post:instagram-image-sizes).
+
+## Profile pictures that work everywhere
+
+Your profile picture appears in posts, comments, Messenger and search. Use a square image of at least 320 × 320 pixels, centre your face or logo, and leave space around it because the circle crops the corners. For a clean background, the [Background Remover](tool:background-remover) can replace it with a solid colour first.
+
+## Preventing awkward crops on shared links
+
+When you share a link, Facebook pulls the page's share image. If it looks cropped or outdated:
+
+- Check that the page has an Open Graph image of 1200 × 630.
+- Use Meta's Sharing Debugger to refresh the preview after you change it.
+
+Every page and article on Lumi Pix has a 1200 × 630 share image for this reason. If you want to resize images for your own site's link previews, the [pixel resizing guide](post:resize-picture-in-pixels) shows how to hit an exact size.
+
+## Key takeaways
+
+- **Feed posts:** 1080×1080 square or 1080×1350 portrait.
+- **Link previews:** 1200×630, with key content in the centre.
+- **Stories:** 1080×1920, keeping text away from the top and bottom.
+- **Covers:** upload larger than the minimum and keep faces and titles centred.
+- **Use PNG for graphics with text** and JPG for photos.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### What size should a Facebook post image be?
@@ -65,3 +125,15 @@ For resizing to exact dimensions in general, see [how to resize a picture in pix
 ### Why is my Facebook cover photo cropped?
 
 Desktop and mobile show different parts of the cover. Use a large image and keep important content in the middle.
+
+### What size is a Facebook group cover photo?
+
+A wide image around 1640 × 856 pixels is commonly recommended. Keep important content in the centre.
+
+### Why do my Facebook images look blurry?
+
+Usually because the upload was much larger or smaller than recommended, or already heavily compressed. Upload at the recommended size, and use PNG for graphics with text.
+
+### Should I upload photos to Facebook as PNG or JPG?
+
+Use JPG for photos, which keeps files small and looks natural. Use PNG for graphics with text, logos or sharp lines, because it keeps edges crisp after Facebook processes the image.

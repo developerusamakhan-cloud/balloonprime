@@ -60,6 +60,60 @@ Results vary with the content of the image. Fine textures such as grass and grav
 
 For quick answers about specific sizes, see [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
 
+## A before-and-after example
+
+Here is a typical workflow applied to a phone photo for a blog post:
+
+| Step | Dimensions | File size |
+|---|---|---|
+| Original from phone | 4032 × 3024 | 3.6MB |
+| Cropped to the subject | 3200 × 2400 | 2.6MB |
+| Resized for the blog | 1480 × 1110 | 640KB |
+| Compressed to a target | 1480 × 1110 | 180KB |
+
+The final image is about 5% of the original size and looks the same in the article. Most of the saving came from resizing, which is why it should always be the first step.
+
+## Lowering file size for specific platforms
+
+**WordPress and other websites.** Upload images at a sensible width (1200–2000 pixels) instead of straight from the camera. Many image plugins can also serve WebP versions automatically.
+
+**Email.** Bring photos under 1MB each with [compress to 1MB](tool:compress-image-to-1mb) so messages send quickly and do not fill the recipient's inbox.
+
+**Online forms.** Use the exact KB limit with the [Image Compressor](tool:compress-image). Our [50KB guide](post:how-to-compress-image-to-50kb) explains the process in detail.
+
+**Messaging apps.** Apps compress images anyway. Sending a pre-compressed image avoids a second round of heavy compression and often looks better.
+
+## What not to do
+
+- **Do not use a very low quality on a large image.** Shrink the dimensions instead.
+- **Do not save photos as PNG** to make them "better"; it makes them much bigger.
+- **Do not compress screenshots of text as JPG at low quality.** Text becomes fuzzy; use PNG or a higher quality.
+- **Do not delete your originals.** Compression is permanent; keep the full-size files for printing.
+
+## Checking quality properly
+
+Compare the original and the compressed version side by side at 100% zoom, not zoomed out. Look at:
+
+- **Skies and smooth gradients**, where banding appears first.
+- **Edges and text**, where blocky artefacts show up.
+- **Faces and skin**, where over-compression looks waxy.
+
+If everything looks right at the size the image will be displayed, the compression is good.
+
+## Batch processing a folder
+
+When you have many images, the same settings can be applied to all of them at once. Drop up to 20 images into the [Image Resizer](tool:image-resizer) to reduce dimensions, download them, and then drop the results into the compressor with your target size. Both tools work in your browser, so even a folder of private photos never leaves your device. For format choices along the way, see [PNG vs JPG](post:png-vs-jpg).
+
+## Key takeaways
+
+- **Resize first:** matching the dimensions to where the image is shown gives the biggest saving.
+- **Use quality 75–85** for photos, or let a target-size compressor choose for you.
+- **Pick the right format:** JPG or WebP for photos, PNG for graphics.
+- **Crop away empty space** and avoid re-compressing already compressed images.
+- **Keep your originals** for printing; compression is permanent.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### Can I reduce file size without any quality loss at all?
@@ -73,3 +127,11 @@ Around 75–85 for photos is a good balance. Use a target-size compressor if you
 ### Why are photos from my phone so large?
 
 Phone cameras capture 12 megapixels or more at high quality. That is great for printing but far more than websites, emails and forms need.
+
+### What is the fastest way to reduce file size?
+
+Reduce the pixel dimensions first. That usually removes most of the file size without any visible change at normal viewing size.
+
+### Does lowering file size affect printing?
+
+Yes, if you reduce the pixels below what the print size needs. Keep the originals for printing and use smaller copies online.

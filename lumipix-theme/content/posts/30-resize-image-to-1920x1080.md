@@ -53,6 +53,80 @@ All share the same 16:9 shape, so the same Fill or Fit choice applies. The resiz
 
 For other exact sizes, see our guide on [resizing a picture in pixels](post:resize-picture-in-pixels), and for many images at once, [batch resizing](post:resize-multiple-images-at-once). If the file needs to be under a size limit afterwards, use the [Image Compressor](tool:compress-image).
 
+## Full HD for different uses
+
+| Use | Mode | Format | Notes |
+|---|---|---|---|
+| Desktop wallpaper | Fill | JPG | Keep the subject away from the taskbar area |
+| YouTube thumbnail | Fill | JPG | YouTube recommends 1280×720; 1920×1080 also works |
+| PowerPoint or Google Slides background | Fill | JPG | Leave space for titles |
+| TV slideshow | Fit (black) | JPG | Avoids cropping portrait photos |
+| Website hero image | Fill | JPG or WebP | Compress to around 200–300KB |
+| Video editing still | Fit or Fill | PNG for graphics | Match the project resolution |
+
+## Making a portrait photo work at 16:9
+
+Portrait photos are the hardest to fit into a wide frame. Options:
+
+- **Fit with a solid colour:** clean and simple. Pick a colour from the photo for a designed look.
+- **Fill with a careful crop:** works when the subject is in the middle and there is space above and below.
+- **Place two portrait photos side by side** in a design tool, each half the width, for a balanced layout.
+
+## Multiple monitors and higher resolutions
+
+If your screen is larger than Full HD, use the matching size so the wallpaper stays sharp:
+
+- 2560 × 1440 for QHD monitors
+- 3840 × 2160 for 4K monitors
+- For two side-by-side Full HD screens, 3840 × 1080 as one spanning image
+
+The [Image Resizer](tool:image-resizer) accepts any of these: turn the link off and type the width and height.
+
+## Keeping file size reasonable
+
+A 1920 × 1080 JPG at high quality is usually between 300KB and 1MB, depending on detail. That is fine for wallpapers and slides. For websites, compress further:
+
+1. Resize to 1920 × 1080.
+2. Use the [Image Compressor](tool:compress-image) with a target such as 250KB.
+3. Check the result at full screen.
+
+Our guide on [how to lower image file size](post:how-to-lower-image-file-size) explains the trade-offs.
+
+## Checking the result on your screen
+
+Open the downloaded image and view it at 100% or full screen. Look at:
+
+- edges and text, which should be crisp
+- the crop, which should keep important parts in view
+- dark areas, where heavy compression shows first
+
+If the photo started smaller than 1920 pixels wide, it may look soft at full screen. Use the largest original available.
+
+## Batch resizing a slideshow
+
+For a slideshow of holiday photos on a TV:
+
+1. Drop up to 20 photos into the resizer.
+2. Tap **Full HD 1920×1080**.
+3. Choose **Fit – add background** with black, so portrait photos are not cropped.
+4. Click **Download all** and copy the folder to a USB stick.
+
+For larger sets, run several batches with the same settings, as described in [how to resize multiple images at once](post:resize-multiple-images-at-once). For a refresher on aspect ratios, see [how to resize a picture in pixels](post:resize-picture-in-pixels), and to understand why file sizes vary, read [image compression explained](post:image-compression-explained).
+
+## Key takeaways
+
+- **1920×1080 is 16:9**, so most phone photos need a crop or padding to fit.
+- **Fill** crops to fill the screen; **Fit** keeps the whole photo with a background colour.
+- **Avoid Stretch**, which distorts faces and objects.
+- **Use the matching size** for QHD (2560×1440) and 4K (3840×2160) screens.
+- **Compress for websites** to around 200–300KB; wallpapers and slides can stay larger.
+
+## Quick answers for common devices
+
+For a laptop or office monitor, 1920×1080 is usually the native resolution, so a Full HD wallpaper looks pixel-perfect. Most TVs sold in recent years are 4K, but they scale Full HD images smoothly, so a 1920×1080 slideshow still looks good from the sofa. For phones, a different size applies, because their screens are tall rather than wide; use a portrait size such as 1080×1920 instead.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I resize a photo to 1920×1080 without stretching?
@@ -66,3 +140,15 @@ Yes. 1080p, Full HD and 1920 × 1080 all describe the same 16:9 resolution.
 ### What is the best format for a 1920×1080 wallpaper?
 
 JPG for photos, at high quality. PNG for graphics with flat colours and text.
+
+### What size is a YouTube thumbnail?
+
+YouTube recommends 1280 × 720 pixels. A 1920 × 1080 image has the same 16:9 shape and also works.
+
+### What size wallpaper do I need for a 4K monitor?
+
+Use 3840 × 2160 pixels so the wallpaper stays sharp at full screen.
+
+### Will resizing to 1920×1080 make a small photo sharper?
+
+No. Enlarging a small photo spreads the existing detail over more pixels, so it can look soft. Start from a photo that is at least 1920 pixels wide for the best result.

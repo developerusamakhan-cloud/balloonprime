@@ -50,6 +50,66 @@ Some portals specify both a size limit and dimensions in pixels. Resize to the e
 - [Compress to 100KB](tool:compress-image-to-100kb)
 - Any other size with the [Image Compressor](tool:compress-image)
 
+## Step by step on a phone
+
+1. Take the photo or signature with the rear camera in good light.
+2. Crop it in your gallery app so only the face and shoulders, or only the signature, remain.
+3. Open [compress image to 20KB](tool:compress-image-to-20kb) in your browser.
+4. Tap **Choose files** and select the cropped image.
+5. When the badge shows **Fits target**, tap **Download**.
+6. In the form, choose the downloaded file from **Downloads** (Android) or **Files** (iPhone).
+
+## What actually happens to a photo at 20KB
+
+To fit 20KB, the compressor balances two things: how many pixels the image has and how much detail each pixel keeps. Here is roughly how a typical portrait behaves:
+
+| Width | JPG quality needed for 20KB | How it looks |
+|---|---|---|
+| 1200 px | Very low | Blocky, smeared skin |
+| 800 px | Low | Soft, some artefacts |
+| 500 px | Medium | Clean at form display size |
+| 350 px | High | Sharp but small |
+
+The tool automatically moves towards the bottom rows, picking the largest size where the quality is still acceptable. That is why a 20KB result is usually a few hundred pixels wide.
+
+## Photos with a minimum size
+
+Some forms set both a minimum and a maximum, for example "between 10KB and 20KB". If the result comes out below the minimum, increase the target slightly (for example to 19KB) or set a larger **Maximum width** under **Advanced options** so the file keeps more detail. Our guide on [compressing photos for online forms](post:compress-photo-for-online-forms) explains how to read these limits.
+
+## Common mistakes at 20KB
+
+- **Starting from a full-body photo.** The face becomes tiny. Crop to head and shoulders first.
+- **Using a photo with a patterned background.** Patterns eat into the 20KB budget.
+- **Uploading the original instead of the result.** Check the file name ends with "-compressed".
+- **Compressing a photo several times in a row.** Each round loses detail; always start from the original.
+- **Using PNG.** A 20KB PNG photo is almost impossible; JPG is the right format.
+
+## Signatures at 20KB
+
+Signatures are mostly white, which makes 20KB easy if the photo is cropped tightly. For the cleanest result:
+
+- Sign with a bold dark pen on white paper.
+- Brighten the photo so the paper is close to white before compressing.
+- Keep the width around 400–600 pixels.
+
+The [signature resizer](tool:resize-signature) is set up for exactly this, and our [signature guide](post:resize-signature-for-online-form) covers dimensions and common rejection reasons.
+
+## When 20KB is too strict
+
+If the result still looks poor, check whether you are reading the limit correctly. Some forms state "200KB" and a quick glance can make it look like "20KB". If the limit really is 20KB and the photo must show a lot of detail, the best you can do is crop tightly and use a plain background. For anything more generous, use [compress to 50KB](tool:compress-image-to-50kb) or the general [Image Compressor](tool:compress-image).
+
+## Key takeaways
+
+- **20KB is a strict limit**, so dimensions matter as much as quality. Around 300–500 pixels wide is typical for a clear portrait.
+- **Crop to head and shoulders**, or tightly around a signature, before compressing.
+- **Plain backgrounds** leave more of the budget for the face.
+- **Use JPG**, never PNG, for photos at this size.
+- **Respect minimum limits** too; raise the maximum width if the result comes out too small.
+- **Start from the original** each time, not from a file that has already been compressed or forwarded.
+- **Check the result at 100% zoom** before uploading, and confirm you are uploading the compressed copy.
+
+<!-- topup -->
+<!-- expanded -->
 ## Frequently asked questions
 
 ### How do I make a photo less than 20KB?
@@ -63,3 +123,15 @@ Not if the dimensions are reduced sensibly. A 20KB photo around 400 pixels wide 
 ### Can I compress a PNG to 20KB?
 
 Yes. The result is saved as JPG, which is far more efficient for photos and accepted by most forms.
+
+### What dimensions should a 20KB photo be?
+
+Usually around 300 to 500 pixels wide for a portrait, which looks clear at the size forms display it.
+
+### How do I compress a signature to under 20KB?
+
+Crop it tightly on white paper, then use the 20KB option in the signature resizer. Signatures compress very well because they are mostly white.
+
+### Why does my 20KB photo look fine on my phone but blurry on a computer?
+
+Phones show images small, which hides compression. On a larger screen you see more detail. Forms display photos small, so judge the result at the size the form will show it, not zoomed in.

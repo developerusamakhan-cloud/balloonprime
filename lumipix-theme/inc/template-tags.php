@@ -58,6 +58,13 @@ function lumipix_breadcrumb_items() {
 		$items[] = array( single_term_title( '', false ), '' );
 	} elseif ( is_home() ) {
 		$items[] = array( get_the_title( (int) get_option( 'page_for_posts' ) ), '' );
+	} elseif ( is_author() ) {
+		$blog = (int) get_option( 'page_for_posts' );
+		if ( $blog ) {
+			$items[] = array( get_the_title( $blog ), get_permalink( $blog ) );
+		}
+		$author  = get_queried_object();
+		$items[] = array( $author ? $author->display_name : '', '' );
 	} elseif ( is_search() ) {
 		$items[] = array( __( 'Search', 'lumipix' ), '' );
 	} elseif ( is_archive() ) {

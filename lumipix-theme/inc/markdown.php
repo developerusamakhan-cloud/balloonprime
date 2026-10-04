@@ -43,8 +43,8 @@ function lumipix_md_parse( $text ) {
 
 	for ( $i = 0; $i < $count; $i++ ) {
 		$line = rtrim( $lines[ $i ] );
-		if ( '' === trim( $line ) ) {
-			continue;
+		if ( '' === trim( $line ) || 0 === strpos( trim( $line ), '<!--' ) ) {
+			continue; // Blank lines and HTML comments (editorial markers) are skipped.
 		}
 
 		if ( preg_match( '/^##\s+(.*)$/', $line, $m ) && ! preg_match( '/^###/', $line ) ) {
