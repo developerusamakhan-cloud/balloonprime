@@ -156,6 +156,18 @@ function lumipix_fallback_favicon() {
 add_action( 'wp_head', 'lumipix_fallback_favicon', 3 );
 
 /**
+ * Serve the theme logo for /favicon.ico until a Site Icon is set
+ * (WordPress would otherwise redirect crawlers to its own logo).
+ */
+function lumipix_favicon_ico() {
+	if ( ! has_site_icon() ) {
+		wp_safe_redirect( LUMIPIX_URI . '/assets/img/logo-512.png', 302 );
+		exit;
+	}
+}
+add_action( 'do_faviconico', 'lumipix_favicon_ico', 5 );
+
+/**
  * Apply the stored colour scheme before paint to avoid a flash.
  */
 function lumipix_theme_bootstrap_script() {
