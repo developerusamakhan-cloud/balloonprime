@@ -1,13 +1,14 @@
 ---
+keywords: white background product photos, product photo white background, ecommerce product photos, amazon white background, product photography
 title: White Background Product Photos for Online Stores (Free Method)
 category: Background Removal
 tool: background-remover
 seo_title: White Background Product Photos – Free Method for Online Stores
-seo_desc: Create clean white-background product photos for your online store or marketplace with a phone and a free AI background remover.
+seo_desc: White background product photos for your online store or marketplace, made with a phone, good light and a free background remover.
 excerpt: How to shoot products with a phone and turn them into clean, consistent white-background images for your shop.
 ---
 
-Clean product photos on a white background make a shop look trustworthy and consistent, and many marketplaces require a white or plain background for the main image. You do not need a studio. A phone, good light and a free background remover will do.
+White background product photos make a shop look trustworthy and consistent, and many marketplaces require a white or plain background for the main image. You do not need a studio. A phone, good light and a free background remover will do.
 
 ## Step 1: Shoot the product well
 

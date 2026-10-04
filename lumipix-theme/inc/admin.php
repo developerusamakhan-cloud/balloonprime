@@ -97,7 +97,7 @@ function lumipix_setup_notice() {
 			printf(
 				'<div class="notice notice-warning"><p><strong>%s</strong> %s <a class="button button-primary" href="%s">%s</a></p></div>',
 				esc_html__( 'Lumi Pix update:', 'lumipix' ),
-				esc_html__( 'this version adds new tools and content. Run Setup to create the new tool pages and refresh untouched content. Pages and posts you edited yourself are not changed.', 'lumipix' ),
+				esc_html__( 'this version adds new tools, content and Rank Math SEO fields. Run Setup to create new pages, refresh untouched content and fill focus keywords. Pages and posts you edited yourself are not changed.', 'lumipix' ),
 				esc_url( admin_url( 'themes.php?page=lumipix-setup' ) ),
 				esc_html__( 'Run setup', 'lumipix' )
 			);

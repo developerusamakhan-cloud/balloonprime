@@ -1,13 +1,14 @@
 ---
+keywords: remove white background from a signature, transparent signature, signature png, signature background remove, digital signature image
 title: How to Remove the White Background From a Signature
 category: Background Removal
 tool: remove-white-background
 seo_title: Remove White Background From a Signature – Transparent PNG, Free
-seo_desc: Turn a photo of your signature into a clean transparent PNG for documents, PDFs and forms. Free, instant and private.
+seo_desc: How to remove white background from a signature: turn a phone photo into a clean transparent PNG for documents, PDFs and forms. Free.
 excerpt: Turn a quick phone photo of your signature into a clean, transparent PNG you can place on any document.
 ---
 
-A transparent signature is handy for signing PDFs, letters and invoices, and some online forms ask for a clean signature scan. Here is how to get a crisp, transparent signature from a simple phone photo.
+A transparent signature is handy for signing PDFs, letters and invoices, and some online forms ask for a clean signature scan. Here is how to remove white background from a signature and get a crisp, transparent PNG from a simple phone photo.
 
 ## Step 1: Sign on clean paper
 

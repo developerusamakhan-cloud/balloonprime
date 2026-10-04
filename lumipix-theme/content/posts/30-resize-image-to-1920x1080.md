@@ -1,13 +1,14 @@
 ---
+keywords: resize image to 1920x1080, 1920x1080 image, full hd image size, 1920x1080 wallpaper, resize without stretching
 title: How to Resize an Image to 1920×1080 (Full HD) Without Stretching
 category: Resizing
 tool: image-resizer
 seo_title: Resize Image to 1920×1080 – Full HD Without Stretching or Black Bars
-seo_desc: Resize any photo to 1920×1080 for wallpapers, presentations, YouTube and TV screens. Crop to fill or fit with a background, free and in seconds.
+seo_desc: How to resize image to 1920x1080 for wallpapers, presentations, YouTube and TV screens – crop or fit without stretching. Free.
 excerpt: Turn any photo into a sharp 1920×1080 image for wallpapers, slides, thumbnails and TV screens, without distortion.
 ---
 
-1920 × 1080, also called Full HD or 1080p, is the most common screen size in the world. It is the standard for desktop wallpapers, presentation slides, video frames and TV displays. Here is how to resize any image to it without stretching.
+1920 × 1080, also called Full HD or 1080p, is the most common screen size in the world. It is the standard for desktop wallpapers, presentation slides, video frames and TV displays. Here is how to resize image to 1920x1080 without stretching or black bars.
 
 ## Understand the shape first
 

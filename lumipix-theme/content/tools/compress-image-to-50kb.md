@@ -1,3 +1,10 @@
+---
+keywords: compress image to 50kb, 50kb photo, reduce image size to 50kb, compress jpg to 50kb, 50kb image converter
+seo_desc: Compress image to 50KB online while keeping it sharp. Works with JPG, PNG and WebP, needs no signup, and processes everything privately in your browser.
+---
+
+Use this tool to compress image to 50KB online and keep your photo sharp, free and without uploading it.
+
 ## A 50KB photo that still looks like you
 
 Fifty kilobytes is a common limit for photographs on application portals, exam registrations, student ID systems and HR platforms. It is small enough to store thousands of photos cheaply, yet large enough for a clear portrait if the compression is done carefully.

@@ -24,6 +24,8 @@ require LUMIPIX_DIR . '/inc/seo.php';
 require LUMIPIX_DIR . '/inc/customizer.php';
 require LUMIPIX_DIR . '/inc/markdown.php';
 require LUMIPIX_DIR . '/inc/installer.php';
+require LUMIPIX_DIR . '/inc/rankmath.php';
+require LUMIPIX_DIR . '/inc/popups.php';
 
 if ( is_admin() ) {
 	require LUMIPIX_DIR . '/inc/admin.php';

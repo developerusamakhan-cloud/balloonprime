@@ -10,10 +10,10 @@ const out = path.join(themeDir, 'assets/avatars');
 fs.mkdirSync(out, { recursive: true });
 const font = fs.readFileSync(path.join(themeDir, 'assets/fonts/geist-latin.woff2')).toString('base64');
 const people = {
-  'ayesha-khan': ['AK', '#6d4bff', '#e0479e'],
-  'hamza-iqbal': ['HI', '#0b8ad9', '#6d4bff'],
+  'emily-carter': ['EC', '#6d4bff', '#e0479e'],
+  'james-walker': ['JW', '#0b8ad9', '#6d4bff'],
   'daniel-brooks': ['DB', '#ff8a4c', '#e0479e'],
-  'sara-malik': ['SM', '#d63d8f', '#ffb547'],
+  'olivia-bennett': ['OB', '#d63d8f', '#ffb547'],
 };
 (async () => {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });

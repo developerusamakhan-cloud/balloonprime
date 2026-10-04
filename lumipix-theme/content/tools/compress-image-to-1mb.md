@@ -1,3 +1,10 @@
+---
+keywords: compress image to 1mb, reduce image size to 1mb, compress jpg to 1mb, 1mb photo, compress photo under 1mb
+seo_desc: Compress image to 1MB online with almost no visible difference – perfect for large camera photos. Free, private and no signup.
+---
+
+Use this tool to compress image to 1MB online and keep almost all of the original quality.
+
 ## Under 1MB without visible loss
 
 A 1MB limit is common on websites, marketplaces, email services, ticketing systems and support forms. Modern phone and camera photos easily exceed it: a 12-megapixel phone photo is often 3–5MB, and camera files can be 10MB or more. The good news is that at 1MB you can keep almost all of the visible quality.

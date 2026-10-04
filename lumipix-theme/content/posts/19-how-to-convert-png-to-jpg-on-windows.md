@@ -1,4 +1,5 @@
 ---
+keywords: convert png to jpg on windows, png to jpg windows 10, png to jpg windows 11, convert png to jpg paint, png to jpg free
 title: How to Convert PNG to JPG on Windows (3 Free Ways)
 category: Formats & Printing
 tool: image-resizer
@@ -7,7 +8,7 @@ seo_desc: Convert PNG to JPG on Windows using Paint, the Photos app, or a free b
 excerpt: Three free ways to turn PNG files into JPG on Windows, and what happens to transparent areas when you do.
 ---
 
-PNG files are great for screenshots and graphics, but they are often too large for email, and many forms only accept JPG. Converting is easy on Windows. Here are three free methods.
+PNG files are great for screenshots and graphics, but they are often too large for email, and many forms only accept JPG. It is easy to convert PNG to JPG on Windows. Here are three free methods.
 
 ## Method 1: Paint
 

@@ -1,3 +1,10 @@
+---
+keywords: resize image for instagram, instagram post size, instagram portrait 1080x1350, instagram story size, instagram resizer
+seo_desc: Resize image for Instagram posts (1080×1080), portraits (1080×1350) and stories (1080×1920) without cropping important parts. Free and private.
+---
+
+Use this tool to resize image for Instagram posts, portraits and stories without cutting off what matters.
+
 ## Instagram sizes in one tap
 
 Instagram crops and recompresses every image you upload. If your photo does not match the shapes it expects, it cuts off edges or softens details. This tool resizes photos to the exact sizes Instagram uses, with a choice of filling the frame or keeping the whole picture with a background colour. It runs in your browser, so your photos stay on your device.

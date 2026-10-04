@@ -1,13 +1,14 @@
 ---
+keywords: compress photo for online form, photo size for online application, reduce photo size for form, photo upload size limit, compress signature for form
 title: How to Compress a Photo for Online Application Forms
 category: Compression
 tool: compress-image
-seo_title: How to Compress a Photo for Online Application Forms (2026 Guide)
-seo_desc: Online form rejecting your photo? Find the exact size limit, compress your photo and signature to fit, and upload first time. Free and private.
+seo_title: How to Compress Photo for Online Form Uploads (2026 Guide)
+seo_desc: Online form rejecting your picture? Learn how to compress photo for online form uploads, find the size limit and fix your signature too.
 excerpt: Why application portals reject photos, how to read the requirements, and how to fix your photo and signature in under a minute.
 ---
 
-Few things are as frustrating as filling in a long online application, reaching the upload step and seeing "File size exceeds the maximum limit". Job portals, university admissions, scholarship forms, visa applications and public service commissions all set strict limits on photos and documents, and they rarely tell you how to meet them.
+Few things are as frustrating as filling in a long online application, reaching the upload step and seeing "File size exceeds the maximum limit". Job portals, university admissions, scholarship forms, visa applications and public service commissions all set strict limits on photos and documents, and they rarely tell you how to meet them. This guide shows how to compress photo for online form uploads and get it accepted first time.
 
 Here is a simple process that works for almost any form.
 

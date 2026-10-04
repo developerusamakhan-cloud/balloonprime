@@ -1,3 +1,10 @@
+---
+keywords: compress image to 200kb, 200kb photo, reduce image size to 200kb, compress jpg to 200kb, compress scan to 200kb
+seo_desc: Compress image to 200KB online in one click – sharp photos and readable scans. Free, no signup, and fully private.
+---
+
+Use this tool to compress image to 200KB online for documents, scans and photos, free and private.
+
 ## Room for detail, ideal for documents
 
 A 200KB limit gives you plenty of room. It is the size many portals choose for scanned documents: identity cards, degrees, transcripts, domicile certificates, experience letters and fee receipts. At 200KB, a full A4 page stays readable at around 1500–2000 pixels wide, and photos look sharp even on large screens.

@@ -1,7 +1,10 @@
 ---
+keywords: free image tools, compress image, image resizer, remove background, online image editor
 seo_title: Lumi Pix – Free Image Tools: Compress, Resize & Remove Background
-seo_desc: Compress images to an exact KB size, resize in pixels, cm or inches, and remove backgrounds with on-device AI. Free, no signup, and your photos never leave your device.
+seo_desc: Free image tools to compress images to an exact KB size, resize in pixels, cm or inches, and remove backgrounds. No signup, and photos never leave your device.
 ---
+
+Lumi Pix is a set of free image tools that compress, resize and remove backgrounds right in your browser, with nothing uploaded.
 
 ## What Lumi Pix does
 

@@ -1,13 +1,14 @@
 ---
+keywords: resize multiple images at once, batch resize images, bulk image resizer, resize many photos, batch image resizer free
 title: How to Resize Multiple Images at Once (Batch Resize, Free)
 category: Resizing
 tool: image-resizer
 seo_title: How to Resize Multiple Images at Once – Free Batch Image Resizer
-seo_desc: Resize many images to the same size in one go, on any device. Batch resize by pixels, percentage or print size, and download them all at once.
+seo_desc: How to resize multiple images at once on any device: batch resize by pixels, percent or preset with a free browser tool.
 excerpt: Resize a whole folder of photos to the same size in one go, without installing anything.
 ---
 
-Product photos for a shop, holiday pictures for a website, a set of images for a presentation: resizing them one by one is tedious. Batch resizing applies the same settings to every image at once.
+Product photos for a shop, holiday pictures for a website, a set of images for a presentation: resizing them one by one is tedious. Batch resizing lets you resize multiple images at once with the same settings.
 
 ## Batch resize in the browser
 

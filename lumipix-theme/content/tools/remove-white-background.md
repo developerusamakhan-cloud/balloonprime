@@ -1,3 +1,10 @@
+---
+keywords: remove white background from image, remove white background, make white transparent, transparent png, remove white background from logo
+seo_desc: Remove white background from image files – logos, signatures and scans – in one click. Transparent PNG, instant, free and fully private.
+---
+
+Use this tool to remove white background from image files such as logos, signatures and scans in one click.
+
 ## Instant transparency for flat backgrounds
 
 When an image has a plain white background, such as a scanned signature, a logo, a stamp or a drawing on paper, you do not need AI to remove it. This tool measures how close each pixel is to the background colour and fades it out smoothly, keeping the edges soft and natural. It works instantly, even on large scans, and it runs entirely in your browser.

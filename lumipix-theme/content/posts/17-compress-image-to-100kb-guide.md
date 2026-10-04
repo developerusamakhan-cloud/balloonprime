@@ -1,9 +1,10 @@
 ---
+keywords: compress image to 100kb, reduce image size to 100kb, 100kb photo, compress jpg to 100kb, compress png to 100kb
 title: How to Compress an Image to 100KB on Any Device
 category: Compression
 tool: compress-image-to-100kb
 seo_title: How to Compress Image to 100KB – Free on Phone, Windows & Mac
-seo_desc: The easiest way to get a JPG or PNG under 100KB on Android, iPhone, Windows or Mac, keeping it sharp enough for forms, profiles and email.
+seo_desc: How to compress image to 100KB on Android, iPhone, Windows or Mac, keeping JPG and PNG photos sharp. Free and private.
 excerpt: The most common upload limit, explained: how to get any photo under 100KB on your phone or computer.
 ---
 

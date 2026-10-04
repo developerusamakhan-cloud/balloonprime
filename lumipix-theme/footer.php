@@ -59,6 +59,9 @@ defined( 'ABSPATH' ) || exit;
 				<?php foreach ( lumipix_legal_links() as $legal ) : ?>
 					<a href="<?php echo esc_url( $legal[1] ); ?>"><?php echo esc_html( $legal[0] ); ?></a>
 				<?php endforeach; ?>
+				<?php if ( get_theme_mod( 'lumipix_cookie_enabled', true ) ) : ?>
+					<button type="button" class="site-footer__link-btn" data-consent-open><?php esc_html_e( 'Cookie settings', 'lumipix' ); ?></button>
+				<?php endif; ?>
 			</nav>
 		</div>
 

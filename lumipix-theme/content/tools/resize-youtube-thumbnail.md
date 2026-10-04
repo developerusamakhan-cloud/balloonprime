@@ -1,3 +1,10 @@
+---
+keywords: youtube thumbnail resizer, youtube thumbnail size, 1280x720 thumbnail, resize youtube thumbnail, youtube thumbnail maker
+seo_desc: YouTube thumbnail resizer: turn any image into a 1280×720 thumbnail and keep it under the upload limit. Fill or fit, JPG or PNG. Free and private.
+---
+
+This free YouTube thumbnail resizer turns any image into a sharp 1280×720 thumbnail in seconds.
+
 ## Thumbnails that fit YouTube perfectly
 
 The thumbnail is often the first thing viewers judge a video by. YouTube recommends thumbnails of **1280×720 pixels** in a 16:9 shape, with a file size under its upload limit (check YouTube Help for the current limit). This tool resizes any image to exactly 1280×720 and saves a JPG that is usually well under the limit. It runs in your browser, so your designs are never uploaded.

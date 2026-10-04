@@ -1,3 +1,10 @@
+---
+keywords: image resizer, resize image, resize image in pixels, resize image in cm, batch image resizer
+seo_desc: Free image resizer: resize JPG, PNG and WebP by pixels, percent, cm or inches. Batch resize, social presets and print DPI. Private.
+---
+
+This free image resizer works in pixels, percent, centimetres or inches, for one photo or a whole batch.
+
 ## One resizer for screens and paper
 
 Different jobs measure images differently. Websites and apps want pixels. Printers and many official forms want centimetres, millimetres or inches. Social networks want specific shapes. The Lumi Pix Image Resizer handles all of them with one set of controls, and it runs in your browser, so your photos never leave your device.

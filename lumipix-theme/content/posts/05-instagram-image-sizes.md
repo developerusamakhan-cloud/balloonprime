@@ -1,4 +1,5 @@
 ---
+keywords: instagram image sizes, instagram post size, instagram portrait size 1080x1350, instagram story size, instagram reel size
 title: Instagram Image Sizes in 2026: Posts, Portraits, Stories and Reels
 category: Social Media
 tool: resize-image-for-instagram

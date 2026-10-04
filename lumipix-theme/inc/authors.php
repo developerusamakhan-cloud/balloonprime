@@ -21,16 +21,16 @@ function lumipix_pack_authors() {
 	return apply_filters(
 		'lumipix_pack_authors',
 		array(
-			'ayesha-khan'   => array(
-				'name'       => 'Ayesha Khan',
+			'emily-carter'  => array(
+				'name'       => 'Emily Carter',
 				'role_label' => __( 'Compression & online forms', 'lumipix' ),
-				'bio'        => __( 'Ayesha writes the Lumi Pix guides on compressing photos and preparing images for online applications. She focuses on clear, step-by-step instructions that work on any phone.', 'lumipix' ),
+				'bio'        => __( 'Emily writes the Lumi Pix guides on compressing photos and preparing images for online applications. She focuses on clear, step-by-step instructions that work on any phone.', 'lumipix' ),
 				'categories' => array( 'Compression' ),
 			),
-			'hamza-iqbal'   => array(
-				'name'       => 'Hamza Iqbal',
+			'james-walker'  => array(
+				'name'       => 'James Walker',
 				'role_label' => __( 'Resizing, ID photos & signatures', 'lumipix' ),
-				'bio'        => __( 'Hamza covers resizing, passport photos and signatures. He tests every method on real phones and computers before writing it up.', 'lumipix' ),
+				'bio'        => __( 'James covers resizing, passport photos and signatures. He tests every method on real phones and computers before writing it up.', 'lumipix' ),
 				'categories' => array( 'Resizing', 'Photos & IDs' ),
 			),
 			'daniel-brooks' => array(
@@ -39,15 +39,70 @@ function lumipix_pack_authors() {
 				'bio'        => __( 'Daniel explains image formats, DPI and printing in plain English, so you can choose the right file for screen or paper without the jargon.', 'lumipix' ),
 				'categories' => array( 'Formats & Printing' ),
 			),
-			'sara-malik'    => array(
-				'name'       => 'Sara Malik',
+			'olivia-bennett' => array(
+				'name'       => 'Olivia Bennett',
 				'role_label' => __( 'Background removal & social media', 'lumipix' ),
-				'bio'        => __( 'Sara writes about background removal, product photos and social media image sizes, with a focus on getting professional results from free tools.', 'lumipix' ),
+				'bio'        => __( 'Olivia writes about background removal, product photos and social media image sizes, with a focus on getting professional results from free tools.', 'lumipix' ),
 				'categories' => array( 'Background Removal', 'Comparisons', 'Social Media' ),
 			),
 		)
 	);
 }
+
+/**
+ * Rename author accounts created by earlier theme versions to the current
+ * profiles. Runs once; only touches users the theme created itself.
+ */
+function lumipix_migrate_pack_authors() {
+	if ( (int) get_option( 'lumipix_authors_rev' ) >= 2 ) {
+		return;
+	}
+	global $wpdb;
+	$renamed  = array(
+		'ayesha-khan' => 'emily-carter',
+		'hamza-iqbal' => 'james-walker',
+		'sara-malik'  => 'olivia-bennett',
+	);
+	$profiles = lumipix_pack_authors();
+	add_filter( 'send_email_change_email', '__return_false' );
+	foreach ( $renamed as $old => $new ) {
+		if ( ! isset( $profiles[ $new ] ) ) {
+			continue;
+		}
+		$ids = get_users(
+			array(
+				'meta_key'   => '_lumipix_author', // phpcs:ignore WordPress.DB.SlowDBQuery
+				'meta_value' => $old, // phpcs:ignore WordPress.DB.SlowDBQuery
+				'fields'     => 'ID',
+			)
+		);
+		foreach ( $ids as $id ) {
+			$p     = $profiles[ $new ];
+			$parts = explode( ' ', $p['name'], 2 );
+			$login = sanitize_user( str_replace( '-', '', $new ), true );
+			if ( ! username_exists( $login ) ) {
+				$wpdb->update( $wpdb->users, array( 'user_login' => $login ), array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			}
+			wp_update_user(
+				array(
+					'ID'            => $id,
+					'display_name'  => $p['name'],
+					'nickname'      => $p['name'],
+					'first_name'    => $parts[0],
+					'last_name'     => $parts[1] ?? '',
+					'user_nicename' => $new,
+					'user_email'    => $new . '@authors.lumipix.invalid',
+					'description'   => $p['bio'],
+				)
+			);
+			update_user_meta( $id, '_lumipix_author', $new );
+			clean_user_cache( $id );
+		}
+	}
+	remove_filter( 'send_email_change_email', '__return_false' );
+	update_option( 'lumipix_authors_rev', 2 );
+}
+add_action( 'admin_init', 'lumipix_migrate_pack_authors' );
 
 /**
  * Create (or find) the user for an author profile.

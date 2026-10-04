@@ -1,13 +1,14 @@
 ---
+keywords: resize a picture in pixels, resize image in pixels, exact pixel size, change image dimensions, resize without stretching
 title: How to Resize a Picture in Pixels (Exact Width and Height)
 category: Resizing
 tool: image-resizer
 seo_title: How to Resize a Picture in Pixels – Exact Width × Height, Free
-seo_desc: Resize any picture to an exact pixel size like 1080×1080 or 600×400 without stretching it. Learn aspect ratio, fit vs fill, and batch resizing.
+seo_desc: How to resize a picture in pixels to an exact size like 1080×1080 or 600×400 without stretching it. Free, on any device.
 excerpt: Get any picture to an exact pixel size without stretching faces or losing the important parts.
 ---
 
-Websites, apps and forms often ask for an image at an exact size, such as 600 × 400 pixels, 1080 × 1080 or 1920 × 1080. Typing two numbers sounds easy, but if your photo is a different shape, the result can be stretched or badly cropped. Here is how to get it right.
+Websites, apps and forms often ask for an image at an exact size, such as 600 × 400 pixels, 1080 × 1080 or 1920 × 1080. Typing two numbers sounds easy, but if your photo is a different shape, the result can be stretched or badly cropped. Here is how to resize a picture in pixels and get it right.
 
 ## Step 1: Know your picture's current size
 

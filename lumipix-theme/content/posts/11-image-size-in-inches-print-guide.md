@@ -1,13 +1,14 @@
 ---
+keywords: image size in inches, print size chart, pixels for 4x6 print, image size in cm, 300 dpi print size
 title: Image Size in Inches and Centimetres: A Simple Print Guide
 category: Formats & Printing
 tool: image-resizer
 seo_title: Image Size in Inches & CM for Printing – Pixels Needed at 300 DPI
-seo_desc: How many pixels do you need to print 4×6, 5×7, 8×10 or A4? A simple print size chart and how to resize an image in inches or centimetres.
+seo_desc: Image size in inches and cm for printing: how many pixels you need for 4×6, 5×7, 8×10 or A4 at 300 DPI, with a simple chart.
 excerpt: How many pixels you need for every common print size, and how to resize an image in inches or centimetres correctly.
 ---
 
-Screens think in pixels. Printers think in inches and centimetres. When a photo prints blurry, or comes out the wrong size, it is almost always because the two were not matched. This guide gives you the numbers and a simple method.
+Screens think in pixels. Printers think in inches and centimetres. When a photo prints blurry, or comes out the wrong size, it is almost always because the two were not matched. This guide converts image size in inches and centimetres to pixels and gives you a simple method.
 
 ## The one formula you need
 

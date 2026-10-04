@@ -1,13 +1,14 @@
 ---
+keywords: png vs jpg, png or jpg, difference between png and jpg, jpg vs png quality, png vs jpg file size
 title: PNG vs JPG: Which Format Is Better and When to Use Each
 category: Formats & Printing
 tool: compress-image
 seo_title: PNG vs JPG – Which Is Better Quality and When to Use Each
-seo_desc: PNG or JPG? Learn the real difference in quality, file size and transparency, and which format to use for photos, logos, screenshots and forms.
+seo_desc: PNG vs JPG: the real difference in quality, file size and transparency, and which format to use for photos, logos, screenshots and forms.
 excerpt: PNG is not "better" than JPG, it is different. Here is how to choose the right format every time.
 ---
 
-"Is PNG better quality than JPG?" is one of the most common image questions, and the honest answer is: it depends on the picture. Each format is designed for a different kind of image. Pick the right one and you get a sharper result in a smaller file.
+"Is PNG better quality than JPG?" is one of the most common image questions, and the honest answer is: it depends on the picture. In the PNG vs JPG question, each format is designed for a different kind of image. Pick the right one and you get a sharper result in a smaller file.
 
 ## The key difference
 

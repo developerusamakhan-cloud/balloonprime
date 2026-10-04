@@ -1,13 +1,14 @@
 ---
+keywords: take a passport photo at home, passport photo with phone, diy passport photo, passport photo background, passport photo lighting
 title: How to Take a Passport Photo at Home With Your Phone
 category: Photos & IDs
 tool: passport-size-photo
 seo_title: How to Take a Passport Photo at Home With Your Phone (Step by Step)
-seo_desc: Take a compliant-looking passport photo at home: lighting, background, camera position and how to crop it to 35×45 mm or 2×2 inches at 300 DPI.
+seo_desc: How to take a passport photo at home: lighting, background, camera position and the exact size, using only your phone. Free.
 excerpt: Lighting, background, camera position and cropping: everything you need for a good passport photo without a studio.
 ---
 
-A studio passport photo costs money and a trip. With a phone, a plain wall and a few minutes, you can take one at home. Whether it is accepted depends on the rules of the authority you apply to, so read their guidance first, then use these steps to meet it.
+A studio passport photo costs money and a trip. With a phone, a plain wall and a few minutes, you can take a passport photo at home. Whether it is accepted depends on the rules of the authority you apply to, so read their guidance first, then use these steps to meet it.
 
 ## What you need
 

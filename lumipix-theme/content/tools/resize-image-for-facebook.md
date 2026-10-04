@@ -1,3 +1,10 @@
+---
+keywords: resize image for facebook, facebook post size, facebook cover size, facebook link preview size, facebook story size
+seo_desc: Resize image for Facebook posts, link previews, covers and stories without awkward crops. Free, private and works on mobile.
+---
+
+Use this tool to resize image for Facebook posts, link previews, covers and stories in one tap.
+
 ## The right shape for every Facebook placement
 
 Facebook shows images in many places: the feed, link previews, page and profile covers, and stories. Each one has its own shape, and an image that does not match is cropped or shrunk. This tool resizes photos to the sizes Facebook works with, so you decide what is visible. It runs in your browser, so your photos are never uploaded.

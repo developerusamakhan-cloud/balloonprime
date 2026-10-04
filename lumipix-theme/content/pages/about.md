@@ -1,7 +1,10 @@
 ---
+keywords: about lumi pix, private image tools, browser image tools, no upload image editor, free image tools
 seo_title: About Lumi Pix – Private Image Tools That Run in Your Browser
-seo_desc: Lumi Pix builds free image tools that run on your own device. No uploads, no signups and no watermarks. Learn how it works and how we keep it free.
+seo_desc: About Lumi Pix: free image tools that run on your own device, with no uploads, no signups and no watermarks. Learn how it works and how we keep it free.
 ---
+
+About Lumi Pix: who we are, why we built these tools and how we keep them free and private.
 
 ## Image tools without the catch
 

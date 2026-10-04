@@ -1,13 +1,14 @@
 ---
+keywords: reduce image size in kb, reduce photo size in kb, reduce image size on phone, reduce image size on windows, reduce image size on mac
 title: How to Reduce Image Size in KB (Phone, Windows and Mac)
 category: Compression
 tool: compress-image
 seo_title: How to Reduce Image Size in KB – Free Methods for Every Device
-seo_desc: Reduce a photo's file size in KB on Android, iPhone, Windows or Mac. Learn the three things that control file size and the fastest free method.
+seo_desc: How to reduce image size in KB on Android, iPhone, Windows or Mac. Learn the three things that control file size and the fastest free fix.
 excerpt: Three things decide how many KB an image takes up. Change the right one and you can shrink almost any photo in seconds.
 ---
 
-Whether an email bounces, a website refuses an upload or your phone storage is full, the fix is the same: make the image file smaller. This guide explains what actually controls file size and how to reduce it on any device.
+Whether an email bounces, a website refuses an upload or your phone storage is full, the fix is the same: make the image file smaller. This guide explains what actually controls file size and how to reduce image size in KB on Android, iPhone, Windows and Mac.
 
 ## What decides an image's file size?
 

@@ -1,3 +1,10 @@
+---
+keywords: compress image to 500kb, 500kb photo, reduce image size to 500kb, compress jpg to 500kb, compress png to 500kb
+seo_desc: Compress image to 500KB online with excellent quality for websites, email and documents. Free, private and no signup.
+---
+
+Use this tool to compress image to 500KB online with excellent quality, free and without uploading.
+
 ## High quality under 500KB
 
 Half a megabyte gives you a lot of room. A full-resolution phone photo often fits under 500KB with no difference you can see at normal viewing size, and multi-page document scans stay crisp. That makes 500KB a popular limit for website uploads, help-desk attachments, school portals and email.

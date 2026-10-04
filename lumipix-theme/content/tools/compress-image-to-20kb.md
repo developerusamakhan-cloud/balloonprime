@@ -1,3 +1,10 @@
+---
+keywords: compress image to 20kb, 20kb photo, reduce image size to 20kb, compress jpg to 20kb, signature 20kb
+seo_desc: Compress image to 20KB online in seconds – ideal for photos and signatures on application forms. Free, no signup, and nothing is uploaded.
+---
+
+Use this tool to compress image to 20KB online for photos and signatures on application forms, free and private.
+
 ## Why 20KB is a special case
 
 Twenty kilobytes is one of the strictest limits you will meet. A typical phone photo is 2–5MB, so it has to shrink by one or two hundred times. Recruitment portals, admission forms and some government services use this limit for signatures and small photographs, because the images are displayed small and stored in large numbers.

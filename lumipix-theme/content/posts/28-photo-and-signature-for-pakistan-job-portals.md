@@ -1,13 +1,14 @@
 ---
+keywords: photo and signature for ppsc, fpsc photo size, nts photo size, ppsc signature size, online form upload checklist
 title: Photo and Signature for PPSC, FPSC and NTS Online Forms: A Checklist
 category: Photos & IDs
 tool: compress-photo-for-ppsc
-seo_title: Photo & Signature for PPSC, FPSC, NTS Online Forms – Upload Checklist
-seo_desc: A practical checklist for preparing your photo, signature and document scans for PPSC, FPSC and NTS online forms, so uploads work first time.
+seo_title: Photo and Signature for PPSC, FPSC & NTS Online Forms – Checklist
+seo_desc: Photo and signature for PPSC, FPSC and NTS online forms: a practical checklist for sizes, formats and document scans before you apply.
 excerpt: A step-by-step checklist for getting your photo, signature and documents ready before you open the PPSC, FPSC or NTS portal.
 ---
 
-Recruitment and testing portals in Pakistan, such as PPSC, FPSC and NTS, ask candidates to upload a photograph, a signature and often scanned documents. Each upload has rules on size and format, and a rejected file can cost you time near a deadline. This checklist helps you prepare everything before you start the form.
+Recruitment and testing portals in Pakistan ask candidates to upload a photo and signature for PPSC, FPSC and NTS forms, and often scanned documents. Each upload has rules on size and format, and a rejected file can cost you time near a deadline. This checklist helps you prepare everything before you start the form.
 
 **Important:** requirements are set by each organisation and can change between advertisements. Always read the instructions for the specific post you are applying for. Lumi Pix is an independent tool and is not affiliated with PPSC, FPSC, NTS or any government department.
 

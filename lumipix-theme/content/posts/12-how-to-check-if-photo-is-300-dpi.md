@@ -1,13 +1,14 @@
 ---
+keywords: check if a photo is 300 dpi, check dpi of image, change dpi to 300, image dpi windows, image dpi mac
 title: How to Check if a Photo Is 300 DPI (and Change It if Not)
 category: Formats & Printing
 tool: image-resizer
 seo_title: How to Check if a Photo Is 300 DPI – Windows, Mac and Online
-seo_desc: Find the DPI of any image on Windows or Mac, understand what the number really means, and set a photo to 300 DPI correctly for printing.
+seo_desc: How to check if a photo is 300 DPI on Windows or Mac, what the number really means, and how to set 300 DPI for printing or forms.
 excerpt: Where to find an image's DPI on Windows and Mac, what the number really means, and how to make a photo print-ready at 300 DPI.
 ---
 
-Print shops, publishers and some application forms ask for images "at 300 DPI". Checking takes seconds, but the number is often misunderstood. Here is how to find it and what to do with it.
+Print shops, publishers and some application forms ask for images "at 300 DPI". Checking takes seconds, but the number is often misunderstood. Here is how to check if a photo is 300 DPI and what to do if it is not.
 
 ## How to check DPI on Windows
 

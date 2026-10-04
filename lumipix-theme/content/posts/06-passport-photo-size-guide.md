@@ -1,4 +1,5 @@
 ---
+keywords: passport photo size, 35x45 mm photo, 2x2 inch photo, passport photo size in pixels, passport photo 300 dpi
 title: Passport Photo Size Guide: 35×45 mm, 2×2 Inch and Pixels at 300 DPI
 category: Photos & IDs
 tool: passport-size-photo
@@ -7,7 +8,7 @@ seo_desc: Passport photo sizes explained: 35×45 mm, 2×2 inches and how many pi
 excerpt: The two most common passport photo sizes, what they are in pixels, and how to make one correctly at home.
 ---
 
-Passport and ID photos follow strict rules, and the size is the first thing that gets checked. This guide explains the common sizes, converts them to pixels for printing and online uploads, and shows how to make one yourself.
+Passport and ID photos follow strict rules, and the passport photo size is the first thing that gets checked. This guide explains the common sizes, converts them to pixels for printing and online uploads, and shows how to make one yourself.
 
 ## The two most common sizes
 

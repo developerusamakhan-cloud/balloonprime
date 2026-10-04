@@ -1,13 +1,14 @@
 ---
+keywords: compress image to 50kb, reduce photo size to 50kb, 50kb photo, compress jpg to 50kb, image size 50kb
 title: How to Compress an Image to 50KB Without Losing Quality
 category: Compression
 tool: compress-image-to-50kb
-seo_title: How to Compress an Image to 50KB (Free, No Quality Loss)
-seo_desc: A simple, step-by-step way to get any photo under 50KB while keeping it sharp. Works on phone and PC, free and without uploading your photo.
+seo_title: Compress Image to 50KB Without Losing Quality – Free Step-by-Step Guide
+seo_desc: How to compress image to 50KB while keeping it sharp: a simple step-by-step method for phone and PC, free and without uploading your photo.
 excerpt: The fastest way to get a photo under 50KB for a form or profile, and how to keep it sharp while you do it.
 ---
 
-A 50KB limit sounds small, and it is. A photo straight from a modern phone is usually between 2MB and 6MB, so it has to shrink by 40 to 100 times. Done badly, that turns a clear portrait into a blocky smudge. Done well, the result looks almost the same on screen and uploads first time.
+A 50KB limit sounds small, and it is. A photo straight from a modern phone is usually between 2MB and 6MB, so it has to shrink by 40 to 100 times. Done badly, that turns a clear portrait into a blocky smudge. Done well, the result looks almost the same on screen and uploads first time. Here is how to compress image to 50KB the right way, on a phone or a computer.
 
 This guide shows the quick way, then explains what is happening so you can get the best possible result.
 

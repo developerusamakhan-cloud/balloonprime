@@ -1,13 +1,14 @@
 ---
+keywords: remove background from an image, remove background free, remove background on iphone, remove background in powerpoint, transparent background
 title: How to Remove the Background From an Image: 5 Free Methods
 category: Background Removal
 tool: background-remover
 seo_title: How to Remove Background From an Image – 5 Free Methods (2026)
-seo_desc: Remove the background from any photo for free: an online AI tool, iPhone, Windows Paint, PowerPoint and Photoshop. Which method works best for each job.
+seo_desc: Five free ways to remove background from an image: an online AI tool, iPhone, Windows Paint, PowerPoint and more. Compare quality and speed.
 excerpt: Five free ways to cut out a subject, from one-click AI to built-in phone features, and which one to pick for portraits, products and logos.
 ---
 
-A transparent background turns an ordinary photo into something you can use anywhere: a product shot for a shop, a profile picture with a new colour behind it, or a cut-out for a poster. You do not need expensive software. Here are five free methods and when each one makes sense.
+A transparent background turns an ordinary photo into something you can use anywhere: a product shot for a shop, a profile picture with a new colour behind it, or a cut-out for a poster. You do not need expensive software. Here are five free ways to remove background from an image, and when each one makes sense.
 
 ## Method 1: An AI background remover in your browser
 

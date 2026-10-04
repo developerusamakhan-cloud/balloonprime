@@ -1,3 +1,10 @@
+---
+keywords: background remover, remove background, remove background free, transparent background, ai background remover
+seo_desc: Free background remover with on-device AI. Download a full-resolution transparent PNG without an account – your photo is never uploaded.
+---
+
+This free background remover uses AI on your own device to cut out people, products and pets in seconds.
+
 ## Remove backgrounds with AI that runs on your device
 
 Most online background removers upload your photo to a server, process it there, and then offer a small free preview while charging for the full-resolution file. Lumi Pix works differently. The AI model is downloaded to your browser once and then runs on your own phone or computer. Your photo is never uploaded, and you can download the full-size result for free.

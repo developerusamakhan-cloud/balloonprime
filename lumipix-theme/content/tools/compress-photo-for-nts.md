@@ -1,3 +1,10 @@
+---
+keywords: compress photo for nts, nts photo size, nts registration photo, nts signature size, nts image upload
+seo_desc: Compress photo for NTS online registration and fit the upload limit first time. Free, private and works on mobile.
+---
+
+Use this tool to compress photo for NTS online registration, so your picture fits the upload limit first time.
+
 ## Preparing your photo for NTS registration
 
 The National Testing Service (NTS) conducts tests in Pakistan for admissions, scholarships and recruitment on behalf of many organisations, including tests such as NAT and GAT. Online registration usually requires a photograph, and some tests also ask for other documents. The photo must meet the size and format rules stated in the instructions for your test.

@@ -1,4 +1,5 @@
 ---
+keywords: resize an image in photoshop, photoshop image size, resize image without photoshop, resize image keep quality, free image resizer
 title: How to Resize an Image in Photoshop (and a Faster Free Way)
 category: Resizing
 tool: image-resizer
@@ -7,7 +8,7 @@ seo_desc: Step-by-step: resize an image in Photoshop with Image Size, keep quali
 excerpt: The exact Photoshop steps for resizing without distortion, and a free browser alternative when you just need it done.
 ---
 
-Photoshop is the classic tool for resizing images, and it does the job well. But if all you need is a photo at a specific size, opening a professional editor can feel like using a crane to lift a cup. This guide covers both: the proper Photoshop method, and a faster free alternative.
+Photoshop is the classic tool for resizing images, and it does the job well. But if all you need is a photo at a specific size, opening a professional editor can feel like using a crane to lift a cup. This guide covers both: how to resize an image in Photoshop properly, and a faster free alternative.
 
 ## Resizing in Photoshop, step by step
 

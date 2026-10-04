@@ -1,13 +1,14 @@
 ---
+keywords: compress a document scan to 200kb, compress scanned document, 200kb pdf scan image, reduce scan size, readable scanned text
 title: How to Compress a Document Scan to 200KB and Keep Text Readable
 category: Compression
 tool: compress-image-to-200kb
 seo_title: Compress a Document Scan to 200KB – Keep Text Readable
-seo_desc: Shrink scans of ID cards, certificates and transcripts to 200KB for online forms while keeping every word readable. Free and private.
+seo_desc: How to compress a document scan to 200KB for online forms: ID cards, certificates and transcripts that stay readable.
 excerpt: How to scan certificates and ID cards with your phone and get them under 200KB with every word still readable.
 ---
 
-Application portals often ask for copies of ID cards, degrees, transcripts and certificates, usually as JPG files under 200KB or so. Text is less forgiving than photos: compress it too hard and letters smear together. Here is how to keep documents crisp.
+Application portals often ask for copies of ID cards, degrees, transcripts and certificates, usually as JPG files under 200KB or so. Text is less forgiving than photos: compress it too hard and letters smear together. Here is how to compress a document scan to 200KB and keep it crisp.
 
 ## Step 1: Capture the document properly
 

@@ -1,3 +1,10 @@
+---
+keywords: compress image to 100kb, 100kb photo, reduce image size to 100kb, compress jpg to 100kb, compress png to 100kb
+seo_desc: Compress image to 100KB online without losing visible quality. Works with JPG, PNG and WebP, needs no signup, and never uploads your files.
+---
+
+Use this tool to compress image to 100KB online without visible quality loss, free and fully private.
+
 ## The most common upload limit
 
 If you have filled in an online form recently, there is a good chance it asked for an image "under 100KB". Exam boards, job portals, visa services, university admissions and HR systems all use this limit. It is generous enough for a sharp portrait or a readable single-page document, yet small enough for servers to store millions of uploads.

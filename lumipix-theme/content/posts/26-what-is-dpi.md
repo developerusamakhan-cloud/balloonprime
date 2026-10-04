@@ -1,13 +1,14 @@
 ---
+keywords: what is dpi, dpi vs ppi, dpi meaning, 300 dpi, pixels per inch
 title: What Is DPI? DPI vs PPI vs Pixels Explained Simply
 category: Formats & Printing
 tool: image-resizer
 seo_title: What Is DPI? DPI vs PPI vs Pixels Explained in Plain English
-seo_desc: DPI, PPI and pixels explained simply: what each means, when DPI matters, why 300 DPI is the print standard and why it does not matter on screens.
+seo_desc: What is DPI? DPI, PPI and pixels explained simply: what each means, when DPI matters, and why 300 DPI is the print standard.
 excerpt: A plain-English explanation of DPI, PPI and pixels, and the only time the number actually matters.
 ---
 
-DPI is one of the most misunderstood terms in digital images. Forms ask for "300 DPI", phones save photos at "72 DPI", and people worry their pictures are low quality. Here is what the numbers really mean.
+DPI is one of the most misunderstood terms in digital images. Forms ask for "300 DPI", phones save photos at "72 DPI", and people worry their pictures are low quality. So what is DPI? Here is what the numbers really mean.
 
 ## Pixels: the real size of an image
 

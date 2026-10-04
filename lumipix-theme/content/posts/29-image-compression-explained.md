@@ -1,4 +1,5 @@
 ---
+keywords: image compression, lossy vs lossless, lossy compression, lossless compression, jpg compression
 title: Image Compression Explained: Lossy vs Lossless in Plain English
 category: Compression
 tool: compress-image
@@ -7,7 +8,7 @@ seo_desc: How image compression works, the difference between lossy and lossless
 excerpt: What actually happens when an image is compressed, and why some methods lose quality while others do not.
 ---
 
-Every image you see online has been compressed. Without compression, a single phone photo would take around 36MB, and web pages would load painfully slowly. This guide explains, without the maths, how compression works and how to use it well.
+Every image you see online has been compressed. Without compression, a single phone photo would take around 36MB, and web pages would load painfully slowly. This guide explains, without the maths, how image compression works and how to use it well.
 
 ## Why images need compressing
 

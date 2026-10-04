@@ -1,3 +1,10 @@
+---
+keywords: compress photo for fpsc, fpsc photo size, fpsc signature size, fpsc online apply, fpsc image upload
+seo_desc: Compress photo for FPSC online applications – photo, signature and documents under the upload limit. Free, no signup, processed on your device.
+---
+
+Use this tool to compress photo for FPSC online applications, so your picture and documents fit the upload limit.
+
 ## Preparing your photo for an FPSC application
 
 The Federal Public Service Commission (FPSC) recruits for posts in the federal government of Pakistan and conducts competitive examinations, including the CSS examination. Its online application system asks candidates to upload a photograph and, depending on the post, a signature and scanned documents. Each upload has rules on file size, format and sometimes dimensions.

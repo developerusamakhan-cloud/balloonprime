@@ -1,7 +1,10 @@
 ---
+keywords: contact lumi pix, lumi pix support, report a bug, suggest an image tool, lumi pix email
 seo_title: Contact Lumi Pix
-seo_desc: Get in touch with Lumi Pix to report a bug, suggest a new image tool or ask a question.
+seo_desc: Contact Lumi Pix to report a bug, suggest a new image tool or ask a question. We read every message.
 ---
+
+Contact Lumi Pix to report a bug, suggest a new tool or ask a question about an image task.
 
 ## We would love to hear from you
 

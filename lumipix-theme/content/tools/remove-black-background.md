@@ -1,3 +1,10 @@
+---
+keywords: remove black background from image, remove black background, make black transparent, transparent png, remove black background from logo
+seo_desc: Remove black background from image files – logos, icons, light effects and screenshots – in one click. Transparent PNG, free and private.
+---
+
+Use this tool to remove black background from image files such as logos, icons and light effects, and download a transparent PNG.
+
 ## Make black transparent in one click
 
 Logos, icons, neon effects, light leaks, fireworks, stars and many screenshots come on a solid black background. To place them on a website, a slide or a design, you need that black to be transparent. This tool removes black, or any dark solid colour, instantly and keeps the edges smooth. It runs in your browser, so your image never leaves your device.

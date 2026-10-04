@@ -1,9 +1,10 @@
 ---
+keywords: compress image to 20kb, 20kb photo, compress signature to 20kb, reduce photo to 20kb, 20kb image online
 title: How to Compress an Image to 20KB (Photos and Signatures)
 category: Compression
 tool: compress-image-to-20kb
 seo_title: How to Compress Image to 20KB – Photo & Signature, Free Online
-seo_desc: Get a photo or signature under 20KB while keeping it clear. Why 20KB is tricky, the right dimensions to use, and a free tool that does it in one step.
+seo_desc: How to compress image to 20KB and keep it clear: why 20KB is tricky, the right dimensions, and a free tool that does it in seconds.
 excerpt: 20KB is one of the strictest upload limits. Here is how to meet it without turning your photo into a blur.
 ---
 

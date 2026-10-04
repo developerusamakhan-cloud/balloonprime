@@ -1,7 +1,10 @@
 ---
+keywords: free image tools, image compressor, image resizer, background remover, online photo tools
 seo_title: All Free Image Tools – Compress, Resize, Remove Background | Lumi Pix
-seo_desc: Every Lumi Pix image tool in one place: compress to an exact KB size, resize for print and social media, make passport photos and remove backgrounds. Free and private.
+seo_desc: All free image tools in one place: compress to an exact KB size, resize for print and social media, and remove backgrounds. No signup, nothing uploaded.
 ---
+
+Here are all our free image tools in one place, grouped by what you need to do.
 
 ## How to choose the right tool
 

@@ -1,3 +1,10 @@
+---
+keywords: compress image to 2mb, reduce image size to 2mb, compress jpg to 2mb, 2mb photo, compress photo under 2mb
+seo_desc: Compress image to 2MB online with near-original quality. Ideal for uploads, printing services and sharing. Free, private and no signup.
+---
+
+Use this tool to compress image to 2MB online with near-original quality, free and private.
+
 ## Near-original quality under 2MB
 
 A 2MB limit is common on upload forms, print and photo-book services, support desks, real-estate and car listing sites, and some government portals that accept high-quality photos. Modern phones and cameras often produce files of 4–15MB, which is too large. At 2MB you can keep almost all of the detail, so the result looks like the original.

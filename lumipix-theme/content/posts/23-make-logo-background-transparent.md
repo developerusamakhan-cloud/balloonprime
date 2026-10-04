@@ -1,13 +1,14 @@
 ---
+keywords: make a logo background transparent, transparent logo, logo png transparent, remove logo background, transparent background png
 title: How to Make a Logo Background Transparent (Free)
 category: Background Removal
 tool: remove-white-background
 seo_title: How to Make a Logo Background Transparent – Free PNG in Seconds
-seo_desc: Turn a logo on a white or coloured background into a transparent PNG. Clean edges, no halo, no signup and no upload.
+seo_desc: How to make a logo background transparent: turn a logo on white or colour into a clean PNG with no halo. Free and private.
 excerpt: Turn a logo with a white box around it into a clean transparent PNG that sits nicely on any background.
 ---
 
-A logo with a white box around it looks unprofessional on coloured websites, slides and shirts. The fix is a transparent background. If your logo sits on a flat colour, you can make it transparent in seconds.
+A logo with a white box around it looks unprofessional on coloured websites, slides and shirts. The fix is a transparent background. If your logo sits on a flat colour, you can make a logo background transparent in seconds.
 
 ## The quick method
 

@@ -1,3 +1,10 @@
+---
+keywords: resize signature online, signature resize, signature 20kb, signature 10kb, compress signature
+seo_desc: Resize signature online and compress it to 10KB, 20KB or 50KB for application forms. Free, private and works on mobile.
+---
+
+Use this tool to resize signature online to 10KB, 20KB or 50KB and keep every stroke clear.
+
 ## A clear signature that fits any form
 
 Online applications for jobs, admissions, scholarships and government services almost always ask for a scanned signature. The rules are usually strict: a JPG file under 10KB, 20KB or 50KB, sometimes with specific dimensions. This tool turns a quick phone photo of your signature into a small, clear file that fits.

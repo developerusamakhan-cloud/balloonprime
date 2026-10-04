@@ -1,3 +1,10 @@
+---
+keywords: compress photo for ppsc, ppsc photo size, ppsc signature size, ppsc online apply, ppsc image upload
+seo_desc: Compress photo for PPSC online applications in seconds – photograph and signature under the upload limit. Free, private and works on any phone.
+---
+
+Use this tool to compress photo for PPSC online applications, so your picture and signature fit the upload limit.
+
 ## Preparing your photo for a PPSC application
 
 The Punjab Public Service Commission (PPSC) recruits candidates for posts in the Government of Punjab through its online application system. Each application asks for a photograph and usually a scanned signature and supporting documents, each with its own size and format rules. A file that is too large, in the wrong format or the wrong shape is rejected at the upload step.

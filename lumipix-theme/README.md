@@ -18,7 +18,10 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 ## What's new in 1.3
 
 - **Longer content:** every article is 1,100–1,500 words, and every tool page has long-form copy (stored in `content/tools/<key>.md`), with more internal links.
-- **Authors:** four author profiles (Ayesha Khan, Hamza Iqbal, Daniel Brooks, Sara Malik) with avatars, an author box under each article and author archive pages. Articles are assigned by category. Edit names and bios in **Users**, or replace the profiles with your real team.
+- **Authors:** four author profiles (Emily Carter, James Walker, Daniel Brooks, Olivia Bennett) with avatars, an author box under each article and author archive pages. Articles are assigned by category. Edit names and bios in **Users**, or replace the profiles with your real team.
+- **Rank Math:** Setup fills each page, tool page and article's Rank Math SEO title, meta description, **five focus keywords** (the first is the primary keyword) and social image. The keywords come from the `keywords:` line in each Markdown file. Anything you change in the Rank Math box is never overwritten.
+- **Cookie banner:** Essential / Analytics / Marketing choices, stored for 180 days, wired to Google Consent Mode v2. Visitors can reopen it from **Cookie settings** in the footer. Scripts tagged `<script type="text/plain" data-lumipix-consent="analytics">` only run after consent.
+- **Lead popup:** a "Need a website?" message linking to Vyntic Studio, shown after 90 seconds on the site and at most once every 24 hours per visitor. Add `?lumipix-lead` to any URL to preview it.
 - **Comments are switched off** site-wide: no forms, no pingbacks, no comments menu.
 - **Design:** full-width featured images, a sticky article sidebar 20px below the header, cleaner tables, and a simpler footer (legal links live in the bottom bar).
 
@@ -71,6 +74,7 @@ tools/build-zip.sh major    # 1.3.0 -> 2.0.0
 - **Home page:** hero badge, heading (wrap a word in `*asterisks*` for the gradient serif accent), text, home SEO title and description, default share image.
 - **Background remover:** Hugging Face model ID (default `Xenova/modnet`) and Transformers.js URL.
 - **Ads (AdSense):** publisher ID and three slot IDs. Leave this off until the site has steady traffic.
+- **Cookie banner & lead popup:** turn each on or off, and change the popup delay, link, heading, text and button.
 - **Footer:** tagline and the **public contact email** (used in the footer, Contact page and legal pages; defaults to `hello@<your domain>`, so create that mailbox or change it here).
 
 The site icon (favicon) and logo use the standard WordPress settings. Until a Site Icon is set, the Lumipix mark is used.

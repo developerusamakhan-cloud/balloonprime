@@ -1,3 +1,10 @@
+---
+keywords: compress image to 10kb, 10kb photo, signature 10kb, reduce image size to 10kb, compress jpg to 10kb
+seo_desc: Compress image to 10KB online for signatures and small photos while keeping them readable. Free, private and works on mobile – nothing is uploaded.
+---
+
+Use this tool to compress image to 10KB online for signatures, thumbnails and small ID photos, free and without uploading anything.
+
 ## The smallest common upload limit
 
 Ten kilobytes is the tightest limit you are likely to meet. It appears most often for **signatures** on recruitment, admission and banking forms, and sometimes for tiny thumbnails or ID photos in older systems. A typical phone photo is 3MB, so a 10KB file is about three hundred times smaller.

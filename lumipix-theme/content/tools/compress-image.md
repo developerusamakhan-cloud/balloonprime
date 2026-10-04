@@ -1,3 +1,10 @@
+---
+keywords: image compressor, compress image, compress image to kb, reduce image size, compress jpg
+seo_desc: Image compressor that hits an exact size: compress JPG, PNG and WebP to 20KB, 50KB, 100KB or 200KB. Free, no signup, nothing uploaded.
+---
+
+This image compressor lets you choose the exact file size you need, then does the rest in your browser.
+
 ## Compress images to the exact size you need
 
 Most image compressors give you a quality slider and leave you to guess. You move it, save, check the file size, and try again. The Lumi Pix Image Compressor works the other way round: you tell it the size you need, such as 20KB, 100KB or 1MB, and it finds the sharpest version of your image that fits under that limit.

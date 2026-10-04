@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 3 );
+define( 'LUMIPIX_PACK_REV', 4 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -321,20 +321,27 @@ function lumipix_run_installer() {
 	foreach ( lumipix_installer_pages() as $key => $page ) {
 		$id   = lumipix_installer_page_id( $key );
 		$pack = lumipix_pack_page( $page['file'] );
-		if ( ! $id || ! $pack || get_post_meta( $id, '_lumipix_pack', true ) ) {
+		if ( ! $id || ! $pack || (int) get_post_meta( $id, '_lumipix_pack_rev', true ) >= LUMIPIX_PACK_REV ) {
 			continue;
 		}
-		$post = get_post( $id );
-		if ( ! lumipix_is_untouched( $post ) && ! in_array( $key, array( 'home' ), true ) ) {
+		$post      = get_post( $id );
+		$untouched = lumipix_is_untouched( $post );
+		$first     = ! get_post_meta( $id, '_lumipix_pack', true );
+		if ( ! $untouched && ! ( $first && 'home' === $key ) ) {
+			update_post_meta( $id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
 			continue;
 		}
-		if ( 'home' !== $key || '' === trim( $post->post_content ) ) {
+		if ( 'home' !== $key || '' === trim( $post->post_content ) || $untouched ) {
 			wp_update_post(
 				array(
 					'ID'           => $id,
 					'post_content' => lumipix_md_parse( (string) file_get_contents( LUMIPIX_DIR . '/content/pages/' . $page['file'] . '.md' ) )['html'], // phpcs:ignore WordPress.WP.AlternativeFunctions -- re-parse so links resolve now.
 				)
 			);
+			// Keep the page marked as untouched so later theme updates can refresh it again.
+			$fresh = get_post( $id );
+			$GLOBALS['wpdb']->update( $GLOBALS['wpdb']->posts, array( 'post_modified' => $fresh->post_date, 'post_modified_gmt' => $fresh->post_date_gmt ), array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			clean_post_cache( $id );
 		}
 		update_post_meta( $id, '_lumipix_faqs', $pack['faqs'] );
 		if ( ! empty( $pack['meta']['seo_title'] ) ) {
@@ -344,6 +351,7 @@ function lumipix_run_installer() {
 			update_post_meta( $id, '_lumipix_seo_desc', $pack['meta']['seo_desc'] );
 		}
 		update_post_meta( $id, '_lumipix_pack', LUMIPIX_VERSION );
+		update_post_meta( $id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
 		/* translators: %s: page title */
 		$log[] = sprintf( __( 'Added content and FAQs: %s', 'lumipix' ), $post->post_title );
 	}
@@ -353,6 +361,13 @@ function lumipix_run_installer() {
 	if ( $removed ) {
 		/* translators: %d: number of pingbacks */
 		$log[] = sprintf( __( 'Removed %d pingbacks created by internal links.', 'lumipix' ), $removed );
+	}
+
+	// Rank Math titles, descriptions, focus keywords and social images.
+	$rm = lumipix_rm_sync();
+	if ( $rm ) {
+		/* translators: %d: number of pages and posts */
+		$log[] = sprintf( __( 'Rank Math SEO fields filled for %d pages and articles.', 'lumipix' ), $rm );
 	}
 
 	update_option( 'lumipix_pack_rev_done', LUMIPIX_PACK_REV );
@@ -490,6 +505,7 @@ function lumipix_install_pack_posts() {
 		}
 		update_post_meta( $id, '_lumipix_faqs', $parsed['faqs'] );
 		update_post_meta( $id, '_lumipix_pack', LUMIPIX_VERSION );
+		update_post_meta( $id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
 		update_post_meta( $id, '_lumipix_pack_rev', LUMIPIX_PACK_REV );
 
 		if ( ! has_post_thumbnail( $id ) ) {

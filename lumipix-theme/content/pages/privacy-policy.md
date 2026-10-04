@@ -1,6 +1,7 @@
 ---
+keywords: privacy policy, lumi pix privacy, image privacy, no upload, data protection
 seo_title: Privacy Policy – Lumi Pix
-seo_desc: How Lumi Pix handles your data. Images are processed on your device and never uploaded. Learn about cookies, analytics, advertising and your rights.
+seo_desc: Privacy policy for Lumi Pix. Your images are processed on your device and never uploaded. Learn what little data we collect and your choices.
 ---
 
 **Last updated: October 2026**

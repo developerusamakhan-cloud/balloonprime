@@ -1,4 +1,5 @@
 ---
+keywords: facebook image sizes, facebook post size, facebook cover photo size, facebook link preview size, facebook profile picture size
 title: Facebook Image Sizes: Posts, Link Previews, Covers and Profiles
 category: Social Media
 tool: image-resizer

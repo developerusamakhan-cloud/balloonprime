@@ -1,9 +1,10 @@
 ---
+keywords: webp vs jpg, what is webp, convert webp to jpg, webp format, webp file size
 title: WebP vs JPG: What WebP Is and When to Convert It
 category: Formats & Printing
 tool: image-resizer
 seo_title: WebP vs JPG – What Is WebP and Should You Convert It?
-seo_desc: What the WebP format is, how it compares to JPG for size and quality, why websites use it, and how to convert WebP to JPG when an app will not open it.
+seo_desc: WebP vs JPG: what the WebP format is, how it compares for size and quality, why websites use it, and how to convert it.
 excerpt: Why so many images you save from the web are WebP, how it compares to JPG, and when you should convert.
 ---
 
