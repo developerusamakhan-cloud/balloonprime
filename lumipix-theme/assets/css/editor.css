@@ -1,0 +1,23 @@
+/* Block editor: match front-end typography. */
+@font-face {
+	font-family: "Geist";
+	src: url("../fonts/geist-latin.woff2") format("woff2");
+	font-weight: 300 800;
+	font-display: swap;
+}
+body {
+	font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+	font-size: 17.5px;
+	line-height: 1.75;
+	color: #36384d;
+}
+h1, h2, h3, h4 {
+	font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+	color: #0e0f1c;
+	letter-spacing: -0.028em;
+	line-height: 1.15;
+	font-weight: 640;
+}
+a {
+	color: #4a2ee0;
+}
