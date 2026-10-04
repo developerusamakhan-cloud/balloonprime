@@ -74,7 +74,7 @@ function lumipix_tools() {
 				$label
 			),
 			__( 'Are my photos uploaded to a server?', 'lumipix' ) => __( 'No. Compression runs entirely inside your browser. Your files never leave your device, which also makes it fast on slow connections.', 'lumipix' ),
-			__( 'What if the photo still looks too large?', 'lumipix' ) => __( 'If the quality setting alone cannot reach the target, Lumipix gently reduces the dimensions as well. You can also set a maximum width under Advanced options.', 'lumipix' ),
+			__( 'What if the photo still looks too large?', 'lumipix' ) => __( 'If the quality setting alone cannot reach the target, Lumi Pix gently reduces the dimensions as well. You can also set a maximum width under Advanced options.', 'lumipix' ),
 			__( 'Which formats are supported?', 'lumipix' ) => __( 'JPG, PNG, WebP, AVIF and most other formats your browser can open. The result is saved as JPG by default, which is accepted by almost every online form.', 'lumipix' ),
 		);
 	};
@@ -83,7 +83,7 @@ function lumipix_tools() {
 		return '<!-- wp:heading --><h2 class="wp-block-heading">' . sprintf( esc_html__( 'Why compress an image to %s?', 'lumipix' ), esc_html( $label ) ) . '</h2><!-- /wp:heading -->'
 			. '<!-- wp:paragraph --><p>' . esc_html( $use ) . '</p><!-- /wp:paragraph -->'
 			. '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'How the target-size compressor works', 'lumipix' ) . '</h2><!-- /wp:heading -->'
-			. '<!-- wp:paragraph --><p>' . esc_html__( 'Most compressors ask you to guess a quality percentage. Lumipix works the other way round: you choose the file size you need and the tool tests different quality levels until it finds the sharpest version that fits. If quality alone is not enough, it reduces the dimensions in small steps, so text and faces stay readable.', 'lumipix' ) . '</p><!-- /wp:paragraph -->'
+			. '<!-- wp:paragraph --><p>' . esc_html__( 'Most compressors ask you to guess a quality percentage. Lumi Pix works the other way round: you choose the file size you need and the tool tests different quality levels until it finds the sharpest version that fits. If quality alone is not enough, it reduces the dimensions in small steps, so text and faces stay readable.', 'lumipix' ) . '</p><!-- /wp:paragraph -->'
 			. '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Tips for the best result', 'lumipix' ) . '</h2><!-- /wp:heading -->'
 			. '<!-- wp:list --><ul class="wp-block-list"><li>' . esc_html__( 'Start from the original photo, not a screenshot of it.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop away empty space first; fewer pixels means more quality per kilobyte.', 'lumipix' ) . '</li><li>' . esc_html__( 'Check the exact limit on the form you are filling in, then pick the matching size.', 'lumipix' ) . '</li></ul><!-- /wp:list -->';
 	};
@@ -93,7 +93,7 @@ function lumipix_tools() {
 			. '<!-- wp:paragraph --><p>' . sprintf( esc_html__( 'Online application portals such as %s usually set a maximum file size and sometimes fixed dimensions for the photograph and signature. If your file is too large, the upload is rejected. Read the current instructions on the official advertisement or portal, note the limit, and choose it above.', 'lumipix' ), esc_html( $org ) ) . '</p><!-- /wp:paragraph -->'
 			. '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Step by step', 'lumipix' ) . '</h2><!-- /wp:heading -->'
 			. '<!-- wp:list {"ordered":true} --><ol class="wp-block-list"><li>' . esc_html__( 'Take the photo against a plain, light background with even lighting.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop it so your face and shoulders fill most of the frame.', 'lumipix' ) . '</li><li>' . esc_html__( 'Drop it into the tool and choose the size limit from the official instructions.', 'lumipix' ) . '</li><li>' . esc_html__( 'Download the JPG and upload it to the portal.', 'lumipix' ) . '</li></ol><!-- /wp:list -->'
-			. '<!-- wp:paragraph --><p>' . esc_html__( 'Lumipix is an independent tool and is not affiliated with any government department or testing service. Always follow the latest official requirements.', 'lumipix' ) . '</p><!-- /wp:paragraph -->';
+			. '<!-- wp:paragraph --><p>' . esc_html__( 'Lumi Pix is an independent tool and is not affiliated with any government department or testing service. Always follow the latest official requirements.', 'lumipix' ) . '</p><!-- /wp:paragraph -->';
 	};
 
 	$form_faqs = function ( $org ) {
@@ -101,7 +101,7 @@ function lumipix_tools() {
 			/* translators: %s: organisation name */
 			sprintf( __( 'What photo size does %s require?', 'lumipix' ), $org ) => __( 'Requirements change between advertisements, so always check the official instructions for the post you are applying for. Once you know the limit, select it here and the tool will produce a file that fits.', 'lumipix' ),
 			__( 'Can I compress my signature too?', 'lumipix' ) => __( 'Yes. Use the same tool for the signature scan, or open the signature tool to make the background transparent or clean white first.', 'lumipix' ),
-			__( 'Is it safe to use for official documents?', 'lumipix' ) => __( 'Your images are processed on your own device and are never uploaded to Lumipix, so nobody else sees them.', 'lumipix' ),
+			__( 'Is it safe to use for official documents?', 'lumipix' ) => __( 'Your images are processed on your own device and are never uploaded to Lumi Pix, so nobody else sees them.', 'lumipix' ),
 		);
 	};
 
@@ -124,7 +124,7 @@ function lumipix_tools() {
 			'config'  => array( 'target' => 100, 'unit' => 'KB' ),
 			'related' => array( 'image-resizer', 'compress-image-to-50kb', 'remove-white-background' ),
 			'faqs'    => array(
-				__( 'How do I compress an image to a specific size?', 'lumipix' ) => __( 'Type the size you need in KB or MB, or tap one of the quick sizes, then drop your image. Lumipix finds the best quality that fits under that limit automatically.', 'lumipix' ),
+				__( 'How do I compress an image to a specific size?', 'lumipix' ) => __( 'Type the size you need in KB or MB, or tap one of the quick sizes, then drop your image. Lumi Pix finds the best quality that fits under that limit automatically.', 'lumipix' ),
 				__( 'Is this image compressor free?', 'lumipix' ) => __( 'Yes. There is no signup, no watermark and no daily limit.', 'lumipix' ),
 				__( 'Are my photos uploaded?', 'lumipix' ) => __( 'No. Everything happens in your browser, so your files stay on your device.', 'lumipix' ),
 				__( 'Can I compress several images at once?', 'lumipix' ) => __( 'Yes. Drop up to 20 images and each one is compressed to the same target.', 'lumipix' ),
@@ -278,7 +278,7 @@ function lumipix_tools() {
 			'related' => array( 'resize-image-for-instagram', 'passport-size-photo', 'compress-image' ),
 			'faqs'    => array(
 				__( 'How do I resize an image to exact pixels?', 'lumipix' ) => __( 'Drop your image, type the width and height in pixels, and download. Keep the lock on to preserve the aspect ratio, or switch the fit mode to crop or pad to an exact size.', 'lumipix' ),
-				__( 'Can I resize in centimetres or inches for printing?', 'lumipix' ) => __( 'Yes. Switch the unit to cm or in and set the DPI. Lumipix calculates the pixels and writes the DPI into the JPG so it prints at the right size.', 'lumipix' ),
+				__( 'Can I resize in centimetres or inches for printing?', 'lumipix' ) => __( 'Yes. Switch the unit to cm or in and set the DPI. Lumi Pix calculates the pixels and writes the DPI into the JPG so it prints at the right size.', 'lumipix' ),
 				__( 'Can I resize many images at once?', 'lumipix' ) => __( 'Yes. Drop up to 20 images and they are all resized with the same settings.', 'lumipix' ),
 				__( 'Does resizing reduce quality?', 'lumipix' ) => __( 'Making an image smaller keeps it sharp. Making it much larger than the original cannot add detail, so it may look soft.', 'lumipix' ),
 			),
@@ -322,7 +322,7 @@ function lumipix_tools() {
 				__( 'What DPI should a passport photo be?', 'lumipix' ) => __( '300 DPI is the usual print standard. At 300 DPI a 35 × 45 mm photo is 413 × 531 pixels.', 'lumipix' ),
 				__( 'Does this check biometric rules?', 'lumipix' ) => __( 'No. The tool sets size and resolution. Make sure your face is centred, well lit and against a plain light background as required by the issuing authority.', 'lumipix' ),
 			),
-			'content' => '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Make a passport photo at home', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:paragraph --><p>' . esc_html__( 'Stand in front of a plain light wall, face the camera directly and take the photo in daylight. Drop it into the tool, pick the size, and Lumipix crops it to the exact proportions at 300 DPI. Print it on photo paper or upload it to your online application.', 'lumipix' ) . '</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>' . esc_html__( 'Need a clean white background? Use the background remover first, then come back to resize.', 'lumipix' ) . '</p><!-- /wp:paragraph -->',
+			'content' => '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Make a passport photo at home', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:paragraph --><p>' . esc_html__( 'Stand in front of a plain light wall, face the camera directly and take the photo in daylight. Drop it into the tool, pick the size, and Lumi Pix crops it to the exact proportions at 300 DPI. Print it on photo paper or upload it to your online application.', 'lumipix' ) . '</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>' . esc_html__( 'Need a clean white background? Use the background remover first, then come back to resize.', 'lumipix' ) . '</p><!-- /wp:paragraph -->',
 		),
 		'resize-signature'           => array(
 			'app'     => 'compress',
@@ -367,7 +367,7 @@ function lumipix_tools() {
 				__( 'Are my photos uploaded?', 'lumipix' ) => __( 'No. The AI model runs inside your browser, so the image never leaves your device.', 'lumipix' ),
 				__( 'Can I add a new background colour?', 'lumipix' ) => __( 'Yes. Keep it transparent or choose white or any colour before downloading.', 'lumipix' ),
 			),
-			'content' => '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'A free alternative to paid background removers', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:paragraph --><p>' . esc_html__( 'Many background removers give you a small preview for free and ask you to sign up or pay for the full-resolution file. Lumipix runs the AI model directly in your browser, so there is no server cost to pass on: you get the full-size PNG without an account.', 'lumipix' ) . '</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Works best with', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:list --><ul class="wp-block-list"><li>' . esc_html__( 'Portraits and profile pictures', 'lumipix' ) . '</li><li>' . esc_html__( 'Product photos for online stores', 'lumipix' ) . '</li><li>' . esc_html__( 'Passport and ID photos that need a plain background', 'lumipix' ) . '</li></ul><!-- /wp:list --><!-- wp:paragraph --><p>' . esc_html__( 'For logos, signatures and scans on white paper, the white background remover is faster and gives crisper edges.', 'lumipix' ) . '</p><!-- /wp:paragraph -->',
+			'content' => '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'A free alternative to paid background removers', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:paragraph --><p>' . esc_html__( 'Many background removers give you a small preview for free and ask you to sign up or pay for the full-resolution file. Lumi Pix runs the AI model directly in your browser, so there is no server cost to pass on: you get the full-size PNG without an account.', 'lumipix' ) . '</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Works best with', 'lumipix' ) . '</h2><!-- /wp:heading --><!-- wp:list --><ul class="wp-block-list"><li>' . esc_html__( 'Portraits and profile pictures', 'lumipix' ) . '</li><li>' . esc_html__( 'Product photos for online stores', 'lumipix' ) . '</li><li>' . esc_html__( 'Passport and ID photos that need a plain background', 'lumipix' ) . '</li></ul><!-- /wp:list --><!-- wp:paragraph --><p>' . esc_html__( 'For logos, signatures and scans on white paper, the white background remover is faster and gives crisper edges.', 'lumipix' ) . '</p><!-- /wp:paragraph -->',
 		),
 		'remove-white-background'    => array(
 			'app'     => 'colorkey',

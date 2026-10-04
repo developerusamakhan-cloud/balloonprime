@@ -44,6 +44,23 @@
 		return step(0);
 	}
 
+	/** DPI stored in a JPEG's JFIF header, or 0. */
+	function readJpegDpi(file) {
+		if (file.type !== 'image/jpeg') return Promise.resolve(0);
+		return file.slice(0, 18).arrayBuffer().then(function (buf) {
+			var b = new Uint8Array(buf);
+			var jfif = b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff && b[3] === 0xe0 && b[6] === 0x4a && b[7] === 0x46 && b[8] === 0x49 && b[9] === 0x46;
+			if (!jfif) return 0;
+			var units = b[13];
+			var x = (b[14] << 8) | b[15];
+			if (units === 1 && x > 1) return x;
+			if (units === 2 && x > 1) return Math.round(x * 2.54);
+			return 0;
+		}).catch(function () {
+			return 0;
+		});
+	}
+
 	function compress(item, opts) {
 		var type = opts.format === 'image/webp' && L.supportsType('image/webp') ? 'image/webp' : 'image/jpeg';
 		var limit = targetBytes(opts);
@@ -98,6 +115,16 @@
 				if (img.source.close) img.source.close();
 				if (img.url) URL.revokeObjectURL(img.url);
 				return res;
+			});
+		}).then(function (res) {
+			// Keep the print DPI of a JPEG source (e.g. a 300 DPI passport photo).
+			if (res.untouched || type !== 'image/jpeg') return res;
+			return readJpegDpi(file).then(function (dpi) {
+				if (!dpi) return res;
+				return L.setJpegDpi(res.blob, dpi).then(function (b) {
+					res.blob = b;
+					return res;
+				});
 			});
 		}).then(function (res) {
 			var outType = res.untouched ? file.type : type;

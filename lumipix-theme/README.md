@@ -1,4 +1,4 @@
-# Lumipix WordPress Theme
+# Lumi Pix WordPress Theme
 
 A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. The tools work out of the box, and every image is processed on the visitor's device. Nothing is uploaded.
 
@@ -15,10 +15,24 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 | **Performance** | No jQuery, no page builder, tool scripts load only on tool pages, fonts preloaded, emoji script removed |
 | **Monetisation ready** | AdSense slots (below tool, in article, sidebar), **off by default** |
 
+## Content pack (new in 1.1)
+
+Setup also installs ready-made content from the `content/` folder:
+
+- **30 articles** (`content/posts/*.md`). The first 15 are published right away; the other 15 are **scheduled every 2 days at 09:00** (site timezone). Every article has an SEO title, meta description, excerpt, category, related tool, internal links to tool pages and earlier articles, an FAQ section (with FAQPage schema) and a 1200×630 featured image that doubles as its social share image.
+- **Page content with FAQs** for Home (about 1,700 words), All tools, About, Contact, Privacy Policy, Terms of Use, Cookie Policy and Disclaimer.
+- **Social share images** for the home page and every tool page (`assets/og/`). Regenerate them with `node tools/og-images.js` (see the script header) after changing titles.
+
+Links in the content are written as `tool:<key>`, `post:<slug>` and `page:<key>` and are turned into real URLs on install, so they work with any permalink setting.
+
+Scheduled posts are published by WordPress cron, which runs when someone visits the site. On low-traffic sites, ask your host to set up a real cron job for `wp-cron.php` so posts go live on time.
+
+Setup never overwrites content you have edited. Pages and posts are only filled in if they are new or still untouched.
+
 ## Install
 
 1. Upload `dist/lumipix.zip` in **Appearance → Themes → Add New → Upload Theme**, then activate.
-2. Open **Appearance → Lumipix Setup** and click **Create missing items**. This creates:
+2. Open **Appearance → Lumi Pix Setup** and click **Create missing items**. This creates:
    - all tool pages, the "All image tools" hub, Guides (blog), About, Contact, Privacy Policy, Terms
    - a static front page and blog page
    - 3 draft articles (outlines only)
@@ -26,14 +40,15 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
    - pretty permalinks (`/blog/post-name/` for articles), but only if the site still uses "Plain" permalinks
 
    Setup only adds what is missing. It never overwrites existing content.
-3. Review the **Privacy Policy** and **Terms** drafts and replace the placeholders.
+3. Set your contact email in **Appearance → Customize → Lumi Pix → Footer**.
+4. Read the legal pages once (Privacy Policy, Terms of Use, Cookie Policy, Disclaimer). They are written for this site, but a quick review by a legal professional is recommended, especially before enabling ads in the EU/UK, where a cookie consent banner is required.
 
-## Customizer (Appearance → Customize → Lumipix)
+## Customizer (Appearance → Customize → Lumi Pix)
 
 - **Home page:** hero badge, heading (wrap a word in `*asterisks*` for the gradient serif accent), text, home SEO title and description, default share image.
 - **Background remover:** Hugging Face model ID (default `Xenova/modnet`) and Transformers.js URL.
 - **Ads (AdSense):** publisher ID and three slot IDs. Leave this off until the site has steady traffic.
-- **Footer:** tagline.
+- **Footer:** tagline and the **public contact email** (used in the footer, Contact page and legal pages; defaults to `hello@<your domain>`, so create that mailbox or change it here).
 
 The site icon (favicon) and logo use the standard WordPress settings. Until a Site Icon is set, the Lumipix mark is used.
 
@@ -71,7 +86,7 @@ add_filter( 'lumipix_tools', function ( $tools ) {
 } );
 ```
 
-Then run **Lumipix Setup** again to create the page.
+Then run **Lumi Pix Setup** again to create the page.
 
 ## Background remover: important notes
 

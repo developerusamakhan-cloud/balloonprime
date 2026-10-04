@@ -16,7 +16,7 @@ function lumipix_customize_register( $wp_customize ) {
 	$wp_customize->add_panel(
 		'lumipix',
 		array(
-			'title'    => __( 'Lumipix', 'lumipix' ),
+			'title'    => __( 'Lumi Pix', 'lumipix' ),
 			'priority' => 30,
 		)
 	);
@@ -77,6 +77,8 @@ function lumipix_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'lumipix_footer', array( 'title' => __( 'Footer', 'lumipix' ), 'panel' => 'lumipix' ) );
 	$wp_customize->add_setting( 'lumipix_footer_text', array( 'default' => __( 'Fast, private image tools that run in your browser. No uploads, no signups, no watermarks.', 'lumipix' ), 'sanitize_callback' => 'sanitize_text_field' ) );
 	$wp_customize->add_control( 'lumipix_footer_text', array( 'label' => __( 'Footer tagline', 'lumipix' ), 'section' => 'lumipix_footer', 'type' => 'textarea' ) );
+	$wp_customize->add_setting( 'lumipix_contact_email', array( 'default' => '', 'sanitize_callback' => 'sanitize_email' ) );
+	$wp_customize->add_control( 'lumipix_contact_email', array( 'label' => __( 'Public contact email (used in the footer, Contact and legal pages)', 'lumipix' ), 'section' => 'lumipix_footer', 'type' => 'email' ) );
 }
 add_action( 'customize_register', 'lumipix_customize_register' );
 

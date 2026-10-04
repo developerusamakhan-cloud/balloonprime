@@ -53,7 +53,8 @@ function lumipix_document_title_parts( $parts ) {
 	} elseif ( is_singular() ) {
 		$custom = (string) get_post_meta( get_queried_object_id(), '_lumipix_seo_title', true );
 		if ( $custom ) {
-			$parts['title'] = $custom;
+			// A hand-written SEO title is used as the complete <title>.
+			$parts = array( 'title' => $custom );
 		}
 	}
 	return $parts;
@@ -92,8 +93,13 @@ function lumipix_meta_description() {
 		}
 		return $desc;
 	}
+	if ( is_home() ) {
+		return __( 'Short, practical guides to compressing, resizing and editing images, from exact KB sizes to passport photos, with free tools to finish the job.', 'lumipix' );
+	}
 	if ( is_category() || is_tag() ) {
-		return wp_strip_all_tags( term_description() );
+		$term_desc = trim( wp_strip_all_tags( term_description() ) );
+		/* translators: %s: category name */
+		return $term_desc ? $term_desc : sprintf( __( '%s guides and tutorials from Lumi Pix.', 'lumipix' ), single_term_title( '', false ) );
 	}
 	return (string) get_bloginfo( 'description' );
 }
@@ -116,7 +122,16 @@ function lumipix_head_meta() {
 		$image = get_the_post_thumbnail_url( null, 'lumipix-hero' );
 	}
 	if ( ! $image ) {
+		$tool_key = is_page() ? lumipix_page_tool_key( get_queried_object_id() ) : '';
+		if ( $tool_key && file_exists( LUMIPIX_DIR . '/assets/og/tool-' . $tool_key . '.jpg' ) ) {
+			$image = LUMIPIX_URI . '/assets/og/tool-' . $tool_key . '.jpg';
+		}
+	}
+	if ( ! $image ) {
 		$image = (string) get_theme_mod( 'lumipix_og_image', '' );
+	}
+	if ( ! $image && file_exists( LUMIPIX_DIR . '/assets/og/home.jpg' ) ) {
+		$image = LUMIPIX_URI . '/assets/og/home.jpg';
 	}
 	printf( '<meta property="og:site_name" content="%s">' . "\n", esc_attr( get_bloginfo( 'name' ) ) );
 	printf( '<meta property="og:type" content="%s">' . "\n", is_singular( 'post' ) ? 'article' : 'website' );
@@ -129,6 +144,16 @@ function lumipix_head_meta() {
 	}
 	if ( $image ) {
 		printf( '<meta property="og:image" content="%s">' . "\n", esc_url( $image ) );
+		echo '<meta property="og:image:width" content="1200">' . "\n" . '<meta property="og:image:height" content="630">' . "\n";
+		printf( '<meta name="twitter:image" content="%s">' . "\n", esc_url( $image ) );
+	}
+	printf( '<meta name="twitter:title" content="%s">' . "\n", esc_attr( $title ) );
+	if ( $desc ) {
+		printf( '<meta name="twitter:description" content="%s">' . "\n", esc_attr( $desc ) );
+	}
+	if ( is_singular( 'post' ) ) {
+		printf( '<meta property="article:published_time" content="%s">' . "\n", esc_attr( get_the_date( 'c' ) ) );
+		printf( '<meta property="article:modified_time" content="%s">' . "\n", esc_attr( get_the_modified_date( 'c' ) ) );
 	}
 	printf( '<meta name="twitter:card" content="%s">' . "\n", $image ? 'summary_large_image' : 'summary' );
 }
@@ -189,23 +214,25 @@ function lumipix_schema() {
 				'priceCurrency' => 'USD',
 			),
 		);
-		if ( ! empty( $tool['faqs'] ) ) {
-			$faq = array();
-			foreach ( $tool['faqs'] as $q => $a ) {
-				$faq[] = array(
-					'@type'          => 'Question',
-					'name'           => $q,
-					'acceptedAnswer' => array(
-						'@type' => 'Answer',
-						'text'  => $a,
-					),
-				);
-			}
-			$graph[] = array(
-				'@type'      => 'FAQPage',
-				'mainEntity' => $faq,
+	}
+
+	$faqs = ( is_singular() || is_front_page() ) ? lumipix_get_faqs() : array();
+	if ( $faqs ) {
+		$faq = array();
+		foreach ( $faqs as $q => $a ) {
+			$faq[] = array(
+				'@type'          => 'Question',
+				'name'           => $q,
+				'acceptedAnswer' => array(
+					'@type' => 'Answer',
+					'text'  => $a,
+				),
 			);
 		}
+		$graph[] = array(
+			'@type'      => 'FAQPage',
+			'mainEntity' => $faq,
+		);
 	}
 
 	if ( is_singular( 'post' ) && ! $plugin ) {

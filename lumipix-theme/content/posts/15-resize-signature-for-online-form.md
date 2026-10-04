@@ -1,0 +1,77 @@
+---
+title: How to Resize a Signature for an Online Form (10KB to 50KB)
+category: Photos & IDs
+tool: resize-signature
+seo_title: How to Resize Signature for Online Form – Under 10KB, 20KB or 50KB
+seo_desc: Make a clear signature image that fits online form limits like 10KB, 20KB or 50KB. Photograph, crop, resize and compress your signature for free.
+excerpt: Get a clear signature under strict form limits like 10KB or 20KB, from a quick phone photo.
+---
+
+Almost every online application asks for a scanned signature, usually as a small JPG with a strict size limit. Signatures are mostly white space, so they compress very well when you prepare them correctly. Here is the complete process.
+
+## What forms usually ask for
+
+Requirements vary, but signature uploads commonly specify:
+
+- **Format:** JPG or JPEG
+- **File size:** often between 10KB and 50KB
+- **Dimensions:** sometimes a pixel size or a ratio, such as a wide rectangle
+- **Background:** white, with dark ink
+
+Check the official instructions for the exact numbers before you begin.
+
+## Step 1: Sign clearly
+
+Use plain white paper and a black or dark blue pen. A gel or felt-tip pen gives a bolder line that survives compression better than a faint ballpoint stroke. Sign at a comfortable size, not tiny.
+
+## Step 2: Photograph it well
+
+Place the paper in good, even light, hold your phone directly above it, and avoid shadows. Take the photo close enough that the signature fills most of the frame.
+
+## Step 3: Crop tightly
+
+Cut away the paper around the signature, leaving a small margin. The less empty space, the easier it is to hit a small limit while keeping the line sharp. Most phone galleries have a crop tool.
+
+## Step 4: Resize and compress
+
+1. Open the [signature resizer](tool:resize-signature).
+2. Tap the limit from your form: 10KB, 20KB, 30KB or 50KB, or type your own.
+3. Drop the cropped photo.
+4. Download the JPG. The **Fits target** badge confirms it is under the limit.
+
+The tool also keeps the width modest (around 500 pixels), which is more than enough for a form and helps reach very small limits without blurring the ink.
+
+If your form specifies exact dimensions, set the width under **Advanced options**, or resize with the [Image Resizer](tool:image-resizer) first.
+
+## Making the paper whiter
+
+Phone photos of paper often look grey or cream. Some portals accept that, but a cleaner background looks better and compresses smaller. You can:
+
+- increase brightness and contrast in your phone's photo editor before compressing, or
+- use the [white background remover](tool:remove-white-background), then place the result on white.
+
+Our guide on [removing the white background from a signature](post:remove-white-background-from-signature) covers the transparent version for documents.
+
+## Common problems
+
+**The form says the file is too large.** Pick a smaller limit than the maximum; some portals count 1KB as 1,000 bytes.
+
+**The signature looks broken or faint.** The original line was too thin. Re-sign with a bolder pen.
+
+**The upload says invalid format.** Make sure the file ends in .jpg. iPhone photos may be HEIC; Lumi Pix saves JPG automatically.
+
+For the full application process, including photos and documents, see [how to compress a photo for online application forms](post:compress-photo-for-online-forms).
+
+## Frequently asked questions
+
+### How do I reduce my signature to 20KB?
+
+Crop the signature tightly, open the signature resizer, select 20KB and drop the photo. Download the JPG once it shows Fits target.
+
+### What size should a signature image be?
+
+Follow the form's instructions. A width of 300–600 pixels is typically plenty for clear online display.
+
+### Can I use a transparent PNG signature on a form?
+
+Only if the form allows PNG. Most application portals ask for a JPG on a white background.

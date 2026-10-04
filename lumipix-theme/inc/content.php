@@ -182,3 +182,27 @@ function lumipix_related_posts( $post_id, $count = 3 ) {
 	}
 	return $posts;
 }
+
+/**
+ * [lumipix_email] – the public contact email as a mailto link.
+ *
+ * @return string
+ */
+function lumipix_email_shortcode() {
+	$email = lumipix_contact_email();
+	if ( ! $email ) {
+		return esc_html__( '(contact email not set – add it under Appearance → Customize → Lumi Pix → Footer)', 'lumipix' );
+	}
+	return '<a href="mailto:' . esc_attr( antispambot( $email ) ) . '">' . esc_html( antispambot( $email ) ) . '</a>';
+}
+add_shortcode( 'lumipix_email', 'lumipix_email_shortcode' );
+
+/**
+ * [lumipix_site] – the site name (keeps legal pages correct if the name changes).
+ *
+ * @return string
+ */
+function lumipix_site_shortcode() {
+	return esc_html( get_bloginfo( 'name' ) );
+}
+add_shortcode( 'lumipix_site', 'lumipix_site_shortcode' );

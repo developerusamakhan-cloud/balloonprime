@@ -47,26 +47,39 @@ defined( 'ABSPATH' ) || exit;
 						)
 					);
 				} else {
-					$company = array_filter( array( lumipix_installer_page_id( 'about' ), lumipix_installer_page_id( 'contact' ), lumipix_installer_page_id( 'privacy' ) ) );
-					if ( $company ) {
-						echo '<ul>';
-						wp_list_pages(
-							array(
-								'title_li' => '',
-								'depth'    => 1,
-								'include'  => implode( ',', $company ),
-							)
-						);
-						echo '</ul>';
+					echo '<ul>';
+					foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $company_key ) {
+						$company_id = lumipix_installer_page_id( $company_key );
+						if ( $company_id ) {
+							echo '<li><a href="' . esc_url( get_permalink( $company_id ) ) . '">' . esc_html( get_the_title( $company_id ) ) . '</a></li>';
+						}
 					}
+					echo '</ul>';
 				}
 				?>
+				<?php $contact_email = lumipix_contact_email(); ?>
+				<?php if ( $contact_email ) : ?>
+					<p class="site-footer__email"><a href="mailto:<?php echo esc_attr( antispambot( $contact_email ) ); ?>"><?php echo esc_html( antispambot( $contact_email ) ); ?></a></p>
+				<?php endif; ?>
+			</div>
+
+			<div class="site-footer__col">
+				<p class="site-footer__title"><?php esc_html_e( 'Legal', 'lumipix' ); ?></p>
+				<ul>
+					<?php foreach ( lumipix_legal_links() as $legal ) : ?>
+						<li><a href="<?php echo esc_url( $legal[1] ); ?>"><?php echo esc_html( $legal[0] ); ?></a></li>
+					<?php endforeach; ?>
+				</ul>
 			</div>
 		</div>
 
 		<div class="site-footer__bottom">
-			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. <?php esc_html_e( 'All rights reserved.', 'lumipix' ); ?></p>
-			<p><?php esc_html_e( 'Made for people who just need it done.', 'lumipix' ); ?></p>
+			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. <?php esc_html_e( 'All rights reserved.', 'lumipix' ); ?> <?php esc_html_e( 'Lumi Pix is an independent service and is not affiliated with any government body, exam board or other brand mentioned on this site.', 'lumipix' ); ?></p>
+			<nav class="site-footer__legal" aria-label="<?php esc_attr_e( 'Legal', 'lumipix' ); ?>">
+				<?php foreach ( lumipix_legal_links() as $legal ) : ?>
+					<a href="<?php echo esc_url( $legal[1] ); ?>"><?php echo esc_html( $legal[0] ); ?></a>
+				<?php endforeach; ?>
+			</nav>
 		</div>
 	</div>
 </footer>

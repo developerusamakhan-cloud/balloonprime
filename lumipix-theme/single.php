@@ -52,6 +52,7 @@ while ( have_posts() ) :
 				the_content();
 				wp_link_pages();
 				?>
+				<?php lumipix_render_faqs( lumipix_get_faqs( get_the_ID() ) ); ?>
 				<?php lumipix_ad_slot( 'article-mid' ); ?>
 				<?php
 				$tags = get_the_tags();

@@ -27,6 +27,7 @@ while ( have_posts() ) :
 				wp_link_pages();
 				?>
 			</div>
+			<?php lumipix_render_faqs( lumipix_get_faqs( get_the_ID() ) ); ?>
 		</div>
 	</section>
 	<?php

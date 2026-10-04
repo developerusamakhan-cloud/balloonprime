@@ -158,7 +158,7 @@ function lumipix_post_card( $post = null ) {
 		<a class="post-card__media" href="<?php echo esc_url( get_permalink( $post ) ); ?>" tabindex="-1" aria-hidden="true">
 			<?php
 			if ( has_post_thumbnail( $post ) ) {
-				echo get_the_post_thumbnail( $post, 'lumipix-card', array( 'loading' => 'lazy' ) );
+				echo get_the_post_thumbnail( $post, 'medium_large', array( 'loading' => 'lazy', 'sizes' => '(max-width: 700px) 100vw, 400px' ) );
 			} else {
 				echo '<span class="post-card__placeholder">' . lumipix_icon( 'image', 28 ) . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput
 			}
@@ -276,4 +276,117 @@ function lumipix_primary_nav() {
 		echo '<li><a href="' . esc_url( get_permalink( $blog ) ) . '"' . ( is_home() || is_singular( 'post' ) ? ' aria-current="page"' : '' ) . '>' . esc_html__( 'Guides', 'lumipix' ) . '</a></li>';
 	}
 	echo '</ul>';
+}
+
+/**
+ * FAQs for a post or page: tool registry for tool pages, otherwise the
+ * `_lumipix_faqs` meta (falling back to the bundled home FAQs on the front page).
+ *
+ * @param int|null $post_id Post ID (defaults to the queried object).
+ * @return array<string, string>
+ */
+function lumipix_get_faqs( $post_id = null ) {
+	$post_id = $post_id ? $post_id : get_queried_object_id();
+	if ( ! $post_id ) {
+		return array();
+	}
+	$key = lumipix_page_tool_key( $post_id );
+	if ( $key ) {
+		$tool = lumipix_get_tool( $key );
+		return isset( $tool['faqs'] ) ? (array) $tool['faqs'] : array();
+	}
+	$faqs = get_post_meta( $post_id, '_lumipix_faqs', true );
+	if ( ! $faqs && (int) get_option( 'page_on_front' ) === (int) $post_id ) {
+		$pack = lumipix_pack_page( 'home' );
+		$faqs = $pack ? $pack['faqs'] : array();
+	}
+	return is_array( $faqs ) ? array_filter( $faqs ) : array();
+}
+
+/**
+ * Render an FAQ accordion.
+ *
+ * @param array<string, string> $faqs  Question => answer.
+ * @param string                $title Heading.
+ * @param string                $id    Heading ID.
+ */
+function lumipix_render_faqs( $faqs, $title = '', $id = 'faq-title' ) {
+	if ( ! $faqs ) {
+		return;
+	}
+	$title = $title ? $title : __( 'Frequently asked questions', 'lumipix' );
+	?>
+	<section class="faq-block" aria-labelledby="<?php echo esc_attr( $id ); ?>">
+		<h2 id="<?php echo esc_attr( $id ); ?>" class="section-title section-title--sm"><?php echo esc_html( $title ); ?></h2>
+		<div class="faq">
+			<?php foreach ( $faqs as $q => $a ) : ?>
+				<details class="faq__item">
+					<summary><?php echo esc_html( $q ); ?><span class="faq__icon" aria-hidden="true"></span></summary>
+					<p><?php echo esc_html( $a ); ?></p>
+				</details>
+			<?php endforeach; ?>
+		</div>
+	</section>
+	<?php
+}
+
+/**
+ * Add id attributes to H2 headings and return [html, toc].
+ *
+ * @param string $html Rendered content.
+ * @return array{0: string, 1: array<string, string>}
+ */
+function lumipix_heading_anchors( $html ) {
+	$toc  = array();
+	$html = preg_replace_callback(
+		'/<h2([^>]*)>(.*?)<\/h2>/s',
+		function ( $m ) use ( &$toc ) {
+			if ( false !== strpos( $m[1], ' id=' ) ) {
+				return $m[0];
+			}
+			$text = wp_strip_all_tags( $m[2] );
+			$id   = sanitize_title( $text );
+			$base = $id;
+			$n    = 2;
+			while ( isset( $toc[ $id ] ) ) {
+				$id = $base . '-' . $n++;
+			}
+			$toc[ $id ] = $text;
+			return '<h2' . $m[1] . ' id="' . esc_attr( $id ) . '">' . $m[2] . '</h2>';
+		},
+		$html
+	);
+	return array( $html, $toc );
+}
+
+/**
+ * Legal page links that exist.
+ *
+ * @return array<int, array{0: string, 1: string}>
+ */
+function lumipix_legal_links() {
+	$out = array();
+	foreach ( array( 'privacy', 'terms', 'cookies', 'disclaimer' ) as $key ) {
+		$id = lumipix_installer_page_id( $key );
+		if ( $id ) {
+			$out[] = array( get_the_title( $id ), get_permalink( $id ) );
+		}
+	}
+	return $out;
+}
+
+/**
+ * Public contact email: Customizer value, else hello@<site domain>.
+ *
+ * @return string
+ */
+function lumipix_contact_email() {
+	$email = sanitize_email( (string) get_theme_mod( 'lumipix_contact_email', '' ) );
+	if ( ! $email ) {
+		$host = wp_parse_url( home_url(), PHP_URL_HOST );
+		if ( $host && false !== strpos( $host, '.' ) && 'localhost' !== $host ) {
+			$email = 'hello@' . preg_replace( '/^www\./', '', $host );
+		}
+	}
+	return is_email( $email ) ? $email : '';
 }

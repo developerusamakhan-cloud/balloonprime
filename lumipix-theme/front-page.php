@@ -123,7 +123,7 @@ $features = array(
 <section class="section" aria-labelledby="why-title">
 	<div class="container">
 		<div class="section-head">
-			<p class="kicker"><?php esc_html_e( 'Why Lumipix', 'lumipix' ); ?></p>
+			<p class="kicker"><?php esc_html_e( 'Why Lumi Pix', 'lumipix' ); ?></p>
 			<h2 id="why-title" class="section-title"><?php esc_html_e( 'Built differently, on purpose', 'lumipix' ); ?></h2>
 		</div>
 		<div class="features">
@@ -145,6 +145,50 @@ $features = array(
 		</div>
 	</div>
 </section>
+
+<?php
+$home_id  = (int) get_option( 'page_on_front' );
+$home_raw = $home_id ? (string) get_post_field( 'post_content', $home_id ) : '';
+if ( '' === trim( $home_raw ) ) {
+	$home_pack = lumipix_pack_page( 'home' );
+	$home_raw  = $home_pack ? $home_pack['html'] : '';
+}
+if ( '' !== trim( $home_raw ) ) :
+	list( $home_html, $home_toc ) = lumipix_heading_anchors( apply_filters( 'the_content', $home_raw ) ); // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals
+	?>
+<section class="section section--guide" aria-labelledby="guide-title">
+	<div class="container">
+		<div class="section-head">
+			<p class="kicker"><?php esc_html_e( 'The guide', 'lumipix' ); ?></p>
+			<h2 id="guide-title" class="section-title"><?php esc_html_e( 'Everything about resizing, compressing and cleaning up images', 'lumipix' ); ?></h2>
+		</div>
+		<div class="guide">
+			<?php if ( count( $home_toc ) > 2 ) : ?>
+				<nav class="guide__toc" aria-label="<?php esc_attr_e( 'On this page', 'lumipix' ); ?>">
+					<p class="guide__toc-title"><?php esc_html_e( 'On this page', 'lumipix' ); ?></p>
+					<ol>
+						<?php foreach ( $home_toc as $anchor_id => $label ) : ?>
+							<li><a href="#<?php echo esc_attr( $anchor_id ); ?>"><?php echo esc_html( $label ); ?></a></li>
+						<?php endforeach; ?>
+					</ol>
+				</nav>
+			<?php endif; ?>
+			<div class="prose guide__body">
+				<?php echo $home_html; // phpcs:ignore WordPress.Security.EscapeOutput -- post content. ?>
+			</div>
+		</div>
+	</div>
+</section>
+<?php endif; ?>
+
+<?php $home_faqs = lumipix_get_faqs( $home_id ); ?>
+<?php if ( $home_faqs ) : ?>
+<section class="section section--tight">
+	<div class="container container--prose">
+		<?php lumipix_render_faqs( $home_faqs, __( 'Frequently asked questions', 'lumipix' ), 'home-faq' ); ?>
+	</div>
+</section>
+<?php endif; ?>
 
 <?php
 $latest = get_posts( array( 'posts_per_page' => 3, 'no_found_rows' => true ) );
@@ -178,7 +222,7 @@ if ( $latest ) :
 		<div class="cta-band">
 			<div class="cta-band__glow" aria-hidden="true"></div>
 			<h2><?php esc_html_e( 'Your next upload limit is no longer a problem.', 'lumipix' ); ?></h2>
-			<p><?php esc_html_e( 'Bookmark Lumipix and get it done in seconds, every time.', 'lumipix' ); ?></p>
+			<p><?php esc_html_e( 'Bookmark Lumi Pix and get it done in seconds, every time.', 'lumipix' ); ?></p>
 			<?php $u = lumipix_tool_url( 'compress-image' ); ?>
 			<?php if ( $u ) : ?>
 				<a class="btn btn--light btn--lg" href="<?php echo esc_url( $u ); ?>"><?php esc_html_e( 'Compress an image', 'lumipix' ); ?> <?php echo lumipix_icon( 'arrow', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>

@@ -125,7 +125,10 @@
 			hInput.disabled = unit === '%';
 			lockBtn.disabled = unit === '%';
 			fitField.hidden = locked || unit === '%';
-			bgField.hidden = locked || unit === '%' || fitSel.value !== 'contain';
+			var fmtSel = el.querySelector('[data-opt="format"]');
+			var toJpeg = fmtSel && fmtSel.value === 'image/jpeg';
+			// Show the colour for padding (fit mode) or for filling transparency when saving as JPG.
+			bgField.hidden = !toJpeg && (locked || unit === '%' || fitSel.value !== 'contain');
 			presetBtns.forEach(function (b) {
 				var p = presets[b.getAttribute('data-preset')];
 				b.classList.toggle('is-active', !!p && !locked && p.unit === unit && +p.w === +wInput.value && +p.h === +hInput.value);

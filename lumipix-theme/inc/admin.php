@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
  * Setup screen under Appearance.
  */
 function lumipix_admin_menu() {
-	add_theme_page( __( 'Lumipix Setup', 'lumipix' ), __( 'Lumipix Setup', 'lumipix' ), 'manage_options', 'lumipix-setup', 'lumipix_setup_screen' );
+	add_theme_page( __( 'Lumi Pix Setup', 'lumipix' ), __( 'Lumi Pix Setup', 'lumipix' ), 'manage_options', 'lumipix-setup', 'lumipix_setup_screen' );
 }
 add_action( 'admin_menu', 'lumipix_admin_menu' );
 
@@ -41,7 +41,7 @@ function lumipix_setup_screen() {
 	$missing = count( array_filter( $status, fn( $r ) => ! $r['exists'] ) );
 	?>
 	<div class="wrap">
-		<h1><?php esc_html_e( 'Lumipix Setup', 'lumipix' ); ?></h1>
+		<h1><?php esc_html_e( 'Lumi Pix Setup', 'lumipix' ); ?></h1>
 		<p><?php esc_html_e( 'Creates the tool pages, hub page, blog, legal pages, starter article drafts and footer menu. It only adds what is missing and never overwrites your content.', 'lumipix' ); ?></p>
 		<?php if ( $log ) : ?>
 			<div class="notice notice-success"><ul style="list-style:disc;padding-left:20px">
@@ -94,7 +94,7 @@ function lumipix_setup_notice() {
 	}
 	printf(
 		'<div class="notice notice-info"><p><strong>%s</strong> %s <a class="button button-primary" href="%s">%s</a></p></div>',
-		esc_html__( 'Lumipix is active.', 'lumipix' ),
+		esc_html__( 'Lumi Pix is active.', 'lumipix' ),
 		esc_html__( 'Create the tool pages, blog and menus in one click.', 'lumipix' ),
 		esc_url( admin_url( 'themes.php?page=lumipix-setup' ) ),
 		esc_html__( 'Open setup', 'lumipix' )
@@ -106,8 +106,8 @@ add_action( 'admin_notices', 'lumipix_setup_notice' );
  * Register meta boxes.
  */
 function lumipix_add_meta_boxes() {
-	add_meta_box( 'lumipix_tool', __( 'Lumipix tool', 'lumipix' ), 'lumipix_tool_meta_box', 'page', 'side', 'high' );
-	add_meta_box( 'lumipix_post', __( 'Lumipix', 'lumipix' ), 'lumipix_post_meta_box', 'post', 'side', 'default' );
+	add_meta_box( 'lumipix_tool', __( 'Lumi Pix tool', 'lumipix' ), 'lumipix_tool_meta_box', 'page', 'side', 'high' );
+	add_meta_box( 'lumipix_post', __( 'Lumi Pix', 'lumipix' ), 'lumipix_post_meta_box', 'post', 'side', 'default' );
 }
 add_action( 'add_meta_boxes', 'lumipix_add_meta_boxes' );
 

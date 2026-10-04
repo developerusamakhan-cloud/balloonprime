@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LUMIPIX_VERSION', '1.0.0' );
+define( 'LUMIPIX_VERSION', '1.1.0' );
 define( 'LUMIPIX_DIR', get_template_directory() );
 define( 'LUMIPIX_URI', get_template_directory_uri() );
 
@@ -19,6 +19,7 @@ require LUMIPIX_DIR . '/inc/tool-apps.php';
 require LUMIPIX_DIR . '/inc/content.php';
 require LUMIPIX_DIR . '/inc/seo.php';
 require LUMIPIX_DIR . '/inc/customizer.php';
+require LUMIPIX_DIR . '/inc/markdown.php';
 require LUMIPIX_DIR . '/inc/installer.php';
 
 if ( is_admin() ) {
