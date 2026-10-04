@@ -149,6 +149,8 @@ add_action( 'wp_head', 'lumipix_preload_fonts', 1 );
 function lumipix_fallback_favicon() {
 	if ( ! has_site_icon() ) {
 		printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( LUMIPIX_URI . '/assets/img/logo-mark.svg' ) );
+		printf( '<link rel="icon" href="%s" type="image/png" sizes="512x512">' . "\n", esc_url( LUMIPIX_URI . '/assets/img/logo-512.png' ) );
+		printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( LUMIPIX_URI . '/assets/img/logo-512.png' ) );
 	}
 }
 add_action( 'wp_head', 'lumipix_fallback_favicon', 3 );
