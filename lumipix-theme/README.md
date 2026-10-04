@@ -43,6 +43,20 @@ Setup never overwrites content you have edited. Pages and posts are only filled 
 3. Set your contact email in **Appearance → Customize → Lumi Pix → Footer**.
 4. Read the legal pages once (Privacy Policy, Terms of Use, Cookie Policy, Disclaimer). They are written for this site, but a quick review by a legal professional is recommended, especially before enabling ads in the EU/UK, where a cookie consent banner is required.
 
+## Updating the theme
+
+The version lives in one place: the `Version:` line in `style.css`. The PHP code reads it from there, and every CSS/JS file is loaded with the version plus its file time, so visitors get the new files right after an update.
+
+**To release an update**, build the zip with the script, which bumps the version automatically:
+
+```
+tools/build-zip.sh          # 1.2.0 -> 1.2.1 (fixes)
+tools/build-zip.sh minor    # 1.2.1 -> 1.3.0 (new features/content)
+tools/build-zip.sh major    # 1.3.0 -> 2.0.0
+```
+
+**To install an update on the site:** Appearance → Themes → Add New → Upload Theme → choose the new `lumipix.zip` → **Replace current with uploaded**. WordPress shows the current and the new version side by side. Your pages, posts, menus and Customizer settings are kept. If you use a caching plugin or Cloudflare, purge its cache once after updating.
+
 ## Customizer (Appearance → Customize → Lumi Pix)
 
 - **Home page:** hero badge, heading (wrap a word in `*asterisks*` for the gradient serif accent), text, home SEO title and description, default share image.

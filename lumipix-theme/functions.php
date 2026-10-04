@@ -7,7 +7,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'LUMIPIX_VERSION', '1.1.0' );
+// Single source of truth: the Version line in style.css (bumped by tools/build-zip.sh).
+define( 'LUMIPIX_VERSION', (string) wp_get_theme( get_template() )->get( 'Version' ) );
 define( 'LUMIPIX_DIR', get_template_directory() );
 define( 'LUMIPIX_URI', get_template_directory_uri() );
 

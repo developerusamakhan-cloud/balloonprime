@@ -82,16 +82,15 @@ function lumipix_widgets_init() {
 add_action( 'widgets_init', 'lumipix_widgets_init' );
 
 /**
- * Asset version helper (file modification time in debug mode).
+ * Asset version helper.
  *
  * @param string $rel Relative path inside the theme.
  * @return string
  */
 function lumipix_asset_ver( $rel ) {
-	if ( defined( 'WP_DEBUG' ) && WP_DEBUG && file_exists( LUMIPIX_DIR . '/' . $rel ) ) {
-		return (string) filemtime( LUMIPIX_DIR . '/' . $rel );
-	}
-	return LUMIPIX_VERSION;
+	// Theme version + file time: browsers and caching plugins fetch fresh files after every update.
+	$path = LUMIPIX_DIR . '/' . $rel;
+	return file_exists( $path ) ? LUMIPIX_VERSION . '.' . filemtime( $path ) : LUMIPIX_VERSION;
 }
 
 /**
