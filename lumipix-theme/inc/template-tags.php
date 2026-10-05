@@ -379,6 +379,10 @@ function lumipix_legal_links() {
 			$out[] = array( get_the_title( $id ), get_permalink( $id ) );
 		}
 	}
+	$sitemap = lumipix_sitemap_url();
+	if ( $sitemap ) {
+		$out[] = array( __( 'Sitemap', 'lumipix' ), $sitemap );
+	}
 	return $out;
 }
 
@@ -396,4 +400,22 @@ function lumipix_contact_email() {
 		}
 	}
 	return is_email( $email ) ? $email : '';
+}
+
+/**
+ * XML sitemap URL: Rank Math / Yoast / SEOPress / AIOSEO, else the WordPress core sitemap.
+ *
+ * @return string
+ */
+function lumipix_sitemap_url() {
+	if ( defined( 'RANK_MATH_VERSION' ) || defined( 'WPSEO_VERSION' ) || defined( 'AIOSEO_VERSION' ) ) {
+		$url = home_url( '/sitemap_index.xml' );
+	} elseif ( defined( 'SEOPRESS_VERSION' ) ) {
+		$url = home_url( '/sitemaps.xml' );
+	} elseif ( function_exists( 'wp_sitemaps_get_server' ) && wp_sitemaps_get_server()->sitemaps_enabled() ) {
+		$url = get_sitemap_url( 'index' );
+	} else {
+		$url = '';
+	}
+	return (string) apply_filters( 'lumipix_sitemap_url', $url );
 }
