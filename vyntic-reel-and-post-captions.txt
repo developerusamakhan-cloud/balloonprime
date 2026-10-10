@@ -1,6 +1,6 @@
 VYNTIC STUDIO: SAMPLE REEL AND POST (Speed Optimizer plugin)
 
-REEL: vyntic-reel-speed-optimizer.mp4 (19 seconds, 1080x1920, music and sound effects included)
+REEL: vyntic-reel-speed-optimizer.mp4 (26.5 seconds, 1080x1920, English voiceover, music and sound effects included)
 
 Reel caption (Instagram, Facebook, TikTok, YouTube Shorts):
 Your WordPress site scores 31 on mobile? 😬
@@ -10,12 +10,13 @@ Comment "SPEED" and we will send you the download link 👇
 
 #wordpress #wordpressplugin #pagespeed #websitespeed #corewebvitals #seo #webdesign #wordpresstips #smallbusiness #vynticstudio
 
-Optional voiceover (record on your phone, or use the Text to Speech option in the Instagram or TikTok editor):
-0 to 3 s:   "Your WordPress site scores 31 on mobile?"
-3 to 6 s:   "Slow sites lose customers. Most people leave after three seconds."
-6 to 12 s:  "Turn on one free plugin, and watch the score go green."
-12 to 15 s: "Page cache, delayed JavaScript, WebP images and a weekly speed report."
-15 to 19 s: "No account, no API key. Comment SPEED for the link."
+Voiceover (already in the video):
+"Is your WordPress site scoring thirty one on mobile?
+Slow sites lose customers. Most visitors leave after just three seconds.
+Install our free plugin, switch it on, and watch your score turn green.
+Page cache. Delayed JavaScript. WebP images. And a weekly speed report.
+It's one hundred percent free. No account, no API key. Comment speed, and we'll send you the link."
+Voice: Piper text to speech, LibriTTS voice (dataset licence CC BY 4.0, commercial use allowed).
 
 POST: vyntic-post-speed-optimizer.png (1080x1350)
 
@@ -44,3 +45,22 @@ If you try it, tell us your before and after score in the comments.
 
 Best times to post (test and adjust): Instagram and Facebook 7 to 9 pm local time, LinkedIn Tuesday to Thursday 8 to 10 am.
 Note: the 31 to 98 scores are an illustration. When you have a real client before and after, use those numbers instead.
+
+
+CAROUSEL: vyntic-carousel-speed.zip (7 slides, 1080x1350, upload in order 01 to 07)
+
+Instagram / Facebook / LinkedIn caption:
+Why is your WordPress site slow? 🐢
+These are the 5 problems we fix on almost every client site:
+1. Too many scripts load at once
+2. No page cache
+3. Heavy images
+4. Render-blocking CSS and fonts
+5. Nobody checks the score
+Swipe for the fix to each one 👉
+All 5 fixes are built into our free Speed Optimizer plugin: vyntic.studio/plugins
+Save this post for your next site check, and share it with someone whose site is slow.
+
+#wordpress #wordpresstips #pagespeed #corewebvitals #websitespeed #seo #webdesign #wordpressplugin #vynticstudio
+
+LinkedIn tip: upload the 7 slides as a PDF document post (Add a document), LinkedIn shows it as a swipeable carousel.
