@@ -1,0 +1,46 @@
+VYNTIC STUDIO: SAMPLE REEL AND POST (Speed Optimizer plugin)
+
+REEL: vyntic-reel-speed-optimizer.mp4 (19 seconds, 1080x1920, music and sound effects included)
+
+Reel caption (Instagram, Facebook, TikTok, YouTube Shorts):
+Your WordPress site scores 31 on mobile? 😬
+We built a free plugin that fixes the usual problems in one click: page cache, delayed JavaScript, WebP images and a weekly PageSpeed report on your dashboard.
+No account. No API key. Updates arrive automatically.
+Comment "SPEED" and we will send you the download link 👇
+
+#wordpress #wordpressplugin #pagespeed #websitespeed #corewebvitals #seo #webdesign #wordpresstips #smallbusiness #vynticstudio
+
+Optional voiceover (record on your phone, or use the Text to Speech option in the Instagram or TikTok editor):
+0 to 3 s:   "Your WordPress site scores 31 on mobile?"
+3 to 6 s:   "Slow sites lose customers. Most people leave after three seconds."
+6 to 12 s:  "Turn on one free plugin, and watch the score go green."
+12 to 15 s: "Page cache, delayed JavaScript, WebP images and a weekly speed report."
+15 to 19 s: "No account, no API key. Comment SPEED for the link."
+
+POST: vyntic-post-speed-optimizer.png (1080x1350)
+
+Instagram / Facebook caption:
+From 31 to 98 on Google PageSpeed. ⚡
+Slow WordPress sites lose visitors and rank lower on Google. Our free Speed Optimizer plugin does the heavy lifting for you:
+✅ Page cache, so pages load before WordPress even starts
+✅ JavaScript delayed until the first scroll or tap
+✅ Images converted to WebP on your own server
+✅ A weekly PageSpeed check, saved on your dashboard
+100% free. No account, no API key, and updates arrive automatically.
+Download it at vyntic.studio/plugins (link in bio).
+
+#wordpress #wordpressplugin #pagespeed #corewebvitals #websitespeed #seo #webdesign #vynticstudio
+
+LinkedIn version:
+We were tired of client sites scoring 30 something on mobile PageSpeed, so we built our own speed plugin.
+It now runs on our client sites and we have made it free for everyone:
+• Page cache served before WordPress loads
+• JavaScript delayed until the first interaction (the biggest win for Total Blocking Time)
+• WebP images, lazy loading and local Google Fonts
+• A weekly PageSpeed check with the scores saved on your WordPress dashboard
+No account and no API key needed. Updates arrive automatically.
+Free download: https://vyntic.studio/plugins/vyntic-speed-optimizer/
+If you try it, tell us your before and after score in the comments.
+
+Best times to post (test and adjust): Instagram and Facebook 7 to 9 pm local time, LinkedIn Tuesday to Thursday 8 to 10 am.
+Note: the 31 to 98 scores are an illustration. When you have a real client before and after, use those numbers instead.
