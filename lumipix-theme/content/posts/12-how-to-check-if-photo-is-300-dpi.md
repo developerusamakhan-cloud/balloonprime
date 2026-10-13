@@ -2,7 +2,7 @@
 keywords: check if a photo is 300 dpi, check dpi of image, change dpi to 300, image dpi windows, image dpi mac
 title: How to Check if a Photo Is 300 DPI (and Change It if Not)
 category: Formats & Printing
-tool: image-resizer
+tool: check-image-dpi
 seo_title: How to Check if a Photo Is 300 DPI – Windows, Mac and Online
 seo_desc: How to check if a photo is 300 DPI on Windows or Mac, what the number really means, and how to set 300 DPI for printing or forms.
 excerpt: Where to find an image's DPI on Windows and Mac, what the number really means, and how to make a photo print-ready at 300 DPI.
@@ -47,6 +47,10 @@ Phone photos often show 72 DPI in their properties even though they have million
 
 ## How to set a photo to 300 DPI
 
+The quickest way to read the value is the free [image DPI checker](tool:check-image-dpi): drop a photo and it shows the stored DPI, the pixel size and how large it prints sharply at 300 DPI.
+
+To print at an exact size, resize it to that size at 300 DPI:
+
 1. Open the [Image Resizer](tool:image-resizer).
 2. Set the unit to **inch**, **cm** or **mm**, and DPI to **300**.
 3. Enter the print size you want.
@@ -86,9 +90,9 @@ If the effective DPI is below about 150 for something held in the hand, choose a
 
 Shops sometimes reject files "under 300 DPI" automatically, even when the pixels are sufficient. If your image has enough pixels for the size, simply set the DPI value:
 
-1. Open the [Image Resizer](tool:image-resizer).
-2. Set the unit to **inch** or **cm**, DPI to **300**, and type the print size.
-3. Choose **JPG** under **Save as** and download.
+1. Open the [Change image DPI](tool:change-image-dpi) tool.
+2. Choose **300**.
+3. Download. For JPG and PNG only the DPI value changes, so the pixels and quality stay exactly the same.
 
 The file now reports 300 DPI and the correct print size. Nothing about the image quality has been made up; you have only told the printer how big to print it.
 

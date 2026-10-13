@@ -6,7 +6,7 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 
 | Area | Details |
 |---|---|
-| **Working tools** | Compress to an exact size (KB/MB, batch up to 20), Image Resizer (px, %, cm, mm, inch + DPI, presets, aspect lock, fit/fill/stretch), AI Background Remover (Transformers.js, on-device), White/solid-colour Background Remover |
+| **Working tools** | Compress to an exact size (KB/MB, batch up to 20), Image Resizer (px, %, cm, mm, inch + DPI, presets, aspect lock, fit/fill/stretch), AI Background Remover (Transformers.js, on-device), White/solid-colour Background Remover, Format converter (WebP, AVIF, PNG, JPG, SVG → JPG/PNG/WebP, ZIP download), Image to PDF (written in the browser, no library), Favicon generator (ICO + PNG + manifest ZIP), DPI checker and changer (rewrites JFIF/EXIF/pHYs without re-compressing), Image cropper. 36 tool pages in a 12 / 8 / 8 / 4 / 4 grid |
 | **Tool landing pages** | 15 pages: Image Compressor, 20KB / 50KB / 100KB / 200KB / 1MB, PPSC / FPSC / NTS form photos, Image Resizer, Instagram, Passport photo, Signature, Background Remover, Remove White Background |
 | **Internal linking** | Mega menu, link-rich footer, breadcrumbs, preset chips, "Related tools" grid on every tool page, auto CTA card inside articles, "Helpful guides" on tool pages, sidebar tools card on posts, "All tools" hub page |
 | **SEO** | Per-tool titles and meta descriptions, Open Graph, JSON-LD (WebApplication, FAQPage, BreadcrumbList, BlogPosting, WebSite, Organization). Generic SEO output steps aside automatically when Yoast, Rank Math, SEOPress or AIOSEO is active |
@@ -19,6 +19,7 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 
 - **Longer content:** every article is 1,100–1,500 words, and every tool page has long-form copy (stored in `content/tools/<key>.md`), with more internal links.
 - **Authors:** four author profiles (Emily Carter, James Walker, Daniel Brooks, Olivia Bennett) with avatars, an author box under each article and author archive pages. Articles are assigned by category. Edit names and bios in **Users**, or replace the profiles with your real team.
+- **Scheduled links:** links to articles that are still scheduled show as plain text until the article is published, so crawlers never hit a 404.
 - **Rank Math:** Setup fills each page, tool page and article's Rank Math SEO title, meta description, **five focus keywords** (the first is the primary keyword) and social image. The keywords come from the `keywords:` line in each Markdown file. Anything you change in the Rank Math box is never overwritten.
 - **Cookie banner:** Essential / Analytics / Marketing choices, stored for 180 days, wired to Google Consent Mode v2. Visitors can reopen it from **Cookie settings** in the footer. Scripts tagged `<script type="text/plain" data-lumipix-consent="analytics">` only run after consent.
 - **Lead popup:** a "Need a website?" message linking to Vyntic Studio, shown after 90 seconds on the site and at most once every 24 hours per visitor. Add `?lumipix-lead` to any URL to preview it.

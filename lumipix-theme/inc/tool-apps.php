@@ -34,8 +34,15 @@ function lumipix_render_tool_app( $key ) {
 		unset( $config['presets'] );
 	}
 
+	if ( 'dpi' === $app && 'check' === ( $config['mode'] ?? '' ) ) {
+		$config['changeUrl'] = lumipix_tool_url( 'change-image-dpi' );
+	}
+
 	$accept = 'image/*';
-	$multi  = ! in_array( $app, array( 'bg', 'colorkey' ), true );
+	$multi  = ! in_array( $app, array( 'bg', 'colorkey', 'favicon', 'crop' ), true );
+	if ( 'convert' === $app && ! empty( $config['svg'] ) ) {
+		$accept = 'image/svg+xml,.svg';
+	}
 	$id     = 'tool-' . sanitize_html_class( $key ) . '-' . wp_rand( 100, 999 );
 
 	ob_start();
@@ -47,7 +54,7 @@ function lumipix_render_tool_app( $key ) {
 				<span class="dropzone__icon"><?php echo lumipix_icon( 'upload', 26 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
 				<span class="dropzone__title"><?php echo $multi ? esc_html__( 'Drop images here', 'lumipix' ) : esc_html__( 'Drop an image here', 'lumipix' ); ?></span>
 				<span class="dropzone__sub"><?php esc_html_e( 'or', 'lumipix' ); ?> <span class="btn btn--primary btn--sm"><?php esc_html_e( 'Choose files', 'lumipix' ); ?></span> <span class="dropzone__paste"><?php esc_html_e( 'or paste with Ctrl+V', 'lumipix' ); ?></span></span>
-				<span class="dropzone__note"><?php echo lumipix_icon( 'lock', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput ?> <?php echo $multi ? esc_html__( 'Up to 20 images · JPG, PNG, WebP, AVIF · processed on your device', 'lumipix' ) : esc_html__( 'JPG, PNG, WebP · processed on your device', 'lumipix' ); ?></span>
+				<span class="dropzone__note"><?php echo lumipix_icon( 'lock', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput ?> <?php echo esc_html( lumipix_dropzone_note( $app, $config, $multi ) ); ?></span>
 			</label>
 			<div class="tool-app__options">
 				<?php
@@ -64,6 +71,21 @@ function lumipix_render_tool_app( $key ) {
 					case 'colorkey':
 						lumipix_render_colorkey_options( $config, $id );
 						break;
+					case 'convert':
+						lumipix_render_convert_options( $config, $id );
+						break;
+					case 'pdf':
+						lumipix_render_pdf_options( $config, $id );
+						break;
+					case 'favicon':
+						lumipix_render_favicon_options( $config, $id );
+						break;
+					case 'dpi':
+						lumipix_render_dpi_options( $config, $id );
+						break;
+					case 'crop':
+						lumipix_render_crop_options( $config, $id );
+						break;
 				}
 				?>
 			</div>
@@ -73,11 +95,22 @@ function lumipix_render_tool_app( $key ) {
 				<p class="results__summary" data-summary aria-live="polite"></p>
 				<div class="results__actions">
 					<button type="button" class="btn btn--ghost btn--sm" data-clear><?php echo lumipix_icon( 'trash', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Clear', 'lumipix' ); ?></button>
-					<?php if ( $multi ) : ?>
-						<button type="button" class="btn btn--primary btn--sm" data-download-all hidden><?php echo lumipix_icon( 'download', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Download all', 'lumipix' ); ?></button>
+					<?php if ( 'pdf' === $app ) : ?>
+						<button type="button" class="btn btn--primary btn--sm" data-pdf-create><?php echo lumipix_icon( 'file', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Create PDF', 'lumipix' ); ?></button>
+					<?php elseif ( 'crop' === $app ) : ?>
+						<button type="button" class="btn btn--primary btn--sm" data-crop-download><?php echo lumipix_icon( 'download', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Download', 'lumipix' ); ?></button>
+					<?php elseif ( 'favicon' === $app ) : ?>
+						<button type="button" class="btn btn--primary btn--sm" data-favicon-download disabled><?php echo lumipix_icon( 'download', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Download favicon package', 'lumipix' ); ?></button>
+					<?php elseif ( $multi && ! ( 'dpi' === $app && 'check' === ( $config['mode'] ?? '' ) ) ) : ?>
+						<button type="button" class="btn btn--primary btn--sm" data-download-all hidden><?php echo lumipix_icon( 'download', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Download all (ZIP)', 'lumipix' ); ?></button>
 					<?php endif; ?>
 				</div>
 			</div>
+			<?php if ( 'crop' === $app ) : ?>
+				<div class="crop-stage" data-crop-stage></div>
+			<?php elseif ( 'favicon' === $app ) : ?>
+				<div class="favicon-preview" data-favicon-preview></div>
+			<?php endif; ?>
 			<ul class="results__list" data-list></ul>
 		</div>
 	</div>
@@ -266,6 +299,231 @@ function lumipix_render_colorkey_options( $c, $id ) {
 	<div class="field">
 		<label class="field__label" for="<?php echo esc_attr( $id ); ?>-fea"><?php esc_html_e( 'Edge softness', 'lumipix' ); ?> <output data-out="feather"><?php echo esc_html( $c['feather'] ?? 12 ); ?></output></label>
 		<input class="range" id="<?php echo esc_attr( $id ); ?>-fea" type="range" min="0" max="60" value="<?php echo esc_attr( $c['feather'] ?? 12 ); ?>" data-opt="feather">
+	</div>
+	<?php
+}
+
+/**
+ * Small print under the dropzone.
+ *
+ * @param string               $app    App.
+ * @param array<string, mixed> $config Config.
+ * @param bool                 $multi  Multiple files allowed.
+ * @return string
+ */
+function lumipix_dropzone_note( $app, $config, $multi ) {
+	if ( 'convert' === $app && ! empty( $config['svg'] ) ) {
+		return __( 'Up to 20 SVG files · processed on your device', 'lumipix' );
+	}
+	if ( 'favicon' === $app ) {
+		return __( 'PNG, SVG, JPG or WebP logo – or switch to Text · processed on your device', 'lumipix' );
+	}
+	if ( 'pdf' === $app ) {
+		return __( 'Up to 20 images, one per page · processed on your device', 'lumipix' );
+	}
+	return $multi ? __( 'Up to 20 images · JPG, PNG, WebP, AVIF · processed on your device', 'lumipix' ) : __( 'JPG, PNG, WebP · processed on your device', 'lumipix' );
+}
+
+/**
+ * Format converter options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_convert_options( $c, $id ) {
+	$to = isset( $c['to'] ) ? $c['to'] : 'image/jpeg';
+	?>
+	<div class="field-row">
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-to"><?php esc_html_e( 'Convert to', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-to" data-opt="to">
+				<option value="image/jpeg" <?php selected( $to, 'image/jpeg' ); ?>>JPG</option>
+				<option value="image/png" <?php selected( $to, 'image/png' ); ?>>PNG</option>
+				<option value="image/webp" <?php selected( $to, 'image/webp' ); ?>>WebP</option>
+			</select>
+		</div>
+		<div class="field" data-bg-field>
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-bg"><?php esc_html_e( 'Background', 'lumipix' ); ?></label>
+			<input class="input input--color" id="<?php echo esc_attr( $id ); ?>-bg" type="color" value="#ffffff" data-opt="background">
+		</div>
+	</div>
+	<div class="field" data-quality-field>
+		<label class="field__label" for="<?php echo esc_attr( $id ); ?>-q"><?php esc_html_e( 'Quality', 'lumipix' ); ?> <output data-out="quality"><?php echo esc_html( $c['quality'] ?? 92 ); ?></output></label>
+		<input class="range" id="<?php echo esc_attr( $id ); ?>-q" type="range" min="1" max="100" value="<?php echo esc_attr( $c['quality'] ?? 92 ); ?>" data-opt="quality">
+	</div>
+	<?php if ( ! empty( $c['svg'] ) ) : ?>
+		<div class="field" data-svg-field>
+			<span class="field__label" id="<?php echo esc_attr( $id ); ?>-scale"><?php esc_html_e( 'Size', 'lumipix' ); ?></span>
+			<div class="field-row">
+				<div class="segmented" role="group" aria-labelledby="<?php echo esc_attr( $id ); ?>-scale">
+					<?php foreach ( array( 1, 2, 4 ) as $sc ) : ?>
+						<button type="button" class="segmented__btn<?php echo 1 === $sc ? ' is-active' : ''; ?>" data-scale="<?php echo esc_attr( $sc ); ?>"><?php echo esc_html( $sc . '×' ); ?></button>
+					<?php endforeach; ?>
+				</div>
+				<input class="input" type="number" min="16" max="16384" step="1" inputmode="numeric" placeholder="<?php esc_attr_e( 'Custom width (px)', 'lumipix' ); ?>" aria-label="<?php esc_attr_e( 'Custom width in pixels', 'lumipix' ); ?>" data-opt="svgWidth">
+			</div>
+		</div>
+	<?php endif; ?>
+	<?php
+}
+
+/**
+ * Image to PDF options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_pdf_options( $c, $id ) {
+	$selects = array(
+		'page'    => array( __( 'Page size', 'lumipix' ), array( 'a4' => 'A4', 'letter' => __( 'US Letter', 'lumipix' ), 'fit' => __( 'Same as image', 'lumipix' ) ), 'a4' ),
+		'orient'  => array( __( 'Orientation', 'lumipix' ), array( 'auto' => __( 'Auto', 'lumipix' ), 'portrait' => __( 'Portrait', 'lumipix' ), 'landscape' => __( 'Landscape', 'lumipix' ) ), 'auto' ),
+		'margin'  => array( __( 'Margin', 'lumipix' ), array( '0' => __( 'None', 'lumipix' ), '20' => __( 'Small', 'lumipix' ), '40' => __( 'Large', 'lumipix' ) ), '20' ),
+		'quality' => array( __( 'Quality', 'lumipix' ), array( 'high' => __( 'High', 'lumipix' ), 'balanced' => __( 'Balanced', 'lumipix' ), 'small' => __( 'Smaller file', 'lumipix' ) ), 'balanced' ),
+	);
+	?>
+	<div class="field-row field-row--4">
+		<?php foreach ( $selects as $key => $s ) : ?>
+			<div class="field">
+				<label class="field__label" for="<?php echo esc_attr( $id . '-' . $key ); ?>"><?php echo esc_html( $s[0] ); ?></label>
+				<select class="select" id="<?php echo esc_attr( $id . '-' . $key ); ?>" data-opt="<?php echo esc_attr( $key ); ?>">
+					<?php foreach ( $s[1] as $v => $label ) : ?>
+						<option value="<?php echo esc_attr( $v ); ?>" <?php selected( $s[2], (string) $v ); ?>><?php echo esc_html( $label ); ?></option>
+					<?php endforeach; ?>
+				</select>
+			</div>
+		<?php endforeach; ?>
+	</div>
+	<p class="field__hint"><?php esc_html_e( 'Drag the images or use the arrows to change the page order.', 'lumipix' ); ?></p>
+	<?php
+}
+
+/**
+ * Favicon generator options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_favicon_options( $c, $id ) {
+	?>
+	<div class="field">
+		<span class="field__label" id="<?php echo esc_attr( $id ); ?>-mode"><?php esc_html_e( 'Create from', 'lumipix' ); ?></span>
+		<div class="segmented" role="group" aria-labelledby="<?php echo esc_attr( $id ); ?>-mode">
+			<button type="button" class="segmented__btn is-active" data-mode="image"><?php esc_html_e( 'Image', 'lumipix' ); ?></button>
+			<button type="button" class="segmented__btn" data-mode="text"><?php esc_html_e( 'Text', 'lumipix' ); ?></button>
+		</div>
+	</div>
+	<div class="field-row" data-text-fields hidden>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-text"><?php esc_html_e( 'Text', 'lumipix' ); ?></label>
+			<input class="input" id="<?php echo esc_attr( $id ); ?>-text" type="text" maxlength="4" value="L" data-opt="text">
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-font"><?php esc_html_e( 'Font', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-font" data-opt="font">
+				<option value="sans"><?php esc_html_e( 'Sans', 'lumipix' ); ?></option>
+				<option value="bold"><?php esc_html_e( 'Bold', 'lumipix' ); ?></option>
+				<option value="serif"><?php esc_html_e( 'Serif', 'lumipix' ); ?></option>
+			</select>
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-color"><?php esc_html_e( 'Text colour', 'lumipix' ); ?></label>
+			<input class="input input--color" id="<?php echo esc_attr( $id ); ?>-color" type="color" value="#ffffff" data-opt="color">
+		</div>
+	</div>
+	<div class="field-row">
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-shape"><?php esc_html_e( 'Shape', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-shape" data-opt="shape">
+				<option value="square"><?php esc_html_e( 'Square', 'lumipix' ); ?></option>
+				<option value="rounded" selected><?php esc_html_e( 'Rounded', 'lumipix' ); ?></option>
+				<option value="circle"><?php esc_html_e( 'Circle', 'lumipix' ); ?></option>
+			</select>
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-bg"><?php esc_html_e( 'Background', 'lumipix' ); ?></label>
+			<div class="input-group">
+				<input class="input input--color" id="<?php echo esc_attr( $id ); ?>-bg" type="color" value="#5b3df5" data-opt="background">
+				<label class="check" data-transparent-field><input type="checkbox" data-transparent checked> <?php esc_html_e( 'Transparent', 'lumipix' ); ?></label>
+			</div>
+		</div>
+	</div>
+	<div class="field">
+		<label class="field__label" for="<?php echo esc_attr( $id ); ?>-pad"><?php esc_html_e( 'Padding', 'lumipix' ); ?> <output data-out="padding">8%</output></label>
+		<input class="range" id="<?php echo esc_attr( $id ); ?>-pad" type="range" min="0" max="30" value="8" data-opt="padding">
+	</div>
+	<?php
+}
+
+/**
+ * DPI changer / checker options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_dpi_options( $c, $id ) {
+	if ( 'check' === ( $c['mode'] ?? '' ) ) {
+		?>
+		<p class="field__hint field__hint--box"><?php echo lumipix_icon( 'shield', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?> <?php esc_html_e( 'Drop JPG, PNG or other images to read their DPI, pixel size and how large they print sharply. Nothing is changed.', 'lumipix' ); ?></p>
+		<?php
+		return;
+	}
+	$dpi = isset( $c['dpi'] ) ? (int) $c['dpi'] : 300;
+	?>
+	<div class="field">
+		<span class="field__label" id="<?php echo esc_attr( $id ); ?>-dpiq"><?php esc_html_e( 'New DPI', 'lumipix' ); ?></span>
+		<div class="segmented" role="group" aria-labelledby="<?php echo esc_attr( $id ); ?>-dpiq">
+			<?php foreach ( array( 72, 96, 150, 200, 300, 600 ) as $q ) : ?>
+				<button type="button" class="segmented__btn<?php echo $q === $dpi ? ' is-active' : ''; ?>" data-dpi-quick="<?php echo esc_attr( $q ); ?>"><?php echo esc_html( $q ); ?></button>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="field">
+		<label class="field__label" for="<?php echo esc_attr( $id ); ?>-dpi"><?php esc_html_e( 'Custom DPI', 'lumipix' ); ?></label>
+		<input class="input" id="<?php echo esc_attr( $id ); ?>-dpi" type="number" min="1" max="2400" step="1" inputmode="numeric" value="<?php echo esc_attr( $dpi ); ?>" data-opt="dpi">
+	</div>
+	<?php
+}
+
+/**
+ * Crop options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_crop_options( $c, $id ) {
+	$ratios = array( 'free' => __( 'Free', 'lumipix' ), '1:1' => '1:1', '4:5' => '4:5', '3:4' => '3:4', '2:3' => '2:3', '16:9' => '16:9', '9:16' => '9:16', '4:3' => '4:3', '3:2' => '3:2' );
+	?>
+	<div class="field">
+		<span class="field__label" id="<?php echo esc_attr( $id ); ?>-ratio"><?php esc_html_e( 'Aspect ratio', 'lumipix' ); ?></span>
+		<div class="preset-grid preset-grid--ratios" role="group" aria-labelledby="<?php echo esc_attr( $id ); ?>-ratio">
+			<?php foreach ( $ratios as $v => $label ) : ?>
+				<button type="button" class="preset<?php echo 'free' === $v ? ' is-active' : ''; ?>" data-aspect="<?php echo esc_attr( $v ); ?>"><?php echo esc_html( $label ); ?></button>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="field-row field-row--crop">
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-cw"><?php esc_html_e( 'Width (px)', 'lumipix' ); ?></label>
+			<input class="input" id="<?php echo esc_attr( $id ); ?>-cw" type="number" min="1" step="1" inputmode="numeric" data-crop-w disabled>
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-ch"><?php esc_html_e( 'Height (px)', 'lumipix' ); ?></label>
+			<input class="input" id="<?php echo esc_attr( $id ); ?>-ch" type="number" min="1" step="1" inputmode="numeric" data-crop-h disabled>
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-fmt"><?php esc_html_e( 'Save as', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-fmt" data-opt="format">
+				<option value="auto"><?php esc_html_e( 'Same as original', 'lumipix' ); ?></option>
+				<option value="image/jpeg">JPG</option>
+				<option value="image/png">PNG</option>
+				<option value="image/webp">WebP</option>
+			</select>
+		</div>
+	</div>
+	<div class="btn-row">
+		<button type="button" class="btn btn--ghost btn--sm" data-rotate="-90" disabled><?php echo lumipix_icon( 'rotate-left', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Rotate left', 'lumipix' ); ?></button>
+		<button type="button" class="btn btn--ghost btn--sm" data-rotate="90" disabled><?php echo lumipix_icon( 'rotate-right', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Rotate right', 'lumipix' ); ?></button>
+		<button type="button" class="btn btn--ghost btn--sm" data-flip disabled><?php echo lumipix_icon( 'flip', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Flip', 'lumipix' ); ?></button>
 	</div>
 	<?php
 }

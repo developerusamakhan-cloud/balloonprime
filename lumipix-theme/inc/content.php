@@ -206,3 +206,43 @@ function lumipix_site_shortcode() {
 	return esc_html( get_bloginfo( 'name' ) );
 }
 add_shortcode( 'lumipix_site', 'lumipix_site_shortcode' );
+
+/**
+ * Links to scheduled (not yet published) articles would be 404s until their
+ * publish date. Show them as plain text until then; they become links again
+ * automatically once the article goes live.
+ *
+ * @param string $content Post content.
+ * @return string
+ */
+function lumipix_unlink_scheduled_posts( $content ) {
+	static $urls = null;
+	if ( null === $urls ) {
+		$urls   = array();
+		$future = get_posts(
+			array(
+				'post_type'      => 'post',
+				'post_status'    => 'future',
+				'posts_per_page' => 100,
+				'no_found_rows'  => true,
+			)
+		);
+		foreach ( $future as $post ) {
+			$clone              = clone $post;
+			$clone->post_status = 'publish';
+			$urls[]             = untrailingslashit( get_permalink( $clone ) );
+		}
+	}
+	if ( ! $urls || false === strpos( $content, '<a ' ) ) {
+		return $content;
+	}
+	return preg_replace_callback(
+		'#<a\s[^>]*href="([^"]+)"[^>]*>(.*?)</a>#is',
+		function ( $m ) use ( $urls ) {
+			$href = untrailingslashit( strtok( html_entity_decode( $m[1] ), '#?' ) );
+			return in_array( $href, $urls, true ) ? $m[2] : $m[0];
+		},
+		$content
+	);
+}
+add_filter( 'the_content', 'lumipix_unlink_scheduled_posts', 99 );

@@ -2,7 +2,7 @@
 keywords: convert png to jpg on windows, png to jpg windows 10, png to jpg windows 11, convert png to jpg paint, png to jpg free
 title: How to Convert PNG to JPG on Windows (3 Free Ways)
 category: Formats & Printing
-tool: image-resizer
+tool: png-to-jpg
 seo_title: How to Convert PNG to JPG on Windows 10 & 11 – 3 Free Methods
 seo_desc: Convert PNG to JPG on Windows using Paint, the Photos app, or a free browser tool that converts many files at once. Includes what happens to transparency.
 excerpt: Three free ways to turn PNG files into JPG on Windows, and what happens to transparent areas when you do.
@@ -30,11 +30,11 @@ Paint may warn that transparency will be lost. Transparent areas become white.
 
 ## Method 3: A browser tool for many files at once
 
-1. Open the [Image Resizer](tool:image-resizer).
-2. Drop up to 20 PNG files.
-3. Set **Save as** to **JPG**. To keep the original size, set the unit to **%** and the value to 100.
+1. Open the [PNG to JPG converter](tool:png-to-jpg).
+2. Drop up to 20 PNG files. **Convert to** is already set to **JPG**.
+3. Adjust **Quality** if you want a smaller file (around 85–92 suits most images).
 4. Choose a **Background** colour for any transparent areas (white is standard).
-5. Download each file, or use **Download all**.
+5. Download each file, or use **Download all** to get one ZIP.
 
 Files are converted in your browser and never uploaded.
 
@@ -63,7 +63,7 @@ After converting, you can hit an exact size with the [Image Compressor](tool:com
 Paint and Photos do not let you choose JPG quality, so the size of the result can vary. If you need control:
 
 - Use the [Image Compressor](tool:compress-image), which converts to JPG and lets you set an exact KB target.
-- Or use the [Image Resizer](tool:image-resizer), which saves JPG at high quality and lets you resize at the same time.
+- Or use the [PNG to JPG converter](tool:png-to-jpg) for batches, or the [Image Resizer](tool:image-resizer) if you also need a new size.
 
 ## Converting with File Explorer and PowerToys
 

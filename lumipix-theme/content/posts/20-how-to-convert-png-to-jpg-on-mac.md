@@ -2,7 +2,7 @@
 keywords: convert png to jpg on mac, png to jpg preview, png to jpg macos, batch convert png to jpg mac, png to jpg finder
 title: How to Convert PNG to JPG on a Mac
 category: Formats & Printing
-tool: image-resizer
+tool: png-to-jpg
 seo_title: How to Convert PNG to JPG on Mac – Preview, Finder & Batch Methods
 seo_desc: Convert PNG to JPG on macOS using Preview, Finder Quick Actions, or a free browser tool for batches. Control quality and file size.
 excerpt: Preview, Finder and a batch-friendly browser method for turning PNGs into JPGs on macOS.
@@ -32,7 +32,7 @@ In recent versions of macOS, select one or more images in Finder, right-click, a
 
 ## Method 4: A browser tool
 
-If you also want to resize, set an exact pixel size, or choose the background colour for transparent areas, use the [Image Resizer](tool:image-resizer):
+To convert many files at once and choose the background colour for transparent areas, use the [PNG to JPG converter](tool:png-to-jpg). If you also want to resize or set an exact pixel size, use the [Image Resizer](tool:image-resizer):
 
 1. Drop up to 20 PNGs.
 2. Set **Save as** to **JPG**. Use the **%** unit at 100 to keep the original size.
@@ -80,7 +80,7 @@ If you convert images regularly, the **Shortcuts** app on recent versions of mac
 
 ## Troubleshooting
 
-- **Transparent areas turn black or white:** JPG cannot store transparency. If you need a specific background colour, use the [Image Resizer](tool:image-resizer) and choose the colour before converting.
+- **Transparent areas turn black or white:** JPG cannot store transparency. If you need a specific background colour, use the [PNG to JPG converter](tool:png-to-jpg) and choose the **Background** colour before converting.
 - **The JPG looks blurry:** the quality slider was too low. Export again at a higher setting.
 - **The file is still large:** the image has a lot of pixels. Reduce the dimensions in **Tools → Adjust Size** before exporting.
 

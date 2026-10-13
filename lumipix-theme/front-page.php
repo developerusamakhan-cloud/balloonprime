@@ -22,12 +22,12 @@ $features = array(
 	<div class="container hero__inner">
 		<p class="eyebrow"><span class="eyebrow__dot"></span><?php echo esc_html( get_theme_mod( 'lumipix_hero_eyebrow', __( 'Free · No signup · 100% private', 'lumipix' ) ) ); ?></p>
 		<h1 class="hero__title"><?php echo lumipix_hero_title_html(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in helper. ?></h1>
-		<p class="hero__lead"><?php echo esc_html( get_theme_mod( 'lumipix_hero_text', __( 'Compress to an exact KB size, resize for print or Instagram, and remove backgrounds with AI that runs on your device. Fast, free, and private by design.', 'lumipix' ) ) ); ?></p>
+		<p class="hero__lead"><?php echo esc_html( get_theme_mod( 'lumipix_hero_text', __( 'Compress to an exact KB size, resize for print or Instagram, convert WebP, PNG and PDF, and remove backgrounds with AI that runs on your device. Fast, free, and private by design.', 'lumipix' ) ) ); ?></p>
 
 		<form class="tool-search" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" data-tool-search-form>
 			<label class="visually-hidden" for="hero-search"><?php esc_html_e( 'Search tools', 'lumipix' ); ?></label>
 			<?php echo lumipix_icon( 'search', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
-			<input id="hero-search" type="search" name="s" autocomplete="off" placeholder="<?php esc_attr_e( 'What do you need? Try “50kb”, “instagram” or “passport”', 'lumipix' ); ?>" data-tool-search-input>
+			<input id="hero-search" type="search" name="s" autocomplete="off" placeholder="<?php esc_attr_e( 'What do you need? Try “50kb”, “webp to jpg” or “passport”', 'lumipix' ); ?>" data-tool-search-input>
 			<kbd>/</kbd>
 		</form>
 

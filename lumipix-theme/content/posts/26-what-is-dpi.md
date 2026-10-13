@@ -2,7 +2,7 @@
 keywords: what is dpi, dpi vs ppi, dpi meaning, 300 dpi, pixels per inch
 title: What Is DPI? DPI vs PPI vs Pixels Explained Simply
 category: Formats & Printing
-tool: image-resizer
+tool: change-image-dpi
 seo_title: What Is DPI? DPI vs PPI vs Pixels Explained in Plain English
 seo_desc: What is DPI? DPI, PPI and pixels explained simply: what each means, when DPI matters, and why 300 DPI is the print standard.
 excerpt: A plain-English explanation of DPI, PPI and pixels, and the only time the number actually matters.
@@ -38,7 +38,7 @@ At normal viewing distance, the human eye cannot distinguish individual pixels a
 
 ## Common situations
 
-**"The form asks for 300 DPI."** Make sure the image has enough pixels for the stated print size at 300 DPI, and set the DPI value in the file. The [Image Resizer](tool:image-resizer) does both when you resize in cm, mm or inches and save as JPG.
+**"The form asks for 300 DPI."** Make sure the image has enough pixels for the stated print size at 300 DPI, and set the DPI value in the file. The [Image Resizer](tool:image-resizer) does both when you resize in cm, mm or inches and save as JPG. If the pixels are already enough, the [Change image DPI](tool:change-image-dpi) tool sets the value without touching the pixels, and the [DPI checker](tool:check-image-dpi) shows what a file currently says.
 
 **"My phone photo says 72 DPI."** That is just a default label. A 12-megapixel phone photo can print sharply at up to about 13 × 10 inches at 300 DPI.
 

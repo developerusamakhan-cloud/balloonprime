@@ -2,7 +2,7 @@
 keywords: webp vs jpg, what is webp, convert webp to jpg, webp format, webp file size
 title: WebP vs JPG: What WebP Is and When to Convert It
 category: Formats & Printing
-tool: image-resizer
+tool: webp-to-jpg
 seo_title: WebP vs JPG – What Is WebP and Should You Convert It?
 seo_desc: WebP vs JPG: what the WebP format is, how it compares for size and quality, why websites use it, and how to convert it.
 excerpt: Why so many images you save from the web are WebP, how it compares to JPG, and when you should convert.
@@ -43,10 +43,10 @@ In those cases, convert it to JPG (for photos) or PNG (for graphics with transpa
 
 ## How to convert WebP to JPG
 
-1. Open the [Image Resizer](tool:image-resizer).
-2. Drop the WebP files.
-3. Set **Save as** to **JPG** (or PNG if you need transparency). Use **%** at 100 to keep the size.
-4. Download.
+1. Open the [WebP to JPG converter](tool:webp-to-jpg).
+2. Drop up to 20 WebP files.
+3. **Convert to** is already set to **JPG**; adjust **Quality** if you need a smaller file.
+4. Download each file, or use **Download all** for one ZIP.
 
 To get a JPG under a specific size, use the [Image Compressor](tool:compress-image) instead; it accepts WebP and saves JPG by default.
 
@@ -86,10 +86,9 @@ If something cannot open a WebP file, converting is quicker than hunting for a p
 
 WebP images can have transparent backgrounds, for example logos and stickers. Converting those to JPG fills the transparency with a colour. To keep it:
 
-1. Open the [Image Resizer](tool:image-resizer).
-2. Set the unit to **%** at 100.
-3. Choose **PNG** under **Save as**.
-4. Download.
+1. Open the [WebP to PNG converter](tool:webp-to-png).
+2. Drop the WebP files.
+3. Download. PNG keeps every transparent pixel.
 
 ## Should you save your own photos as WebP?
 

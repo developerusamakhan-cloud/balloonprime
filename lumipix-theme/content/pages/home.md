@@ -38,6 +38,16 @@ The [Background Remover](tool:background-remover) uses an AI model that runs in 
 
 For logos, signatures, stamps and scans on white paper, you do not need AI at all. The [white background remover](tool:remove-white-background) turns white, or any colour you click on, transparent in an instant. It keeps soft edges and removes the light halo that simple tools leave behind.
 
+## Convert images between formats
+
+Saved a picture from a website and it arrived as WebP or AVIF? Need a JPG for a form that only accepts JPG, or a PNG with a transparent background? The converters change one format into another in a click: [WebP to JPG](tool:webp-to-jpg), [WebP to PNG](tool:webp-to-png), [PNG to JPG](tool:png-to-jpg), [JPG to PNG](tool:jpg-to-png), [AVIF to JPG](tool:avif-to-jpg), [PNG to WebP](tool:png-to-webp) and [SVG to PNG](tool:svg-to-png). Drop up to 20 files, choose the quality, and download them one by one or as a single ZIP.
+
+To send several photos or scans as one document, the [Image to PDF converter](tool:image-to-pdf) puts each image on its own page in the order you choose, with A4, US Letter or image-sized pages.
+
+## Favicons, DPI and cropping
+
+A few smaller tools round out the set. The [favicon generator](tool:favicon-generator) turns a logo or a letter into a complete favicon package for your website. The [DPI checker](tool:check-image-dpi) tells you whether a photo is 300 DPI and how large it prints sharply, and [Change image DPI](tool:change-image-dpi) sets the value a printer asks for without re-compressing JPG or PNG files. The [image cropper](tool:crop-image) trims photos to a square, 16:9 or an exact pixel size at full resolution.
+
 ## Why it matters that your photos stay on your device
 
 The images people resize and compress are often personal: ID card scans, passport photos, certificates, signatures and family pictures. When a tool uploads them, you have to trust that the service deletes them, does not reuse them and keeps them secure. With Lumi Pix there is nothing to trust, because the files are never sent to us.
@@ -76,7 +86,7 @@ Yes. All tools work in modern mobile browsers on Android and iPhone, with no app
 
 ### Which image formats are supported?
 
-You can open JPG, PNG, WebP, AVIF and most other formats your browser supports. Results can be saved as JPG, PNG or WebP depending on the tool.
+You can open JPG, PNG, WebP, AVIF and most other formats your browser supports. Results can be saved as JPG, PNG or WebP depending on the tool, SVG files can be turned into PNG, and any set of images can be combined into one PDF.
 
 ### How do I make a passport-size photo at home?
 

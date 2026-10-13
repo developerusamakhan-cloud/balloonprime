@@ -23,7 +23,15 @@ $steps = array(
 	'resize'   => array( __( 'Pick a preset or type a size', 'lumipix' ), __( 'Drop your images', 'lumipix' ), __( 'Download at the exact size', 'lumipix' ) ),
 	'bg'       => array( __( 'Drop a photo', 'lumipix' ), __( 'AI removes the background on your device', 'lumipix' ), __( 'Download a transparent PNG', 'lumipix' ) ),
 	'colorkey' => array( __( 'Drop a logo, signature or scan', 'lumipix' ), __( 'Adjust tolerance if needed', 'lumipix' ), __( 'Download a transparent PNG', 'lumipix' ) ),
+	'convert'  => array( __( 'Drop up to 20 images', 'lumipix' ), __( 'Pick the format and quality', 'lumipix' ), __( 'Download one by one or as a ZIP', 'lumipix' ) ),
+	'pdf'      => array( __( 'Drop your images', 'lumipix' ), __( 'Drag them into the right order', 'lumipix' ), __( 'Click Create PDF', 'lumipix' ) ),
+	'favicon'  => array( __( 'Drop a logo or type a letter', 'lumipix' ), __( 'Choose shape, colours and padding', 'lumipix' ), __( 'Download the favicon package', 'lumipix' ) ),
+	'dpi'      => array( __( 'Drop JPG or PNG images', 'lumipix' ), __( 'Choose the DPI you need', 'lumipix' ), __( 'Download – pixels untouched', 'lumipix' ) ),
+	'crop'     => array( __( 'Drop an image', 'lumipix' ), __( 'Drag the box or pick a ratio', 'lumipix' ), __( 'Download at full resolution', 'lumipix' ) ),
 );
+if ( 'dpi' === $tool['app'] && 'check' === ( $tool['config']['mode'] ?? '' ) ) {
+	$steps['dpi'] = array( __( 'Drop one or more images', 'lumipix' ), __( 'Read the DPI and pixel size', 'lumipix' ), __( 'See how large each prints sharply', 'lumipix' ) );
+}
 $app_steps = isset( $steps[ $tool['app'] ] ) ? $steps[ $tool['app'] ] : $steps['compress'];
 
 while ( have_posts() ) :

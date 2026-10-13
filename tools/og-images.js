@@ -20,6 +20,8 @@ const TONES = {
   compress: { a: '#8b74ff', b: '#c04bf2', label: 'Compress' },
   resize: { a: '#3fb5ff', b: '#6d4bff', label: 'Resize' },
   background: { a: '#ff6aa8', b: '#ffb547', label: 'Background' },
+  convert: { a: '#ffb547', b: '#ff6a88', label: 'Convert' },
+  more: { a: '#3ddcb5', b: '#3fb5ff', label: 'More tools' },
 };
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 

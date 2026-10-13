@@ -155,6 +155,108 @@
 		});
 	}
 
+	/* CRC-32 (used by ZIP and PNG chunks). */
+	var crcTable = null;
+	function crc32(bytes, crc) {
+		if (!crcTable) {
+			crcTable = new Uint32Array(256);
+			for (var n = 0; n < 256; n++) {
+				var c = n;
+				for (var k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+				crcTable[n] = c >>> 0;
+			}
+		}
+		crc = crc === undefined ? 0xffffffff : crc ^ 0xffffffff;
+		for (var i = 0; i < bytes.length; i++) crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ (crc >>> 8);
+		return (crc ^ 0xffffffff) >>> 0;
+	}
+
+	/** Make every name in a list unique: photo.jpg, photo-2.jpg, … */
+	function uniqueNames(names) {
+		var seen = {};
+		return names.map(function (name) {
+			var key = name.toLowerCase();
+			if (!seen[key]) {
+				seen[key] = 1;
+				return name;
+			}
+			var n = ++seen[key];
+			var dot = name.lastIndexOf('.');
+			var out = dot > 0 ? name.slice(0, dot) + '-' + n + name.slice(dot) : name + '-' + n;
+			seen[out.toLowerCase()] = 1;
+			return out;
+		});
+	}
+
+	/**
+	 * Build a ZIP (stored, no compression – images are already compressed).
+	 * files: [{ name, blob }] → Promise<Blob>
+	 */
+	function makeZip(files) {
+		var names = uniqueNames(
+			files.map(function (f) {
+				return f.name;
+			})
+		);
+		return Promise.all(
+			files.map(function (f) {
+				return f.blob.arrayBuffer().then(function (b) {
+					return new Uint8Array(b);
+				});
+			})
+		).then(function (datas) {
+			var enc = new TextEncoder();
+			var parts = [];
+			var central = [];
+			var offset = 0;
+			var d = new Date();
+			var dosTime = (d.getHours() << 11) | (d.getMinutes() << 5) | (d.getSeconds() >> 1);
+			var dosDate = ((d.getFullYear() - 1980) << 9) | ((d.getMonth() + 1) << 5) | d.getDate();
+			datas.forEach(function (data, i) {
+				var name = enc.encode(names[i]);
+				var crc = crc32(data);
+				var local = new DataView(new ArrayBuffer(30));
+				local.setUint32(0, 0x04034b50, true);
+				local.setUint16(4, 20, true);
+				local.setUint16(6, 0x0800, true); // UTF-8 names
+				local.setUint16(8, 0, true);
+				local.setUint16(10, dosTime, true);
+				local.setUint16(12, dosDate, true);
+				local.setUint32(14, crc, true);
+				local.setUint32(18, data.length, true);
+				local.setUint32(22, data.length, true);
+				local.setUint16(26, name.length, true);
+				local.setUint16(28, 0, true);
+				parts.push(local.buffer, name, data);
+				var cd = new DataView(new ArrayBuffer(46));
+				cd.setUint32(0, 0x02014b50, true);
+				cd.setUint16(4, 20, true);
+				cd.setUint16(6, 20, true);
+				cd.setUint16(8, 0x0800, true);
+				cd.setUint16(10, 0, true);
+				cd.setUint16(12, dosTime, true);
+				cd.setUint16(14, dosDate, true);
+				cd.setUint32(16, crc, true);
+				cd.setUint32(20, data.length, true);
+				cd.setUint32(24, data.length, true);
+				cd.setUint16(28, name.length, true);
+				cd.setUint32(42, offset, true);
+				central.push(cd.buffer, name);
+				offset += 30 + name.length + data.length;
+			});
+			var cdSize = central.reduce(function (s, p) {
+				return s + (p.byteLength !== undefined ? p.byteLength : p.length);
+			}, 0);
+			var end = new DataView(new ArrayBuffer(22));
+			end.setUint32(0, 0x06054b50, true);
+			end.setUint16(8, datas.length, true);
+			end.setUint16(10, datas.length, true);
+			end.setUint32(12, cdSize, true);
+			end.setUint32(16, offset, true);
+			return new Blob(parts.concat(central, [end.buffer]), { type: 'application/zip' });
+		});
+	}
+
 	function download(blob, filename) {
 		var url = URL.createObjectURL(blob);
 		var a = document.createElement('a');
@@ -298,6 +400,14 @@
 				done: function (res) {
 					meta.innerHTML = res.meta + (res.badge ? ' ' + res.badge : '');
 					actions.innerHTML = '';
+					if (res.action) {
+						var link = document.createElement('a');
+						link.className = 'btn btn--ghost btn--sm';
+						link.href = res.action.href;
+						link.textContent = res.action.label;
+						actions.appendChild(link);
+					}
+					if (!res.blob) return;
 					var btn = document.createElement('button');
 					btn.type = 'button';
 					btn.className = 'btn btn--primary btn--sm';
@@ -324,6 +434,10 @@
 			});
 			if (allBtn) allBtn.hidden = ok.length < 2;
 			if (!summary) return;
+			if (handlers.summary) {
+				summary.textContent = handlers.summary(ok, items);
+				return;
+			}
 			if (!ok.length) {
 				summary.textContent = '';
 				return;
@@ -387,10 +501,13 @@
 				var ok = items.filter(function (i) {
 					return i.result;
 				});
-				ok.forEach(function (i, idx) {
-					setTimeout(function () {
-						download(i.result.blob, i.result.name);
-					}, idx * 350);
+				// One ZIP instead of many downloads (browsers often block multiple downloads).
+				makeZip(
+					ok.map(function (i) {
+						return { name: i.result.name, blob: i.result.blob };
+					})
+				).then(function (zip) {
+					download(zip, (handlers.zipName || 'lumipix-images') + '.zip');
 				});
 			});
 		}
@@ -477,6 +594,9 @@
 		flatten: flatten,
 		supportsType: supportsType,
 		setJpegDpi: setJpegDpi,
+		crc32: crc32,
+		makeZip: makeZip,
+		uniqueNames: uniqueNames,
 		download: download,
 		debounce: debounce,
 		icon: icon

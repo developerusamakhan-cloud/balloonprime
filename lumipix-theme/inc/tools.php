@@ -7,7 +7,7 @@
  * the installer sets automatically and editors can change in the page sidebar.
  *
  * Keys:
- *  - app      Which in-browser app to mount: compress | resize | bg | colorkey
+ *  - app      Which in-browser app to mount: compress | resize | bg | colorkey | convert | pdf | favicon | dpi | crop
  *  - group    Hub the tool belongs to (see lumipix_tool_groups()).
  *  - parent   Main tool key this preset belongs to (empty for main tools).
  *  - slug     Page slug created by the installer.
@@ -45,10 +45,20 @@ function lumipix_tool_groups() {
 				'desc'  => __( 'Change dimensions in pixels, centimetres or inches, with social presets.', 'lumipix' ),
 				'icon'  => 'resize',
 			),
+			'convert'    => array(
+				'label' => __( 'Convert', 'lumipix' ),
+				'desc'  => __( 'Change formats: WebP, AVIF, PNG, JPG, SVG and PDF.', 'lumipix' ),
+				'icon'  => 'convert',
+			),
 			'background' => array(
 				'label' => __( 'Background', 'lumipix' ),
 				'desc'  => __( 'Remove or replace backgrounds with on-device AI.', 'lumipix' ),
 				'icon'  => 'wand',
+			),
+			'more'       => array(
+				'label' => __( 'More tools', 'lumipix' ),
+				'desc'  => __( 'Favicons, DPI and cropping.', 'lumipix' ),
+				'icon'  => 'grid',
 			),
 		)
 	);
@@ -562,6 +572,266 @@ function lumipix_tools() {
 			),
 			'content' => '',
 		),
+
+		/* ---------------------------------------------------------------
+		 * Convert
+		 * ------------------------------------------------------------- */
+		'webp-to-jpg' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'webp-to-jpg',
+			'icon'    => 'convert',
+			'nav'     => __( 'WebP to JPG', 'lumipix' ),
+			'h1'      => __( 'Convert WebP to JPG', 'lumipix' ),
+			'title'   => __( 'Convert WebP to JPG Online – Free, Private, No Upload', 'lumipix' ),
+			'desc'    => __( 'Convert WebP to JPG in your browser. Up to 20 images at once, adjustable quality, Download all as ZIP. No upload, no signup, no watermark.', 'lumipix' ),
+			'lead'    => __( 'Turn WebP images into JPGs that open everywhere, right in your browser.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/jpeg', 'quality' => 92 ),
+			'related' => array( 'webp-to-png', 'png-to-jpg', 'compress-image' ),
+			'faqs'    => array(
+				__( 'Are my WebP files uploaded to a server?', 'lumipix' ) => __( 'No. The conversion runs entirely in your browser, so your images never leave your device.', 'lumipix' ),
+				__( 'What happens to transparent areas when I save WebP as JPG?', 'lumipix' ) => __( 'JPG cannot store transparency, so transparent pixels are filled with the Background colour you choose, which is white by default. Convert to PNG instead if you need to keep transparency.', 'lumipix' ),
+				__( 'Why is my JPG bigger than the original WebP?', 'lumipix' ) => __( 'WebP usually compresses more efficiently than JPG, so the same image often takes more space as a JPG. Lowering the Quality slider makes the file smaller.', 'lumipix' ),
+				__( 'Can I convert an animated WebP to JPG?', 'lumipix' ) => __( 'Only the first frame is converted, because a JPG holds a single image.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'webp-to-png' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'webp-to-png',
+			'icon'    => 'file-image',
+			'nav'     => __( 'WebP to PNG', 'lumipix' ),
+			'h1'      => __( 'Convert WebP to PNG', 'lumipix' ),
+			'title'   => __( 'Convert WebP to PNG Online – Keeps Transparency, Free', 'lumipix' ),
+			'desc'    => __( 'Convert WebP to PNG and keep transparent backgrounds. Lossless output, up to 20 images at once, Download all as ZIP. No upload or watermark.', 'lumipix' ),
+			'lead'    => __( 'Change WebP images to lossless PNG files and keep every transparent pixel.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/png', 'quality' => 92 ),
+			'related' => array( 'webp-to-jpg', 'png-to-webp', 'background-remover' ),
+			'faqs'    => array(
+				__( 'Does converting WebP to PNG keep the transparent background?', 'lumipix' ) => __( 'Yes. PNG supports transparency, so transparent areas in the WebP stay transparent in the PNG.', 'lumipix' ),
+				__( 'Why is there no quality slider for PNG?', 'lumipix' ) => __( 'PNG is lossless, so the pixels are saved exactly as decoded and there is nothing to adjust.', 'lumipix' ),
+				__( 'Will the PNG look better than the WebP?', 'lumipix' ) => __( 'No. The PNG keeps the image exactly as it is, including any compression artefacts in the original, but it will not lose any more quality when you edit and save it again.', 'lumipix' ),
+				__( 'Why is the PNG file larger?', 'lumipix' ) => __( 'PNG stores every pixel without lossy compression, so it is usually bigger than a WebP, especially for photos. For photos without transparency, JPG is often the better choice.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'png-to-jpg' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'png-to-jpg',
+			'icon'    => 'image',
+			'nav'     => __( 'PNG to JPG', 'lumipix' ),
+			'h1'      => __( 'Convert PNG to JPG', 'lumipix' ),
+			'title'   => __( 'Convert PNG to JPG Online – Free, Fast, No Upload', 'lumipix' ),
+			'desc'    => __( 'Convert PNG to JPG to shrink screenshots, scans and photos. Set quality and background colour, convert 20 files at once. Free, private, no upload.', 'lumipix' ),
+			'lead'    => __( 'Turn large PNG screenshots, scans and photos into smaller JPGs in seconds.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/jpeg', 'quality' => 90 ),
+			'related' => array( 'jpg-to-png', 'compress-image', 'webp-to-jpg' ),
+			'faqs'    => array(
+				__( 'What happens to the transparent background of my PNG?', 'lumipix' ) => __( 'JPG has no transparency, so transparent areas are filled with the Background colour you pick. White is the default, but you can choose any colour.', 'lumipix' ),
+				__( 'Will converting PNG to JPG reduce the file size?', 'lumipix' ) => __( 'Usually yes for photos, scans and detailed screenshots. Simple graphics with flat colours may not get much smaller, and each result shows the old and new size so you can check.', 'lumipix' ),
+				__( 'What quality setting should I use?', 'lumipix' ) => __( 'The default of 92 suits most images. Values from 80 to 92 give smaller files with little visible change, and text-heavy screenshots look best at 90 or above.', 'lumipix' ),
+				__( 'Does the image size in pixels change?', 'lumipix' ) => __( 'No. The JPG keeps the same pixel dimensions as the PNG; use the Image Resizer if you also want to change them.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'jpg-to-png' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'jpg-to-png',
+			'icon'    => 'layers',
+			'nav'     => __( 'JPG to PNG', 'lumipix' ),
+			'h1'      => __( 'Convert JPG to PNG', 'lumipix' ),
+			'title'   => __( 'Convert JPG to PNG Online – Free, Lossless, No Upload', 'lumipix' ),
+			'desc'    => __( 'Convert JPG to PNG for editing, lossless saving or uploads that require PNG. Up to 20 images at once, no upload, no signup, no watermark.', 'lumipix' ),
+			'lead'    => __( 'Save JPG photos as lossless PNG files for editing or uploads that need PNG.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/png', 'quality' => 92 ),
+			'related' => array( 'png-to-jpg', 'remove-white-background', 'image-resizer' ),
+			'faqs'    => array(
+				__( 'Does converting JPG to PNG improve image quality?', 'lumipix' ) => __( 'No. The PNG contains the same pixels as the JPG, but it will not lose any more quality when you edit and save it again.', 'lumipix' ),
+				__( 'Why is my PNG bigger than the JPG?', 'lumipix' ) => __( 'PNG is lossless and does not use the lossy compression that keeps JPGs small, so the file usually gets larger.', 'lumipix' ),
+				__( 'Will the background become transparent?', 'lumipix' ) => __( 'No. Converting keeps the background exactly as it is; use the Background Remover or Remove white background tool to make it transparent.', 'lumipix' ),
+				__( 'Is my photo uploaded anywhere?', 'lumipix' ) => __( 'No. The conversion happens in your browser, and EXIF metadata such as GPS location is removed from the result.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'avif-to-jpg' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'avif-to-jpg',
+			'icon'    => 'sparkles',
+			'nav'     => __( 'AVIF to JPG', 'lumipix' ),
+			'h1'      => __( 'Convert AVIF to JPG', 'lumipix' ),
+			'title'   => __( 'Convert AVIF to JPG – Free, Private, Batch of 20', 'lumipix' ),
+			'desc'    => __( 'Convert AVIF to JPG in your browser. Up to 20 images at once, quality slider, background colour for transparency, ZIP download. No upload, no signup.', 'lumipix' ),
+			'lead'    => __( 'Turn AVIF images into JPGs that open in any app, right in your browser.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/jpeg', 'quality' => 92 ),
+			'related' => array( 'webp-to-jpg', 'png-to-jpg', 'compress-image' ),
+			'faqs'    => array(
+				__( 'Why won\'t my AVIF file open in this converter?', 'lumipix' ) => __( 'Your browser has to decode AVIF itself. Use a current version of Chrome, Edge, Firefox or Safari 16.4 or newer.', 'lumipix' ),
+				__( 'What happens to transparent areas in an AVIF?', 'lumipix' ) => __( 'JPG cannot store transparency, so transparent areas are filled with the Background colour you choose, which is white by default. Switch Convert to PNG or WebP if you need to keep transparency.', 'lumipix' ),
+				__( 'Why is my JPG bigger than the original AVIF?', 'lumipix' ) => __( 'AVIF usually compresses more efficiently than JPG, so a JPG of similar quality often needs more bytes. Lower the Quality slider or compress the JPG afterwards if size matters.', 'lumipix' ),
+				__( 'Are my images uploaded anywhere?', 'lumipix' ) => __( 'No. The conversion runs entirely in your browser, and re-encoding also removes EXIF metadata such as GPS location.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'png-to-webp' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'png-to-webp',
+			'icon'    => 'zap',
+			'nav'     => __( 'PNG to WebP', 'lumipix' ),
+			'h1'      => __( 'Convert PNG to WebP', 'lumipix' ),
+			'title'   => __( 'Convert PNG to WebP – Keep Transparency, Free', 'lumipix' ),
+			'desc'    => __( 'Convert PNG to WebP for faster websites. Transparency kept, quality slider, up to 20 images per batch and ZIP download. Free and private, in your browser.', 'lumipix' ),
+			'lead'    => __( 'Make PNG images much lighter for your website while keeping transparent backgrounds.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/webp', 'quality' => 85 ),
+			'related' => array( 'webp-to-png', 'compress-image', 'image-resizer' ),
+			'faqs'    => array(
+				__( 'Does WebP keep the transparent background of my PNG?', 'lumipix' ) => __( 'Yes. WebP supports transparency, so transparent areas in your PNG stay transparent after conversion.', 'lumipix' ),
+				__( 'Which Quality setting should I use?', 'lumipix' ) => __( 'The default of 92 suits most images. Photos can often go lower, while screenshots, text and logos look best at higher values.', 'lumipix' ),
+				__( 'Will the image dimensions change?', 'lumipix' ) => __( 'No, the WebP keeps the same width and height in pixels. Resize the image first if it is larger than your page layout needs.', 'lumipix' ),
+				__( 'Can I convert several PNG files at once?', 'lumipix' ) => __( 'Yes, you can convert up to 20 images in one batch and save them all as a single ZIP with Download all.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'svg-to-png' => array(
+			'app'     => 'convert',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'svg-to-png',
+			'icon'    => 'code',
+			'nav'     => __( 'SVG to PNG', 'lumipix' ),
+			'h1'      => __( 'Convert SVG to PNG', 'lumipix' ),
+			'title'   => __( 'Convert SVG to PNG – Any Size, Transparent, Free', 'lumipix' ),
+			'desc'    => __( 'Convert SVG to PNG at 1×, 2×, 4× or a custom width with the transparent background kept. Batch up to 20 files, no upload, free in your browser.', 'lumipix' ),
+			'lead'    => __( 'Turn SVG logos and icons into sharp PNGs at exactly the size you need.', 'lumipix' ),
+			'config'  => array( 'to' => 'image/png', 'quality' => 92, 'svg' => true ),
+			'related' => array( 'favicon-generator', 'png-to-webp', 'image-resizer' ),
+			'faqs'    => array(
+				__( 'How do I get a high-resolution PNG from an SVG?', 'lumipix' ) => __( 'Choose 2× or 4× under Size, or type a custom width in pixels. The height follows the aspect ratio automatically.', 'lumipix' ),
+				__( 'Is the transparent background kept?', 'lumipix' ) => __( 'Yes, the PNG keeps the SVG\'s transparent background. If you need a solid colour instead, switch Convert to JPG and pick a Background colour.', 'lumipix' ),
+				__( 'Why is the text in my PNG in a different font?', 'lumipix' ) => __( 'SVGs that load external fonts or images may render with fallback fonts. Convert text to outlines in your design app and export the SVG again.', 'lumipix' ),
+				__( 'Is there a quality setting for PNG?', 'lumipix' ) => __( 'No, PNG is lossless, so every pixel is saved exactly and no quality slider is needed.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'image-to-pdf' => array(
+			'app'     => 'pdf',
+			'group'   => 'convert',
+			'parent'  => '',
+			'slug'    => 'image-to-pdf',
+			'icon'    => 'file',
+			'nav'     => __( 'Image to PDF', 'lumipix' ),
+			'h1'      => __( 'Image to PDF converter', 'lumipix' ),
+			'title'   => __( 'Image to PDF Converter – Combine Photos into One PDF', 'lumipix' ),
+			'desc'    => __( 'Free image to PDF converter: combine up to 20 JPG, PNG or WebP images into one PDF. Reorder pages, pick page size and margins. Private, no upload.', 'lumipix' ),
+			'lead'    => __( 'Combine photos, scans and screenshots into one PDF, in the order you choose.', 'lumipix' ),
+			'config'  => array(),
+			'related' => array( 'compress-image-to-200kb', 'crop-image', 'png-to-jpg' ),
+			'faqs'    => array(
+				__( 'How many images can I put in one PDF?', 'lumipix' ) => __( 'You can add up to 20 images, and each one becomes its own page in a single PDF.', 'lumipix' ),
+				__( 'Will my images be stretched to fit the page?', 'lumipix' ) => __( 'No. Each image is scaled to fit the page and centred, keeping its proportions; choose Same as image under Page size to avoid white borders.', 'lumipix' ),
+				__( 'Can I select or search the text in the PDF?', 'lumipix' ) => __( 'No, the images are placed as pictures and there is no OCR, so text in photos is not converted into selectable text.', 'lumipix' ),
+				__( 'Is it safe to use for ID cards and documents?', 'lumipix' ) => __( 'Yes. The PDF is created on your device and downloaded directly, so your images are never uploaded.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+
+		/* ---------------------------------------------------------------
+		 * More tools
+		 * ------------------------------------------------------------- */
+		'favicon-generator' => array(
+			'app'     => 'favicon',
+			'group'   => 'more',
+			'parent'  => '',
+			'slug'    => 'favicon-generator',
+			'icon'    => 'app-window',
+			'nav'     => __( 'Favicon generator', 'lumipix' ),
+			'h1'      => __( 'Favicon generator', 'lumipix' ),
+			'title'   => __( 'Favicon Generator – Make favicon.ico From Logo or Text', 'lumipix' ),
+			'desc'    => __( 'Free favicon generator: create favicon.ico, Apple touch and Android icons from a logo, letter or emoji, with a ready HTML snippet. No upload.', 'lumipix' ),
+			'lead'    => __( 'Turn a logo, a letter or an emoji into a complete favicon package in seconds.', 'lumipix' ),
+			'config'  => array(),
+			'related' => array( 'svg-to-png', 'crop-image', 'remove-white-background' ),
+			'faqs'    => array(
+				__( 'Which files are in the favicon package?', 'lumipix' ) => __( 'The ZIP contains favicon.ico (with 16, 32 and 48 px), favicon-16x16.png, favicon-32x32.png, a 180×180 apple-touch-icon.png, Android icons at 192 and 512 px, and site.webmanifest.', 'lumipix' ),
+				__( 'How do I install the favicon on my website?', 'lumipix' ) => __( 'Upload all the files to your site\'s root folder, such as public_html, and paste the HTML snippet into the head of your pages. On WordPress you can also set a 512×512 PNG as Site Icon under Appearance → Customize → Site Identity.', 'lumipix' ),
+				__( 'Why does the Apple touch icon have a background colour?', 'lumipix' ) => __( 'iOS does not support transparency for home screen icons, so apple-touch-icon.png always gets a solid background. Pick a colour that suits your logo.', 'lumipix' ),
+				__( 'Why does Google not show my favicon yet?', 'lumipix' ) => __( 'Google needs a square favicon of at least 48×48 px that it can crawl, and it can take days or weeks to appear in search results.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'change-image-dpi' => array(
+			'app'     => 'dpi',
+			'group'   => 'more',
+			'parent'  => '',
+			'slug'    => 'change-image-dpi',
+			'icon'    => 'printer',
+			'nav'     => __( 'Change image DPI', 'lumipix' ),
+			'h1'      => __( 'Change image DPI', 'lumipix' ),
+			'title'   => __( 'Change Image DPI to 300 Online – No Quality Loss', 'lumipix' ),
+			'desc'    => __( 'Change image DPI to 300, 600 or any value from 1 to 2400. JPG and PNG are not re-compressed, so quality stays identical. Free, private, no upload.', 'lumipix' ),
+			'lead'    => __( 'Set the DPI a printer or form asks for, without re-compressing your photo.', 'lumipix' ),
+			'config'  => array( 'mode' => 'change', 'dpi' => 300 ),
+			'related' => array( 'check-image-dpi', 'resize-image-in-cm', 'passport-size-photo' ),
+			'faqs'    => array(
+				__( 'Does changing the DPI improve image quality?', 'lumipix' ) => __( 'No. DPI only changes how large the image prints; it does not add pixels or sharpen anything. To print a larger size sharply you need more pixels from the start.', 'lumipix' ),
+				__( 'Will my JPG lose quality when I change its DPI?', 'lumipix' ) => __( 'No. For JPG and PNG only the stored DPI value is rewritten and the pixels are not re-compressed, so quality is identical and the file size barely changes.', 'lumipix' ),
+				__( 'Will Windows and Photoshop see the new DPI?', 'lumipix' ) => __( 'Yes. For JPG both the JFIF header and the EXIF resolution are updated, so Windows Properties, Photoshop and print shops read the new value. PNG files get a pHYs chunk.', 'lumipix' ),
+				__( 'Why did my WebP file come back as a PNG?', 'lumipix' ) => __( 'WebP, AVIF, GIF and BMP images are converted to PNG with the DPI set, so the value is stored reliably.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'check-image-dpi' => array(
+			'app'     => 'dpi',
+			'group'   => 'more',
+			'parent'  => '',
+			'slug'    => 'check-image-dpi',
+			'icon'    => 'scan',
+			'nav'     => __( 'Check image DPI', 'lumipix' ),
+			'h1'      => __( 'Check image DPI', 'lumipix' ),
+			'title'   => __( 'Check Image DPI Online – Is My Photo 300 DPI?', 'lumipix' ),
+			'desc'    => __( 'Check image DPI for free: see the stored DPI, pixel size and the largest sharp print at 300 DPI for up to 20 photos. Nothing is uploaded or changed.', 'lumipix' ),
+			'lead'    => __( 'See the DPI stored in your photo and how large it prints sharply.', 'lumipix' ),
+			'config'  => array( 'mode' => 'check' ),
+			'related' => array( 'change-image-dpi', 'resize-image-in-cm', 'image-resizer' ),
+			'faqs'    => array(
+				__( 'What does "No DPI stored" mean?', 'lumipix' ) => __( 'The file does not contain a DPI value, which is common for screenshots and web images. Many apps then assume 72 or 96 DPI.', 'lumipix' ),
+				__( 'My photo says 72 DPI. Can it still print at 300 DPI?', 'lumipix' ) => __( 'Often yes, if it has enough pixels. Check the largest sharp print size at 300 DPI in the results, then set the value with the Change image DPI tool.', 'lumipix' ),
+				__( 'Where does the checker find the DPI?', 'lumipix' ) => __( 'It reads the JFIF header or EXIF data in JPG files and the pHYs chunk in PNG files, and tells you which source it used.', 'lumipix' ),
+				__( 'Does the checker change or upload my images?', 'lumipix' ) => __( 'No. Your images are read on your device and nothing is changed, uploaded or downloaded.', 'lumipix' ),
+			),
+			'content' => '',
+		),
+		'crop-image' => array(
+			'app'     => 'crop',
+			'group'   => 'more',
+			'parent'  => '',
+			'slug'    => 'crop-image',
+			'icon'    => 'crop',
+			'nav'     => __( 'Crop image', 'lumipix' ),
+			'h1'      => __( 'Crop image', 'lumipix' ),
+			'title'   => __( 'Crop Image Online Free – Square, 16:9 or Exact Pixels', 'lumipix' ),
+			'desc'    => __( 'Crop image online for free: drag the box, choose 1:1, 4:5, 16:9 or exact pixels, rotate or flip, and save at full resolution. No upload, no signup.', 'lumipix' ),
+			'lead'    => __( 'Drag a box over the part you want and download it at full resolution.', 'lumipix' ),
+			'config'  => array(),
+			'related' => array( 'image-resizer', 'resize-image-for-instagram', 'passport-size-photo' ),
+			'faqs'    => array(
+				__( 'How do I crop an image to a square?', 'lumipix' ) => __( 'Click the 1:1 ratio, then drag the crop box over your subject and resize it with the corner handles. The box keeps its square shape.', 'lumipix' ),
+				__( 'Can I crop to an exact size in pixels?', 'lumipix' ) => __( 'Yes. Type the width and height in pixels and the crop box takes that size, as long as it fits inside the image.', 'lumipix' ),
+				__( 'Does cropping reduce image quality?', 'lumipix' ) => __( 'No. The crop is saved at full resolution with no upscaling; JPG and WebP only go through their normal compression when saved.', 'lumipix' ),
+				__( 'Can I crop several images at once?', 'lumipix' ) => __( 'No, the cropper works on one image at a time so you can position each crop precisely.', 'lumipix' ),
+			),
+			'content' => '',
+		),
 	);
 
 	$tools = apply_filters( 'lumipix_tools', $tools );
@@ -692,6 +962,10 @@ function lumipix_tool_family( $key ) {
 		if ( $k === $root || $t['parent'] === $root ) {
 			$out[ $k ] = $t;
 		}
+	}
+	// Standalone tools (converters, utilities) show the rest of their group instead.
+	if ( count( $out ) < 2 ) {
+		$out = lumipix_group_tools( $tool['group'] );
 	}
 	return $out;
 }
