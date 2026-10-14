@@ -9,7 +9,7 @@ Use this tool to compress image to 30KB online for form photos, signatures and p
 
 A 30KB limit sits in an awkward spot. It is too small for a full phone photo, yet a little more generous than the strictest signature limits. You will find it on application forms that ask for a small photograph and a signature, on membership and booking systems, on forums and chat apps that store avatars, and on websites that keep thumbnails light.
 
-The extra 10KB over a 20KB limit matters more than it sounds. It is half again as much room, which usually means a portrait can be a few hundred pixels wider and a signature keeps smoother pen strokes.
+The extra 10KB over a 20KB limit is half again as much room, so a portrait can be noticeably wider and a signature keeps smoother strokes.
 
 This page opens with a 30KB target and a maximum width of 800 pixels. The quick buttons switch between **20KB**, **30KB**, **40KB** and **50KB**, so you can match the exact limit on your form without typing. If yours is different, enter it in **Custom size** and pick KB or MB.
 
@@ -21,7 +21,7 @@ This page opens with a 30KB target and a maximum width of 800 pixels. The quick 
 4. **Wait for the result badge** to confirm the file fits.
 5. **Download** the new file, or use **Download all** to save a ZIP when you dropped several images.
 
-You can add up to 20 images in one batch, which is handy when a form wants a photo and a signature, or when you are preparing a set of thumbnails.
+You can add up to 20 images in one batch, for example a photo and a signature, or a set of thumbnails.
 
 ## How the compressor reaches 30KB
 
@@ -39,7 +39,7 @@ Because the starting width is capped at 800 pixels, most phone photos are scaled
 | Square profile picture | Around 400–500 px, sharp at avatar size |
 | Product or article thumbnail | Around 400–600 px wide |
 
-Results depend on how much detail the picture holds. Flat colours and plain backgrounds squeeze down easily; foliage, patterned clothes and grainy low-light shots use the budget fast.
+Flat colours and plain backgrounds squeeze down easily; foliage, patterns and grainy low-light shots use the budget fast.
 
 ## Choosing the right preset
 
@@ -50,7 +50,7 @@ Results depend on how much detail the picture holds. Flat colours and plain back
 | "Between 20KB and 40KB" | **30KB** or **40KB** | Stays safely inside the range |
 | "Less than 50KB" | **40KB** or **50KB** | More room for a sharper portrait |
 
-When a form gives a range, aim for the middle rather than the very bottom. There is no reward for being smaller than necessary, and a little extra room keeps the photo clearer.
+When a form gives a range, aim for the middle rather than the bottom; extra room keeps the photo clearer.
 
 ## Good uses for a 30KB file
 
@@ -92,17 +92,8 @@ Your images are processed in your browser on Windows, Mac, Android or iPhone and
 <!-- more -->
 ## Why a profile picture fits so well at 30KB
 
-Avatars are usually shown in a circle or square between 40 and 200 pixels across. Even on high-density screens, a 400 pixel image is more than enough. At 30KB that size leaves plenty of quality, so the picture looks crisp in comments, chats and staff directories while the site stays fast for everyone.
+Avatars are usually shown in a circle or square between 40 and 200 pixels across. Even on high-density screens, a 400 pixel image is more than enough. At 30KB that size leaves plenty of quality, so the picture looks crisp in comments and directories.
 
 ## Thumbnails for websites and listings
 
-If you run a small website or a listing page, thumbnails are often the most numerous images on the page. Keeping each one near 30KB means a grid of twenty previews loads quickly even on a slow mobile connection. Set the maximum width to roughly twice the width the thumbnail is displayed at, choose **WebP** under **Save as** if your site supports it, and compress the whole set in one batch.
-
-## Phone-only workflow
-
-1. Take the photo with the rear camera against a plain, light wall.
-2. Crop it in your gallery app.
-3. Open this page and tap **Choose files**.
-4. Download the result, then upload it from Downloads on Android or Files on iPhone.
-
-No app is needed, and the whole job takes a minute or two.
+On a website or listing page, thumbnails are often the most numerous images. Keeping each one near 30KB means a grid of twenty previews loads quickly even on a slow mobile connection. Set the maximum width to roughly twice the width the thumbnail is displayed at, choose **WebP** under **Save as** if your site supports it, and compress the whole set in one batch.

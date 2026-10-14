@@ -9,7 +9,7 @@ Use this tool to compress image to 300KB online for document scans, website imag
 
 Three hundred kilobytes is roomy enough that most images keep their full character, yet small enough to upload quickly on a weak connection. That balance is why it shows up so often: document upload fields on portals, support and help-desk attachments, classified and marketplace listings, content management systems and website builders that cap image size.
 
-At 300KB, a phone photo can usually stay well over 2000 pixels wide, and a full-page scan keeps small print readable. The challenge is less about shrinking dramatically and more about trimming the waste in files that start at several megabytes.
+At 300KB, a phone photo can usually stay well over 2000 pixels wide, and a full-page scan keeps small print readable.
 
 This page opens with a 300KB target and no width limit, so the compressor keeps as many pixels as it can. The quick buttons are **200KB**, **250KB**, **300KB** and **400KB**. Any other value can go in **Custom size**, in KB or MB.
 
@@ -63,7 +63,7 @@ Our guide on [compressing a document scan to 200KB](post:compress-document-scan-
 
 For your own website, 300KB is a sensible ceiling for large content images. The best order is to resize first, then compress: if an image is shown at 1000 pixels wide, around 2000 pixels covers sharp screens. Set that under **Advanced options** in **Maximum width (px, optional)**, or prepare the size with the [Image Resizer](tool:image-resizer). Choosing **WebP** under **Save as** gives a smaller file at the same visible quality on sites that support it; the guide to [WebP vs JPG](post:webp-vs-jpg) explains when that is worth it.
 
-Marketplaces and listing sites often allow several photos per item. Compressing them all to around 300KB keeps the listing fast while leaving enough detail for buyers to zoom in.
+For marketplace listings with several photos per item, around 300KB each keeps the page fast while leaving detail for buyers to zoom in.
 
 ## Attachments with a size cap
 
@@ -73,7 +73,7 @@ Help desks, contact forms, school portals and claim forms often cap each attachm
 
 - **Always work on a copy** and keep the original for printing or later edits.
 - **Do not compress a file twice.** Go back to the original if you need a new size.
-- **Convert PNG screenshots to JPG** only when they contain photos; flat graphics may look cleaner as PNG with [PNG to JPG](tool:png-to-jpg) used just for portals that demand JPG.
+- **Expect PNG files to shrink a lot.** A PNG scan or screenshot saved as JPG is usually far smaller. If a portal only needs a format change, [PNG to JPG](tool:png-to-jpg) does that on its own.
 - **Straighten and crop** scans before compressing so no bytes are wasted on borders.
 
 ## Common problems and fixes
@@ -82,7 +82,7 @@ Help desks, contact forms, school portals and claim forms often cap each attachm
 - **The portal still says the file is too large.** Use the **250KB** preset to allow for sites that count 1KB as 1,024 bytes, and check you selected the compressed copy.
 - **The format is rejected.** Switch **Save as** to **JPG**.
 - **The image is bigger in pixels than allowed.** Set **Maximum width** under **Advanced options**, or resize first.
-- **Colours look slightly different.** Make sure the original is a normal sRGB photo; unusual colour profiles may display differently once converted.
+- **A photo of a page looks grey.** Retake it in brighter, even light so the paper looks white; grey shading costs bytes and lowers contrast.
 
 ## Private and free
 
