@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 6 );
+define( 'LUMIPIX_PACK_REV', 7 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -263,6 +263,9 @@ function lumipix_run_installer() {
 		update_option( 'page_for_posts', (int) $ids['blog'] );
 	}
 
+	// Undo the 1.7.0 content swap, if it ran on this site.
+	$log = array_merge( $log, lumipix_undo_170_swap() );
+
 	// Tool pages (main tools first).
 	$tools = lumipix_tools();
 	uasort(
@@ -300,10 +303,6 @@ function lumipix_run_installer() {
 			$log[] = sprintf( __( 'Created tool page: %s', 'lumipix' ), $tool['h1'] );
 		}
 	}
-
-	// Retired pack content (old tool pages and articles).
-	$log = array_merge( $log, lumipix_retire_content() );
-	$log = array_merge( $log, lumipix_scrub_retired_text() );
 
 	// Remove WordPress's sample content if nobody has edited it.
 	foreach ( array( array( 'hello-world', 'post' ), array( 'sample-page', 'page' ) ) as $sample ) {
@@ -603,115 +602,62 @@ function lumipix_refresh_tool_pages() {
 }
 
 /**
- * Pages and articles removed from the content pack, with the URL path of
- * their replacement. Untouched copies are moved to the trash by Setup, and
- * old URLs are redirected permanently.
- *
- * @return array<string, array{type: string, to: string}>
- */
-function lumipix_retired_content() {
-	return array(
-		'compress-photo-for-ppsc-form'                 => array( 'type' => 'page', 'to' => 'tool:compress-image-to-30kb' ),
-		'compress-photo-for-fpsc-form'                 => array( 'type' => 'page', 'to' => 'tool:compress-image' ),
-		'compress-photo-for-nts-form'                  => array( 'type' => 'page', 'to' => 'tool:compress-image-to-30kb' ),
-		'photo-and-signature-for-pakistan-job-portals' => array( 'type' => 'post', 'to' => 'post:compress-photo-for-online-forms' ),
-	);
-}
-
-/**
- * Trash retired pack content that nobody has edited.
+ * Undo the content swap made by theme version 1.7.0: restore the exam-form
+ * presets and article it moved to the trash, and remove the pages it added
+ * (only when nobody has edited them). Runs as part of Setup; does nothing on
+ * sites that never ran 1.7.0.
  *
  * @return array<int, string> Log lines.
  */
-function lumipix_retire_content() {
-	$log = array();
-	foreach ( lumipix_retired_content() as $slug => $info ) {
-		$post = get_page_by_path( $slug, OBJECT, $info['type'] );
+function lumipix_undo_170_swap() {
+	$log     = array();
+	$restore = array(
+		'compress-photo-for-ppsc-form'                 => 'page',
+		'compress-photo-for-fpsc-form'                 => 'page',
+		'compress-photo-for-nts-form'                  => 'page',
+		'photo-and-signature-for-pakistan-job-portals' => 'post',
+	);
+	$keep_status = function ( $new_status, $post_id, $previous_status ) {
+		return $previous_status;
+	};
+	add_filter( 'wp_untrash_post_status', $keep_status, 10, 3 );
+	foreach ( $restore as $slug => $type ) {
+		$trashed = get_posts(
+			array(
+				'post_type'      => $type,
+				'post_status'    => 'trash',
+				'posts_per_page' => 1,
+				'meta_key'       => '_wp_desired_post_slug', // phpcs:ignore WordPress.DB.SlowDBQuery
+				'meta_value'     => $slug, // phpcs:ignore WordPress.DB.SlowDBQuery
+			)
+		);
+		if ( $trashed && ! get_page_by_path( $slug, OBJECT, $type ) ) {
+			wp_untrash_post( $trashed[0]->ID );
+			/* translators: %s: title */
+			$log[] = sprintf( __( 'Restored: %s', 'lumipix' ), $trashed[0]->post_title );
+		}
+	}
+	remove_filter( 'wp_untrash_post_status', $keep_status, 10 );
+
+	$added = array(
+		'compress-image-to-30kb'   => 'page',
+		'compress-image-to-300kb'  => 'page',
+		'compress-image-for-email' => 'page',
+		'how-to-make-a-favicon'    => 'post',
+	);
+	foreach ( $added as $slug => $type ) {
+		$post = get_page_by_path( $slug, OBJECT, $type );
 		if ( ! $post || 'trash' === $post->post_status ) {
 			continue;
 		}
-		if ( 'page' === $info['type'] ) {
-			$key = (string) get_post_meta( $post->ID, '_lumipix_tool', true );
-			if ( $key && lumipix_get_tool( $key ) ) {
-				continue; // Still attached to a live tool.
-			}
+		$key = (string) get_post_meta( $post->ID, '_lumipix_tool', true );
+		if ( 'page' === $type && $key && lumipix_get_tool( $key ) ) {
+			continue;
 		}
 		if ( lumipix_is_untouched( $post ) || 'future' === $post->post_status ) {
 			wp_trash_post( $post->ID );
 			/* translators: %s: title */
-			$log[] = sprintf( __( 'Removed retired content: %s', 'lumipix' ), $post->post_title );
-		}
-	}
-	return $log;
-}
-
-/**
- * Redirect retired URLs (only when nothing else answers them).
- */
-function lumipix_redirect_retired() {
-	if ( ! is_404() ) {
-		return;
-	}
-	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-	$slug = basename( $path );
-	$map  = lumipix_retired_content();
-	if ( ! $slug || ! isset( $map[ $slug ] ) ) {
-		return;
-	}
-	$to = lumipix_md_resolve_url( $map[ $slug ]['to'] );
-	if ( $to ) {
-		wp_safe_redirect( $to, 301 );
-		exit;
-	}
-}
-add_action( 'template_redirect', 'lumipix_redirect_retired', 1 );
-
-/**
- * Replace location-specific sentences that earlier versions of the content
- * pack wrote, even in pages that were edited since. Only the exact sentences
- * the theme wrote are changed; the rest of the page is left alone.
- *
- * @return array<int, string> Log lines.
- */
-function lumipix_scrub_retired_text() {
-	global $wpdb;
-	$log   = array();
-	$texts = array(
-		', including PPSC, FPSC and NTS. Names are used' => '. Names are used',
-	);
-	$ids   = $wpdb->get_col( "SELECT ID FROM {$wpdb->posts} WHERE post_status IN ('publish','future','draft') AND post_type IN ('page','post') AND (post_content LIKE '%PPSC%' OR post_content LIKE '%Pakistan%')" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-	foreach ( $ids as $id ) {
-		$post    = get_post( (int) $id );
-		$content = strtr( $post->post_content, $texts );
-		// The compressor page linked to the removed exam-board presets.
-		$content = preg_replace( '#<!-- wp:paragraph -->\s*<p>For recruitment forms, there are dedicated pages for .*?</p>\s*<!-- /wp:paragraph -->#s', '', $content );
-		if ( $content !== $post->post_content ) {
-			$wpdb->update( $wpdb->posts, array( 'post_content' => $content ), array( 'ID' => $post->ID ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
-			clean_post_cache( $post->ID );
-			/* translators: %s: title */
-			$log[] = sprintf( __( 'Removed location-specific text: %s', 'lumipix' ), $post->post_title );
-		}
-		$faqs = get_post_meta( $post->ID, '_lumipix_faqs', true );
-		$old  = 'Is Lumi Pix affiliated with PPSC, FPSC or NTS?';
-		if ( is_array( $faqs ) && isset( $faqs[ $old ] ) ) {
-			$new = array();
-			foreach ( $faqs as $q => $a ) {
-				if ( $q === $old ) {
-					$new[ __( 'Is Lumi Pix affiliated with any government office, exam board or employer?', 'lumipix' ) ] = __( 'No. Lumi Pix is an independent image tool. Pages that mention online forms only describe how to prepare photos and documents for them. Always follow the official instructions of the organisation you are applying to.', 'lumipix' );
-				} else {
-					$new[ $q ] = $a;
-				}
-			}
-			update_post_meta( $post->ID, '_lumipix_faqs', $new );
-		}
-	}
-	// FAQ meta can exist on pages whose body never mentioned the names.
-	foreach ( get_posts( array( 'post_type' => 'page', 'posts_per_page' => 50, 'meta_key' => '_lumipix_faqs', 'fields' => 'ids' ) ) as $pid ) { // phpcs:ignore WordPress.DB.SlowDBQuery
-		$faqs = get_post_meta( $pid, '_lumipix_faqs', true );
-		if ( is_array( $faqs ) && isset( $faqs['Is Lumi Pix affiliated with PPSC, FPSC or NTS?'] ) && ! in_array( (string) $pid, $ids, true ) ) {
-			unset( $faqs['Is Lumi Pix affiliated with PPSC, FPSC or NTS?'] );
-			$faqs[ __( 'Is Lumi Pix affiliated with any government office, exam board or employer?', 'lumipix' ) ] = __( 'No. Lumi Pix is an independent image tool. Pages that mention online forms only describe how to prepare photos and documents for them. Always follow the official instructions of the organisation you are applying to.', 'lumipix' );
-			update_post_meta( $pid, '_lumipix_faqs', $faqs );
+			$log[] = sprintf( __( 'Removed page added by version 1.7.0: %s', 'lumipix' ), $post->post_title );
 		}
 	}
 	return $log;

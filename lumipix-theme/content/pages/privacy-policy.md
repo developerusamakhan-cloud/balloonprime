@@ -101,4 +101,4 @@ The site stores your light or dark theme choice in your browser. If analytics or
 
 ### How can I ask for my data to be deleted?
 
-Email us at the address on this page. Because we do not collect images or accounts, we usually hold very little information about you.
+Email us using the email address shown on this page. Because we do not collect images or accounts, we usually hold very little information about you.

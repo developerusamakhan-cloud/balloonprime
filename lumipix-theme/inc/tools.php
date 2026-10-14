@@ -98,6 +98,23 @@ function lumipix_tools() {
 			. '<!-- wp:list --><ul class="wp-block-list"><li>' . esc_html__( 'Start from the original photo, not a screenshot of it.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop away empty space first; fewer pixels means more quality per kilobyte.', 'lumipix' ) . '</li><li>' . esc_html__( 'Check the exact limit on the form you are filling in, then pick the matching size.', 'lumipix' ) . '</li></ul><!-- /wp:list -->';
 	};
 
+	$form_content = function ( $org ) {
+		return '<!-- wp:heading --><h2 class="wp-block-heading">' . sprintf( esc_html__( 'Getting your photo ready for the %s application', 'lumipix' ), esc_html( $org ) ) . '</h2><!-- /wp:heading -->'
+			. '<!-- wp:paragraph --><p>' . sprintf( esc_html__( 'Online application portals such as %s usually set a maximum file size and sometimes fixed dimensions for the photograph and signature. If your file is too large, the upload is rejected. Read the current instructions on the official advertisement or portal, note the limit, and choose it above.', 'lumipix' ), esc_html( $org ) ) . '</p><!-- /wp:paragraph -->'
+			. '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Step by step', 'lumipix' ) . '</h2><!-- /wp:heading -->'
+			. '<!-- wp:list {"ordered":true} --><ol class="wp-block-list"><li>' . esc_html__( 'Take the photo against a plain, light background with even lighting.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop it so your face and shoulders fill most of the frame.', 'lumipix' ) . '</li><li>' . esc_html__( 'Drop it into the tool and choose the size limit from the official instructions.', 'lumipix' ) . '</li><li>' . esc_html__( 'Download the JPG and upload it to the portal.', 'lumipix' ) . '</li></ol><!-- /wp:list -->'
+			. '<!-- wp:paragraph --><p>' . esc_html__( 'Lumi Pix is an independent tool and is not affiliated with any government department or testing service. Always follow the latest official requirements.', 'lumipix' ) . '</p><!-- /wp:paragraph -->';
+	};
+
+	$form_faqs = function ( $org ) {
+		return array(
+			/* translators: %s: organisation name */
+			sprintf( __( 'What photo size does %s require?', 'lumipix' ), $org ) => __( 'Requirements change between advertisements, so always check the official instructions for the post you are applying for. Once you know the limit, select it here and the tool will produce a file that fits.', 'lumipix' ),
+			__( 'Can I compress my signature too?', 'lumipix' ) => __( 'Yes. Use the same tool for the signature scan, or open the signature tool to make the background transparent or clean white first.', 'lumipix' ),
+			__( 'Is it safe to use for official documents?', 'lumipix' ) => __( 'Your images are processed on your own device and are never uploaded to Lumi Pix, so nobody else sees them.', 'lumipix' ),
+		);
+	};
+
 	$tools = array(
 
 		/* ---------------------------------------------------------------
@@ -156,27 +173,6 @@ function lumipix_tools() {
 			'faqs'    => $size_faqs( '20KB' ),
 			'content' => $size_content( '20KB', __( 'A 20KB limit is common for signatures and small profile photos on recruitment and admission portals. At this size, dimensions matter as much as quality, so the tool also limits the width to keep the result crisp.', 'lumipix' ) ),
 		),
-		'compress-image-to-30kb' => array(
-			'app'     => 'compress',
-			'group'   => 'compress',
-			'parent'  => 'compress-image',
-			'slug'    => 'compress-image-to-30kb',
-			'icon'    => 'compress',
-			'nav'     => __( 'Compress to 30KB', 'lumipix' ),
-			'h1'      => __( 'Compress image to 30KB', 'lumipix' ),
-			'title'   => __( 'Compress Image to 30KB Online – Free & Private', 'lumipix' ),
-			'desc'    => __( 'Compress photos, signatures and profile pictures to under 30KB for application forms and thumbnails. Free, no signup, and nothing is uploaded.', 'lumipix' ),
-			'lead'    => __( 'Shrink a photo or signature to under 30KB for forms, profile pictures and thumbnails.', 'lumipix' ),
-			'config'  => array( 'target' => 30, 'unit' => 'KB', 'maxWidth' => 800, 'quick' => array( 20, 30, 40, 50 ) ),
-			'related' => array( 'compress-image-to-20kb', 'compress-image-to-50kb', 'resize-signature' ),
-			'faqs'    => array(
-				__( 'How do I compress an image to 30KB?', 'lumipix' ) => __( 'Drop the image on this page with the 30KB target selected and download the result once the badge confirms it fits. The tool finds the highest quality that fits and only reduces dimensions if it has to.', 'lumipix' ),
-				__( 'Will my photo still look clear at 30KB?', 'lumipix' ) => __( 'Yes, at the size forms and profile pages display it. A cropped head-and-shoulders portrait against a plain background usually stays several hundred pixels wide and sharp.', 'lumipix' ),
-				__( 'My form needs a minimum size as well. What should I do?', 'lumipix' ) => __( 'If the result is below the minimum, open Advanced options and raise the Maximum width so more pixels are kept. You can also pick the 40KB preset if it stays within the allowed range.', 'lumipix' ),
-				__( 'Are my photos uploaded to a server?', 'lumipix' ) => __( 'No. Compression happens entirely in your browser, so your photo and signature never leave your device.', 'lumipix' ),
-			),
-			'content' => '',
-		),
 		'compress-image-to-50kb'     => array(
 			'app'     => 'compress',
 			'group'   => 'compress',
@@ -224,27 +220,6 @@ function lumipix_tools() {
 			'related' => array( 'compress-image-to-100kb', 'compress-image-to-1mb', 'image-resizer' ),
 			'faqs'    => $size_faqs( '200KB' ),
 			'content' => $size_content( '200KB', __( 'A 200KB limit is typical for document scans, CNIC or ID card copies and certificates on application portals. At this size text stays readable when the compression is tuned properly.', 'lumipix' ) ),
-		),
-		'compress-image-to-300kb' => array(
-			'app'     => 'compress',
-			'group'   => 'compress',
-			'parent'  => 'compress-image',
-			'slug'    => 'compress-image-to-300kb',
-			'icon'    => 'compress',
-			'nav'     => __( 'Compress to 300KB', 'lumipix' ),
-			'h1'      => __( 'Compress image to 300KB', 'lumipix' ),
-			'title'   => __( 'Compress Image to 300KB Online – Sharp Scans & Photos', 'lumipix' ),
-			'desc'    => __( 'Reduce photos and document scans to under 300KB with readable text and sharp detail. Ideal for uploads, listings and attachments. Free and private.', 'lumipix' ),
-			'lead'    => __( 'Bring scans, photos and website images under 300KB while keeping text and detail sharp.', 'lumipix' ),
-			'config'  => array( 'target' => 300, 'unit' => 'KB', 'quick' => array( 200, 250, 300, 400 ) ),
-			'related' => array( 'compress-image-to-200kb', 'compress-image-to-500kb', 'image-to-pdf' ),
-			'faqs'    => array(
-				__( 'How do I compress an image to 300KB?', 'lumipix' ) => __( 'Drop your images with the 300KB target selected, wait for the badge confirming each one fits, and download them individually or with Download all.', 'lumipix' ),
-				__( 'Will text in a scanned document stay readable?', 'lumipix' ) => __( 'Yes. A full-page scan usually stays at or near full size at 300KB, so normal print remains crisp, provided the original scan is in focus.', 'lumipix' ),
-				__( 'Should I save as JPG or WebP?', 'lumipix' ) => __( 'Choose JPG for portals, forms and attachments because it is accepted everywhere. WebP gives smaller files for your own website if it supports the format.', 'lumipix' ),
-				__( 'Can I compress several files at once?', 'lumipix' ) => __( 'Yes. You can add up to 20 images in one batch and save them all as a single ZIP with Download all.', 'lumipix' ),
-			),
-			'content' => '',
 		),
 		'compress-image-to-500kb'    => array(
 			'app'     => 'compress',
@@ -294,26 +269,53 @@ function lumipix_tools() {
 			'faqs'    => $size_faqs( '2MB' ),
 			'content' => $size_content( '2MB', __( 'Many upload forms, print services and help desks limit images to 2MB. Camera and high-end phone photos are often larger, but they can be brought under 2MB with no difference you would notice.', 'lumipix' ) ),
 		),
-		'compress-image-for-email' => array(
+		'compress-photo-for-ppsc'    => array(
 			'app'     => 'compress',
 			'group'   => 'compress',
 			'parent'  => 'compress-image',
-			'slug'    => 'compress-image-for-email',
-			'icon'    => 'file-image',
-			'nav'     => __( 'Compress for email', 'lumipix' ),
-			'h1'      => __( 'Compress image for email', 'lumipix' ),
-			'title'   => __( 'Compress Image for Email – Shrink Photos to Attach', 'lumipix' ),
-			'desc'    => __( 'Shrink a batch of photos for email attachments, download one ZIP and send without hitting size limits. Free, private and no signup.', 'lumipix' ),
-			'lead'    => __( 'Make photos small enough to attach and send, while they still look great on screen.', 'lumipix' ),
-			'config'  => array( 'target' => 500, 'unit' => 'KB', 'maxWidth' => 2000, 'quick' => array( 200, 500, 1000, 2000 ) ),
-			'related' => array( 'compress-image-to-1mb', 'image-to-pdf', 'compress-image' ),
-			'faqs'    => array(
-				__( 'What size should photos be for email?', 'lumipix' ) => __( 'Around 500KB per photo at 2000 pixels wide looks sharp on screens and keeps messages manageable. For many photos, choose 200KB; for just a few, 1MB or 2MB is fine.', 'lumipix' ),
-				__( 'What is the attachment limit for email?', 'lumipix' ) => __( 'It depends on the provider and usually applies to the whole message, not each file. Limits vary and can change, so check your provider and keep some headroom.', 'lumipix' ),
-				__( 'Can I compress a whole set of photos at once?', 'lumipix' ) => __( 'Yes. Add up to 20 photos, then press Download all to save them as one ZIP that you can attach or unzip.', 'lumipix' ),
-				__( 'Are my photos uploaded anywhere?', 'lumipix' ) => __( 'No. The photos are compressed in your browser and only go where you send them in your email.', 'lumipix' ),
-			),
-			'content' => '',
+			'slug'    => 'compress-photo-for-ppsc-form',
+			'icon'    => 'file',
+			'nav'     => __( 'Photo for PPSC form', 'lumipix' ),
+			'h1'      => __( 'Compress photo for PPSC online form', 'lumipix' ),
+			'title'   => __( 'Compress Photo for PPSC Online Application – Free', 'lumipix' ),
+			'desc'    => __( 'Get your photograph and signature under the PPSC upload size limit in seconds. Free, private, and works on any phone.', 'lumipix' ),
+			'lead'    => __( 'Check the size limit in your PPSC advertisement, select it below, and download a file that uploads first time.', 'lumipix' ),
+			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 30, 50, 100, 200 ) ),
+			'related' => array( 'compress-photo-for-fpsc', 'compress-photo-for-nts', 'resize-signature' ),
+			'faqs'    => $form_faqs( 'PPSC' ),
+			'content' => $form_content( 'PPSC' ),
+		),
+		'compress-photo-for-fpsc'    => array(
+			'app'     => 'compress',
+			'group'   => 'compress',
+			'parent'  => 'compress-image',
+			'slug'    => 'compress-photo-for-fpsc-form',
+			'icon'    => 'file',
+			'nav'     => __( 'Photo for FPSC form', 'lumipix' ),
+			'h1'      => __( 'Compress photo for FPSC online form', 'lumipix' ),
+			'title'   => __( 'Compress Photo for FPSC Online Application – Free', 'lumipix' ),
+			'desc'    => __( 'Resize and compress your photo and documents to the FPSC upload limit. Free, no signup, processed on your device.', 'lumipix' ),
+			'lead'    => __( 'Choose the limit from the official FPSC instructions and get an upload-ready JPG in one step.', 'lumipix' ),
+			'config'  => array( 'target' => 100, 'unit' => 'KB', 'maxWidth' => 1200, 'quick' => array( 20, 50, 100, 200, 500 ) ),
+			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-nts', 'compress-image-to-200kb' ),
+			'faqs'    => $form_faqs( 'FPSC' ),
+			'content' => $form_content( 'FPSC' ),
+		),
+		'compress-photo-for-nts'     => array(
+			'app'     => 'compress',
+			'group'   => 'compress',
+			'parent'  => 'compress-image',
+			'slug'    => 'compress-photo-for-nts-form',
+			'icon'    => 'file',
+			'nav'     => __( 'Photo for NTS form', 'lumipix' ),
+			'h1'      => __( 'Compress photo for NTS online form', 'lumipix' ),
+			'title'   => __( 'Compress Photo for NTS Online Registration – Free', 'lumipix' ),
+			'desc'    => __( 'Make your photograph fit the NTS online registration upload limit. Free, private and works on mobile.', 'lumipix' ),
+			'lead'    => __( 'Select the size from your NTS test instructions and download a photo that is ready to upload.', 'lumipix' ),
+			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 50, 100, 200 ) ),
+			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-fpsc', 'passport-size-photo' ),
+			'faqs'    => $form_faqs( 'NTS' ),
+			'content' => $form_content( 'NTS' ),
 		),
 
 		/* ---------------------------------------------------------------
@@ -475,7 +477,7 @@ function lumipix_tools() {
 			'desc'    => __( 'Resize and compress a scanned signature to 10KB, 20KB or 50KB for online applications. Free, private and works on mobile.', 'lumipix' ),
 			'lead'    => __( 'Snap your signature on white paper, drop it here, and get a small, clear file for the form.', 'lumipix' ),
 			'config'  => array( 'target' => 20, 'unit' => 'KB', 'maxWidth' => 500, 'quick' => array( 10, 20, 30, 50 ) ),
-			'related' => array( 'remove-white-background', 'compress-image-to-20kb', 'compress-image-to-30kb' ),
+			'related' => array( 'remove-white-background', 'compress-image-to-20kb', 'compress-photo-for-ppsc' ),
 			'faqs'    => array(
 				__( 'How do I make my signature smaller in KB?', 'lumipix' ) => __( 'Choose the size limit from the form instructions and drop your signature photo. The tool trims the dimensions and quality until it fits.', 'lumipix' ),
 				__( 'How do I make a signature with a transparent background?', 'lumipix' ) => __( 'Use the white background remover. It turns the paper transparent and keeps the ink, and you can save it as PNG.', 'lumipix' ),

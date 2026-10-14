@@ -52,7 +52,7 @@ If you know the limit, these pages open with the target already set:
 - [Compress to 200KB](tool:compress-image-to-200kb) for document scans
 - [Compress to 1MB](tool:compress-image-to-1mb) when you want to keep nearly all the detail
 
-More one-click presets: [compress to 30KB](tool:compress-image-to-30kb) for small form photos, [compress to 300KB](tool:compress-image-to-300kb) for scans and listings, and [compress for email](tool:compress-image-for-email) to send a batch of photos without hitting attachment limits.
+For recruitment forms, there are dedicated pages for [PPSC](tool:compress-photo-for-ppsc), [FPSC](tool:compress-photo-for-fpsc) and [NTS](tool:compress-photo-for-nts) with suitable quick sizes.
 
 ## JPG or WebP?
 
