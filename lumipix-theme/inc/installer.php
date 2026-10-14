@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 5 );
+define( 'LUMIPIX_PACK_REV', 6 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -300,6 +300,9 @@ function lumipix_run_installer() {
 			$log[] = sprintf( __( 'Created tool page: %s', 'lumipix' ), $tool['h1'] );
 		}
 	}
+
+	// Retired pack content (old tool pages and articles).
+	$log = array_merge( $log, lumipix_retire_content() );
 
 	// Remove WordPress's sample content if nobody has edited it.
 	foreach ( array( array( 'hello-world', 'post' ), array( 'sample-page', 'page' ) ) as $sample ) {
@@ -597,3 +600,67 @@ function lumipix_refresh_tool_pages() {
 	}
 	return $log;
 }
+
+/**
+ * Pages and articles removed from the content pack, with the URL path of
+ * their replacement. Untouched copies are moved to the trash by Setup, and
+ * old URLs are redirected permanently.
+ *
+ * @return array<string, array{type: string, to: string}>
+ */
+function lumipix_retired_content() {
+	return array(
+		'compress-photo-for-ppsc-form'                 => array( 'type' => 'page', 'to' => 'tool:compress-image-to-30kb' ),
+		'compress-photo-for-fpsc-form'                 => array( 'type' => 'page', 'to' => 'tool:compress-image' ),
+		'compress-photo-for-nts-form'                  => array( 'type' => 'page', 'to' => 'tool:compress-image-to-30kb' ),
+		'photo-and-signature-for-pakistan-job-portals' => array( 'type' => 'post', 'to' => 'post:compress-photo-for-online-forms' ),
+	);
+}
+
+/**
+ * Trash retired pack content that nobody has edited.
+ *
+ * @return array<int, string> Log lines.
+ */
+function lumipix_retire_content() {
+	$log = array();
+	foreach ( lumipix_retired_content() as $slug => $info ) {
+		$post = get_page_by_path( $slug, OBJECT, $info['type'] );
+		if ( ! $post || 'trash' === $post->post_status ) {
+			continue;
+		}
+		if ( 'page' === $info['type'] ) {
+			$key = (string) get_post_meta( $post->ID, '_lumipix_tool', true );
+			if ( $key && lumipix_get_tool( $key ) ) {
+				continue; // Still attached to a live tool.
+			}
+		}
+		if ( lumipix_is_untouched( $post ) || 'future' === $post->post_status ) {
+			wp_trash_post( $post->ID );
+			/* translators: %s: title */
+			$log[] = sprintf( __( 'Removed retired content: %s', 'lumipix' ), $post->post_title );
+		}
+	}
+	return $log;
+}
+
+/**
+ * Redirect retired URLs (only when nothing else answers them).
+ */
+function lumipix_redirect_retired() {
+	if ( ! is_404() ) {
+		return;
+	}
+	$path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	$slug = basename( $path );
+	$map  = lumipix_retired_content();
+	if ( ! $slug || ! isset( $map[ $slug ] ) ) {
+		return;
+	}
+	$to = lumipix_md_resolve_url( $map[ $slug ]['to'] );
+	if ( $to ) {
+		wp_safe_redirect( $to, 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'lumipix_redirect_retired', 1 );

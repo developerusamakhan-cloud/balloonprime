@@ -98,23 +98,6 @@ function lumipix_tools() {
 			. '<!-- wp:list --><ul class="wp-block-list"><li>' . esc_html__( 'Start from the original photo, not a screenshot of it.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop away empty space first; fewer pixels means more quality per kilobyte.', 'lumipix' ) . '</li><li>' . esc_html__( 'Check the exact limit on the form you are filling in, then pick the matching size.', 'lumipix' ) . '</li></ul><!-- /wp:list -->';
 	};
 
-	$form_content = function ( $org ) {
-		return '<!-- wp:heading --><h2 class="wp-block-heading">' . sprintf( esc_html__( 'Getting your photo ready for the %s application', 'lumipix' ), esc_html( $org ) ) . '</h2><!-- /wp:heading -->'
-			. '<!-- wp:paragraph --><p>' . sprintf( esc_html__( 'Online application portals such as %s usually set a maximum file size and sometimes fixed dimensions for the photograph and signature. If your file is too large, the upload is rejected. Read the current instructions on the official advertisement or portal, note the limit, and choose it above.', 'lumipix' ), esc_html( $org ) ) . '</p><!-- /wp:paragraph -->'
-			. '<!-- wp:heading --><h2 class="wp-block-heading">' . esc_html__( 'Step by step', 'lumipix' ) . '</h2><!-- /wp:heading -->'
-			. '<!-- wp:list {"ordered":true} --><ol class="wp-block-list"><li>' . esc_html__( 'Take the photo against a plain, light background with even lighting.', 'lumipix' ) . '</li><li>' . esc_html__( 'Crop it so your face and shoulders fill most of the frame.', 'lumipix' ) . '</li><li>' . esc_html__( 'Drop it into the tool and choose the size limit from the official instructions.', 'lumipix' ) . '</li><li>' . esc_html__( 'Download the JPG and upload it to the portal.', 'lumipix' ) . '</li></ol><!-- /wp:list -->'
-			. '<!-- wp:paragraph --><p>' . esc_html__( 'Lumi Pix is an independent tool and is not affiliated with any government department or testing service. Always follow the latest official requirements.', 'lumipix' ) . '</p><!-- /wp:paragraph -->';
-	};
-
-	$form_faqs = function ( $org ) {
-		return array(
-			/* translators: %s: organisation name */
-			sprintf( __( 'What photo size does %s require?', 'lumipix' ), $org ) => __( 'Requirements change between advertisements, so always check the official instructions for the post you are applying for. Once you know the limit, select it here and the tool will produce a file that fits.', 'lumipix' ),
-			__( 'Can I compress my signature too?', 'lumipix' ) => __( 'Yes. Use the same tool for the signature scan, or open the signature tool to make the background transparent or clean white first.', 'lumipix' ),
-			__( 'Is it safe to use for official documents?', 'lumipix' ) => __( 'Your images are processed on your own device and are never uploaded to Lumi Pix, so nobody else sees them.', 'lumipix' ),
-		);
-	};
-
 	$tools = array(
 
 		/* ---------------------------------------------------------------
@@ -269,54 +252,7 @@ function lumipix_tools() {
 			'faqs'    => $size_faqs( '2MB' ),
 			'content' => $size_content( '2MB', __( 'Many upload forms, print services and help desks limit images to 2MB. Camera and high-end phone photos are often larger, but they can be brought under 2MB with no difference you would notice.', 'lumipix' ) ),
 		),
-		'compress-photo-for-ppsc'    => array(
-			'app'     => 'compress',
-			'group'   => 'compress',
-			'parent'  => 'compress-image',
-			'slug'    => 'compress-photo-for-ppsc-form',
-			'icon'    => 'file',
-			'nav'     => __( 'Photo for PPSC form', 'lumipix' ),
-			'h1'      => __( 'Compress photo for PPSC online form', 'lumipix' ),
-			'title'   => __( 'Compress Photo for PPSC Online Application – Free', 'lumipix' ),
-			'desc'    => __( 'Get your photograph and signature under the PPSC upload size limit in seconds. Free, private, and works on any phone.', 'lumipix' ),
-			'lead'    => __( 'Check the size limit in your PPSC advertisement, select it below, and download a file that uploads first time.', 'lumipix' ),
-			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 30, 50, 100, 200 ) ),
-			'related' => array( 'compress-photo-for-fpsc', 'compress-photo-for-nts', 'resize-signature' ),
-			'faqs'    => $form_faqs( 'PPSC' ),
-			'content' => $form_content( 'PPSC' ),
-		),
-		'compress-photo-for-fpsc'    => array(
-			'app'     => 'compress',
-			'group'   => 'compress',
-			'parent'  => 'compress-image',
-			'slug'    => 'compress-photo-for-fpsc-form',
-			'icon'    => 'file',
-			'nav'     => __( 'Photo for FPSC form', 'lumipix' ),
-			'h1'      => __( 'Compress photo for FPSC online form', 'lumipix' ),
-			'title'   => __( 'Compress Photo for FPSC Online Application – Free', 'lumipix' ),
-			'desc'    => __( 'Resize and compress your photo and documents to the FPSC upload limit. Free, no signup, processed on your device.', 'lumipix' ),
-			'lead'    => __( 'Choose the limit from the official FPSC instructions and get an upload-ready JPG in one step.', 'lumipix' ),
-			'config'  => array( 'target' => 100, 'unit' => 'KB', 'maxWidth' => 1200, 'quick' => array( 20, 50, 100, 200, 500 ) ),
-			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-nts', 'compress-image-to-200kb' ),
-			'faqs'    => $form_faqs( 'FPSC' ),
-			'content' => $form_content( 'FPSC' ),
-		),
-		'compress-photo-for-nts'     => array(
-			'app'     => 'compress',
-			'group'   => 'compress',
-			'parent'  => 'compress-image',
-			'slug'    => 'compress-photo-for-nts-form',
-			'icon'    => 'file',
-			'nav'     => __( 'Photo for NTS form', 'lumipix' ),
-			'h1'      => __( 'Compress photo for NTS online form', 'lumipix' ),
-			'title'   => __( 'Compress Photo for NTS Online Registration – Free', 'lumipix' ),
-			'desc'    => __( 'Make your photograph fit the NTS online registration upload limit. Free, private and works on mobile.', 'lumipix' ),
-			'lead'    => __( 'Select the size from your NTS test instructions and download a photo that is ready to upload.', 'lumipix' ),
-			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 50, 100, 200 ) ),
-			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-fpsc', 'passport-size-photo' ),
-			'faqs'    => $form_faqs( 'NTS' ),
-			'content' => $form_content( 'NTS' ),
-		),
+/*REPLACEMENTS*/
 
 		/* ---------------------------------------------------------------
 		 * Resize
@@ -477,7 +413,7 @@ function lumipix_tools() {
 			'desc'    => __( 'Resize and compress a scanned signature to 10KB, 20KB or 50KB for online applications. Free, private and works on mobile.', 'lumipix' ),
 			'lead'    => __( 'Snap your signature on white paper, drop it here, and get a small, clear file for the form.', 'lumipix' ),
 			'config'  => array( 'target' => 20, 'unit' => 'KB', 'maxWidth' => 500, 'quick' => array( 10, 20, 30, 50 ) ),
-			'related' => array( 'remove-white-background', 'compress-image-to-20kb', 'compress-photo-for-ppsc' ),
+			'related' => array( 'remove-white-background', 'compress-image-to-20kb', 'compress-image-to-30kb' ),
 			'faqs'    => array(
 				__( 'How do I make my signature smaller in KB?', 'lumipix' ) => __( 'Choose the size limit from the form instructions and drop your signature photo. The tool trims the dimensions and quality until it fits.', 'lumipix' ),
 				__( 'How do I make a signature with a transparent background?', 'lumipix' ) => __( 'Use the white background remover. It turns the paper transparent and keeps the ink, and you can save it as PNG.', 'lumipix' ),

@@ -7,7 +7,7 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 | Area | Details |
 |---|---|
 | **Working tools** | Compress to an exact size (KB/MB, batch up to 20), Image Resizer (px, %, cm, mm, inch + DPI, presets, aspect lock, fit/fill/stretch), AI Background Remover (Transformers.js, on-device), White/solid-colour Background Remover, Format converter (WebP, AVIF, PNG, JPG, SVG → JPG/PNG/WebP, ZIP download), Image to PDF (written in the browser, no library), Favicon generator (ICO + PNG + manifest ZIP), DPI checker and changer (rewrites JFIF/EXIF/pHYs without re-compressing), Image cropper. 36 tool pages in a 12 / 8 / 8 / 4 / 4 grid |
-| **Tool landing pages** | 15 pages: Image Compressor, 20KB / 50KB / 100KB / 200KB / 1MB, PPSC / FPSC / NTS form photos, Image Resizer, Instagram, Passport photo, Signature, Background Remover, Remove White Background |
+| **Tool landing pages** | 36 pages in five groups – Compress (12): Image Compressor, 10KB / 20KB / 30KB / 50KB / 100KB / 200KB / 300KB / 500KB / 1MB / 2MB, Compress for email · Resize (8) · Convert (8) · Background (4) · More tools (4) |
 | **Internal linking** | Mega menu, link-rich footer, breadcrumbs, preset chips, "Related tools" grid on every tool page, auto CTA card inside articles, "Helpful guides" on tool pages, sidebar tools card on posts, "All tools" hub page |
 | **SEO** | Per-tool titles and meta descriptions, Open Graph, JSON-LD (WebApplication, FAQPage, BreadcrumbList, BlogPosting, WebSite, Organization). Generic SEO output steps aside automatically when Yoast, Rank Math, SEOPress or AIOSEO is active |
 | **Blog** | Blog index with category chips, article template with sticky tools sidebar, reading time, related posts |
@@ -94,7 +94,7 @@ The site icon (favicon) and logo use the standard WordPress settings. Until a Si
 [lumipix_cta tool="background-remover"]      call-to-action card linking to a tool
 ```
 
-Tool keys: `compress-image`, `compress-image-to-20kb`, `compress-image-to-50kb`, `compress-image-to-100kb`, `compress-image-to-200kb`, `compress-image-to-1mb`, `compress-photo-for-ppsc`, `compress-photo-for-fpsc`, `compress-photo-for-nts`, `image-resizer`, `resize-image-for-instagram`, `passport-size-photo`, `resize-signature`, `background-remover`, `remove-white-background`.
+Tool keys: see `inc/tools.php` (`lumipix_tools()`); every key has its long-form copy in `content/tools/<key>.md`.
 
 ## Adding tools in code
 

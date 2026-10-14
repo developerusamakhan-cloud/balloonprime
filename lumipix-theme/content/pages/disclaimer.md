@@ -16,7 +16,7 @@ Some pages explain how to prepare photos, signatures and documents for online ap
 
 ## No affiliation
 
-Lumi Pix is an independent service. It is not affiliated with, endorsed by or connected to any government department, public service commission, testing service, university, passport office or company mentioned on this website, including PPSC, FPSC and NTS. Names are used only to describe what a page helps with.
+Lumi Pix is an independent service. It is not affiliated with, endorsed by or connected to any government department, public service commission, testing service, university, passport office or company mentioned on this website. Names are used only to describe what a page helps with.
 
 ## Third-party brands and products
 
@@ -36,9 +36,9 @@ If you notice an error on the site, please let us know at [lumipix_email] and we
 
 ## Frequently asked questions
 
-### Is Lumi Pix affiliated with PPSC, FPSC or NTS?
+### Is Lumi Pix affiliated with any government office, exam board or employer?
 
-No. Lumi Pix is an independent image tool. Pages that mention these organisations only describe how to prepare photos for their online forms.
+No. Lumi Pix is an independent image tool. Pages that mention online forms only describe how to prepare photos and documents for them. Always follow the official instructions of the organisation you are applying to.
 
 ### Are the size requirements in your guides official?
 
