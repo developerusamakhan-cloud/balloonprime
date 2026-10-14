@@ -303,6 +303,7 @@ function lumipix_run_installer() {
 
 	// Retired pack content (old tool pages and articles).
 	$log = array_merge( $log, lumipix_retire_content() );
+	$log = array_merge( $log, lumipix_scrub_retired_text() );
 
 	// Remove WordPress's sample content if nobody has edited it.
 	foreach ( array( array( 'hello-world', 'post' ), array( 'sample-page', 'page' ) ) as $sample ) {
@@ -664,3 +665,54 @@ function lumipix_redirect_retired() {
 	}
 }
 add_action( 'template_redirect', 'lumipix_redirect_retired', 1 );
+
+/**
+ * Replace location-specific sentences that earlier versions of the content
+ * pack wrote, even in pages that were edited since. Only the exact sentences
+ * the theme wrote are changed; the rest of the page is left alone.
+ *
+ * @return array<int, string> Log lines.
+ */
+function lumipix_scrub_retired_text() {
+	global $wpdb;
+	$log   = array();
+	$texts = array(
+		', including PPSC, FPSC and NTS. Names are used' => '. Names are used',
+	);
+	$ids   = $wpdb->get_col( "SELECT ID FROM {$wpdb->posts} WHERE post_status IN ('publish','future','draft') AND post_type IN ('page','post') AND (post_content LIKE '%PPSC%' OR post_content LIKE '%Pakistan%')" ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	foreach ( $ids as $id ) {
+		$post    = get_post( (int) $id );
+		$content = strtr( $post->post_content, $texts );
+		// The compressor page linked to the removed exam-board presets.
+		$content = preg_replace( '#<!-- wp:paragraph -->\s*<p>For recruitment forms, there are dedicated pages for .*?</p>\s*<!-- /wp:paragraph -->#s', '', $content );
+		if ( $content !== $post->post_content ) {
+			$wpdb->update( $wpdb->posts, array( 'post_content' => $content ), array( 'ID' => $post->ID ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			clean_post_cache( $post->ID );
+			/* translators: %s: title */
+			$log[] = sprintf( __( 'Removed location-specific text: %s', 'lumipix' ), $post->post_title );
+		}
+		$faqs = get_post_meta( $post->ID, '_lumipix_faqs', true );
+		$old  = 'Is Lumi Pix affiliated with PPSC, FPSC or NTS?';
+		if ( is_array( $faqs ) && isset( $faqs[ $old ] ) ) {
+			$new = array();
+			foreach ( $faqs as $q => $a ) {
+				if ( $q === $old ) {
+					$new[ __( 'Is Lumi Pix affiliated with any government office, exam board or employer?', 'lumipix' ) ] = __( 'No. Lumi Pix is an independent image tool. Pages that mention online forms only describe how to prepare photos and documents for them. Always follow the official instructions of the organisation you are applying to.', 'lumipix' );
+				} else {
+					$new[ $q ] = $a;
+				}
+			}
+			update_post_meta( $post->ID, '_lumipix_faqs', $new );
+		}
+	}
+	// FAQ meta can exist on pages whose body never mentioned the names.
+	foreach ( get_posts( array( 'post_type' => 'page', 'posts_per_page' => 50, 'meta_key' => '_lumipix_faqs', 'fields' => 'ids' ) ) as $pid ) { // phpcs:ignore WordPress.DB.SlowDBQuery
+		$faqs = get_post_meta( $pid, '_lumipix_faqs', true );
+		if ( is_array( $faqs ) && isset( $faqs['Is Lumi Pix affiliated with PPSC, FPSC or NTS?'] ) && ! in_array( (string) $pid, $ids, true ) ) {
+			unset( $faqs['Is Lumi Pix affiliated with PPSC, FPSC or NTS?'] );
+			$faqs[ __( 'Is Lumi Pix affiliated with any government office, exam board or employer?', 'lumipix' ) ] = __( 'No. Lumi Pix is an independent image tool. Pages that mention online forms only describe how to prepare photos and documents for them. Always follow the official instructions of the organisation you are applying to.', 'lumipix' );
+			update_post_meta( $pid, '_lumipix_faqs', $faqs );
+		}
+	}
+	return $log;
+}
