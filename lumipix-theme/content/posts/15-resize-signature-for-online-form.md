@@ -3,7 +3,7 @@ keywords: resize signature for online form, signature size 20kb, signature size 
 title: How to Resize a Signature for an Online Form (10KB to 50KB)
 category: Photos & IDs
 tool: resize-signature
-seo_title: How to Resize Signature for Online Form – Under 10KB, 20KB or 50KB
+seo_title: Resize Signature for Online Form: 10KB, 20KB or 50KB
 seo_desc: How to resize signature for online form limits like 10KB, 20KB or 50KB: photograph, crop, clean and compress it so it stays clear.
 excerpt: Get a clear signature under strict form limits like 10KB or 20KB, from a quick phone photo.
 ---

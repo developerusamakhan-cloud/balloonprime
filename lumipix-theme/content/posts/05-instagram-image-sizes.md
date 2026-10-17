@@ -3,7 +3,7 @@ keywords: instagram image sizes, instagram post size, instagram portrait size 10
 title: Instagram Image Sizes in 2026: Posts, Portraits, Stories and Reels
 category: Social Media
 tool: resize-image-for-instagram
-seo_title: Instagram Image Sizes 2026 – Post, Portrait, Story & Reel Dimensions
+seo_title: Instagram Image Sizes 2026: Posts, Stories & Reels
 seo_desc: The right Instagram image sizes for square, portrait and landscape posts, stories and reels, plus how to post full photos without cropping.
 excerpt: The pixel sizes that look sharpest on Instagram, and how to post a full photo without the app cropping it.
 ---

@@ -3,7 +3,7 @@ keywords: compress image to 50kb, reduce photo size to 50kb, 50kb photo, compres
 title: How to Compress an Image to 50KB Without Losing Quality
 category: Compression
 tool: compress-image-to-50kb
-seo_title: Compress Image to 50KB Without Losing Quality – Free Step-by-Step Guide
+seo_title: Compress Image to 50KB Without Losing Quality (Free Guide)
 seo_desc: How to compress image to 50KB while keeping it sharp: a simple step-by-step method for phone and PC, free and without uploading your photo.
 excerpt: The fastest way to get a photo under 50KB for a form or profile, and how to keep it sharp while you do it.
 ---

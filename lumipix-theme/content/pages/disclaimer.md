@@ -1,6 +1,6 @@
 ---
 keywords: disclaimer, lumi pix disclaimer, official photo requirements, image tool accuracy, website disclaimer
-seo_title: Disclaimer – Lumi Pix
+seo_title: Disclaimer – Lumi Pix Free Image Tools and Guides
 seo_desc: Disclaimer: important information about using Lumi Pix tools and guides, official photo requirements, accuracy and third-party links.
 ---
 

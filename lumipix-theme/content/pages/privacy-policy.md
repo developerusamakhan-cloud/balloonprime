@@ -1,6 +1,6 @@
 ---
 keywords: privacy policy, lumi pix privacy, image privacy, no upload, data protection
-seo_title: Privacy Policy – Lumi Pix
+seo_title: Privacy Policy – Lumi Pix: Your Images Stay on Your Device
 seo_desc: Privacy policy for Lumi Pix. Your images are processed on your device and never uploaded. Learn what little data we collect and your choices.
 ---
 

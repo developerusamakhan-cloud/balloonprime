@@ -3,7 +3,7 @@ keywords: convert png to jpg on mac, png to jpg preview, png to jpg macos, batch
 title: How to Convert PNG to JPG on a Mac
 category: Formats & Printing
 tool: png-to-jpg
-seo_title: How to Convert PNG to JPG on Mac – Preview, Finder & Batch Methods
+seo_title: How to Convert PNG to JPG on Mac – 4 Easy Ways
 seo_desc: Convert PNG to JPG on macOS using Preview, Finder Quick Actions, or a free browser tool for batches. Control quality and file size.
 excerpt: Preview, Finder and a batch-friendly browser method for turning PNGs into JPGs on macOS.
 ---

@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled keywords, titles or descriptions change. */
-define( 'LUMIPIX_RM_REV', 2 );
+define( 'LUMIPIX_RM_REV', 3 );
 
 /**
  * SEO data for everything the theme manages.

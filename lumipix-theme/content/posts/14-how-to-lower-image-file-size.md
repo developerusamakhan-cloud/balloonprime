@@ -3,7 +3,7 @@ keywords: lower image file size, reduce file size without losing quality, make i
 title: How to Lower Image File Size Without Losing Quality
 category: Compression
 tool: compress-image
-seo_title: How to Lower Image File Size Without Losing Quality – 7 Proven Tips
+seo_title: How to Lower Image File Size Without Losing Quality
 seo_desc: Seven practical ways to lower image file size without losing quality: dimensions, format, quality settings, metadata and more.
 excerpt: Seven practical techniques that make images much smaller while keeping them looking sharp.
 ---

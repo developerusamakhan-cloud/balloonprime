@@ -1,6 +1,6 @@
 ---
 keywords: free image tools, image compressor, image resizer, background remover, online photo tools
-seo_title: All Free Image Tools – Compress, Resize, Remove Background | Lumi Pix
+seo_title: All Free Image Tools: Compress, Resize, Convert | Lumi Pix
 seo_desc: All free image tools in one place: compress to an exact KB size, resize for print and social media, and remove backgrounds. No signup, nothing uploaded.
 ---
 
