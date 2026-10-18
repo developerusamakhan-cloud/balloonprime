@@ -240,7 +240,11 @@ function lumipix_md_resolve_url( $target ) {
 		return lumipix_tool_url( substr( $target, 5 ) );
 	}
 	if ( 0 === strpos( $target, 'page:' ) ) {
-		$id = lumipix_installer_page_id( substr( $target, 5 ) );
+		$key = substr( $target, 5 );
+		$id  = lumipix_installer_page_id( $key );
+		if ( ! $id && function_exists( 'lumipix_lang_page_id' ) && preg_match( '/^([a-z]{2})-(.+)$/', $key, $m ) ) {
+			$id = lumipix_lang_page_id( $m[1], $m[2] ); // Translated pages: page:fr-privacy.
+		}
 		return $id ? get_permalink( $id ) : '';
 	}
 	if ( 0 === strpos( $target, 'post:' ) ) {

@@ -42,11 +42,8 @@ defined( 'ABSPATH' ) || exit;
 			<div class="site-footer__col">
 				<p class="site-footer__title"><?php esc_html_e( 'Company', 'lumipix' ); ?></p>
 				<ul>
-					<?php foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $company_key ) : ?>
-						<?php $company_id = lumipix_installer_page_id( $company_key ); ?>
-						<?php if ( $company_id ) : ?>
-							<li><a href="<?php echo esc_url( get_permalink( $company_id ) ); ?>"><?php echo esc_html( get_the_title( $company_id ) ); ?></a></li>
-						<?php endif; ?>
+					<?php foreach ( lumipix_company_links() as $company_link ) : ?>
+						<li><a href="<?php echo esc_url( $company_link[1] ); ?>"><?php echo esc_html( $company_link[0] ); ?></a></li>
 					<?php endforeach; ?>
 				</ul>
 				<?php $contact_email = lumipix_contact_email(); ?>

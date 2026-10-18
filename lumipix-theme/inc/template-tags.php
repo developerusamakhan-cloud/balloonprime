@@ -386,7 +386,23 @@ function lumipix_legal_links() {
 	if ( $sitemap ) {
 		$out[] = array( __( 'Sitemap', 'lumipix' ), $sitemap );
 	}
-	return $out;
+	return apply_filters( 'lumipix_legal_links', $out );
+}
+
+/**
+ * Company links in the footer as [label, url].
+ *
+ * @return array<int, array{0:string,1:string}>
+ */
+function lumipix_company_links() {
+	$out = array();
+	foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $key ) {
+		$id = lumipix_installer_page_id( $key );
+		if ( $id ) {
+			$out[] = array( get_the_title( $id ), get_permalink( $id ) );
+		}
+	}
+	return apply_filters( 'lumipix_company_links', $out );
 }
 
 /**

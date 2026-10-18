@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled language pages change, so untouched pages are refreshed. */
-define( 'LUMIPIX_LANG_REV', 2 );
+define( 'LUMIPIX_LANG_REV', 3 );
 
 /**
  * Languages with their own pages.
@@ -80,6 +80,7 @@ function lumipix_lang_pack() {
 	$pack = array(
 		'hubs'  => array(),
 		'tools' => array(),
+		'pages' => array(),
 	);
 	$base = lumipix_tools();
 	// Display order of the translated tools (menus, cards, chips).
@@ -150,8 +151,48 @@ function lumipix_lang_pack() {
 			}
 			$pack['tools'][ $key ]['related'] = $related;
 		}
+
+		// Company and legal pages (content/lang/<lang>/pages/<installer key>.md).
+		foreach ( (array) glob( LUMIPIX_DIR . '/content/lang/' . $lang . '/pages/*.md' ) as $file ) {
+			$name = basename( $file, '.md' );
+			$meta = lumipix_lang_read( $file )['meta'];
+			if ( empty( $meta['slug'] ) || ! in_array( $name, lumipix_lang_page_keys(), true ) ) {
+				continue;
+			}
+			$pack['pages'][ $lang ][ $name ] = array(
+				'file'     => $file,
+				'slug'     => $meta['slug'],
+				'path'     => ( $pack['hubs'][ $lang ]['slug'] ?? $lang ) . '/' . $meta['slug'],
+				'title'    => $meta['title'] ?? '',
+				'seo'      => $meta['seo_title'] ?? '',
+				'desc'     => $meta['desc'] ?? '',
+				'keywords' => $meta['keywords'] ?? '',
+			);
+		}
 	}
 	return $pack;
+}
+
+/**
+ * Installer keys of the company and legal pages that have translations.
+ *
+ * @return string[]
+ */
+function lumipix_lang_page_keys() {
+	return array( 'about', 'contact', 'privacy', 'terms', 'cookies', 'disclaimer' );
+}
+
+/**
+ * Page ID of a translated company or legal page.
+ *
+ * @param string $lang Language code.
+ * @param string $key  Installer key, e.g. privacy.
+ * @return int
+ */
+function lumipix_lang_page_id( $lang, $key ) {
+	$ids = (array) get_option( 'lumipix_lang_pages', array() );
+	$id  = isset( $ids[ 'page:' . $lang . ':' . $key ] ) ? (int) $ids[ 'page:' . $lang . ':' . $key ] : 0;
+	return ( $id && 'publish' === get_post_status( $id ) ) ? $id : 0;
 }
 
 /**
@@ -365,6 +406,18 @@ function lumipix_lang_alternates() {
 				$out[ $info['hreflang'] ] = $url;
 			}
 		}
+	} elseif ( lumipix_lang_page_key_of( $id ) ) {
+		$page_key = lumipix_lang_page_key_of( $id );
+		$english  = lumipix_installer_page_id( $page_key );
+		if ( $english ) {
+			$out['en'] = get_permalink( $english );
+		}
+		foreach ( $langs as $lang => $info ) {
+			$lang_id = lumipix_lang_page_id( $lang, $page_key );
+			if ( $lang_id ) {
+				$out[ $info['hreflang'] ] = get_permalink( $lang_id );
+			}
+		}
 	} else {
 		$key = lumipix_page_tool_key( $id );
 		if ( ! $key ) {
@@ -385,6 +438,25 @@ function lumipix_lang_alternates() {
 	}
 	$out['x-default'] = $out['en'];
 	return $out;
+}
+
+/**
+ * Installer key of a company or legal page (English or translated), if any.
+ *
+ * @param int $id Page ID.
+ * @return string
+ */
+function lumipix_lang_page_key_of( $id ) {
+	$key = (string) get_post_meta( $id, '_lumipix_lang_page', true );
+	if ( $key ) {
+		return $key;
+	}
+	foreach ( lumipix_lang_page_keys() as $page_key ) {
+		if ( (int) $id === lumipix_installer_page_id( $page_key ) ) {
+			return $page_key;
+		}
+	}
+	return '';
 }
 
 /**
@@ -570,6 +642,84 @@ function lumipix_lang_footer_col() {
 	</div>
 	<?php
 }
+
+/**
+ * Footer company links on translated pages: translated About and Contact,
+ * the language hub instead of the English tool list, and the English guides
+ * marked as such.
+ *
+ * @param array<int, array{0:string,1:string}> $links Links.
+ * @return array<int, array{0:string,1:string}>
+ */
+function lumipix_lang_company_links( $links ) {
+	$lang = lumipix_current_lang();
+	if ( 'en' === $lang ) {
+		return $links;
+	}
+	$out = array();
+	foreach ( array( 'about', 'tools', 'blog', 'contact' ) as $key ) {
+		if ( 'tools' === $key ) {
+			$id = lumipix_lang_hub_id( $lang );
+		} elseif ( 'blog' === $key ) {
+			$id = lumipix_installer_page_id( 'blog' );
+			if ( $id ) {
+				$out[] = array( __( 'Guides (English)', 'lumipix' ), get_permalink( $id ) );
+			}
+			continue;
+		} else {
+			$id = lumipix_lang_page_id( $lang, $key );
+			$id = $id ? $id : lumipix_installer_page_id( $key );
+		}
+		if ( $id ) {
+			$out[] = array( get_the_title( $id ), get_permalink( $id ) );
+		}
+	}
+	return $out;
+}
+add_filter( 'lumipix_company_links', 'lumipix_lang_company_links' );
+
+/**
+ * Footer legal links on translated pages point to the translated pages.
+ *
+ * @param array<int, array{0:string,1:string}> $links Links.
+ * @return array<int, array{0:string,1:string}>
+ */
+function lumipix_lang_legal_links( $links ) {
+	$lang = lumipix_current_lang();
+	if ( 'en' === $lang ) {
+		return $links;
+	}
+	$out = array();
+	foreach ( array( 'privacy', 'terms', 'cookies', 'disclaimer' ) as $key ) {
+		$id = lumipix_lang_page_id( $lang, $key );
+		$id = $id ? $id : lumipix_installer_page_id( $key );
+		if ( $id ) {
+			$out[] = array( get_the_title( $id ), get_permalink( $id ) );
+		}
+	}
+	$sitemap = lumipix_sitemap_url();
+	if ( $sitemap ) {
+		$out[] = array( __( 'Sitemap', 'lumipix' ), $sitemap );
+	}
+	return $out;
+}
+add_filter( 'lumipix_legal_links', 'lumipix_lang_legal_links' );
+
+/**
+ * Cookie banner links to the cookie policy in the page language.
+ *
+ * @param int $id English cookie policy page ID.
+ * @return int
+ */
+function lumipix_lang_cookie_policy_id( $id ) {
+	$lang = lumipix_current_lang();
+	if ( 'en' === $lang ) {
+		return $id;
+	}
+	$lang_id = lumipix_lang_page_id( $lang, 'cookies' );
+	return $lang_id ? $lang_id : $id;
+}
+add_filter( 'lumipix_cookie_policy_id', 'lumipix_lang_cookie_policy_id' );
 
 /**
  * Language links shown in the footer of every page.
@@ -780,6 +930,34 @@ function lumipix_lang_install() {
 			update_post_meta( $id, '_lumipix_lang', $lang );
 			$fill[ $id ] = $tool['file'];
 		}
+
+		$pages = lumipix_lang_pack()['pages'];
+		foreach ( isset( $pages[ $lang ] ) ? $pages[ $lang ] : array() as $key => $page ) {
+			$id = lumipix_lang_page_id( $lang, $key );
+			if ( ! $id ) {
+				$existing = get_page_by_path( $page['path'] );
+				$id       = $existing ? (int) $existing->ID : (int) wp_insert_post(
+					array(
+						'post_type'   => 'page',
+						'post_status' => 'publish',
+						'post_title'  => $page['title'],
+						'post_name'   => $page['slug'],
+						'post_parent' => $hub_id,
+					)
+				);
+				if ( ! $id ) {
+					continue;
+				}
+				$ids[ 'page:' . $lang . ':' . $key ] = $id;
+				/* translators: %s: page title */
+				$log[] = sprintf( __( 'Created language page: %s', 'lumipix' ), $page['title'] );
+			}
+			update_post_meta( $id, '_lumipix_lang', $lang );
+			update_post_meta( $id, '_lumipix_lang_page', $key );
+			update_post_meta( $id, '_lumipix_seo_title', $page['seo'] );
+			update_post_meta( $id, '_lumipix_seo_desc', $page['desc'] );
+			$fill[ $id ] = $page['file'];
+		}
 	}
 	update_option( 'lumipix_lang_pages', $ids );
 
@@ -839,6 +1017,19 @@ function lumipix_lang_rm_items( $items ) {
 				'keywords' => $hub['keywords'],
 				'image'    => 'assets/og/home.jpg',
 			);
+		}
+	}
+	foreach ( lumipix_lang_pack()['pages'] as $lang => $pages ) {
+		foreach ( $pages as $key => $page ) {
+			$id = lumipix_lang_page_id( $lang, $key );
+			if ( $id ) {
+				$items[ $id ] = array(
+					'title'    => $page['seo'],
+					'desc'     => $page['desc'],
+					'keywords' => $page['keywords'],
+					'image'    => 'assets/og/home.jpg',
+				);
+			}
 		}
 	}
 	foreach ( lumipix_lang_tools() as $key => $tool ) {

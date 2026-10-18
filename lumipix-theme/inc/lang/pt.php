@@ -210,6 +210,7 @@ return array(
 	'All tools' => 'Todas as ferramentas',
 	'Language' => 'Idioma',
 	'Also in' => 'Também em',
+	'Guides (English)' => 'Guias (em inglês)',
 	'Languages' => 'Idiomas',
 	'Also available in' => 'Também disponível em',
 	'Other languages' => 'Outros idiomas',

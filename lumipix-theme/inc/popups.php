@@ -117,7 +117,7 @@ function lumipix_lead_url() {
  */
 function lumipix_popups_markup() {
 	if ( get_theme_mod( 'lumipix_cookie_enabled', true ) ) {
-		$policy = lumipix_installer_page_id( 'cookies' );
+		$policy = (int) apply_filters( 'lumipix_cookie_policy_id', lumipix_installer_page_id( 'cookies' ) );
 		?>
 		<section class="consent" data-consent hidden role="dialog" aria-modal="false" aria-labelledby="consent-title" aria-describedby="consent-text">
 			<div class="consent__glow" aria-hidden="true"></div>
