@@ -1,7 +1,7 @@
 ---
 slug: politique-de-confidentialite
 title: Politique de confidentialité
-seo_title: Politique de confidentialité Lumi Pix : vos images restent chez vous
+seo_title: Confidentialité Lumi Pix : vos images restent sur votre appareil
 desc: Politique de confidentialité de Lumi Pix. Vos images sont traitées sur votre appareil et jamais envoyées. Découvrez le peu de données collectées et vos choix.
 keywords: politique de confidentialité, confidentialité lumi pix, confidentialité des images, sans envoi, protection des données
 ---

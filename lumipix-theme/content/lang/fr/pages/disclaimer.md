@@ -18,7 +18,7 @@ Certaines pages expliquent comment préparer des photos, des signatures et des d
 
 ## Absence d'affiliation
 
-Lumi Pix est un service indépendant. Il n'est affilié à aucun ministère, commission de la fonction publique, organisme d'examen, université, service des passeports ou entreprise mentionnés sur ce site, y compris PPSC, FPSC et NTS, n'est approuvé par aucun d'entre eux et n'a aucun lien avec eux. Ces noms sont utilisés uniquement pour décrire l'objet d'une page.
+Lumi Pix est un service indépendant. Il n'est ni affilié à, ni approuvé par, ni lié à aucun ministère, commission de la fonction publique, organisme d'examen, université, service des passeports ou entreprise mentionnés sur ce site, y compris PPSC, FPSC et NTS. Ces noms sont utilisés uniquement pour décrire l'objet d'une page.
 
 ## Marques et produits tiers
 
