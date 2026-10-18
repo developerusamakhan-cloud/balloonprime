@@ -63,6 +63,11 @@ return array(
 <li><strong>Değer sert biçimde düşüp yükseliyorsa:</strong> Kablosuz bağlantıda parazit, zayıf pil veya uzak alıcı olabilir.</li>
 </ul>
 
+<h2>Polling rate gecikmeyi ne kadar etkiler?</h2>
+<p>Polling rate, toplam gecikmenin yalnızca bir parçasıdır. Bir tıklamanın ekranda karşılık bulması için farenin switch'i ve sensörü, USB bağlantısı, işletim sistemi, oyun motoru, ekran kartı ve monitör sırayla devreye girer. Polling rate'in bu zincire eklediği en kötü durum gecikmesi, rapor aralığı kadardır: 125 Hz'de en fazla 8 ms, 1000 Hz'de en fazla 1 ms.</p>
+<p>Ortalama olarak ise bunun yaklaşık yarısı kadar bir fark oluşur, çünkü hareketiniz iki rapor arasındaki herhangi bir anda başlayabilir. 125 Hz'den 1000 Hz'e geçmek bu yüzden ölçülebilir bir iyileşmedir. 1000 Hz'den 8000 Hz'e geçmek ise en fazla 1 milisaniyenin altında bir kazanç sağlar; bu farkı hissedip hissetmemek kişiye ve kullanılan sisteme göre değişir.</p>
+<p>Akıcılık açısından da benzer bir tablo vardır. Monitörünüz saniyede 60 kare çiziyorsa ve fare saniyede yalnızca 125 rapor gönderiyorsa her karede iki ya da üç güncelleme düşer; bu da çoğu zaman yeterlidir. 240 Hz bir monitörde ise 125 Hz bir fare her kareye güncelleme yetiştiremez ve imleç hareketinde düzensizlik görülebilir. Yüksek yenileme hızlı ekranlarda yüksek polling rate'in daha anlamlı olmasının nedeni budur.</p>
+
 <h2>Polling rate nasıl değiştirilir?</h2>
 <p>Windows'un kendi ayarlarında fare polling rate değerini değiştiren bir seçenek yoktur. Bu ayar farenin içindeki yazılım tarafından belirlenir ve üreticinin sunduğu yöntemlerle değiştirilir.</p>
 <ol class="tm-steps">

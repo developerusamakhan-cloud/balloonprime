@@ -75,6 +75,7 @@ return array(
 <h2>BIOS testi: yazılım mı, donanım mı?</h2>
 <p>Klavyenin hiç çalışmadığı durumlarda en öğretici test BIOS'a girmektir. BIOS, Windows'tan ve sürücülerden bağımsız çalışır. Laptopu açarken modelinize uygun tuşa (birçok modelde <kbd>F2</kbd> veya <kbd>F1</kbd>) basın ya da Novo düğmesini kullanın. BIOS menüsünde yön tuşlarıyla gezinebiliyorsanız klavye donanımı büyük olasılıkla sağlamdır ve sorun Windows tarafındadır.</p>
 <p>BIOS'ta da tuşlar tepki vermiyorsa sorun donanımsal olabilir: klavye bağlantı kablosu yerinden oynamış, sıvı teması olmuş veya klavye arızalanmış olabilir. Bu noktada bir USB klavye takarak bilgisayarın geri kalanının çalıştığını doğrulayın.</p>
+<p>Harici klavye sorunsuz çalışıyorsa, servise gidene kadar onu kullanmaya devam edebilirsiniz. Bazı kullanıcılar sorun yalnızca belirli bir sıcaklıkta veya laptop belli bir açıyla tutulduğunda ortaya çıktığını fark eder; bu da gevşek bir bağlantıya işaret edebilir. Bu tür ayrıntıları not almak, servise arızayı anlatırken işinize yarar.</p>
 <div class="tm-callout tm-callout--warn">
 <p><strong>Uyarı:</strong> Klavyeye sıvı döküldüyse laptopu hemen kapatın, şarjdan çıkarın ve kurumadan açmayın. Kendi başınıza kasayı açmak garanti koşullarını etkileyebilir; önce yetkili servise danışın.</p>
 </div>
@@ -82,6 +83,12 @@ return array(
 <h2>Güç sıfırlama ve batarya</h2>
 <p>Tüm tuşların aniden kilitlendiği bazı durumlarda kısa bir güç sıfırlaması işe yarar. Şarj adaptörünü çıkarın ve güç düğmesini 10–15 saniye basılı tutun, ardından laptopu yeniden açın. Bazı Lenovo modellerinde alt kasada acil durum sıfırlama deliği de bulunur; varsa yerini modelinizin kullanım kılavuzunda bulabilirsiniz.</p>
 <p>Batarya şişmesi de klavyeyi dolaylı olarak etkileyebilir. Klavye yüzeyi yukarı doğru kabarıyor, touchpad zor basıyor veya kasa aralanıyorsa laptopu kullanmayı bırakın ve servise başvurun. Şişmiş bir batarya güvenlik riski taşır.</p>
+
+<h2>Tek tek tuşlar takılıyorsa: temizlik</h2>
+<p>Yalnızca bir veya iki tuş zor basıyor, takılıyor ya da bazen hiç algılanmıyorsa sorun çoğu zaman tuşun altına giren toz veya kırıntıdır. Laptopu kapatın, şarjdan çıkarın ve tuş aralıklarını basınçlı havayla, kısa püskürtmelerle temizleyin. Kutuyu dik tutun; ters tutulduğunda soğuk sıvı püskürtebilir.</p>
+<p>Laptop klavyelerindeki tuş kapakları ince plastik mandallarla tutturulur ve kolayca kırılabilir. Bu yüzden tuş kapağını sökmeyi yalnızca modelinize ait servis kılavuzundaki talimatlara göre deneyin. Temizlikten sonra klavye testinde ilgili tuşa 20–30 kez basın; tuş her seferinde mavi yanıyorsa sorun giderilmiştir.</p>
+<h3>Klavye arka ışığı yanmıyor</h3>
+<p>Arka ışık yanmıyorsa önce <kbd>Fn</kbd> + <kbd>Boşluk</kbd> kombinasyonuyla seviyeleri deneyin; birçok modelde kapalı, düşük ve yüksek arasında geçiş yapar. Lenovo Vantage'da arka ışığın belirli bir süre sonra otomatik kapanması gibi bir seçenek de bulunabilir. Modelinizde arka ışıklı klavye olup olmadığını teknik özelliklerinden kontrol etmeyi unutmayın; aynı serinin her yapılandırmasında bulunmayabilir.</p>
 
 <h2>Garanti ve servis</h2>
 <p>Lenovo, cihazınızın garanti durumunu seri numarasıyla sorgulayabileceğiniz bir destek sitesi sunar. Seri numarası genellikle laptopun altındaki etikette yazar. Servise başvurmadan önce klavye testinde çalışmayan tuşların ekran görüntüsünü almanız, arızayı açıkça anlatmanızı kolaylaştırır. Türkiye'de tüketicilere satılan ürünlerde yasal garanti süresi en az iki yıldır.</p>
