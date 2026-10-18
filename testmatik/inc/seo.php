@@ -34,8 +34,8 @@ function testmatik_seo_title() {
 		}
 		return $t ? $t : get_bloginfo( 'name' ) . ' – ' . get_bloginfo( 'description' );
 	}
-	if ( is_singular() ) {
-		$t = (string) get_post_meta( get_queried_object_id(), '_testmatik_seo_title', true );
+	if ( is_singular() || ( is_home() && get_option( 'page_for_posts' ) ) ) {
+		$t = (string) get_post_meta( is_singular() ? get_queried_object_id() : (int) get_option( 'page_for_posts' ), '_testmatik_seo_title', true );
 		if ( $t ) {
 			return $t;
 		}
@@ -69,7 +69,8 @@ function testmatik_seo_description() {
 			$d = sprintf( __( '%s kategorisindeki rehberler: sorunları adım adım çözün ve donanımınızı ücretsiz test edin.', 'testmatik' ), single_cat_title( '', false ) );
 		}
 	} elseif ( is_home() ) {
-		$d = __( 'Klavye, ekran, mikrofon, kamera, mouse ve hoparlör sorunları için adım adım Türkçe çözüm rehberleri.', 'testmatik' );
+		$d = (string) get_post_meta( (int) get_option( 'page_for_posts' ), '_testmatik_seo_desc', true );
+		$d = $d ? $d : __( 'Klavye, ekran, mikrofon, kamera, mouse ve hoparlör sorunları için adım adım Türkçe çözüm rehberleri.', 'testmatik' );
 	}
 	return trim( preg_replace( '/\s+/', ' ', (string) $d ) );
 }
@@ -260,8 +261,14 @@ add_action(
 			}
 		}
 
+		$faq_source = 0;
 		if ( is_singular() ) {
-			$faqs = testmatik_get_faqs( is_front_page() ? (int) get_option( 'page_on_front' ) : get_queried_object_id() );
+			$faq_source = is_front_page() ? (int) get_option( 'page_on_front' ) : get_queried_object_id();
+		} elseif ( is_home() && ! is_paged() ) {
+			$faq_source = (int) get_option( 'page_for_posts' );
+		}
+		if ( $faq_source ) {
+			$faqs = testmatik_get_faqs( $faq_source );
 			if ( $faqs ) {
 				$main = array();
 				foreach ( $faqs as $f ) {

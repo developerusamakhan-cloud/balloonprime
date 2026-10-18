@@ -72,7 +72,8 @@ add_action(
 		$ga  = trim( (string) get_theme_mod( 'testmatik_ga4', '' ) );
 		$pub = trim( (string) get_theme_mod( 'testmatik_adsense_pub', '' ) );
 		$ads = get_theme_mod( 'testmatik_ads_on', false ) && $pub;
-		if ( ! $ga && ! $ads ) {
+		// Consent defaults also guard tags added by plugins such as Site Kit; this runs before them.
+		if ( ! $ga && ! $ads && ! testmatik_needs_consent() ) {
 			return;
 		}
 		?>

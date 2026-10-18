@@ -89,4 +89,17 @@ $cats        = get_categories( array( 'hide_empty' => true ) );
 </section>
 
 <?php
+// Blog page text and FAQs from the "Rehberler" page, first page only.
+$blog_page = is_home() && ! is_paged() ? (int) get_option( 'page_for_posts' ) : 0;
+if ( $blog_page && trim( (string) get_post_field( 'post_content', $blog_page ) ) ) :
+	?>
+	<section class="section section--tight">
+		<div class="container container--prose">
+			<div class="prose"><?php echo apply_filters( 'the_content', get_post_field( 'post_content', $blog_page ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+			<?php testmatik_render_faqs( testmatik_get_faqs( $blog_page ) ); ?>
+		</div>
+	</section>
+<?php endif; ?>
+
+<?php
 get_footer();
