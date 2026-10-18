@@ -2,7 +2,7 @@
 slug: contact
 title: Contact
 seo_title: Contacter Lumi Pix : questions, bugs et idées d'outils
-desc: Contactez Lumi Pix pour signaler un bug, proposer un nouvel outil image ou poser une question. Nous lisons chaque message et répondons sous deux jours ouvrés.
+desc: Contactez Lumi Pix pour signaler un bug, suggérer un nouvel outil image ou poser une question sur vos images. Écrivez-nous par e-mail : nous lisons chaque message.
 keywords: contacter lumi pix, assistance lumi pix, signaler un bug, proposer un outil image, e-mail lumi pix
 ---
 
