@@ -96,6 +96,27 @@ $tools   = testmatik_tools();
 	</div>
 </section>
 
+<section class="section section--tight" aria-labelledby="privacy-title">
+	<div class="container">
+		<div class="split">
+			<div class="split__media"><?php echo testmatik_illustration( 'privacy' ); // phpcs:ignore WordPress.Security.EscapeOutput -- theme file. ?></div>
+			<div class="split__body">
+				<p class="kicker"><?php esc_html_e( 'Gizlilik', 'testmatik' ); ?></p>
+				<h2 id="privacy-title" class="section-title"><?php esc_html_e( 'Sesiniz, görüntünüz ve tuşlarınız cihazınızdan çıkmaz', 'testmatik' ); ?></h2>
+				<p class="section-lead"><?php esc_html_e( 'Testmatik’teki her test tarayıcınızın kendi özelliklerini kullanır. Mikrofon kaydı, kamera görüntüsü veya bastığınız tuşlar bir sunucuya gönderilmez, kaydedilmez.', 'testmatik' ); ?></p>
+				<ul class="ticks">
+					<li><?php esc_html_e( 'İzinleri yalnızca test sırasında kullanırız; sekmeyi kapatınca biter.', 'testmatik' ); ?></li>
+					<li><?php esc_html_e( 'Kayıt veya hesap yok; e-posta adresinizi istemeyiz.', 'testmatik' ); ?></li>
+					<li><?php esc_html_e( 'Ses kaydını ve kamera fotoğrafını sadece siz dinler, siz indirirsiniz.', 'testmatik' ); ?></li>
+				</ul>
+				<?php $u = testmatik_tool_url( 'mikrofon-testi' ); if ( $u ) : ?>
+					<a class="btn btn--primary" href="<?php echo esc_url( $u ); ?>"><?php esc_html_e( 'Mikrofonu güvenle test et', 'testmatik' ); ?> <?php echo testmatik_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php
 $home_raw = $home_id ? (string) get_post_field( 'post_content', $home_id ) : '';
 if ( '' === trim( $home_raw ) ) {
@@ -127,6 +148,31 @@ if ( $home_faqs ) :
 	</div>
 </section>
 <?php endif; ?>
+
+<?php
+$check_post = get_page_by_path( 'ikinci-el-laptop-kontrol', OBJECT, 'post' );
+$check_url  = ( $check_post && 'publish' === $check_post->post_status ) ? get_permalink( $check_post ) : '';
+?>
+<section class="section section--tight" aria-labelledby="secondhand-title">
+	<div class="container">
+		<div class="split split--reverse">
+			<div class="split__media"><?php echo testmatik_illustration( 'checklist' ); // phpcs:ignore WordPress.Security.EscapeOutput -- theme file. ?></div>
+			<div class="split__body">
+				<p class="kicker"><?php esc_html_e( 'İkinci el alırken', 'testmatik' ); ?></p>
+				<h2 id="secondhand-title" class="section-title"><?php esc_html_e( 'Satıcının yanında 5 dakikada eksiksiz kontrol', 'testmatik' ); ?></h2>
+				<p class="section-lead"><?php esc_html_e( 'İkinci el laptop, monitör veya telefon alırken parayı vermeden önce ekranı, klavyeyi, kamerayı ve sesi kendiniz test edin. Telefonunuzdan bile açılır.', 'testmatik' ); ?></p>
+				<div class="mini-tools">
+					<?php foreach ( array( 'olu-piksel-testi', 'klavye-testi', 'kamera-testi', 'hoparlor-testi' ) as $k ) : $tool = testmatik_get_tool( $k ); $u = testmatik_tool_url( $k ); if ( ! $u ) { continue; } ?>
+						<a class="mini-tool tone-<?php echo esc_attr( $tool['tone'] ); ?>" href="<?php echo esc_url( $u ); ?>"><?php echo testmatik_icon( $tool['icon'], 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php echo esc_html( $tool['name'] ); ?></a>
+					<?php endforeach; ?>
+				</div>
+				<?php if ( $check_url ) : ?>
+					<a class="btn btn--dark" href="<?php echo esc_url( $check_url ); ?>"><?php esc_html_e( '9 adımlık kontrol listesini oku', 'testmatik' ); ?> <?php echo testmatik_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
+				<?php endif; ?>
+			</div>
+		</div>
+	</div>
+</section>
 
 <?php
 $latest = get_posts( array( 'posts_per_page' => 6, 'no_found_rows' => true ) );

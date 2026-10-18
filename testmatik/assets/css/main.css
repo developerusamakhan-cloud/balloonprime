@@ -608,3 +608,17 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .consent__title { display: flex; align-items: center; gap: 8px; font-weight: 750; color: var(--ink) !important; }
 .consent__opts { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; }
 .consent__actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ----------------------------------------------------------- Split media */
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.split--reverse .split__media { order: 2; }
+.split__media { position: relative; }
+.split__media .illus { width: 100%; height: auto; max-width: 520px; margin: 0 auto; filter: drop-shadow(0 30px 40px rgba(11, 16, 32, .08)); }
+.split__body .section-lead { margin-bottom: 18px; }
+.ticks { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.ticks li { position: relative; padding-left: 32px; color: var(--ink-2); }
+.ticks li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 6px; background: var(--brand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / 13px no-repeat; }
+.mini-tools { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+.mini-tool { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px; background: var(--tone-soft); color: var(--tone); font-weight: 700; font-size: 14.5px; text-decoration: none; border: 1px solid color-mix(in srgb, var(--tone) 22%, transparent); }
+.mini-tool:hover { color: var(--tone); transform: translateY(-1px); }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split--reverse .split__media { order: 0; } .split__media .illus { max-width: 380px; } }

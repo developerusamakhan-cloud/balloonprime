@@ -267,3 +267,14 @@ function testmatik_contact_email() {
 	}
 	return $email;
 }
+
+/**
+ * Inline vector illustration from assets/img/illus-<name>.svg (inherits the page font).
+ *
+ * @param string $name Illustration name.
+ * @return string
+ */
+function testmatik_illustration( $name ) {
+	$file = TESTMATIK_DIR . '/assets/img/illus-' . sanitize_file_name( $name ) . '.svg';
+	return file_exists( $file ) ? (string) file_get_contents( $file ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+}
