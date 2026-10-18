@@ -152,7 +152,7 @@ function lumipix_lang_pack() {
 			$pack['tools'][ $key ]['related'] = $related;
 		}
 
-		// Company and legal pages (content/lang/<lang>/pages/<installer key>.md).
+		// Company and legal pages (content/lang/LANG/pages/KEY.md).
 		foreach ( (array) glob( LUMIPIX_DIR . '/content/lang/' . $lang . '/pages/*.md' ) as $file ) {
 			$name = basename( $file, '.md' );
 			$meta = lumipix_lang_read( $file )['meta'];
