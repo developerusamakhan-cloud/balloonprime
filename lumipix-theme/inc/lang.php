@@ -320,7 +320,7 @@ function lumipix_lang_setup_request() {
 add_action( 'wp', 'lumipix_lang_setup_request' );
 
 /**
- * <html lang> on translated pages.
+ * The html lang attribute on translated pages.
  *
  * @param string $output Attributes.
  * @return string
