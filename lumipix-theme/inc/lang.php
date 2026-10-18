@@ -419,7 +419,8 @@ function lumipix_lang_template_include( $template ) {
 add_filter( 'template_include', 'lumipix_lang_template_include', 20 );
 
 /**
- * Primary navigation on translated pages: the translated tools and a way back to English.
+ * Primary navigation on translated pages, built like the English one: a tools
+ * menu with every translated tool, then the three most used tools.
  *
  * @return bool Whether a navigation was printed.
  */
@@ -430,32 +431,123 @@ function lumipix_lang_nav() {
 	}
 	$current = is_page() ? lumipix_page_tool_key( get_queried_object_id() ) : '';
 	echo '<ul class="nav-list">';
-	$hub = lumipix_lang_hub_url( $lang );
-	if ( $hub ) {
-		$is_hub = is_page() && (string) get_post_meta( get_queried_object_id(), '_lumipix_lang_hub', true ) === $lang;
-		echo '<li><a href="' . esc_url( $hub ) . '"' . ( $is_hub ? ' aria-current="page"' : '' ) . '>' . esc_html__( 'All tools', 'lumipix' ) . '</a></li>';
-	}
-	// The four most searched tools; the rest are on the hub and in the footer.
-	foreach ( array_slice( lumipix_lang_tools( $lang ), 0, 4, true ) as $key => $tool ) {
+	echo '<li class="has-mega"><button class="nav-trigger" type="button" aria-expanded="false" aria-controls="mega-tools">' . esc_html__( 'Tools', 'lumipix' ) . lumipix_icon( 'chevron', 16 ) . '</button>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="mega mega--lang" id="mega-tools"><div class="mega__grid"><ul>';
+	foreach ( lumipix_lang_tools( $lang ) as $key => $tool ) {
 		$url = lumipix_tool_url( $key );
 		if ( $url ) {
-			echo '<li><a href="' . esc_url( $url ) . '"' . ( $key === $current ? ' aria-current="page"' : '' ) . '>' . esc_html( $tool['nav'] ) . '</a></li>';
+			echo '<li><a href="' . esc_url( $url ) . '"' . ( $key === $current ? ' aria-current="page"' : '' ) . '>' . lumipix_icon( $tool['icon'], 16 ) . '<span>' . esc_html( $tool['nav'] ) . '</span></a></li>'; // phpcs:ignore WordPress.Security.EscapeOutput
 		}
 	}
-	echo '<li><a href="' . esc_url( lumipix_lang_english_url() ) . '" hreflang="en" lang="en">English</a></li>';
+	echo '</ul>';
+	$hub = lumipix_lang_hub_url( $lang );
+	if ( $hub ) {
+		echo '<a class="mega__all" href="' . esc_url( $hub ) . '">' . esc_html__( 'See all tools', 'lumipix' ) . lumipix_icon( 'arrow', 16 ) . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+	echo '</div></div></li>';
+
+	$shortcuts = array(
+		'compress-image'     => __( 'Compress', 'lumipix' ),
+		'image-resizer'      => __( 'Resize', 'lumipix' ),
+		'background-remover' => __( 'Remove background', 'lumipix' ),
+	);
+	foreach ( $shortcuts as $base => $label ) {
+		$key = $lang . '-' . $base;
+		$url = lumipix_tool_url( $key );
+		if ( $url ) {
+			echo '<li><a href="' . esc_url( $url ) . '"' . ( $key === $current ? ' aria-current="page"' : '' ) . '>' . esc_html( $label ) . '</a></li>';
+		}
+	}
 	echo '</ul>';
 	return true;
 }
 
 /**
- * English counterpart of the current translated page (home page as fallback).
+ * Links of the language switcher: the same page in every language when it
+ * exists, otherwise the home page or the language hub.
  *
- * @return string
+ * @return array<int, array{code: string, name: string, hreflang: string, url: string}>
  */
-function lumipix_lang_english_url() {
+function lumipix_lang_switch_links() {
 	$alternates = lumipix_lang_alternates();
-	return ! empty( $alternates['en'] ) ? $alternates['en'] : home_url( '/' );
+	$links      = array(
+		array(
+			'code'     => 'en',
+			'name'     => 'English',
+			'hreflang' => 'en',
+			'url'      => ! empty( $alternates['en'] ) ? $alternates['en'] : home_url( '/' ),
+		),
+	);
+	foreach ( lumipix_languages() as $lang => $info ) {
+		$url = ! empty( $alternates[ $info['hreflang'] ] ) ? $alternates[ $info['hreflang'] ] : lumipix_lang_hub_url( $lang );
+		if ( $url ) {
+			$links[] = array(
+				'code'     => $lang,
+				'name'     => $info['name'],
+				'hreflang' => $info['hreflang'],
+				'url'      => $url,
+			);
+		}
+	}
+	return $links;
 }
+
+/**
+ * Language switcher in the header.
+ */
+function lumipix_lang_switcher() {
+	$links = lumipix_lang_switch_links();
+	if ( count( $links ) < 2 ) {
+		return;
+	}
+	$current = lumipix_current_lang();
+	?>
+	<div class="lang-switch" data-lang-switch>
+		<button class="lang-switch__btn" type="button" aria-expanded="false" aria-controls="lang-switch-menu" aria-label="<?php esc_attr_e( 'Language', 'lumipix' ); ?>">
+			<?php echo lumipix_icon( 'globe', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+			<span class="lang-switch__code"><?php echo esc_html( strtoupper( $current ) ); ?></span>
+			<?php echo lumipix_icon( 'chevron', 14 ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+		</button>
+		<ul class="lang-switch__menu" id="lang-switch-menu" hidden>
+			<?php foreach ( $links as $link ) : ?>
+				<li><a href="<?php echo esc_url( $link['url'] ); ?>" hreflang="<?php echo esc_attr( $link['hreflang'] ); ?>" lang="<?php echo esc_attr( $link['hreflang'] ); ?>"<?php echo $link['code'] === $current ? ' aria-current="true"' : ''; ?>><span class="lang-switch__tag"><?php echo esc_html( strtoupper( $link['code'] ) ); ?></span><?php echo esc_html( $link['name'] ); ?></a></li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<?php
+}
+
+/**
+ * Short "Also in" line with the language hubs, shown in the home page hero.
+ */
+function lumipix_language_strip() {
+	$links = array();
+	foreach ( lumipix_languages() as $lang => $info ) {
+		$url = lumipix_lang_hub_url( $lang );
+		if ( $url ) {
+			$links[] = sprintf( '<a href="%s" hreflang="%s" lang="%s">%s</a>', esc_url( $url ), esc_attr( $info['hreflang'] ), esc_attr( $info['hreflang'] ), esc_html( $info['name'] ) );
+		}
+	}
+	if ( ! $links ) {
+		return;
+	}
+	echo '<p class="hero-langs">' . lumipix_icon( 'globe', 16 ) . '<span>' . esc_html__( 'Also in', 'lumipix' ) . '</span> ' . implode( ' <span aria-hidden="true">·</span> ', $links ) . '</p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+
+/**
+ * Body class on translated pages.
+ *
+ * @param string[] $classes Classes.
+ * @return string[]
+ */
+function lumipix_lang_body_class( $classes ) {
+	if ( 'en' !== lumipix_current_lang() ) {
+		$classes[] = 'is-translated';
+		$classes[] = 'lang-' . lumipix_current_lang();
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'lumipix_lang_body_class' );
 
 /**
  * Footer column with the translated tools (replaces the English tool columns

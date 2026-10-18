@@ -38,6 +38,7 @@ defined( 'ABSPATH' ) || exit;
 		</nav>
 
 		<div class="site-header__actions">
+			<?php lumipix_lang_switcher(); ?>
 			<button class="icon-btn" type="button" data-theme-toggle aria-label="<?php esc_attr_e( 'Toggle dark mode', 'lumipix' ); ?>">
 				<span class="theme-icon theme-icon--sun"><?php echo lumipix_icon( 'sun', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
 				<span class="theme-icon theme-icon--moon"><?php echo lumipix_icon( 'moon', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>

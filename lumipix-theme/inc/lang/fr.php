@@ -208,6 +208,8 @@ return array(
 	'Maybe later' => 'Plus tard',
 	'A message from Vyntic Studio, the team behind Lumi Pix.' => 'Un message de Vyntic Studio, l\'équipe derrière Lumi Pix.',
 	'All tools' => 'Tous les outils',
+	'Language' => 'Langue',
+	'Also in' => 'Aussi en',
 	'Languages' => 'Langues',
 	'Also available in' => 'Également disponible en',
 	'Other languages' => 'Autres langues',

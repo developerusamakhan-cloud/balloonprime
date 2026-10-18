@@ -36,6 +36,7 @@ $features = array(
 			<li><?php echo lumipix_icon( 'zap', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Instant results', 'lumipix' ); ?></li>
 			<li><?php echo lumipix_icon( 'gift', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Free HD downloads', 'lumipix' ); ?></li>
 		</ul>
+		<?php lumipix_language_strip(); ?>
 	</div>
 </section>
 
@@ -83,6 +84,8 @@ $features = array(
 	</div>
 </section>
 
+<?php lumipix_language_section(); ?>
+
 <section class="section" aria-labelledby="all-tools-title">
 	<div class="container">
 		<div class="section-head">
@@ -105,8 +108,6 @@ $features = array(
 		<p class="tool-search-empty" data-tool-search-empty hidden><?php esc_html_e( 'No tool matches that yet. Try a size like “100kb” or a word like “resize”.', 'lumipix' ); ?></p>
 	</div>
 </section>
-
-<?php lumipix_language_section(); ?>
 
 <?php if ( lumipix_tool_url( 'compress-image' ) ) : ?>
 <section class="section section--panel" aria-labelledby="try-title">

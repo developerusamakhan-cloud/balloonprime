@@ -83,6 +83,30 @@
 		});
 	});
 
+	/* Language switcher */
+	document.querySelectorAll('[data-lang-switch]').forEach(function (box) {
+		var btn = box.querySelector('button');
+		var menu = box.querySelector('ul');
+		if (!btn || !menu) return;
+		var setOpen = function (open) {
+			menu.hidden = !open;
+			btn.setAttribute('aria-expanded', String(open));
+		};
+		btn.addEventListener('click', function (e) {
+			e.stopPropagation();
+			setOpen(menu.hidden);
+		});
+		document.addEventListener('click', function (e) {
+			if (!box.contains(e.target)) setOpen(false);
+		});
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && !menu.hidden) {
+				setOpen(false);
+				btn.focus();
+			}
+		});
+	});
+
 	/* Tool search: filters tool cards in place; submits to site search if nothing is on the page. */
 	var searchInput = document.querySelector('[data-tool-search-input]');
 	var cards = document.querySelectorAll('[data-tool-search]');
