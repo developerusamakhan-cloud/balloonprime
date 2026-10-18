@@ -83,6 +83,69 @@
 		heads.forEach(function (h) { obs.observe(h); });
 	}
 
+	/* GA4 tool events: works with any gtag on the page (Site Kit or the theme loader) */
+	var track = function (name, params) {
+		if (typeof window.gtag === 'function') { window.gtag('event', name, params); }
+	};
+	var app = document.querySelector('[data-tm-tool]');
+	if (app) {
+		var toolName = app.getAttribute('data-tm-tool');
+		var started = false;
+		var start = function (how) {
+			if (started) { return; }
+			started = true;
+			track('tool_start', { tool_name: toolName, start_method: how });
+		};
+		var seen = {};
+		app.addEventListener('click', function (e) {
+			var btn = e.target.closest('button, [role="button"]');
+			if (!btn || !app.contains(btn)) { return; }
+			var action = btn.getAttribute('data-action') || (btn.getAttribute('data-color-index') !== null ? 'color' : '') ||
+				(btn.getAttribute('data-res') ? 'resolution' : '') || (btn.getAttribute('data-pan') ? 'channel' : '') ||
+				(btn.getAttribute('data-hz') ? 'tone' : '') || (btn.getAttribute('data-layout') ? 'layout' : '') || 'button';
+			start('click');
+			// One event per action and page keeps the reports readable.
+			if (!seen[action]) {
+				seen[action] = true;
+				track('tool_action', { tool_name: toolName, tool_action: action });
+			}
+		});
+		if (app.getAttribute('data-tm-app') === 'keyboard') {
+			document.addEventListener('keydown', function () { start('key'); }, { once: true });
+		}
+		if (app.getAttribute('data-tm-app') === 'mouse') {
+			app.addEventListener('mousedown', function () { start('click'); }, { once: true });
+		}
+		// Camera and microphone: report whether the browser permission was granted.
+		var md = navigator.mediaDevices;
+		if (md && typeof md.getUserMedia === 'function') {
+			var gum = md.getUserMedia.bind(md);
+			var reported = {};
+			var report = function (result) {
+				if (reported[result]) { return; }
+				reported[result] = true;
+				track('tool_permission', { tool_name: toolName, permission_result: result });
+			};
+			md.getUserMedia = function (c) {
+				start('permission');
+				return gum(c).then(function (s) {
+					report('granted');
+					return s;
+				}, function (err) {
+					report((err && err.name) || 'error');
+					throw err;
+				});
+			};
+		}
+	}
+
+	/* Clicks on tool cards and CTA buttons that lead to a tool */
+	document.addEventListener('click', function (e) {
+		var a = e.target.closest('.cta-card a, a.tool-card, [data-search]');
+		if (!a || !a.href) { return; }
+		track('tool_cta_click', { link_url: a.href, cta_type: a.closest('.cta-card') ? 'article_cta' : 'tool_card' });
+	});
+
 	/* Cookie consent (Google Consent Mode v2) */
 	var banner = document.querySelector('[data-consent]');
 	if (banner) {

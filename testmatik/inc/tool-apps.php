@@ -25,7 +25,7 @@ function testmatik_render_tool_app( $key ) {
 		return '';
 	}
 	ob_start();
-	echo '<div class="app app--' . esc_attr( $tool['script'] ) . ' tone-' . esc_attr( $tool['tone'] ) . '" data-tm-app="' . esc_attr( $tool['script'] ) . '">';
+	echo '<div class="app app--' . esc_attr( $tool['script'] ) . ' tone-' . esc_attr( $tool['tone'] ) . '" data-tm-app="' . esc_attr( $tool['script'] ) . '" data-tm-tool="' . esc_attr( $key ) . '">';
 	echo '<noscript><p class="app__notice">' . esc_html__( 'Bu test için tarayıcınızda JavaScript açık olmalıdır.', 'testmatik' ) . '</p></noscript>';
 	$fn();
 	echo '</div>';
