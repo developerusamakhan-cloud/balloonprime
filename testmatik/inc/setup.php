@@ -71,6 +71,10 @@ add_action(
 	'wp_head',
 	function () {
 		printf( '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n", esc_url( TESTMATIK_URI . '/assets/fonts/jakarta-latin.woff2' ) );
+		// A 48px-based /favicon.ico is what Google search results look for first.
+		if ( file_exists( ABSPATH . 'favicon.ico' ) ) {
+			printf( '<link rel="icon" href="%s" sizes="48x48">' . "\n", esc_url( home_url( '/favicon.ico' ) ) );
+		}
 		if ( ! has_site_icon() ) {
 			printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( TESTMATIK_URI . '/assets/img/favicon.svg' ) );
 		}
@@ -147,6 +151,17 @@ add_action(
 	function ( $q ) {
 		if ( ! is_admin() && $q->is_main_query() && $q->is_search() ) {
 			$q->set( 'post_type', array( 'post', 'page' ) );
+		}
+	}
+);
+
+// Put the theme's favicon.ico in the site root once, so /favicon.ico does not 404.
+add_action(
+	'admin_init',
+	function () {
+		$dst = ABSPATH . 'favicon.ico';
+		if ( ! file_exists( $dst ) && wp_is_writable( ABSPATH ) ) {
+			copy( TESTMATIK_DIR . '/assets/img/favicon.ico', $dst );
 		}
 	}
 );
