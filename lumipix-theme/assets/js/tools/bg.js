@@ -88,12 +88,12 @@
 			pane.innerHTML = '';
 			var canvas = compose(state.cutout, background);
 			canvas.setAttribute('role', 'img');
-			canvas.setAttribute('aria-label', 'Result');
+			canvas.setAttribute('aria-label', L.t('result', 'Result'));
 			pane.appendChild(canvas);
 			pane.classList.toggle('checker', background === 'transparent');
 			var label = document.createElement('span');
 			label.className = 'preview__label';
-			label.textContent = 'After';
+			label.textContent = L.t('after', 'After');
 			pane.appendChild(label);
 		}
 

@@ -48,7 +48,7 @@ function lumipix_md_parse( $text ) {
 		}
 
 		if ( preg_match( '/^##\s+(.*)$/', $line, $m ) && ! preg_match( '/^###/', $line ) ) {
-			if ( preg_match( '/^(faq|faqs|frequently asked questions)$/i', trim( $m[1] ) ) ) {
+			if ( preg_match( '/^(faq|faqs|frequently asked questions|questions fréquentes|perguntas frequentes)$/iu', trim( $m[1] ) ) ) {
 				$in_faq = true;
 				continue;
 			}
@@ -230,7 +230,7 @@ function lumipix_md_emphasis( $html ) {
 }
 
 /**
- * Resolve tool:/post:/page: link targets.
+ * Resolve tool:/post:/page:/lang: link targets.
  *
  * @param string $target Link target.
  * @return string URL or empty string when the target does not exist.
@@ -245,6 +245,9 @@ function lumipix_md_resolve_url( $target ) {
 	}
 	if ( 0 === strpos( $target, 'post:' ) ) {
 		return lumipix_pack_post_url( substr( $target, 5 ) );
+	}
+	if ( 0 === strpos( $target, 'lang:' ) ) {
+		return function_exists( 'lumipix_lang_hub_url' ) ? lumipix_lang_hub_url( substr( $target, 5 ) ) : '';
 	}
 	return $target;
 }

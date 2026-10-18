@@ -31,7 +31,7 @@ function lumipix_breadcrumb_items() {
 		if ( $key ) {
 			$tool   = lumipix_get_tool( $key );
 			$groups = lumipix_tool_groups();
-			$all    = lumipix_installer_page_id( 'tools' );
+			$all    = empty( $tool['lang'] ) ? lumipix_installer_page_id( 'tools' ) : lumipix_lang_hub_id( $tool['lang'] );
 			if ( $all ) {
 				$items[] = array( get_the_title( $all ), get_permalink( $all ) );
 			}
@@ -235,6 +235,9 @@ function lumipix_ad_slot( $position ) {
  * Primary navigation: a saved menu if assigned, otherwise a smart default built from the registry.
  */
 function lumipix_primary_nav() {
+	if ( lumipix_lang_nav() ) {
+		return;
+	}
 	if ( has_nav_menu( 'primary' ) ) {
 		wp_nav_menu(
 			array(

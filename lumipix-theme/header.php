@@ -43,7 +43,7 @@ defined( 'ABSPATH' ) || exit;
 				<span class="theme-icon theme-icon--moon"><?php echo lumipix_icon( 'moon', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
 			</button>
 			<?php
-			$cta_url = lumipix_tool_url( 'compress-image' );
+			$cta_url = lumipix_tool_url( lumipix_lang_key( 'compress-image' ) );
 			if ( $cta_url ) :
 				?>
 				<a class="btn btn--primary btn--sm site-header__cta" href="<?php echo esc_url( $cta_url ); ?>"><?php esc_html_e( 'Start free', 'lumipix' ); ?></a>

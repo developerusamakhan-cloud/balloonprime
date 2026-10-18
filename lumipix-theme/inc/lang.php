@@ -1,0 +1,761 @@
+<?php
+/**
+ * Other-language tool pages (French and Brazilian Portuguese).
+ *
+ * Each language has a hub page (/fr/, /pt/) and translated landing pages for a
+ * handful of tools, stored as Markdown in content/lang/<lang>/<tool>.md. The
+ * pages reuse the English tool apps; the interface is translated through the
+ * `lumipix` text domain on those pages only, so the English site is untouched.
+ *
+ * Pages are created automatically the first time the site loads after an
+ * update that ships new language content (see LUMIPIX_LANG_REV).
+ *
+ * @package Lumipix
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/** Bump when the bundled language pages change, so untouched pages are refreshed. */
+define( 'LUMIPIX_LANG_REV', 1 );
+
+/**
+ * Languages with their own pages.
+ *
+ * @return array<string, array<string, string>>
+ */
+function lumipix_languages() {
+	return array(
+		'fr' => array(
+			'name'     => 'Français',
+			'locale'   => 'fr_FR',
+			'hreflang' => 'fr',
+			'html'     => 'fr-FR',
+		),
+		'pt' => array(
+			'name'     => 'Português',
+			'locale'   => 'pt_BR',
+			'hreflang' => 'pt-BR',
+			'html'     => 'pt-BR',
+		),
+	);
+}
+
+/**
+ * Front matter and FAQs of a language Markdown file. Body links are not resolved
+ * here, so building the registry never needs page lookups.
+ *
+ * @param string $path File path.
+ * @return array{meta: array<string,string>, faqs: array<string,string>}
+ */
+function lumipix_lang_read( $path ) {
+	$text = str_replace( "\r\n", "\n", (string) file_get_contents( $path ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	$meta = array();
+	if ( preg_match( '/^---\n(.*?)\n---\n/s', $text, $m ) ) {
+		foreach ( explode( "\n", $m[1] ) as $line ) {
+			if ( preg_match( '/^([a-z0-9_]+):\s*(.*)$/', $line, $kv ) ) {
+				$meta[ $kv[1] ] = trim( $kv[2] );
+			}
+		}
+	}
+	$faqs = array();
+	if ( preg_match( '/^##\s+(questions fréquentes|perguntas frequentes|faq)\s*$.*/imsu', $text, $f ) ) {
+		$faqs = lumipix_md_parse( $f[0] )['faqs'];
+	}
+	return array(
+		'meta' => $meta,
+		'faqs' => $faqs,
+	);
+}
+
+/**
+ * Bundled language content: hubs and tools.
+ *
+ * @return array{hubs: array<string, array<string, mixed>>, tools: array<string, array<string, mixed>>}
+ */
+function lumipix_lang_pack() {
+	static $pack = null;
+	if ( null !== $pack ) {
+		return $pack;
+	}
+	$pack = array(
+		'hubs'  => array(),
+		'tools' => array(),
+	);
+	$base = lumipix_tools();
+	// Display order of the translated tools (menus, cards, chips).
+	$order = array( '_hub', 'compress-image', 'image-resizer', 'image-to-pdf', 'background-remover', 'webp-to-jpg', 'png-to-jpg' );
+	foreach ( array_keys( lumipix_languages() ) as $lang ) {
+		$files = glob( LUMIPIX_DIR . '/content/lang/' . $lang . '/*.md' );
+		usort(
+			$files,
+			function ( $a, $b ) use ( $order ) {
+				$ia = array_search( basename( $a, '.md' ), $order, true );
+				$ib = array_search( basename( $b, '.md' ), $order, true );
+				return ( false === $ia ? 99 : $ia ) - ( false === $ib ? 99 : $ib );
+			}
+		);
+		$keys = array();
+		foreach ( $files as $file ) {
+			$name = basename( $file, '.md' );
+			$data = lumipix_lang_read( $file );
+			$meta = $data['meta'];
+			if ( '_hub' === $name ) {
+				$pack['hubs'][ $lang ] = array(
+					'lang'     => $lang,
+					'file'     => $file,
+					'slug'     => $meta['slug'] ?? $lang,
+					'nav'      => $meta['nav'] ?? lumipix_languages()[ $lang ]['name'],
+					'h1'       => $meta['h1'] ?? '',
+					'title'    => $meta['title'] ?? '',
+					'desc'     => $meta['desc'] ?? '',
+					'lead'     => $meta['lead'] ?? '',
+					'keywords' => $meta['keywords'] ?? '',
+					'faqs'     => $data['faqs'],
+				);
+				continue;
+			}
+			if ( ! isset( $base[ $name ] ) || empty( $meta['slug'] ) ) {
+				continue;
+			}
+			$key    = $lang . '-' . $name;
+			$keys[] = $key;
+			$tool   = $base[ $name ];
+
+			$pack['tools'][ $key ] = array_merge(
+				$tool,
+				array(
+					'lang'      => $lang,
+					'source'    => $name,
+					'file'      => $file,
+					'parent'    => '',
+					'slug'      => ( $pack['hubs'][ $lang ]['slug'] ?? $lang ) . '/' . $meta['slug'],
+					'post_name' => $meta['slug'],
+					'nav'       => $meta['nav'] ?? $tool['nav'],
+					'h1'        => $meta['h1'] ?? $tool['h1'],
+					'title'     => $meta['title'] ?? $tool['title'],
+					'desc'      => $meta['desc'] ?? $tool['desc'],
+					'lead'      => $meta['lead'] ?? $tool['lead'],
+					'keywords'  => $meta['keywords'] ?? '',
+					'faqs'      => $data['faqs'],
+					'content'   => '',
+				)
+			);
+		}
+		// Related tools: the next three pages of the same language.
+		$count = count( $keys );
+		foreach ( $keys as $i => $key ) {
+			$related = array();
+			for ( $j = 1; $j < $count && count( $related ) < 3; $j++ ) {
+				$related[] = $keys[ ( $i + $j ) % $count ];
+			}
+			$pack['tools'][ $key ]['related'] = $related;
+		}
+	}
+	return $pack;
+}
+
+/**
+ * Translated tool definitions, optionally for one language.
+ *
+ * @param string $lang Language code.
+ * @return array<string, array<string, mixed>>
+ */
+function lumipix_lang_tools( $lang = '' ) {
+	$tools = lumipix_lang_pack()['tools'];
+	if ( ! $lang ) {
+		return $tools;
+	}
+	return array_filter(
+		$tools,
+		function ( $t ) use ( $lang ) {
+			return $t['lang'] === $lang;
+		}
+	);
+}
+
+/**
+ * A translated tool definition.
+ *
+ * @param string $key Tool key, e.g. fr-compress-image.
+ * @return array<string, mixed>|null
+ */
+function lumipix_lang_tool( $key ) {
+	if ( ! preg_match( '/^[a-z]{2}-/', (string) $key ) ) {
+		return null;
+	}
+	$tools = lumipix_lang_pack()['tools'];
+	return isset( $tools[ $key ] ) ? $tools[ $key ] : null;
+}
+
+/**
+ * Hub definition of a language.
+ *
+ * @param string $lang Language code.
+ * @return array<string, mixed>|null
+ */
+function lumipix_lang_hub( $lang ) {
+	$hubs = lumipix_lang_pack()['hubs'];
+	return isset( $hubs[ $lang ] ) ? $hubs[ $lang ] : null;
+}
+
+/**
+ * Page ID of a language hub.
+ *
+ * @param string $lang Language code.
+ * @return int
+ */
+function lumipix_lang_hub_id( $lang ) {
+	$ids = (array) get_option( 'lumipix_lang_pages', array() );
+	$id  = isset( $ids[ 'hub:' . $lang ] ) ? (int) $ids[ 'hub:' . $lang ] : 0;
+	return ( $id && 'publish' === get_post_status( $id ) ) ? $id : 0;
+}
+
+/**
+ * URL of a language hub (empty when the page does not exist).
+ *
+ * @param string $lang Language code.
+ * @return string
+ */
+function lumipix_lang_hub_url( $lang ) {
+	$id = lumipix_lang_hub_id( $lang );
+	return $id ? get_permalink( $id ) : '';
+}
+
+/**
+ * Translations of an English tool, as lang => key, for pages that exist.
+ *
+ * @param string $base English tool key.
+ * @return array<string, string>
+ */
+function lumipix_lang_versions( $base ) {
+	$out = array();
+	foreach ( array_keys( lumipix_languages() ) as $lang ) {
+		$key = $lang . '-' . $base;
+		if ( lumipix_lang_tool( $key ) && lumipix_tool_url( $key ) ) {
+			$out[ $lang ] = $key;
+		}
+	}
+	return $out;
+}
+
+/**
+ * Language of the current request: a language code on translated pages, otherwise "en".
+ *
+ * @return string
+ */
+function lumipix_current_lang() {
+	static $lang = null;
+	if ( null !== $lang ) {
+		return $lang;
+	}
+	if ( ! did_action( 'wp' ) ) {
+		return 'en';
+	}
+	$lang = 'en';
+	if ( is_page() ) {
+		$value = (string) get_post_meta( get_queried_object_id(), '_lumipix_lang', true );
+		if ( isset( lumipix_languages()[ $value ] ) ) {
+			$lang = $value;
+		}
+	}
+	return $lang;
+}
+
+/**
+ * The tool key to link to in the current language (falls back to English).
+ *
+ * @param string $base English tool key.
+ * @return string
+ */
+function lumipix_lang_key( $base ) {
+	$lang = lumipix_current_lang();
+	if ( 'en' !== $lang && lumipix_tool_url( $lang . '-' . $base ) ) {
+		return $lang . '-' . $base;
+	}
+	return $base;
+}
+
+/* -------------------------------------------------------------------------
+ * Interface translation
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Interface strings of a language (English source => translation).
+ *
+ * @param string $lang Language code.
+ * @return array<string, string>
+ */
+function lumipix_lang_strings( $lang ) {
+	static $cache = array();
+	if ( ! isset( $cache[ $lang ] ) ) {
+		$file           = LUMIPIX_DIR . '/inc/lang/' . sanitize_file_name( $lang ) . '.php';
+		$cache[ $lang ] = file_exists( $file ) ? (array) include $file : array();
+	}
+	return $cache[ $lang ];
+}
+
+/**
+ * Translate theme strings on translated pages.
+ *
+ * @param string $translation Translated text.
+ * @param string $text        Original text.
+ * @return string
+ */
+function lumipix_lang_gettext( $translation, $text ) {
+	$strings = lumipix_lang_strings( lumipix_current_lang() );
+	return isset( $strings[ $text ] ) ? $strings[ $text ] : $translation;
+}
+
+/**
+ * Switch the interface language once the queried page is known.
+ */
+function lumipix_lang_setup_request() {
+	if ( 'en' === lumipix_current_lang() ) {
+		return;
+	}
+	add_filter( 'gettext_lumipix', 'lumipix_lang_gettext', 10, 2 );
+	add_filter( 'language_attributes', 'lumipix_lang_attributes' );
+	add_filter( 'rank_math/opengraph/facebook/og_locale', 'lumipix_lang_og_locale' );
+}
+add_action( 'wp', 'lumipix_lang_setup_request' );
+
+/**
+ * <html lang> on translated pages.
+ *
+ * @param string $output Attributes.
+ * @return string
+ */
+function lumipix_lang_attributes( $output ) {
+	$code = lumipix_languages()[ lumipix_current_lang() ]['html'];
+	return preg_match( '/lang="[^"]*"/', $output ) ? preg_replace( '/lang="[^"]*"/', 'lang="' . $code . '"', $output ) : trim( $output . ' lang="' . $code . '"' );
+}
+
+/**
+ * Open Graph locale on translated pages (Rank Math).
+ *
+ * @return string
+ */
+function lumipix_lang_og_locale() {
+	return lumipix_languages()[ lumipix_current_lang() ]['locale'];
+}
+
+/* -------------------------------------------------------------------------
+ * hreflang
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Alternate URLs of the current page, as hreflang => URL.
+ *
+ * @return array<string, string>
+ */
+function lumipix_lang_alternates() {
+	if ( ! is_page() && ! is_front_page() ) {
+		return array();
+	}
+	$langs = lumipix_languages();
+	$out   = array();
+	$id    = get_queried_object_id();
+
+	$hub_lang = (string) get_post_meta( $id, '_lumipix_lang_hub', true );
+	if ( is_front_page() || isset( $langs[ $hub_lang ] ) ) {
+		$out['en'] = home_url( '/' );
+		foreach ( $langs as $lang => $info ) {
+			$url = lumipix_lang_hub_url( $lang );
+			if ( $url ) {
+				$out[ $info['hreflang'] ] = $url;
+			}
+		}
+	} else {
+		$key = lumipix_page_tool_key( $id );
+		if ( ! $key ) {
+			return array();
+		}
+		$tool = lumipix_get_tool( $key );
+		$base = ! empty( $tool['lang'] ) ? $tool['source'] : $key;
+		$url  = lumipix_tool_url( $base );
+		if ( $url ) {
+			$out['en'] = $url;
+		}
+		foreach ( lumipix_lang_versions( $base ) as $lang => $lang_key ) {
+			$out[ $langs[ $lang ]['hreflang'] ] = lumipix_tool_url( $lang_key );
+		}
+	}
+	if ( count( $out ) < 2 || empty( $out['en'] ) ) {
+		return array();
+	}
+	$out['x-default'] = $out['en'];
+	return $out;
+}
+
+/**
+ * Print hreflang links.
+ */
+function lumipix_lang_hreflang() {
+	foreach ( lumipix_lang_alternates() as $code => $url ) {
+		printf( '<link rel="alternate" hreflang="%s" href="%s">' . "\n", esc_attr( $code ), esc_url( $url ) );
+	}
+}
+add_action( 'wp_head', 'lumipix_lang_hreflang', 4 );
+
+/* -------------------------------------------------------------------------
+ * Templates and links
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Route language hub pages to their template.
+ *
+ * @param string $template Template path.
+ * @return string
+ */
+function lumipix_lang_template_include( $template ) {
+	if ( is_page() && ! is_front_page() && get_post_meta( get_queried_object_id(), '_lumipix_lang_hub', true ) ) {
+		$hub_template = locate_template( 'templates/lang-hub.php' );
+		if ( $hub_template ) {
+			return $hub_template;
+		}
+	}
+	return $template;
+}
+add_filter( 'template_include', 'lumipix_lang_template_include', 20 );
+
+/**
+ * Primary navigation on translated pages: the translated tools and a way back to English.
+ *
+ * @return bool Whether a navigation was printed.
+ */
+function lumipix_lang_nav() {
+	$lang = lumipix_current_lang();
+	if ( 'en' === $lang ) {
+		return false;
+	}
+	$current = is_page() ? lumipix_page_tool_key( get_queried_object_id() ) : '';
+	echo '<ul class="nav-list">';
+	$hub = lumipix_lang_hub_url( $lang );
+	if ( $hub ) {
+		$is_hub = is_page() && (string) get_post_meta( get_queried_object_id(), '_lumipix_lang_hub', true ) === $lang;
+		echo '<li><a href="' . esc_url( $hub ) . '"' . ( $is_hub ? ' aria-current="page"' : '' ) . '>' . esc_html__( 'All tools', 'lumipix' ) . '</a></li>';
+	}
+	// The four most searched tools; the rest are on the hub and in the footer.
+	foreach ( array_slice( lumipix_lang_tools( $lang ), 0, 4, true ) as $key => $tool ) {
+		$url = lumipix_tool_url( $key );
+		if ( $url ) {
+			echo '<li><a href="' . esc_url( $url ) . '"' . ( $key === $current ? ' aria-current="page"' : '' ) . '>' . esc_html( $tool['nav'] ) . '</a></li>';
+		}
+	}
+	echo '<li><a href="' . esc_url( lumipix_lang_english_url() ) . '" hreflang="en" lang="en">English</a></li>';
+	echo '</ul>';
+	return true;
+}
+
+/**
+ * English counterpart of the current translated page (home page as fallback).
+ *
+ * @return string
+ */
+function lumipix_lang_english_url() {
+	$alternates = lumipix_lang_alternates();
+	return ! empty( $alternates['en'] ) ? $alternates['en'] : home_url( '/' );
+}
+
+/**
+ * Footer column with the translated tools (replaces the English tool columns
+ * on translated pages).
+ */
+function lumipix_lang_footer_col() {
+	$lang = lumipix_current_lang();
+	$hub  = lumipix_lang_hub_id( $lang );
+	?>
+	<div class="site-footer__col">
+		<p class="site-footer__title"><?php echo esc_html( $hub ? get_the_title( $hub ) : __( 'All tools', 'lumipix' ) ); ?></p>
+		<ul>
+			<?php foreach ( lumipix_lang_tools( $lang ) as $key => $tool ) : ?>
+				<?php $url = lumipix_tool_url( $key ); ?>
+				<?php if ( $url ) : ?>
+					<li><a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $tool['nav'] ); ?></a></li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<?php
+}
+
+/**
+ * Language links shown in the footer of every page.
+ */
+function lumipix_language_links() {
+	$links = array( array( 'en', 'English', 'en', home_url( '/' ) ) );
+	foreach ( lumipix_languages() as $lang => $info ) {
+		$url = lumipix_lang_hub_url( $lang );
+		if ( $url ) {
+			$links[] = array( $lang, $info['name'], $info['hreflang'], $url );
+		}
+	}
+	if ( count( $links ) < 2 ) {
+		return;
+	}
+	$current = lumipix_current_lang();
+	echo '<nav class="lang-links" aria-label="' . esc_attr__( 'Languages', 'lumipix' ) . '">';
+	echo lumipix_icon( 'globe', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput
+	foreach ( $links as $link ) {
+		printf(
+			'<a href="%s" hreflang="%s" lang="%s"%s>%s</a>',
+			esc_url( $link[3] ),
+			esc_attr( $link[2] ),
+			esc_attr( $link[2] ),
+			$link[0] === $current ? ' aria-current="true"' : '',
+			esc_html( $link[1] )
+		);
+	}
+	echo '</nav>';
+}
+
+/**
+ * "Also available in" links under an English tool, and back to English on translated tools.
+ *
+ * @param string $key Tool key of the page.
+ */
+function lumipix_lang_tool_switcher( $key ) {
+	$tool = lumipix_get_tool( $key );
+	if ( ! $tool ) {
+		return;
+	}
+	$langs = lumipix_languages();
+	$base  = ! empty( $tool['lang'] ) ? $tool['source'] : $key;
+	$links = array();
+	if ( ! empty( $tool['lang'] ) ) {
+		$url = lumipix_tool_url( $base );
+		if ( $url ) {
+			$links[] = array( 'en', 'English', $url );
+		}
+	}
+	foreach ( lumipix_lang_versions( $base ) as $lang => $lang_key ) {
+		if ( $lang_key !== $key ) {
+			$links[] = array( $langs[ $lang ]['hreflang'], lumipix_get_tool( $lang_key )['nav'] . ' (' . $langs[ $lang ]['name'] . ')', lumipix_tool_url( $lang_key ) );
+		}
+	}
+	if ( ! $links ) {
+		return;
+	}
+	echo '<div class="tool-family tool-langs"><p class="tool-family__label">' . esc_html__( 'Also available in', 'lumipix' ) . '</p><div class="chips">';
+	foreach ( $links as $link ) {
+		printf( '<a class="chip" href="%s" hreflang="%s" lang="%s">%s</a>', esc_url( $link[2] ), esc_attr( $link[0] ), esc_attr( $link[0] ), esc_html( $link[1] ) );
+	}
+	echo '</div></div>';
+}
+add_action( 'lumipix_tool_hero_after', 'lumipix_lang_tool_switcher' );
+
+/**
+ * Home and tools-hub section linking to every language hub and its tools.
+ */
+function lumipix_language_section() {
+	$blocks = array();
+	foreach ( lumipix_languages() as $lang => $info ) {
+		$hub = lumipix_lang_hub_id( $lang );
+		if ( $hub ) {
+			$blocks[ $lang ] = $hub;
+		}
+	}
+	if ( ! $blocks ) {
+		return;
+	}
+	?>
+	<section class="section section--tight" aria-labelledby="lang-title">
+		<div class="container">
+			<div class="section-head">
+				<p class="kicker"><?php esc_html_e( 'Other languages', 'lumipix' ); ?></p>
+				<h2 id="lang-title" class="section-title section-title--sm"><?php esc_html_e( 'Lumi Pix in your language', 'lumipix' ); ?></h2>
+			</div>
+			<div class="lang-grid">
+				<?php foreach ( $blocks as $lang => $hub ) : ?>
+					<div class="lang-card" lang="<?php echo esc_attr( lumipix_languages()[ $lang ]['html'] ); ?>">
+						<p class="lang-card__name"><?php echo lumipix_icon( 'globe', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php echo esc_html( lumipix_languages()[ $lang ]['name'] ); ?></p>
+						<a class="lang-card__hub" href="<?php echo esc_url( get_permalink( $hub ) ); ?>" hreflang="<?php echo esc_attr( lumipix_languages()[ $lang ]['hreflang'] ); ?>"><?php echo esc_html( get_the_title( $hub ) ); ?> <?php echo lumipix_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
+						<div class="chips">
+							<?php foreach ( lumipix_lang_tools( $lang ) as $key => $tool ) : ?>
+								<?php $url = lumipix_tool_url( $key ); ?>
+								<?php if ( $url ) : ?>
+									<a class="chip" href="<?php echo esc_url( $url ); ?>" hreflang="<?php echo esc_attr( lumipix_languages()[ $lang ]['hreflang'] ); ?>"><?php echo esc_html( $tool['nav'] ); ?></a>
+								<?php endif; ?>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
+	<?php
+}
+
+/* -------------------------------------------------------------------------
+ * Page creation
+ * ---------------------------------------------------------------------- */
+
+/**
+ * Block markup of a language Markdown file (links resolved).
+ *
+ * @param string $file File path.
+ * @return string
+ */
+function lumipix_lang_body( $file ) {
+	return lumipix_md_parse( (string) file_get_contents( $file ) )['html']; // phpcs:ignore WordPress.WP.AlternativeFunctions
+}
+
+/**
+ * Write content into a page and keep it marked as untouched.
+ *
+ * @param int    $id      Page ID.
+ * @param string $content Block markup.
+ */
+function lumipix_lang_fill( $id, $content ) {
+	global $wpdb;
+	wp_update_post(
+		array(
+			'ID'           => $id,
+			'post_content' => $content,
+		)
+	);
+	$fresh = get_post( $id );
+	$wpdb->update( $wpdb->posts, array( 'post_modified' => $fresh->post_date, 'post_modified_gmt' => $fresh->post_date_gmt ), array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+	clean_post_cache( $id );
+	update_post_meta( $id, '_lumipix_lang_rev', LUMIPIX_LANG_REV );
+}
+
+/**
+ * Create the language hubs and tool pages that are missing, then fill
+ * untouched pages with the current content.
+ *
+ * @return array<int, string> Log lines.
+ */
+function lumipix_lang_install() {
+	$log  = array();
+	$ids  = (array) get_option( 'lumipix_lang_pages', array() );
+	$fill = array();
+
+	foreach ( array_keys( lumipix_languages() ) as $lang ) {
+		$hub = lumipix_lang_hub( $lang );
+		if ( ! $hub ) {
+			continue;
+		}
+		$hub_id = lumipix_lang_hub_id( $lang );
+		if ( ! $hub_id ) {
+			$existing = get_page_by_path( $hub['slug'] );
+			$hub_id   = $existing ? (int) $existing->ID : (int) wp_insert_post(
+				array(
+					'post_type'   => 'page',
+					'post_status' => 'publish',
+					'post_title'  => $hub['h1'],
+					'post_name'   => $hub['slug'],
+				)
+			);
+			if ( ! $hub_id ) {
+				continue;
+			}
+			$ids[ 'hub:' . $lang ] = $hub_id;
+			/* translators: %s: page title */
+			$log[] = sprintf( __( 'Created language page: %s', 'lumipix' ), $hub['h1'] );
+		}
+		update_post_meta( $hub_id, '_lumipix_lang', $lang );
+		update_post_meta( $hub_id, '_lumipix_lang_hub', $lang );
+		update_post_meta( $hub_id, '_lumipix_faqs', $hub['faqs'] );
+		update_post_meta( $hub_id, '_lumipix_seo_title', $hub['title'] );
+		update_post_meta( $hub_id, '_lumipix_seo_desc', $hub['desc'] );
+		$fill[ $hub_id ] = $hub['file'];
+
+		$order = 0;
+		foreach ( lumipix_lang_tools( $lang ) as $key => $tool ) {
+			++$order;
+			$id = isset( $ids[ $key ] ) && 'publish' === get_post_status( (int) $ids[ $key ] ) ? (int) $ids[ $key ] : 0;
+			if ( ! $id ) {
+				$existing = get_page_by_path( $tool['slug'] );
+				$id       = $existing ? (int) $existing->ID : (int) wp_insert_post(
+					array(
+						'post_type'   => 'page',
+						'post_status' => 'publish',
+						'post_title'  => $tool['h1'],
+						'post_name'   => $tool['post_name'],
+						'post_parent' => $hub_id,
+						'menu_order'  => $order,
+					)
+				);
+				if ( ! $id ) {
+					continue;
+				}
+				$ids[ $key ] = $id;
+				/* translators: %s: page title */
+				$log[] = sprintf( __( 'Created tool page: %s', 'lumipix' ), $tool['h1'] );
+			}
+			update_post_meta( $id, '_lumipix_tool', $key );
+			update_post_meta( $id, '_lumipix_lang', $lang );
+			$fill[ $id ] = $tool['file'];
+		}
+	}
+	update_option( 'lumipix_lang_pages', $ids );
+
+	// Second pass, once every page exists, so links between them resolve.
+	foreach ( $fill as $id => $file ) {
+		$post = get_post( $id );
+		if ( ! $post || ( (int) get_post_meta( $id, '_lumipix_lang_rev', true ) >= LUMIPIX_LANG_REV ) ) {
+			continue;
+		}
+		if ( '' !== trim( $post->post_content ) && ! lumipix_is_untouched( $post ) ) {
+			continue; // Edited by hand: keep it.
+		}
+		lumipix_lang_fill( $id, lumipix_lang_body( $file ) );
+	}
+
+	if ( defined( 'RANK_MATH_VERSION' ) && function_exists( 'lumipix_rm_sync' ) ) {
+		lumipix_rm_sync();
+	}
+	update_option( 'lumipix_lang_rev_done', LUMIPIX_LANG_REV );
+	return $log;
+}
+
+/**
+ * Create or refresh the language pages after an update that ships new content.
+ */
+function lumipix_lang_maybe_install() {
+	if ( (int) get_option( 'lumipix_lang_rev_done' ) >= LUMIPIX_LANG_REV || get_transient( 'lumipix_lang_installing' ) ) {
+		return;
+	}
+	if ( ! lumipix_lang_pack()['hubs'] ) {
+		return;
+	}
+	set_transient( 'lumipix_lang_installing', 1, 5 * MINUTE_IN_SECONDS );
+	lumipix_lang_install();
+	delete_transient( 'lumipix_lang_installing' );
+}
+add_action( 'init', 'lumipix_lang_maybe_install', 30 );
+
+/**
+ * Rank Math data for the language pages.
+ *
+ * @param array<int, array<string, string>> $items Items keyed by post ID.
+ * @return array<int, array<string, string>>
+ */
+function lumipix_lang_rm_items( $items ) {
+	foreach ( array_keys( lumipix_languages() ) as $lang ) {
+		$hub    = lumipix_lang_hub( $lang );
+		$hub_id = lumipix_lang_hub_id( $lang );
+		if ( $hub && $hub_id ) {
+			$items[ $hub_id ] = array(
+				'title'    => $hub['title'],
+				'desc'     => $hub['desc'],
+				'keywords' => $hub['keywords'],
+				'image'    => 'assets/og/home.jpg',
+			);
+		}
+	}
+	foreach ( lumipix_lang_tools() as $key => $tool ) {
+		$id = lumipix_tool_page_id( $key );
+		if ( $id ) {
+			$items[ $id ] = array(
+				'title'    => $tool['title'],
+				'desc'     => $tool['desc'],
+				'keywords' => $tool['keywords'],
+				'image'    => 'assets/og/tool-' . $tool['source'] . '.jpg',
+			);
+		}
+	}
+	return $items;
+}
+add_filter( 'lumipix_rm_items', 'lumipix_lang_rm_items' );

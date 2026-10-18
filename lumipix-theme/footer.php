@@ -21,6 +21,9 @@ defined( 'ABSPATH' ) || exit;
 				<p class="privacy-pill"><?php echo lumipix_icon( 'shield', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?> <?php esc_html_e( 'Your images never leave your device', 'lumipix' ); ?></p>
 			</div>
 
+			<?php if ( 'en' !== lumipix_current_lang() ) : ?>
+				<?php lumipix_lang_footer_col(); ?>
+			<?php else : ?>
 			<?php foreach ( lumipix_tool_groups() as $gkey => $group ) : ?>
 				<div class="site-footer__col">
 					<p class="site-footer__title"><?php echo esc_html( $group['label'] ); ?></p>
@@ -34,6 +37,7 @@ defined( 'ABSPATH' ) || exit;
 					</ul>
 				</div>
 			<?php endforeach; ?>
+			<?php endif; ?>
 
 			<div class="site-footer__col">
 				<p class="site-footer__title"><?php esc_html_e( 'Company', 'lumipix' ); ?></p>
@@ -52,6 +56,8 @@ defined( 'ABSPATH' ) || exit;
 			</div>
 
 		</div>
+
+		<?php lumipix_language_links(); ?>
 
 		<div class="site-footer__bottom">
 			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>. <?php esc_html_e( 'All rights reserved.', 'lumipix' ); ?> <?php esc_html_e( 'Lumi Pix is an independent service and is not affiliated with any government body, exam board or other brand mentioned on this site.', 'lumipix' ); ?></p>

@@ -3914,3 +3914,59 @@ html.has-lead {
 		margin-left: auto;
 	}
 }
+
+/* Other languages: footer links, home/tools section, tool switcher */
+.lang-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 6px 18px;
+	margin-top: 40px;
+	font-size: 14px;
+	color: var(--muted);
+}
+.lang-links a:hover,
+.lang-links a[aria-current] {
+	color: var(--ink);
+}
+.lang-links a[aria-current] {
+	font-weight: 600;
+}
+.lang-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+	gap: 16px;
+}
+.lang-card {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 20px;
+	border-radius: var(--radius-lg);
+	background: var(--bg-elev);
+	border: 1px solid var(--line);
+}
+.lang-card__name {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--muted);
+}
+.lang-card__hub {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--ink);
+}
+.lang-card__hub:hover {
+	color: var(--brand-text);
+}
+.tool-langs {
+	margin-top: 16px;
+}

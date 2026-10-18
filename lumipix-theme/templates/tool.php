@@ -55,6 +55,7 @@ while ( have_posts() ) :
 					<?php lumipix_tool_chips( $family, $key ); ?>
 				</div>
 			<?php endif; ?>
+			<?php do_action( 'lumipix_tool_hero_after', $key ); ?>
 		</div>
 	</section>
 
@@ -118,7 +119,7 @@ while ( have_posts() ) :
 	<?php endif; ?>
 
 	<?php
-	$guides = lumipix_tool_guides( $key, 3 );
+	$guides = empty( $tool['lang'] ) ? lumipix_tool_guides( $key, 3 ) : array(); // Guides are in English.
 	if ( $guides ) :
 		?>
 		<section class="section section--tight" aria-labelledby="guides-title">

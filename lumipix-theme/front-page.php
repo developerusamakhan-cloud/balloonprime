@@ -106,6 +106,8 @@ $features = array(
 	</div>
 </section>
 
+<?php lumipix_language_section(); ?>
+
 <?php if ( lumipix_tool_url( 'compress-image' ) ) : ?>
 <section class="section section--panel" aria-labelledby="try-title">
 	<div class="container">

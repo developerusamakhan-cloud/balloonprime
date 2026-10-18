@@ -126,6 +126,14 @@ function lumipix_enqueue_app( $app ) {
 					'modelFailed'  => __( 'The AI model could not be loaded. Check your connection and try again.', 'lumipix' ),
 					'underTarget'  => __( 'Fits target', 'lumipix' ),
 					'overTarget'   => __( 'Smallest possible – still above target', 'lumipix' ),
+					'page'         => __( 'page', 'lumipix' ),
+					'pages'        => __( 'pages', 'lumipix' ),
+					'pdfReady'     => __( 'PDF ready', 'lumipix' ),
+					'moveUp'       => __( 'Move up', 'lumipix' ),
+					'moveDown'     => __( 'Move down', 'lumipix' ),
+					'remove'       => __( 'Remove', 'lumipix' ),
+					'after'        => __( 'After', 'lumipix' ),
+					'result'       => __( 'Result', 'lumipix' ),
 				),
 			)
 		);

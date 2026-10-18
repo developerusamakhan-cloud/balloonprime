@@ -846,7 +846,11 @@ function lumipix_tools() {
  */
 function lumipix_get_tool( $key ) {
 	$tools = lumipix_tools();
-	return isset( $tools[ $key ] ) ? $tools[ $key ] : null;
+	if ( isset( $tools[ $key ] ) ) {
+		return $tools[ $key ];
+	}
+	// Translated tool pages (fr-…, pt-…), see inc/lang.php.
+	return function_exists( 'lumipix_lang_tool' ) ? lumipix_lang_tool( $key ) : null;
 }
 
 /**
@@ -955,6 +959,9 @@ function lumipix_tool_family( $key ) {
 	$tool = lumipix_get_tool( $key );
 	if ( ! $tool ) {
 		return array();
+	}
+	if ( ! empty( $tool['lang'] ) ) {
+		return lumipix_lang_tools( $tool['lang'] );
 	}
 	$root = $tool['parent'] ? $tool['parent'] : $key;
 	$out  = array();

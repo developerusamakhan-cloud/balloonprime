@@ -45,6 +45,8 @@ get_header();
 		<p class="tool-search-empty" data-tool-search-empty hidden><?php esc_html_e( 'No tool matches that yet.', 'lumipix' ); ?></p>
 	</div>
 </section>
+
+<?php lumipix_language_section(); ?>
 <?php
 while ( have_posts() ) :
 	the_post();
