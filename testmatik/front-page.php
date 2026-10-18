@@ -205,15 +205,14 @@ if ( $latest ) :
 	<div class="container">
 		<div class="cta-band">
 			<div>
-				<h2><?php esc_html_e( 'İkinci el laptop mı alıyorsunuz?', 'testmatik' ); ?></h2>
-				<p><?php esc_html_e( 'Ekranı, klavyeyi, kamerayı ve sesi satıcının yanında beş dakikada kontrol edin.', 'testmatik' ); ?></p>
+				<h2><?php esc_html_e( 'Klavyenizin her tuşu çalışıyor mu?', 'testmatik' ); ?></h2>
+				<p><?php esc_html_e( 'Türkçe Q ve F düzeniyle tüm tuşları bir dakikada kontrol edin. Ücretsiz, kayıtsız.', 'testmatik' ); ?></p>
 			</div>
 			<?php
-			$check = get_page_by_path( 'ikinci-el-laptop-kontrol', OBJECT, 'post' );
-			$u     = ( $check && 'publish' === $check->post_status ) ? get_permalink( $check ) : testmatik_tool_url( 'olu-piksel-testi' );
+			$u = testmatik_tool_url( 'klavye-testi' );
 			if ( $u ) :
 				?>
-				<a class="btn btn--light btn--lg" href="<?php echo esc_url( $u ); ?>"><?php esc_html_e( 'Kontrol listesini aç', 'testmatik' ); ?> <?php echo testmatik_icon( 'arrow', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
+				<a class="btn btn--light btn--lg" href="<?php echo esc_url( $u ); ?>"><?php esc_html_e( 'Klavye testini başlat', 'testmatik' ); ?> <?php echo testmatik_icon( 'arrow', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
 			<?php endif; ?>
 		</div>
 	</div>
