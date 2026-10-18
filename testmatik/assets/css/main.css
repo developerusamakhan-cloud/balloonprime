@@ -622,3 +622,18 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .mini-tool { display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 12px; background: var(--tone-soft); color: var(--tone); font-weight: 700; font-size: 14.5px; text-decoration: none; border: 1px solid color-mix(in srgb, var(--tone) 22%, transparent); }
 .mini-tool:hover { color: var(--tone); transform: translateY(-1px); }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split--reverse .split__media { order: 0; } .split__media .illus { max-width: 380px; } }
+
+/* ------------------------------------------- Accessible contrast (1.0.2) */
+/* Light mode only: darker brand and tool tones so text on them meets WCAG AA (4.5:1). Dark mode rules above are more specific and keep their colours. */
+:root { --brand: #047857; --brand-hover: #065f46; --brand-text: #047857; --ring: 0 0 0 3px rgba(4, 120, 87, .3); --accent-text: linear-gradient(105deg, #047857 0%, #0e7490 48%, #4338ca 100%); }
+.tone-indigo  { --tone: #4338ca; }
+.tone-rose    { --tone: #be123c; }
+.tone-emerald { --tone: #047857; }
+.tone-sky     { --tone: #0369a1; }
+.tone-amber   { --tone: #a14a04; }
+.tone-violet  { --tone: #6d28d9; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent-text: linear-gradient(105deg, #34d399 0%, #22d3ee 48%, #a5b4fc 100%); } }
+:root[data-theme="dark"] { --accent-text: linear-gradient(105deg, #34d399 0%, #22d3ee 48%, #a5b4fc 100%); }
+.hero__title .accent, .logo__text span { background: var(--accent-text); -webkit-background-clip: text; background-clip: text; }
+.btn--primary { box-shadow: 0 6px 18px -8px rgba(4, 120, 87, .6); }
+.k.is-ok { background: #059669; border-color: #047857; }

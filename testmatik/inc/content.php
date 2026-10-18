@@ -46,20 +46,32 @@ function testmatik_pack_slugs( $type ) {
  * Replace {tool:x}, {post:x}, {page:x} and {home} tokens with URLs.
  *
  * Links to items that do not exist (yet) become plain text so crawlers never hit a 404.
+ * With $keep_pending, links to scheduled or draft items keep their token, so they turn
+ * into real links by themselves once the target is published.
  *
- * @param string $html HTML.
+ * @param string $html         HTML.
+ * @param bool   $keep_pending Keep tokens whose target exists but is not published yet.
  * @return string
  */
-function testmatik_resolve_links( $html ) {
+function testmatik_resolve_links( $html, $keep_pending = false ) {
 	if ( false === strpos( $html, '{' ) ) {
 		return $html;
 	}
 	// Whole anchors first, so a missing target can be unwrapped.
 	$html = preg_replace_callback(
 		'#<a\s+href="\{(tool|post|page):([a-z0-9\-]+)\}"([^>]*)>(.*?)</a>#su',
-		function ( $m ) {
+		function ( $m ) use ( $keep_pending ) {
 			$url = testmatik_token_url( $m[1], $m[2] );
-			return $url ? '<a href="' . esc_url( $url ) . '"' . $m[3] . '>' . $m[4] . '</a>' : $m[4];
+			if ( $url ) {
+				return '<a href="' . esc_url( $url ) . '"' . $m[3] . '>' . $m[4] . '</a>';
+			}
+			if ( $keep_pending && 'tool' !== $m[1] ) {
+				$target = get_page_by_path( $m[2], OBJECT, 'post' === $m[1] ? 'post' : 'page' );
+				if ( $target && in_array( $target->post_status, array( 'future', 'draft', 'pending' ), true ) ) {
+					return $m[0];
+				}
+			}
+			return $m[4];
 		},
 		$html
 	);

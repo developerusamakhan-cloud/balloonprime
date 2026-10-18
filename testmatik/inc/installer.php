@@ -166,7 +166,7 @@ function testmatik_install() {
 	// Second pass: now every target exists, turn link tokens into real URLs.
 	foreach ( array_unique( $touched ) as $id ) {
 		$content  = (string) get_post_field( 'post_content', $id );
-		$resolved = testmatik_resolve_links( $content );
+		$resolved = testmatik_resolve_links( $content, true );
 		if ( $resolved !== $content ) {
 			wp_update_post( array( 'ID' => $id, 'post_content' => $resolved ) );
 		}
@@ -251,6 +251,16 @@ function testmatik_install_item( $type, $slug, $pack, &$log ) {
 		'post_status'  => 'publish',
 	);
 
+	// Optional 'date' (UTC, "Y-m-d H:i:s"): a future date schedules the item.
+	if ( ! empty( $pack['date'] ) ) {
+		$ts = strtotime( $pack['date'] . ' UTC' );
+		if ( $ts ) {
+			$data['post_date_gmt'] = gmdate( 'Y-m-d H:i:s', $ts );
+			$data['post_date']     = get_date_from_gmt( $data['post_date_gmt'] );
+			$data['post_status']   = $ts > time() ? 'future' : 'publish';
+		}
+	}
+
 	if ( $existing ) {
 		$id     = (int) $existing->ID;
 		$stored = (string) get_post_meta( $id, '_testmatik_pack_hash', true );
@@ -259,8 +269,12 @@ function testmatik_install_item( $type, $slug, $pack, &$log ) {
 			testmatik_install_meta( $id, $pack, false );
 			return $id;
 		}
-		$data['ID']          = $id;
-		$data['post_status'] = $existing->post_status;
+		$data['ID'] = $id;
+		if ( empty( $pack['date'] ) ) {
+			$data['post_status'] = $existing->post_status;
+		} else {
+			unset( $data['post_date'], $data['post_date_gmt'], $data['post_status'] ); // keep the schedule it already has
+		}
 		wp_update_post( wp_slash( $data ) );
 		testmatik_install_meta( $id, $pack, true );
 		return $id;
@@ -272,7 +286,7 @@ function testmatik_install_item( $type, $slug, $pack, &$log ) {
 		return 0;
 	}
 	testmatik_install_meta( $id, $pack, true );
-	$log[] = ( 'post' === $type ? 'Makale' : 'Sayfa' ) . ' oluşturuldu: ' . $pack['title'];
+	$log[] = ( 'post' === $type ? 'Makale' : 'Sayfa' ) . ( 'future' === $data['post_status'] ? ' zamanlandı (' . $data['post_date'] . '): ' : ' oluşturuldu: ' ) . $pack['title'];
 	return (int) $id;
 }
 
