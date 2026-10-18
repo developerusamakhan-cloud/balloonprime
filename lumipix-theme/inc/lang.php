@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled language pages change, so untouched pages are refreshed. */
-define( 'LUMIPIX_LANG_REV', 1 );
+define( 'LUMIPIX_LANG_REV', 2 );
 
 /**
  * Languages with their own pages.
@@ -705,6 +705,10 @@ function lumipix_lang_install() {
 
 	if ( defined( 'RANK_MATH_VERSION' ) && function_exists( 'lumipix_rm_sync' ) ) {
 		lumipix_rm_sync();
+	}
+	// New pages must show up in the cached XML sitemap.
+	if ( method_exists( '\RankMath\Sitemap\Cache', 'invalidate_storage' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
 	}
 	update_option( 'lumipix_lang_rev_done', LUMIPIX_LANG_REV );
 	return $log;
