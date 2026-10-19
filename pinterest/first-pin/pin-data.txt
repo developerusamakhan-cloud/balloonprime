@@ -1,0 +1,27 @@
+===== PINTEREST: FIRST PIN =====
+Upload: pin-free-website-audit-1000x1500.png
+When: as soon as the profile and boards are set up. Timing matters less on Pinterest than on
+      other platforms, because pins keep showing up in Pinterest search for months.
+
+TITLE (61 of 100 characters):
+Free Website Audit: Check Your Speed, Core Web Vitals and SEO
+
+DESCRIPTION (paste as is):
+Is your website slow or not showing up on Google? Get a free website audit from Vyntic Studio. We check your mobile and desktop PageSpeed scores, Core Web Vitals (LCP, CLS and INP) and on-page SEO like titles, headings and schema, then send a plain English report with the 3 fixes that will make the biggest difference. Free, with no sales call required. #websiteaudit #seotips #smallbusinesswebsite
+
+LINK (destination URL):
+https://vyntic.studio/free-website-audit/
+
+BOARD:
+Website Speed Tips
+
+ALT TEXT (under "More options"):
+Pin for the Vyntic Studio free website audit, listing what it checks: PageSpeed scores, Core Web Vitals, on-page SEO and the three most important fixes.
+
+TAGGED TOPICS (Pinterest suggests topics after upload; pick these if offered):
+Website design, SEO, Small business, Web development, Digital marketing
+
+AFTER PUBLISHING
+- Save the same pin to a second board a few days later: "Web Design Tips".
+- Use it as the board cover for Website Speed Tips.
+- Check Pinterest Analytics after 30 days: impressions, saves and outbound clicks.
