@@ -1,0 +1,72 @@
+VYNTIC STUDIO: PINTEREST PROFILE SETUP
+======================================
+
+1. ACCOUNT TYPE
+Create a free Pinterest BUSINESS account (or convert a personal one: Settings > Account management > Convert to business).
+Business account gives you analytics, website claim and ads later.
+
+Business name:   Vyntic Studio
+Business type:   Agency / Professional services
+Country:         United States (the main target market)
+Language:        English (US)
+
+2. PROFILE DETAILS (Settings > Edit profile)
+
+Profile photo:   vyntic-pinterest-profile-720.png
+Cover:           vyntic-pinterest-cover-1920x1080.png (Pinterest shows covers in 16:9; the text sits in the middle so it is safe on mobile)
+
+Name:            Vyntic Studio | Web Design and SEO
+Username:        vynticstudio   (pinterest.com/vynticstudio)
+Website:         https://vyntic.studio/
+Pronouns:        leave empty
+
+About (401 of 500 characters):
+Web design, WordPress development and SEO tips for small businesses. Vyntic Studio builds fast websites on WordPress, Webflow and Shopify, and helps businesses rank on Google, Google Maps and AI search tools like ChatGPT. Follow for website cost guides, redesign checklists, local SEO tips, Core Web Vitals fixes and free WordPress plugins. Get a free website audit at vyntic.studio/free-website-audit
+
+3. CLAIM THE WEBSITE (very important for SEO and Rich Pins)
+Settings > Claimed accounts > Websites > Claim > choose "Add HTML tag".
+Pinterest shows a tag like:  <meta name="p:domain_verify" content="xxxxxxxx"/>
+Send me that tag and I will add it to vyntic.studio, then click Verify in Pinterest.
+Rich Pins: once the site is claimed, Pinterest reads the article title and description from the
+site automatically (Rank Math already outputs the Open Graph tags it needs).
+
+4. BOARDS (create in this order; the first 6 match the 9 pins already designed)
+
+Board: Web Design Tips
+Description: Web design tips for small business websites: layout ideas, homepage structure, website cost guides and redesign advice that turn visitors into leads.
+
+Board: Local SEO Tips
+Description: Local SEO tips for small businesses: rank in Google Maps, optimize your Google Business Profile, earn reviews and get more calls from nearby customers.
+
+Board: AI Search and SEO
+Description: How to get your business recommended by ChatGPT, Google AI Overviews and other AI search tools. Generative engine optimization and SEO tips in plain English.
+
+Board: WordPress Tips
+Description: WordPress tips for business owners: choosing the right platform, Wix vs WordPress, security, maintenance and building a site that grows with you.
+
+Board: Website Speed Tips
+Description: Make your website faster: Core Web Vitals, PageSpeed fixes, image optimization and caching tips that improve rankings and conversions.
+
+Board: WordPress Plugins
+Description: Free WordPress plugins by Vyntic Studio for speed, indexing, site audits and AI visibility, plus tips on choosing plugins that do not slow your site down.
+
+Board: Website Redesign Ideas
+Description: Website redesign checklists, costs and before and after ideas. Plan a redesign that keeps your rankings and brings more leads.
+
+Board: Ecommerce Website Tips
+Description: Ecommerce website tips for Shopify and WooCommerce stores: product pages, checkout, speed and SEO that help small online shops sell more.
+
+Board cover: open each board > Edit > Change cover and pick the best pin once it has a few pins.
+
+5. FIRST WEEK ON THE PROFILE
+- Upload the 9 designed pins (they are in vyntic-30-days.zip under Media, each folder has pin.png and captions.txt with title, description, link and board).
+- Pin 3 to 5 pins a week. Every pin must link to the matching page on vyntic.studio.
+- Also save 5 to 10 good pins from other creators to each board in the first week, so the boards do not look empty.
+- Add the Pinterest profile link to the website footer and send it to me for the Organization schema (sameAs), like LinkedIn and Facebook.
+
+6. PIN RULES THAT WORK
+- Size 1000 x 1500 (2:3). The designed pins already use this size.
+- Title: up to 100 characters, start with the main keyword (for example "How Much Does a Website Cost?").
+- Description: 2 to 3 sentences with keywords, no hashtag spam (2 or 3 at most).
+- Alt text: describe the pin in one sentence.
+- Link: always the exact article URL, never only the homepage.
