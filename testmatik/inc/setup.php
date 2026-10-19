@@ -165,3 +165,14 @@ add_action(
 		}
 	}
 );
+
+// Let the CDN keep pages for an hour at most, so new and scheduled guides show up quickly.
+add_action(
+	'send_headers',
+	function () {
+		if ( is_admin() || is_user_logged_in() ) {
+			return;
+		}
+		header( 'Cache-Control: public, max-age=600, s-maxage=3600' );
+	}
+);
