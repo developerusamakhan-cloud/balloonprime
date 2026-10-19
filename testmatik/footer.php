@@ -66,7 +66,6 @@ $legal  = array(
 			</div>
 		</div>
 		<div class="site-footer__bottom">
-			<p>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Tüm testler ücretsizdir ve cihazınızda çalışır.', 'testmatik' ); ?></p>
 			<ul>
 				<?php foreach ( $legal as $slug => $label ) : $u = testmatik_page_url( $slug ); ?>
 					<?php if ( $u ) : ?><li><a href="<?php echo esc_url( $u ); ?>"><?php echo esc_html( $label ); ?></a></li><?php endif; ?>
@@ -76,6 +75,8 @@ $legal  = array(
 				<?php endif; ?>
 			</ul>
 			<p class="site-footer__credit">
+				<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?>. <?php esc_html_e( 'Tüm testler ücretsizdir ve cihazınızda çalışır.', 'testmatik' ); ?></span>
+				<span class="site-footer__sep" aria-hidden="true">·</span>
 				Made with <svg class="site-footer__heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.4 7.6 3.6 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.6 0 5.8 3.6 4.5 7.1-1.8 4.8-9.3 9.4-9.3 9.4Z"></path></svg>
 				<span class="screen-reader-text">love</span>
 				by <a href="https://vyntic.studio/" target="_blank" rel="noopener">Vyntic Studio</a>
