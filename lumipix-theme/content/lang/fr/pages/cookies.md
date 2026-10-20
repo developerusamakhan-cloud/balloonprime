@@ -20,7 +20,6 @@ Les cookies sont de petits fichiers texte qu'un site web enregistre dans votre n
 |---|---|---|
 | Strictement nécessaires | Assurer le fonctionnement du site et mémoriser vos choix | Votre choix de thème clair ou sombre (stockage local) |
 | Consentement | Mémoriser vos choix en matière de cookies pendant 180 jours | Le cookie lumipix_consent |
-| Préférences | Afficher notre message occasionnel du studio au maximum une fois par jour | lumipix_lead_seen et lumipix_lead_time (stockage local) |
 | Cache du navigateur | Stocker le modèle d'IA de l'outil de suppression d'arrière-plan pour éviter de le télécharger à nouveau | Stockage en cache utilisé par la bibliothèque Transformers.js |
 | Mesure d'audience (si activée) | Mesurer de manière agrégée les visites et les outils populaires | Cookies Google Analytics comme _ga |
 | Publicité (si activée) | Afficher et mesurer les publicités qui permettent aux outils de rester gratuits | Cookies Google AdSense |

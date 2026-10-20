@@ -20,7 +20,6 @@ Cookies são pequenos arquivos de texto que um site armazena no seu navegador. T
 |---|---|---|
 | Estritamente necessários | Manter o site funcionando e lembrar as escolhas que você faz | Sua escolha de tema claro ou escuro (armazenamento local) |
 | Consentimento | Lembrar suas escolhas de cookies por 180 dias | O cookie lumipix_consent |
-| Preferências | Exibir nossa mensagem ocasional do estúdio no máximo uma vez por dia | lumipix_lead_seen e lumipix_lead_time (armazenamento local) |
 | Cache do navegador | Armazenar o modelo de IA do removedor de fundo para que ele não seja baixado de novo | Armazenamento em cache usado pela biblioteca Transformers.js |
 | Análise (se ativada) | Medir visitas e ferramentas populares de forma agregada | Cookies do Google Analytics, como _ga |
 | Publicidade (se ativada) | Exibir e medir anúncios que mantêm as ferramentas gratuitas | Cookies do Google AdSense |

@@ -18,7 +18,6 @@ Cookies are small text files that a website stores in your browser. Similar tech
 |---|---|---|
 | Strictly necessary | Keep the site working and remember choices you make | Your light or dark theme choice (local storage) |
 | Consent | Remember your cookie choices for 180 days | The lumipix_consent cookie |
-| Preferences | Show our occasional studio message no more than once a day | lumipix_lead_seen and lumipix_lead_time (local storage) |
 | Browser cache | Store the background remover's AI model so it does not download again | Cache storage used by the Transformers.js library |
 | Analytics (if enabled) | Measure visits and popular tools in aggregate | Google Analytics cookies such as _ga |
 | Advertising (if enabled) | Show and measure ads that keep the tools free | Google AdSense cookies |
