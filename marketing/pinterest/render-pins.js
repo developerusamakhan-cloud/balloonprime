@@ -1,13 +1,31 @@
-// Render a 1000x1500 Pinterest pin for the keyboard test.
+// Render 1000x1500 Pinterest pins for every Testmatik tool.
 const { chromium } = require('playwright-core');
 const fs = require('fs');
-const { ILL, T } = require(process.env.ILLUS || './illus');
+const { ILL, T } = require('./illus');
 const FONTS = '/home/user/balloonprime/testmatik/assets/fonts';
-const OUT = __dirname + '/pin-01-klavye-testi.png';
-const c = T.indigo;
+const OUT = '/home/user/balloonprime/marketing/pinterest';
+
+const PINS = [
+  ['pin-01-klavye-testi', 'indigo', 'keyboard', 'Klavyenin her tuşu', 'çalışıyor mu?', '30 saniyede test et. Program yok, kayıt yok.',
+    ['Çalışan her tuş yeşile döner', 'Türkçe Q ve F klavye düzeni', 'Ghosting testi: aynı anda kaç tuş?']],
+  ['pin-02-olu-piksel-testi', 'rose', 'pixel', 'Ekranında ölü piksel', 'var mı?', 'Tam ekran renk testi. Monitör, laptop ve telefon.',
+    ['9 renkle tam ekran kontrol', 'Otomatik mod: 3 saniyede bir renk', 'Sıkışmış piksel onarıcı dahil']],
+  ['pin-03-mikrofon-testi', 'emerald', 'mic', 'Mikrofonun sesini', 'alıyor mu?', 'Saniyeler içinde test et. Kayıt cihazında kalır.',
+    ['Canlı ses seviyesi göstergesi', '5 saniye kaydet, geri dinle', 'Kulaklık ve USB mikrofonlarda çalışır']],
+  ['pin-04-kamera-testi', 'sky', 'camera', 'Web kameran', 'net mi?', 'Gerçek çözünürlüğü ve FPS değerini anında gör.',
+    ['Gerçek çözünürlük: 720p, 1080p, 4K', 'Ölçülen FPS ve kamera adı', 'Fotoğraf çek, cihazına kaydet']],
+  ['pin-05-mouse-testi', 'amber', 'mouse', "Mouse'un", 'çift tıklıyor mu?', 'Arızalı tuşu saniyeler içinde yakala.',
+    ['Çift tıklama (chatter) dedektörü', 'Polling rate (Hz) tahmini', '5 saniyelik CPS testi']],
+  ['pin-06-hoparlor-testi', 'violet', 'speaker', 'Sağ ve sol ses', 'doğru mu çalıyor?', 'Hoparlör ve kulaklık testi. Kurulum yok.',
+    ['Sol, sağ ve iki kanal testi', '20 Hz – 20 kHz frekans taraması', 'İstediğin frekansta ton üret']],
+];
+
 const logo = `<svg width="56" height="56" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><path d="m10.5 15.5 3.8 3.8 7.2-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const check = `<svg width="34" height="34" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#047857"/><path d="m7 12.5 3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-const html = `<!doctype html><html><head><meta charset="utf-8"><style>
+
+function html(tone, ill, h1a, h1b, sub, list) {
+  const c = T[tone];
+  return `<!doctype html><html><head><meta charset="utf-8"><style>
 @font-face{font-family:Jakarta;src:url(file://${FONTS}/jakarta-latin.woff2) format("woff2");font-weight:200 800;unicode-range:U+0000-00FF,U+0131,U+2000-206F}
 @font-face{font-family:Jakarta;src:url(file://${FONTS}/jakarta-latin-ext.woff2) format("woff2");font-weight:200 800;unicode-range:U+0100-02BA,U+1E00-1EFF}
 *{margin:0;box-sizing:border-box}
@@ -17,10 +35,11 @@ body{width:1000px;height:1500px;overflow:hidden;font-family:Jakarta;position:rel
 .top{position:absolute;left:0;right:0;top:0;height:14px;background:linear-gradient(90deg,#10b981,#06b6d4,#6366f1)}
 .wrap{position:absolute;inset:80px 72px 70px;display:flex;flex-direction:column}
 .pill{align-self:flex-start;padding:12px 26px;border-radius:99px;background:${c.c};color:#fff;font-weight:800;font-size:28px}
-h1{margin-top:34px;font-size:96px;line-height:1.02;letter-spacing:-.045em;font-weight:800}
+h1{margin-top:34px;font-size:92px;line-height:1.03;letter-spacing:-.045em;font-weight:800}
 h1 span{background:linear-gradient(105deg,#047857,#0e7490 48%,#4338ca);-webkit-background-clip:text;color:transparent}
 .sub{margin-top:22px;font-size:36px;line-height:1.3;color:#3d4560;font-weight:600}
-.art{margin:26px -20px 0;height:520px}
+.art{margin:20px -20px 0;height:500px}
+.art text{font-family:Jakarta!important;font-weight:700}
 .list{display:flex;flex-direction:column;gap:20px;margin-top:6px}
 .list div{display:flex;align-items:center;gap:18px;font-size:34px;font-weight:700}
 .cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;background:#0b1020;color:#fff;border-radius:28px;padding:30px 36px}
@@ -30,23 +49,24 @@ h1 span{background:linear-gradient(105deg,#047857,#0e7490 48%,#4338ca);-webkit-b
 </style></head><body><div class="bg"></div><div class="dots"></div><div class="top"></div>
 <div class="wrap">
 <span class="pill">Ücretsiz online araç</span>
-<h1>Klavyenin her tuşu <span>çalışıyor mu?</span></h1>
-<p class="sub">30 saniyede test et. Program yok, kayıt yok.</p>
-<svg class="art" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">${ILL.keyboard('indigo')}</svg>
-<div class="list">
-<div>${check} Çalışan her tuş yeşile döner</div>
-<div>${check} Türkçe Q ve F klavye düzeni</div>
-<div>${check} Ghosting testi: aynı anda kaç tuş?</div>
-</div>
+<h1>${h1a} <span>${h1b}</span></h1>
+<p class="sub">${sub}</p>
+<svg class="art" viewBox="0 0 560 560" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">${ILL[ill](tone)}</svg>
+<div class="list">${list.map(t => `<div>${check} ${t}</div>`).join('')}</div>
 <div class="cta"><div class="brand">${logo}<span>Test<b>matik</b></span></div><span class="url">testmatik.app</span></div>
 </div></body></html>`;
+}
+
 (async () => {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const p = await b.newPage({ viewport: { width: 1000, height: 1500 } });
-  fs.writeFileSync(__dirname + '/tmp-pin.html', html);
-  await p.goto('file://' + __dirname + '/tmp-pin.html', { waitUntil: 'load' });
-  await p.waitForTimeout(400);
-  await p.screenshot({ path: OUT });
+  for (const [slug, tone, ill, a, bb, sub, list] of PINS) {
+    fs.writeFileSync(__dirname + '/tmp-pin.html', html(tone, ill, a, bb, sub, list));
+    await p.goto('file://' + __dirname + '/tmp-pin.html', { waitUntil: 'load' });
+    await p.waitForTimeout(300);
+    const h = await p.evaluate(() => document.querySelector('.cta').getBoundingClientRect().top - document.querySelector('.list').getBoundingClientRect().bottom);
+    await p.screenshot({ path: `${OUT}/${slug}.png` });
+    console.log(slug, 'gap above CTA:', Math.round(h));
+  }
   await b.close();
-  console.log('ok');
 })();
