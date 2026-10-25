@@ -1,6 +1,6 @@
 ---
 keywords: compress photo for fpsc, fpsc photo size, fpsc signature size, fpsc online apply, fpsc image upload
-seo_desc: Compress photo for FPSC online applications – photo, signature and documents under the upload limit. Free, no signup, processed on your device.
+seo_desc: Compress photo for FPSC online applications: photo, signature and documents under the upload limit. Free, no signup, processed on your device.
 ---
 
 Use this tool to compress photo for FPSC online applications, so your picture and documents fit the upload limit.

@@ -1,6 +1,6 @@
 ---
-keywords: change image dpi, change dpi to 300, convert image to 300 dpi, increase image dpi, change photo dpi
-seo_desc: Change image DPI to 300, 600 or any value without re-compressing. JPG and PNG keep identical quality. See the print size instantly. Free, no upload.
+keywords: how to change image dpi, image dpi change online, how to convert image dpi, image resolution for print, change image dpi
+seo_desc: How to change image DPI to 300, 600 or any value without re-compressing: drop your photo here. JPG and PNG keep identical quality. Free, no upload.
 ---
 
 Use this tool to change image DPI to 300 or any other value in seconds, without touching a single pixel of your photo.

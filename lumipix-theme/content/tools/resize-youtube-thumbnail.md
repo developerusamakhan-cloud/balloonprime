@@ -1,5 +1,5 @@
 ---
-keywords: youtube thumbnail resizer, youtube thumbnail size, 1280x720 thumbnail, resize youtube thumbnail, youtube thumbnail maker
+keywords: youtube thumbnail resizer, youtube thumbnail free maker, youtube thumbnail size converter, resize image for youtube thumbnail, 1280x720 thumbnail
 seo_desc: YouTube thumbnail resizer: turn any image into a 1280×720 thumbnail and keep it under the upload limit. Fill or fit, JPG or PNG. Free and private.
 ---
 

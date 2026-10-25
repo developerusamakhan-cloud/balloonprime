@@ -1,6 +1,6 @@
 ---
 keywords: compress image to 1mb, reduce image size to 1mb, compress jpg to 1mb, 1mb photo, compress photo under 1mb
-seo_desc: Compress image to 1MB online with almost no visible difference – perfect for large camera photos. Free, private and no signup.
+seo_desc: Compress image to 1MB online with almost no visible difference, perfect for large camera photos. Free, private and no signup.
 ---
 
 Use this tool to compress image to 1MB online and keep almost all of the original quality.

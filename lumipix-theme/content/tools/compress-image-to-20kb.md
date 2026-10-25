@@ -1,9 +1,9 @@
 ---
-keywords: compress image to 20kb, 20kb photo, reduce image size to 20kb, compress jpg to 20kb, signature 20kb
-seo_desc: Compress image to 20KB online in seconds – ideal for photos and signatures on application forms. Free, no signup, and nothing is uploaded.
+keywords: resize image to 20kb, resize image to 20 kb, compress image to 20kb, compression image to 20kb, signature 20kb
+seo_desc: Resize image to 20KB online in seconds, ideal for photos and signatures on application forms. Free, no signup, and nothing is uploaded.
 ---
 
-Use this tool to compress image to 20KB online for photos and signatures on application forms, free and private.
+Use this tool to resize image to 20KB online for photos and signatures on application forms, free and private.
 
 ## Why 20KB is a special case
 

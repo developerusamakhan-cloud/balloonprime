@@ -1,9 +1,9 @@
 ---
-keywords: check image dpi, check dpi of image online, image dpi checker, how to know the dpi of an image, is my photo 300 dpi
-seo_desc: Check image DPI online: see the stored DPI, pixel size and the largest sharp print at 300 DPI for up to 20 photos. Nothing is uploaded or changed.
+keywords: image resolution checker, image dpi checker, image dpi check, how to find image dpi, check image dpi
+seo_desc: Free image resolution checker: see the stored DPI, pixel size and the largest sharp print at 300 DPI for up to 20 photos. Nothing is uploaded or changed.
 ---
 
-Drop a photo here to check image DPI and find out, in plain numbers, how large it will print sharply.
+Drop a photo into this image resolution checker to see its DPI and find out, in plain numbers, how large it will print sharply.
 
 ## Is my photo 300 DPI?
 

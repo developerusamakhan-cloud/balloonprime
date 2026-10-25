@@ -1,9 +1,9 @@
 ---
-keywords: convert png to jpg, png to jpg, png to jpg converter, change png to jpg, png to jpeg
-seo_desc: Convert PNG to JPG to shrink screenshots and photos for forms and email. Choose quality and background colour. Up to 20 files, no upload.
+keywords: turn png to jpg, transform png to jpg, change png to jpg free, convert from png to jpg free, png to jpg
+seo_desc: Turn PNG to JPG online to shrink screenshots and photos for forms and email. Choose quality and background colour. Up to 20 files, no upload.
 ---
 
-Convert PNG to JPG here to turn large screenshots, scans and photos into smaller files that every website and app accepts.
+Turn PNG to JPG here to make large screenshots, scans and photos into smaller files that every website and app accepts.
 
 ## Why turn a PNG into a JPG
 

@@ -1,6 +1,6 @@
 ---
 keywords: resize image to 1920x1080, 1920x1080 image, full hd resize, 1920x1080 wallpaper, 16:9 image
-seo_desc: Resize image to 1920x1080 Full HD for wallpapers, slides and screens. Fill to crop or fit with a background – never stretched. Free and private.
+seo_desc: Resize image to 1920x1080 Full HD for wallpapers, slides and screens. Fill to crop or fit with a background, never stretched. Free and private.
 ---
 
 Use this tool to resize image to 1920x1080 (Full HD) for wallpapers, slides and screens without stretching it.

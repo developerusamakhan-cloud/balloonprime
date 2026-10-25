@@ -1,9 +1,9 @@
 ---
-keywords: resize image in cm, resize image in inches, resize image in mm, print size 300 dpi, photo print size
-seo_desc: Resize image in cm, mm or inches for printing at 300 DPI: 10×15 cm, 4×6 in, A4 and more. Free, private and no signup.
+keywords: resize image into inches, resize photo centimeters, resize photo cm, resize image in cm, print size 300 dpi
+seo_desc: Resize image into inches, cm or mm for printing at 300 DPI: 10×15 cm, 4×6 in, A4 and more. Free, private and no signup.
 ---
 
-Use this tool to resize image in cm, mm or inches for printing, with 300 DPI set for you.
+Use this tool to resize image into inches, cm or mm for printing, with 300 DPI set for you.
 
 ## Print sizes without the maths
 

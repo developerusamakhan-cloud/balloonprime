@@ -1,9 +1,9 @@
 ---
-keywords: image to pdf, image to pdf converter, jpg to pdf, convert photo to pdf, combine images into one pdf
-seo_desc: Image to PDF converter: combine up to 20 JPG, PNG or WebP images into one PDF. Choose order, page size, margins and quality. Free, no upload.
+keywords: make jpg to pdf online, jpg to pdf and combine, turn jpg to pdf online, jpg to pdf website, image to pdf
+seo_desc: Make JPG to PDF online: combine up to 20 JPG, PNG or WebP images into one PDF. Choose order, page size, margins and quality. Free, no upload.
 ---
 
-Turn photos, scans and screenshots into a single, tidy document with this free image to pdf converter that runs entirely in your browser.
+Make JPG to PDF online and turn photos, scans and screenshots into a single, tidy document with this free converter that runs entirely in your browser.
 
 ## One PDF instead of a pile of photos
 

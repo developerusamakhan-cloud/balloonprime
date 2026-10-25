@@ -1,6 +1,6 @@
 ---
 keywords: compress photo for ppsc, ppsc photo size, ppsc signature size, ppsc online apply, ppsc image upload
-seo_desc: Compress photo for PPSC online applications in seconds – photograph and signature under the upload limit. Free, private and works on any phone.
+seo_desc: Compress photo for PPSC online applications in seconds: photograph and signature under the upload limit. Free, private and works on any phone.
 ---
 
 Use this tool to compress photo for PPSC online applications, so your picture and signature fit the upload limit.

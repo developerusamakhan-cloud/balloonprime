@@ -1,9 +1,9 @@
 ---
-keywords: image compressor, compress image, compress image to kb, reduce image size, compress jpg
-seo_desc: Image compressor that hits an exact size: compress JPG, PNG and WebP to 20KB, 50KB, 100KB or 200KB. Free, no signup, nothing uploaded.
+keywords: reduce image size in online, reduce image size kb, compress image, compress image to kb, image compressor for web
+seo_desc: Reduce image size in KB online: compress JPG, PNG and WebP to an exact size like 20KB, 50KB, 100KB or 200KB. Free, no signup, nothing uploaded.
 ---
 
-This image compressor lets you choose the exact file size you need, then does the rest in your browser.
+Reduce image size in KB online with this free image compressor: choose the exact file size you need, and it does the rest in your browser.
 
 ## Compress images to the exact size you need
 

@@ -1,9 +1,9 @@
 ---
-keywords: background remover, remove background, remove background free, transparent background, ai background remover
-seo_desc: Free background remover with on-device AI. Download a full-resolution transparent PNG without an account – your photo is never uploaded.
+keywords: remove background for free online, free remove background online, remove background photos, make transparent background picture, background remover
+seo_desc: Remove background for free online with on-device AI. Download a full-resolution transparent PNG without an account; your photo is never uploaded.
 ---
 
-This free background remover uses AI on your own device to cut out people, products and pets in seconds.
+Remove background for free online with this AI background remover, which cuts out people, products and pets in seconds on your own device.
 
 ## Remove backgrounds with AI that runs on your device
 

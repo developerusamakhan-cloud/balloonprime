@@ -1,9 +1,9 @@
 ---
-keywords: convert jpg to png, jpg to png, jpg to png converter, jpeg to png, change jpg to png
-seo_desc: Convert JPG to PNG for editing, lossless saving or uploads that require PNG. Up to 20 images at once, no upload, no watermark. Free tool.
+keywords: jpg to png online converter free, free online jpg to png converter, transfer jpg to png, jpg to png with transparency, jpg to png
+seo_desc: Free JPG to PNG online converter for editing, lossless saving or uploads that require PNG. Up to 20 images at once, no upload, no watermark.
 ---
 
-Convert JPG to PNG in your browser when a website, app or editing job needs a PNG file, with up to 20 images at a time.
+This free JPG to PNG online converter works in your browser when a website, app or editing job needs a PNG file, with up to 20 images at a time.
 
 ## What converting to PNG does and does not do
 

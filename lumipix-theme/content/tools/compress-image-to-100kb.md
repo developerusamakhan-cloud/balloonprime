@@ -1,5 +1,5 @@
 ---
-keywords: compress image to 100kb, 100kb photo, reduce image size to 100kb, compress jpg to 100kb, compress png to 100kb
+keywords: compress image 100 kb, compress image to 100kb, reduce image size to 100 kb, reduce image size to 100kb, compress jpg to 100kb
 seo_desc: Compress image to 100KB online without losing visible quality. Works with JPG, PNG and WebP, needs no signup, and never uploads your files.
 ---
 

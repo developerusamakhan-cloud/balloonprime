@@ -1,9 +1,9 @@
 ---
-keywords: passport size photo maker, passport size photo, 35x45 mm photo, 2x2 inch photo, passport photo online
-seo_desc: Passport size photo maker: resize any photo to 35×45 mm, 2×2 inch and more at 300 DPI, ready to print or upload. Free and private.
+keywords: passport size photo creator, make passport size photo free, resize image to 2x2, passport size photo maker, 35x45 mm photo
+seo_desc: Passport size photo creator: resize any photo to 35×45 mm, 2×2 inch and more at 300 DPI, ready to print or upload. Free and private.
 ---
 
-This free passport size photo maker crops and resizes your photo to official sizes at 300 DPI.
+This free passport size photo creator crops and resizes your photo to official sizes at 300 DPI.
 
 ## Passport and ID photos at the right size
 

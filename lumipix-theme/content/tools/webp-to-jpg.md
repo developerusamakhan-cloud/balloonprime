@@ -1,5 +1,5 @@
 ---
-keywords: convert webp to jpg, webp to jpg, webp to jpg converter, change webp to jpg, save webp as jpg
+keywords: to convert webp to jpg, convert webp to jpg, file webp to jpg, how to change a webp to jpg, webp to jpg
 seo_desc: Convert WebP to JPG in your browser: up to 20 images at once, adjustable quality, no upload and no watermark. Free WebP to JPG converter.
 ---
 

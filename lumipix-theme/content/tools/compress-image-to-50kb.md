@@ -1,5 +1,5 @@
 ---
-keywords: compress image to 50kb, 50kb photo, reduce image size to 50kb, compress jpg to 50kb, 50kb image converter
+keywords: compress image to 50 kb, compress image to 50kb, reduce image size to 50kb, compress jpg to 50kb, 50kb photo
 seo_desc: Compress image to 50KB online while keeping it sharp. Works with JPG, PNG and WebP, needs no signup, and processes everything privately in your browser.
 ---
 

@@ -1,6 +1,6 @@
 ---
 keywords: compress image to 10kb, 10kb photo, signature 10kb, reduce image size to 10kb, compress jpg to 10kb
-seo_desc: Compress image to 10KB online for signatures and small photos while keeping them readable. Free, private and works on mobile – nothing is uploaded.
+seo_desc: Compress image to 10KB online for signatures and small photos while keeping them readable. Free, private and works on mobile, nothing is uploaded.
 ---
 
 Use this tool to compress image to 10KB online for signatures, thumbnails and small ID photos, free and without uploading anything.

@@ -1,9 +1,9 @@
 ---
-keywords: change photo background to white, white background photo, photo background white, change background color, white background for passport photo
+keywords: passport photo with white background, change photo background to white, white background photo, photo background white, change background color
 seo_desc: Change photo background to white (or any colour) with on-device AI. Ideal for ID photos, profiles and product listings. Free HD download, nothing uploaded.
 ---
 
-Use this tool to change photo background to white with on-device AI – perfect for ID photos, profiles and products.
+Use this tool to change photo background to white with on-device AI, perfect for ID photos, profiles and products.
 
 ## A clean white background in one step
 

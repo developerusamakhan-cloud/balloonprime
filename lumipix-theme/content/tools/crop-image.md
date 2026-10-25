@@ -1,9 +1,9 @@
 ---
-keywords: crop image, image cropper free online, crop photo online, crop image to square, crop picture
-seo_desc: Crop image online for free: drag a crop box, pick 1:1, 4:5, 16:9 or exact pixels, rotate or flip, and save at full resolution. No upload, no signup.
+keywords: crop image tools, crop image square, online round crop image, crop image by size, image cropper free online
+seo_desc: Free crop image tool online: drag a crop box, pick 1:1, 4:5, 16:9 or exact pixels, rotate or flip, and save at full resolution. No upload, no signup.
 ---
 
-Crop image files right in your browser: drag the box over the part you want, pick a shape, and download it at full resolution.
+This free crop image tool works right in your browser: drag the box over the part you want, pick a shape, and download it at full resolution.
 
 ## Cut away what you do not need
 

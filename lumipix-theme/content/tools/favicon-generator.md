@@ -1,9 +1,9 @@
 ---
-keywords: favicon generator, favicon maker, ico generator, create favicon from image, favicon.ico
-seo_desc: Free favicon generator: turn a logo, letter or emoji into favicon.ico, Apple touch icon and Android icons, plus a ready HTML snippet. No upload.
+keywords: favicon to ico, favicon for free, favicon generator, favicon maker, favicon.ico
+seo_desc: Free favicon to ICO generator: turn a logo, letter or emoji into favicon.ico, Apple touch icon and Android icons, plus a ready HTML snippet. No upload.
 ---
 
-This free favicon generator turns your logo, a letter or an emoji into a complete set of website icons, including favicon.ico, in one download.
+This free favicon to ICO generator turns your logo, a letter or an emoji into a complete set of website icons, including favicon.ico, in one download.
 
 ## Every icon your site needs in one ZIP
 

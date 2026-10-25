@@ -1,9 +1,9 @@
 ---
-keywords: convert svg to png, svg to png, svg to png converter, svg to png high resolution, svg to png transparent
-seo_desc: Convert SVG to PNG at 1×, 2×, 4× or any custom width. Transparent background kept, batch up to 20 files. Free, runs in your browser, no upload.
+keywords: online svg to png converter, save svg to png, convert svg to png with transparent background, convert svg to png, svg to png
+seo_desc: Online SVG to PNG converter: save SVG to PNG at 1×, 2×, 4× or any custom width. Transparent background kept, batch up to 20 files. Free, no upload.
 ---
 
-Use this tool to convert SVG to PNG at exactly the size you need, with a transparent background and sharp edges.
+Use this online SVG to PNG converter to save SVG to PNG at exactly the size you need, with a transparent background and sharp edges.
 
 ## From vector to a picture any app accepts
 

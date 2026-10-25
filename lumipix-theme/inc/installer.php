@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 7 );
+define( 'LUMIPIX_PACK_REV', 8 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -600,6 +600,33 @@ function lumipix_refresh_tool_pages() {
 	}
 	return $log;
 }
+
+/**
+ * Refresh untouched tool pages and their Rank Math fields once after a theme
+ * update that changes tool copy, without waiting for someone to run Setup.
+ */
+function lumipix_tool_copy_maybe_refresh() {
+	if ( (int) get_option( 'lumipix_tool_copy_rev' ) >= LUMIPIX_PACK_REV ) {
+		return;
+	}
+	update_option( 'lumipix_tool_copy_rev', LUMIPIX_PACK_REV );
+	lumipix_refresh_tool_pages();
+	global $wpdb;
+	foreach ( lumipix_tools() as $key => $tool ) {
+		$page_id = lumipix_tool_page_id( $key );
+		$page    = $page_id ? get_post( $page_id ) : null;
+		if ( ! $page || ! lumipix_is_untouched( $page ) || $page->post_title === $tool['h1'] ) {
+			continue;
+		}
+		wp_update_post( array( 'ID' => $page_id, 'post_title' => $tool['h1'] ) );
+		$wpdb->update( $wpdb->posts, array( 'post_modified' => $page->post_date, 'post_modified_gmt' => $page->post_date_gmt ), array( 'ID' => $page_id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		clean_post_cache( $page_id );
+	}
+	if ( defined( 'RANK_MATH_VERSION' ) ) {
+		lumipix_rm_sync();
+	}
+}
+add_action( 'init', 'lumipix_tool_copy_maybe_refresh', 30 );
 
 /**
  * Undo the content swap made by theme version 1.7.0: restore the exam-form

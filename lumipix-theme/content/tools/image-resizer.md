@@ -1,9 +1,9 @@
 ---
-keywords: image resizer, resize image, resize image in pixels, resize image in cm, batch image resizer
-seo_desc: Free image resizer: resize JPG, PNG and WebP by pixels, percent, cm or inches. Batch resize, social presets and print DPI. Private.
+keywords: resize image by size, online resize image free, resize image in bulk, resize image in pixel, image resizer
+seo_desc: Resize image by size online: set pixels, percent, cm or inches for JPG, PNG and WebP. Batch resize, social presets and print DPI. Free and private.
 ---
 
-This free image resizer works in pixels, percent, centimetres or inches, for one photo or a whole batch.
+Resize image by size in pixels, percent, centimetres or inches with this free image resizer, for one photo or a whole batch.
 
 ## One resizer for screens and paper
 

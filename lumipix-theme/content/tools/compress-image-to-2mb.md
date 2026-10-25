@@ -1,5 +1,5 @@
 ---
-keywords: compress image to 2mb, reduce image size to 2mb, compress jpg to 2mb, 2mb photo, compress photo under 2mb
+keywords: compress image to 2 mb, compress image to 2mb, reduce image size to 2 mb, compress jpg to 2mb, compress photo under 2mb
 seo_desc: Compress image to 2MB online with near-original quality. Ideal for uploads, printing services and sharing. Free, private and no signup.
 ---
 
