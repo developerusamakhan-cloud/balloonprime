@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 8 );
+define( 'LUMIPIX_PACK_REV', 10 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -602,16 +602,40 @@ function lumipix_refresh_tool_pages() {
 }
 
 /**
- * Refresh untouched tool pages and their Rank Math fields once after a theme
- * update that changes tool copy, without waiting for someone to run Setup.
+ * Create pages for new tools, refresh untouched tool pages and their Rank Math
+ * fields once after a theme update that changes tools or tool copy, without
+ * waiting for someone to run Setup.
  */
 function lumipix_tool_copy_maybe_refresh() {
 	if ( (int) get_option( 'lumipix_tool_copy_rev' ) >= LUMIPIX_PACK_REV ) {
 		return;
 	}
 	update_option( 'lumipix_tool_copy_rev', LUMIPIX_PACK_REV );
-	lumipix_refresh_tool_pages();
 	global $wpdb;
+	foreach ( lumipix_tools() as $key => $tool ) {
+		if ( lumipix_tool_page_id( $key ) ) {
+			continue;
+		}
+		$id = wp_insert_post(
+			array(
+				'post_type'    => 'page',
+				'post_status'  => 'publish',
+				'post_title'   => $tool['h1'],
+				'post_name'    => $tool['slug'],
+				'post_content' => lumipix_tool_pack_content( $key, $tool ),
+				'meta_input'   => array(
+					'_lumipix_tool'     => $key,
+					'_lumipix_pack_rev' => LUMIPIX_PACK_REV,
+				),
+			)
+		);
+		if ( $id && ! is_wp_error( $id ) ) {
+			$page = get_post( $id );
+			$wpdb->update( $wpdb->posts, array( 'post_modified' => $page->post_date, 'post_modified_gmt' => $page->post_date_gmt ), array( 'ID' => $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			clean_post_cache( $id );
+		}
+	}
+	lumipix_refresh_tool_pages();
 	foreach ( lumipix_tools() as $key => $tool ) {
 		$page_id = lumipix_tool_page_id( $key );
 		$page    = $page_id ? get_post( $page_id ) : null;
@@ -624,6 +648,10 @@ function lumipix_tool_copy_maybe_refresh() {
 	}
 	if ( defined( 'RANK_MATH_VERSION' ) ) {
 		lumipix_rm_sync();
+	}
+	// New pages must show up in the sitemap straight away.
+	if ( method_exists( '\\RankMath\\Sitemap\\Cache', 'invalidate_storage' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
 	}
 }
 add_action( 'init', 'lumipix_tool_copy_maybe_refresh', 30 );
