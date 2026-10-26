@@ -1,0 +1,172 @@
+VYNTIC STUDIO: DISCORD SETUP
+============================
+
+FILES IN THIS FOLDER
+--------------------
+vyntic-discord-icon-1024.png                     Avatar for your profile AND the server icon (Discord crops it to a circle; the logo sits safely in the middle)
+vyntic-discord-profile-banner-1360x480.png       Profile banner (Discord shows it at 680x240; needs Nitro)
+vyntic-discord-server-banner-1920x1080.png       Server banner at the top of the channel list (needs server Boost Level 2)
+vyntic-discord-invite-background-1920x1080.png   Invite background shown when someone opens your invite link (needs server Boost Level 1)
+
+Without Nitro or boosts you can still use the avatar and server icon. Keep the other files ready for later.
+
+
+PART 1: YOUR PROFILE  (User Settings > Profiles)
+------------------------------------------------
+Display name:  Vyntic Studio
+Username:      vynticstudio   (if taken: vyntic.studio or vynticstudio_)
+Pronouns:      leave empty
+Avatar:        vyntic-discord-icon-1024.png
+Banner:        vyntic-discord-profile-banner-1360x480.png
+Profile colours (Nitro):  Primary #0F2B2E   Accent #C7431F
+
+About Me (184 of 190 characters):
+Web design, WordPress, SEO, eBook design, vector art and logos. We build fast sites and graphics that help businesses grow. DM for a free quote. Portfolio and free audit: vyntic.studio
+
+Custom status:  Open for new projects | DM for a quote
+
+Connections (User Settings > Connections): add your website domain vyntic.studio, plus YouTube, X or GitHub if you use them. They show as verified links on your profile.
+
+
+PART 2: YOUR SERVER
+-------------------
+Server name:   Vyntic Studio
+Server icon:   vyntic-discord-icon-1024.png
+Turn on Community (Server Settings > Enable Community). This unlocks the rules screen, welcome screen, announcement channels and server description.
+
+Server description (Server Settings > Community > Overview, 117 characters):
+Web design, WordPress, SEO, eBook design, vector art and logos. Ask questions, see our work and hire the Vyntic team.
+
+
+CHANNELS
+--------
+Category: START HERE
+  #welcome          Welcome message (below). Only staff can post.
+  #rules            Rules (below). Only staff can post.
+  #announcements    News, new work, free plugins. Announcement channel.
+
+Category: SERVICES
+  #services         The services list (below). Only staff can post.
+  #portfolio        Finished work: websites, eBook covers, vectors, logos.
+  #hire-us          How to order (below). Members click a button or post a short brief.
+  #reviews          Feedback from clients after a project.
+
+Category: COMMUNITY
+  #general          Chat
+  #ask-for-help     Questions about websites, WordPress, SEO and design
+  #show-your-work   Members share their own work for feedback
+  #free-resources   Free plugins, guides, templates
+
+Category: PROJECTS (private, one channel per client: #order-clientname, visible only to that client and staff)
+
+
+ROLES
+-----
+Founder            Brand orange #C7431F
+Team               Teal #0E9F6A
+Client             Gold #E0A12E    (give after the first order)
+Member             Default for everyone who accepts the rules
+
+
+WELCOME MESSAGE  (#welcome)
+---------------------------
+Welcome to Vyntic Studio!
+
+We design websites, eBooks, vector art and logos, and help businesses get found on Google.
+
+Start here:
+1. Read #rules
+2. See what we do in #services
+3. Look at real projects in #portfolio
+4. Ready to start? Go to #hire-us
+
+Have a question? Ask in #ask-for-help, we are happy to help.
+Website and free audit: https://vyntic.studio/free-website-audit/
+
+
+RULES  (#rules)
+---------------
+1. Be respectful. No harassment, hate speech or personal attacks.
+2. No spam, scams or unrequested DMs to other members.
+3. Self promotion only in #show-your-work.
+4. Keep channels on topic.
+5. Do not share private information, logins or payment details in public channels.
+6. Only share work you own or have the right to share.
+7. All orders and payments go through the Vyntic team only. We will never ask you to pay a third party.
+8. Follow Discord's Terms of Service and Community Guidelines.
+
+
+SERVICES  (#services)
+---------------------
+VYNTIC STUDIO SERVICES
+
+WEBSITES
+- Website design and redesign
+- WordPress development
+- Shopify, WooCommerce, Webflow, Wix and Squarespace sites
+- Landing pages
+- Website speed optimization
+- Website migration to WordPress
+
+SEO AND GROWTH
+- SEO and local SEO
+- Google Business Profile optimization
+- AI search visibility (show up in ChatGPT and Google AI answers)
+- GoHighLevel setup
+
+EBOOK DESIGN (new)
+- eBook cover design
+- Interior layout and formatting for Kindle, EPUB and print
+- Lead magnet eBooks and PDF guides for websites and email lists
+- Workbooks, planners and digital downloads
+
+VECTOR ART (new)
+- Logo vectorization: turn a blurry JPG or PNG into a clean vector (SVG, AI, EPS, PDF)
+- Vector illustrations and characters
+- Icons and icon sets
+- Print and cutting files for t-shirts, signs, stickers, Cricut and laser
+
+LOGOS AND GRAPHICS (new)
+- Logo design and brand identity
+- Social media posts and banners
+- Discord server packs: icons, banners, emotes and stickers
+- YouTube thumbnails and channel art
+
+Every project starts with a short brief and a clear written quote before any work begins.
+Order in #hire-us or DM @vynticstudio.
+
+
+HOW TO ORDER  (#hire-us)
+------------------------
+HIRE VYNTIC STUDIO
+
+Post a message (or DM @vynticstudio) with:
+1. What you need (website, eBook, vector, logo, SEO...)
+2. Examples you like (links or images)
+3. Your deadline
+4. Your budget range
+
+What happens next:
+1. We reply with questions or a written quote
+2. You approve the quote
+3. We open a private project channel for you
+4. You get progress updates and can request changes
+5. You receive your final files
+
+
+FIRST ANNOUNCEMENT  (#announcements)
+------------------------------------
+Vyntic Studio is now on Discord!
+
+This is our home for websites, SEO and graphics. Besides websites and SEO, we now also take orders for eBook design, vector art, logos and Discord server graphics.
+
+See everything in #services and order in #hire-us.
+Free website audit: https://vyntic.studio/free-website-audit/
+
+
+SAFETY SETTINGS (Server Settings > Safety Setup)
+------------------------------------------------
+- Verification level: Medium (verified email and member for 5 minutes)
+- Explicit image filter: on for all members
+- AutoMod: turn on "Block spam content" and "Block mention spam"
+- Turn on 2FA for moderator actions
