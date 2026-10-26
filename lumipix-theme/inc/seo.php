@@ -217,12 +217,17 @@ function lumipix_schema() {
 		);
 	}
 
+	$url  = is_singular() ? get_permalink( get_queried_object_id() ) : '';
+	$lang = function_exists( 'lumipix_current_lang' ) ? lumipix_current_lang() : 'en';
+
 	$tool = lumipix_current_tool();
 	if ( $tool ) {
 		$graph[] = array(
 			'@type'               => 'WebApplication',
+			'@id'                 => $url . '#app',
 			'name'                => $tool['h1'],
-			'url'                 => get_permalink( get_queried_object_id() ),
+			'url'                 => $url,
+			'inLanguage'          => $lang,
 			'description'         => $tool['desc'],
 			'applicationCategory' => 'MultimediaApplication',
 			'operatingSystem'     => 'Any (runs in the browser)',
@@ -251,6 +256,8 @@ function lumipix_schema() {
 		}
 		$graph[] = array(
 			'@type'      => 'FAQPage',
+			'@id'        => ( $url ? $url : home_url( '/' ) ) . '#faq',
+			'inLanguage' => $lang,
 			'mainEntity' => $faq,
 		);
 	}
@@ -277,13 +284,13 @@ function lumipix_schema() {
 		);
 	}
 
-	if ( ! is_front_page() && ! $plugin && ( is_singular() || is_archive() || is_home() ) ) {
+	if ( ! is_front_page() && ! lumipix_plugin_breadcrumb_schema() && ( is_singular() || is_archive() || is_home() ) ) {
 		$list = array();
 		foreach ( lumipix_breadcrumb_items() as $i => $item ) {
 			$entry = array(
 				'@type'    => 'ListItem',
 				'position' => $i + 1,
-				'name'     => $item[0],
+				'name'     => html_entity_decode( wp_strip_all_tags( $item[0] ), ENT_QUOTES, 'UTF-8' ),
 			);
 			if ( $item[1] ) {
 				$entry['item'] = $item[1];
@@ -292,6 +299,7 @@ function lumipix_schema() {
 		}
 		$graph[] = array(
 			'@type'           => 'BreadcrumbList',
+			'@id'             => ( $url ? $url : home_url( strtok( add_query_arg( array() ), '?' ) ) ) . '#breadcrumb',
 			'itemListElement' => $list,
 		);
 	}
@@ -306,3 +314,40 @@ function lumipix_schema() {
 	}
 }
 add_action( 'wp_head', 'lumipix_schema', 20 );
+
+/**
+ * Whether the active SEO plugin prints its own BreadcrumbList.
+ *
+ * Rank Math only adds one when its breadcrumbs setting is on.
+ *
+ * @return bool
+ */
+function lumipix_plugin_breadcrumb_schema() {
+	if ( ! lumipix_seo_plugin_active() ) {
+		return false;
+	}
+	if ( defined( 'RANK_MATH_VERSION' ) && class_exists( '\\RankMath\\Helper' ) ) {
+		return (bool) \RankMath\Helper::get_settings( 'general.breadcrumbs' );
+	}
+	return true;
+}
+
+/**
+ * Tool and info pages are not articles: drop the Article node Rank Math adds to pages.
+ *
+ * @param array $data JSON-LD entities.
+ * @return array
+ */
+function lumipix_rm_json_ld( $data ) {
+	if ( ! is_page() || ! is_array( $data ) ) {
+		return $data;
+	}
+	foreach ( $data as $key => $entity ) {
+		$type = is_array( $entity ) && isset( $entity['@type'] ) ? (array) $entity['@type'] : array();
+		if ( array_intersect( $type, array( 'Article', 'BlogPosting', 'NewsArticle' ) ) ) {
+			unset( $data[ $key ] );
+		}
+	}
+	return $data;
+}
+add_filter( 'rank_math/json_ld', 'lumipix_rm_json_ld', 99 );

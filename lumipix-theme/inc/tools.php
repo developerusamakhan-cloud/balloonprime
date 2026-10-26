@@ -75,19 +75,6 @@ function lumipix_tools() {
 		return $tools;
 	}
 
-	$size_faqs = function ( $label ) {
-		return array(
-			/* translators: %s: target size, e.g. 100KB */
-			sprintf( __( 'Will my photo be exactly %s?', 'lumipix' ), $label ) => sprintf(
-				/* translators: %s: target size */
-				__( 'It will be at or just under %s. The tool searches for the highest quality that still fits the limit, so you never upload a file that gets rejected for being a few bytes over.', 'lumipix' ),
-				$label
-			),
-			__( 'Are my photos uploaded to a server?', 'lumipix' ) => __( 'No. Compression runs entirely inside your browser. Your files never leave your device, which also makes it fast on slow connections.', 'lumipix' ),
-			__( 'What if the photo still looks too large?', 'lumipix' ) => __( 'If the quality setting alone cannot reach the target, Lumi Pix gently reduces the dimensions as well. You can also set a maximum width under Advanced options.', 'lumipix' ),
-			__( 'Which formats are supported?', 'lumipix' ) => __( 'JPG, PNG, WebP, AVIF and most other formats your browser can open. The result is saved as JPG by default, which is accepted by almost every online form.', 'lumipix' ),
-		);
-	};
 
 	$size_content = function ( $label, $use ) {
 		return '<!-- wp:heading --><h2 class="wp-block-heading">' . sprintf( esc_html__( 'Why compress an image to %s?', 'lumipix' ), esc_html( $label ) ) . '</h2><!-- /wp:heading -->'
@@ -106,14 +93,6 @@ function lumipix_tools() {
 			. '<!-- wp:paragraph --><p>' . esc_html__( 'Lumi Pix is an independent tool and is not affiliated with any government department or testing service. Always follow the latest official requirements.', 'lumipix' ) . '</p><!-- /wp:paragraph -->';
 	};
 
-	$form_faqs = function ( $org ) {
-		return array(
-			/* translators: %s: organisation name */
-			sprintf( __( 'What photo size does %s require?', 'lumipix' ), $org ) => __( 'Requirements change between advertisements, so always check the official instructions for the post you are applying for. Once you know the limit, select it here and the tool will produce a file that fits.', 'lumipix' ),
-			__( 'Can I compress my signature too?', 'lumipix' ) => __( 'Yes. Use the same tool for the signature scan, or open the signature tool to make the background transparent or clean white first.', 'lumipix' ),
-			__( 'Is it safe to use for official documents?', 'lumipix' ) => __( 'Your images are processed on your own device and are never uploaded to Lumi Pix, so nobody else sees them.', 'lumipix' ),
-		);
-	};
 
 	$tools = array(
 
@@ -154,7 +133,12 @@ function lumipix_tools() {
 			'lead'    => __( 'The strictest common limit. Ideal for signatures and thumbnails on online application forms.', 'lumipix' ),
 			'config'  => array( 'target' => 10, 'unit' => 'KB', 'maxWidth' => 400, 'quick' => array( 5, 10, 15, 20 ) ),
 			'related' => array( 'resize-signature', 'compress-image-to-20kb', 'remove-white-background' ),
-			'faqs'    => $size_faqs( '10KB' ),
+			'faqs'    => array(
+				__( 'Will a 10KB photo still be clear?', 'lumipix' ) => __( 'For a small passport-style photo or a signature, yes. Forms show these images small, so a 10KB file looks clean on screen. A wide group photo loses detail at this size, so crop to the face or the signature first.', 'lumipix' ),
+				__( 'How do I get a signature under 10KB?', 'lumipix' ) => __( 'Sign on plain white paper, scan or photograph it in good light, crop tightly around the signature and drop it here. Dark ink on white compresses very well, so most signatures fit in 10KB and stay readable.', 'lumipix' ),
+				__( 'Why did the tool make my picture smaller in pixels?', 'lumipix' ) => __( 'At 10KB, lowering the JPG quality alone is often not enough. Lumi Pix then reduces the dimensions step by step and keeps the sharpest version that stays at or under 10KB.', 'lumipix' ),
+				__( 'Is it safe to use for ID photos and signatures?', 'lumipix' ) => __( 'Yes. The file is processed in your browser and never uploaded, so nobody else sees your photo or signature.', 'lumipix' ),
+			),
 			'content' => $size_content( '10KB', __( 'A 10KB limit is mostly used for signatures and tiny thumbnails. At this size the image must be small in pixels as well as compressed, so the tool limits the width automatically.', 'lumipix' ) ),
 		),
 		'compress-image-to-20kb'     => array(
@@ -170,7 +154,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Get a photo or signature under 20KB for strict upload limits, without blurring it beyond recognition.', 'lumipix' ),
 			'config'  => array( 'target' => 20, 'unit' => 'KB', 'maxWidth' => 600 ),
 			'related' => array( 'compress-image-to-50kb', 'resize-signature', 'passport-size-photo' ),
-			'faqs'    => $size_faqs( '20KB' ),
+			'faqs'    => array(
+				__( 'Is 20KB enough for a passport-style photo?', 'lumipix' ) => __( 'Usually yes. Online forms display these photos small, and a head-and-shoulders photo at that size fits in 20KB as a JPG with clear facial detail.', 'lumipix' ),
+				__( 'Can I compress my photo and signature to 20KB together?', 'lumipix' ) => __( 'Yes. Drop both files at once. Each one is compressed separately to stay under 20KB, and you can download them one by one or together as a ZIP.', 'lumipix' ),
+				__( 'My form says between 10KB and 20KB. What should I pick?', 'lumipix' ) => __( 'Pick 20KB. The result lands just under the maximum, which keeps the most detail while staying inside the range. If your original is already smaller than 10KB, make it larger in pixels with the image resizer first.', 'lumipix' ),
+				__( 'Which format will the 20KB file be?', 'lumipix' ) => __( 'JPG by default, which almost every application form accepts. Transparent areas in a PNG become white, as JPG has no transparency.', 'lumipix' ),
+			),
 			'content' => $size_content( '20KB', __( 'A 20KB limit is common for signatures and small profile photos on recruitment and admission portals. At this size, dimensions matter as much as quality, so the tool also limits the width to keep the result crisp.', 'lumipix' ) ),
 		),
 		'compress-image-to-50kb'     => array(
@@ -186,7 +175,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Turn a heavy phone photo into a clean file under 50KB, ready for forms and profiles.', 'lumipix' ),
 			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1200 ),
 			'related' => array( 'compress-image-to-20kb', 'compress-image-to-100kb', 'passport-size-photo' ),
-			'faqs'    => $size_faqs( '50KB' ),
+			'faqs'    => array(
+				__( 'Why does my large phone photo still look sharp at 50KB?', 'lumipix' ) => __( 'Most of a phone photo\'s file size comes from its very high pixel count. Forms show photos small, so Lumi Pix reduces the pixels to a sensible size when needed and the face stays sharp while the file drops to 50KB.', 'lumipix' ),
+				__( 'Can I also limit the width and height?', 'lumipix' ) => __( 'Yes. Open Advanced options and set a maximum width. This helps when a form limits the dimensions as well as the file size.', 'lumipix' ),
+				__( 'Will the colours or background change?', 'lumipix' ) => __( 'No. Compression keeps the colours as they are. Only transparent areas of a PNG turn white, because JPG has no transparency.', 'lumipix' ),
+				__( 'Can I compress several photos to 50KB at once?', 'lumipix' ) => __( 'Yes, up to 20 photos in one batch. Each file is compressed on its own and you can download them all as a ZIP.', 'lumipix' ),
+			),
 			'content' => $size_content( '50KB', __( 'Many online forms cap passport-style photographs at around 50KB. Modern phone photos are often 3 to 5MB, so they need to shrink by almost a hundred times without turning into a blurry mess.', 'lumipix' ) ),
 		),
 		'compress-image-to-100kb'    => array(
@@ -202,7 +196,12 @@ function lumipix_tools() {
 			'lead'    => __( 'The most requested limit for forms and portals. Drop a photo and get a sharp JPG under 100KB.', 'lumipix' ),
 			'config'  => array( 'target' => 100, 'unit' => 'KB', 'maxWidth' => 1600 ),
 			'related' => array( 'compress-image-to-50kb', 'compress-image-to-200kb', 'image-resizer' ),
-			'faqs'    => $size_faqs( '100KB' ),
+			'faqs'    => array(
+				__( 'Why is the result 96KB and not exactly 100KB?', 'lumipix' ) => __( 'The tool looks for the highest quality that stays at or under the limit. JPG sizes change in small steps, so the result usually lands a little below 100KB, which every form accepts.', 'lumipix' ),
+				__( 'Is a 100KB photo good enough to print?', 'lumipix' ) => __( 'For a small print such as a passport photo it often is. For larger prints keep the original file, because 100KB is meant for uploads and email rather than printing.', 'lumipix' ),
+				__( 'Does it work with iPhone and Android photos?', 'lumipix' ) => __( 'Yes. Choose the photo from your gallery in the browser and compress it right on the phone. Nothing is uploaded.', 'lumipix' ),
+				__( 'How many photos can I compress to 100KB at a time?', 'lumipix' ) => __( 'Up to 20. They are all compressed with the same target and you can download them together as a ZIP file.', 'lumipix' ),
+			),
 			'content' => $size_content( '100KB', __( 'Exam boards, job portals and visa applications frequently accept images up to 100KB. It is enough room for a clear portrait or a readable document scan, as long as the compression is done carefully.', 'lumipix' ) ),
 		),
 		'compress-image-to-200kb'    => array(
@@ -218,7 +217,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Plenty of room for detail. Shrink large photos and scans to under 200KB for uploads and email.', 'lumipix' ),
 			'config'  => array( 'target' => 200, 'unit' => 'KB', 'maxWidth' => 2000 ),
 			'related' => array( 'compress-image-to-100kb', 'compress-image-to-1mb', 'image-resizer' ),
-			'faqs'    => $size_faqs( '200KB' ),
+			'faqs'    => array(
+				__( 'Can I compress a scanned document to 200KB?', 'lumipix' ) => __( 'Yes. Scans of certificates, ID cards and letters usually stay clearly readable at 200KB. For the best result, scan at 150 to 300 DPI and crop away empty borders first.', 'lumipix' ),
+				__( 'Will text in a screenshot stay readable?', 'lumipix' ) => __( 'In most cases, yes. If a screenshot with small text looks soft, crop it to the important part before compressing, so more of the 200KB goes to the text.', 'lumipix' ),
+				__( 'Where is a 200KB limit common?', 'lumipix' ) => __( 'Job portals, university admissions, visa and exam forms often limit photos or scanned documents to around 200KB. Always check the exact limit in your form\'s instructions.', 'lumipix' ),
+				__( 'Can I combine several 200KB scans into one file?', 'lumipix' ) => __( 'Yes. Compress each page here, then join them with the image to PDF tool in the order you need.', 'lumipix' ),
+			),
 			'content' => $size_content( '200KB', __( 'A 200KB limit is typical for document scans, CNIC or ID card copies and certificates on application portals. At this size text stays readable when the compression is tuned properly.', 'lumipix' ) ),
 		),
 		'compress-image-to-500kb'    => array(
@@ -234,7 +238,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Plenty of room for detail. Great for website images, email and high-quality document scans.', 'lumipix' ),
 			'config'  => array( 'target' => 500, 'unit' => 'KB', 'quick' => array( 200, 300, 500, 800 ) ),
 			'related' => array( 'compress-image-to-200kb', 'compress-image-to-1mb', 'image-resizer' ),
-			'faqs'    => $size_faqs( '500KB' ),
+			'faqs'    => array(
+				__( 'Does a 500KB photo look as good as the original?', 'lumipix' ) => __( 'On a phone or computer screen, almost always. 500KB leaves plenty of room for a sharp, full HD sized photo, so the difference is very hard to see.', 'lumipix' ),
+				__( 'Is 500KB a good size for website images?', 'lumipix' ) => __( 'It is a good upper limit for large banner or hero images. For thumbnails and images inside articles, smaller files of 100KB to 200KB load faster.', 'lumipix' ),
+				__( 'How do I send several pages under 500KB each?', 'lumipix' ) => __( 'Compress every page to 500KB here, then combine them with the image to PDF tool if the form wants a single document.', 'lumipix' ),
+				__( 'Why not just lower the quality in my photo editor?', 'lumipix' ) => __( 'An editor makes you guess the quality, save, check and try again. Here you choose 500KB once and the tool finds the best quality that fits in one step.', 'lumipix' ),
+			),
 			'content' => $size_content( '500KB', __( 'Half a megabyte is generous: a full-resolution phone photo usually fits with almost no visible change, and detailed document scans stay sharp.', 'lumipix' ) ),
 		),
 		'compress-image-to-1mb'      => array(
@@ -250,7 +259,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Keep photos looking original while fitting them under a 1MB upload limit.', 'lumipix' ),
 			'config'  => array( 'target' => 1, 'unit' => 'MB' ),
 			'related' => array( 'compress-image-to-200kb', 'image-resizer', 'compress-image' ),
-			'faqs'    => $size_faqs( '1MB' ),
+			'faqs'    => array(
+				__( 'Will a 1MB photo look different from the original?', 'lumipix' ) => __( 'Almost never on screen. 1MB is enough for a high quality JPG at a large size, so most photos look the same as before.', 'lumipix' ),
+				__( 'Is 1MB a good size for email?', 'lumipix' ) => __( 'Yes. Several 1MB photos fit comfortably in one email, while large camera originals often go over the attachment limit.', 'lumipix' ),
+				__( 'Can I still print a photo compressed to 1MB?', 'lumipix' ) => __( 'Standard photo prints such as 10 × 15 cm or 4 × 6 in usually look fine. For large prints, keep and use the original file.', 'lumipix' ),
+				__( 'Is camera information kept in the file?', 'lumipix' ) => __( 'Not when the photo is compressed. It is re-encoded in your browser, which removes camera metadata such as GPS location. A JPG that is already under 1MB is kept exactly as it is, metadata included.', 'lumipix' ),
+			),
 			'content' => $size_content( '1MB', __( 'Websites, marketplaces and messaging apps often limit uploads to 1MB. High-resolution camera and phone photos easily exceed that, yet they can usually be brought under 1MB with no difference you can see.', 'lumipix' ) ),
 		),
 		'compress-image-to-2mb'      => array(
@@ -266,7 +280,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Keep almost every detail while getting big camera files under a 2MB upload limit.', 'lumipix' ),
 			'config'  => array( 'target' => 2, 'unit' => 'MB', 'quick' => array( 500, 1000, 1500, 2000 ) ),
 			'related' => array( 'compress-image-to-5mb', 'compress-image-to-1mb', 'compress-image-to-500kb' ),
-			'faqs'    => $size_faqs( '2MB' ),
+			'faqs'    => array(
+				__( 'Will my photo keep its full resolution at 2MB?', 'lumipix' ) => __( 'Often it will, or it is reduced only slightly. The tool lowers quality first and only reduces the pixel size if that is needed to fit under 2MB.', 'lumipix' ),
+				__( 'Is 2MB enough for printing?', 'lumipix' ) => __( 'For standard photo prints, yes. A 2MB JPG has enough detail for common print sizes. Keep the original for posters or large wall prints.', 'lumipix' ),
+				__( 'Which services limit uploads to 2MB?', 'lumipix' ) => __( 'Many job portals, university forms, support desks and print shops set a 2MB limit. Check the exact number in their instructions before you upload.', 'lumipix' ),
+				__( 'Can I compress many camera photos to 2MB at once?', 'lumipix' ) => __( 'Yes. Add up to 20 photos, and download them one by one or all together as a ZIP file.', 'lumipix' ),
+			),
 			'content' => $size_content( '2MB', __( 'Many upload forms, print services and help desks limit images to 2MB. Camera and high-end phone photos are often larger, but they can be brought under 2MB with no difference you would notice.', 'lumipix' ) ),
 		),
 		'compress-image-to-5mb'      => array(
@@ -282,7 +301,12 @@ function lumipix_tools() {
 			'lead'    => __( 'Get large camera photos and scans under a 5MB upload limit with no visible change.', 'lumipix' ),
 			'config'  => array( 'target' => 5, 'unit' => 'MB', 'quick' => array( 1000, 2000, 3000, 5000 ) ),
 			'related' => array( 'compress-image-to-2mb', 'compress-image-to-1mb', 'image-resizer' ),
-			'faqs'    => $size_faqs( '5MB' ),
+			'faqs'    => array(
+				__( 'Will compressing to 5MB reduce the quality?', 'lumipix' ) => __( 'Very rarely in a way you can see. Most camera and phone photos need only light compression to fit in 5MB, so they look the same as the original.', 'lumipix' ),
+				__( 'Can I compress RAW or HEIC files to 5MB?', 'lumipix' ) => __( 'The tool works with formats your browser can open, such as JPG, PNG, WebP and AVIF. Convert RAW files to JPG in your camera software first.', 'lumipix' ),
+				__( 'Is a 5MB photo good for printing?', 'lumipix' ) => __( 'Yes, for most print sizes. For very large posters, keep the original file and use the 5MB copy for uploads.', 'lumipix' ),
+				__( 'What about panoramas and very large images?', 'lumipix' ) => __( 'They work too. If a very large image cannot fit in 5MB at good quality, its dimensions are reduced slightly so the file fits.', 'lumipix' ),
+			),
 			'content' => $size_content( '5MB', __( 'Many websites, job portals and email services limit attachments to 5MB. Photos from modern cameras and phones, and high-resolution scans, can be much larger, but bringing them under 5MB rarely needs any visible loss of quality.', 'lumipix' ) ),
 		),
 		'compress-photo-for-ppsc'    => array(
@@ -298,7 +322,11 @@ function lumipix_tools() {
 			'lead'    => __( 'Check the size limit in your PPSC advertisement, select it below, and download a file that uploads first time.', 'lumipix' ),
 			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 30, 50, 100, 200 ) ),
 			'related' => array( 'compress-photo-for-fpsc', 'compress-photo-for-nts', 'resize-signature' ),
-			'faqs'    => $form_faqs( 'PPSC' ),
+			'faqs'    => array(
+				__( 'Where do I find the PPSC photo and signature limits?', 'lumipix' ) => __( 'In the instructions of the advertisement and on the online application form on the PPSC website. Limits can differ between posts, so check them for the job you are applying for.', 'lumipix' ),
+				__( 'Why does the PPSC portal reject my photo?', 'lumipix' ) => __( 'Most often the file is larger than the allowed size, in a format the portal does not accept, or too dark. Compress it here to the stated limit as a JPG and try again.', 'lumipix' ),
+				__( 'Can I prepare my PPSC photo on my phone?', 'lumipix' ) => __( 'Yes. Take the photo against a plain, light wall in daylight, then open this page in your phone browser, choose the limit and download the result.', 'lumipix' ),
+			),
 			'content' => $form_content( 'PPSC' ),
 		),
 		'compress-photo-for-fpsc'    => array(
@@ -314,7 +342,11 @@ function lumipix_tools() {
 			'lead'    => __( 'Choose the limit from the official FPSC instructions and get an upload-ready JPG in one step.', 'lumipix' ),
 			'config'  => array( 'target' => 100, 'unit' => 'KB', 'maxWidth' => 1200, 'quick' => array( 20, 50, 100, 200, 500 ) ),
 			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-nts', 'compress-image-to-200kb' ),
-			'faqs'    => $form_faqs( 'FPSC' ),
+			'faqs'    => array(
+				__( 'What files does the FPSC online application ask for?', 'lumipix' ) => __( 'That depends on the post. The advertisement and the online form list the photo and documents required and their size limits, so read them before preparing your files.', 'lumipix' ),
+				__( 'How do I make a scanned certificate small enough for FPSC?', 'lumipix' ) => __( 'Drop the scan here and choose the limit from the instructions. If the form wants several pages in one file, compress each page and combine them with the image to PDF tool.', 'lumipix' ),
+				__( 'Will compressing my photo make my face blurry?', 'lumipix' ) => __( 'No. The tool keeps the highest quality that still fits the limit, so your face stays clear at the sizes application forms use.', 'lumipix' ),
+			),
 			'content' => $form_content( 'FPSC' ),
 		),
 		'compress-photo-for-nts'     => array(
@@ -330,7 +362,11 @@ function lumipix_tools() {
 			'lead'    => __( 'Select the size from your NTS test instructions and download a photo that is ready to upload.', 'lumipix' ),
 			'config'  => array( 'target' => 50, 'unit' => 'KB', 'maxWidth' => 1000, 'quick' => array( 20, 50, 100, 200 ) ),
 			'related' => array( 'compress-photo-for-ppsc', 'compress-photo-for-fpsc', 'passport-size-photo' ),
-			'faqs'    => $form_faqs( 'NTS' ),
+			'faqs'    => array(
+				__( 'Where are the NTS photo requirements?', 'lumipix' ) => __( 'In the instructions for your specific test on the NTS website and in the registration form. Requirements can differ between tests, so check them each time.', 'lumipix' ),
+				__( 'Can I use a mobile selfie for NTS registration?', 'lumipix' ) => __( 'It is better to ask someone to take the photo from about 1.5 metres away, against a plain light background. Then crop it to your face and shoulders and compress it here.', 'lumipix' ),
+				__( 'What if my photo is already under the limit?', 'lumipix' ) => __( 'Then you can upload it as it is. Lumi Pix only reduces files that are larger than the size you choose.', 'lumipix' ),
+			),
 			'content' => $form_content( 'NTS' ),
 		),
 
