@@ -49,7 +49,7 @@ function lumipix_document_title_parts( $parts ) {
 		$parts['title'] = $custom ? $custom : $tool['title'];
 	} elseif ( is_front_page() ) {
 		$parts['title']   = get_bloginfo( 'name' );
-		$parts['tagline'] = get_theme_mod( 'lumipix_home_title', __( 'Free Image Tools – Compress, Resize & Remove Background', 'lumipix' ) );
+		$parts['tagline'] = get_theme_mod( 'lumipix_home_title', __( 'Free Image Tools: Compress, Resize & Remove Background', 'lumipix' ) );
 	} elseif ( is_singular() ) {
 		$custom = (string) get_post_meta( get_queried_object_id(), '_lumipix_seo_title', true );
 		if ( $custom ) {

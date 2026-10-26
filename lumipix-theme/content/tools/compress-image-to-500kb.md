@@ -3,78 +3,68 @@ keywords: compress image to 500kb, 500kb photo, reduce image size to 500kb, comp
 seo_desc: Compress image to 500KB online with excellent quality for websites, email and documents. Free, private and no signup.
 ---
 
-Use this tool to compress image to 500KB online with excellent quality, free and without uploading.
+500KB is a generous limit, and that's good news. Most photos can fit under it without any change you'd notice. Drop your files here to compress an image to 500KB for a website, an email or a portal, and keep the quality high. Nothing is uploaded.
 
-## High quality under 500KB
+## Why 500KB is easy to work with
 
-Half a megabyte gives you a lot of room. A full-resolution phone photo often fits under 500KB with no difference you can see at normal viewing size, and multi-page document scans stay crisp. That makes 500KB a popular limit for website uploads, help-desk attachments, school portals and email.
+A full-resolution phone photo often squeezes under 500KB and still looks the same at normal viewing size. Multi-page scans stay crisp too. That's why you'll see this limit on website uploads, help desks, school portals and email.
 
-This page opens with a 500KB target and no width limit, so the compressor keeps as many pixels as it can and only lowers the JPG quality as much as needed.
+This page starts with a 500KB target and no width limit. The compressor keeps every pixel it can and lowers the JPG quality only as much as it needs to.
 
-## How to compress to 500KB
+## How to compress an image to 500KB
 
-1. **Drop your images** or click **Choose files**. Up to 20 at once.
-2. **Wait for Fits target** on each result.
-3. **Download** individually or with **Download all**.
+1. **Drop your images** or tap **Choose files**. Up to 20 at once.
+2. **Wait for Fits target** on each one.
+3. **Download** them one by one or tap **Download all**.
 
-The quick buttons switch between 200KB, 300KB, 500KB and 800KB if your limit is slightly different.
+Limit is a bit different? The quick buttons switch between 200KB, 300KB, 500KB and 800KB.
 
 ## What to expect
 
-| Original | Original size | Typical result under 500KB |
+| Starting file | Original size | Typical result under 500KB |
 |---|---|---|
-| Phone photo, 4032×3024 | 3–5MB | Often full size, quality around 70–85% |
-| Camera photo, 6000×4000 | 8–12MB | Full or slightly reduced size |
-| A4 scan at 300 DPI | 1–3MB | Full size, sharp text |
-| Screenshot | 1–2MB | Full size, crisp |
+| Phone photo, 4032 x 3024 | 3 to 5MB | Often full size, quality around 70 to 85% |
+| Camera photo, 6000 x 4000 | 8 to 12MB | Full or slightly smaller size |
+| A4 scan at 300 DPI | 1 to 3MB | Full size, sharp text |
+| Screenshot | 1 to 2MB | Full size, crisp |
 
-Smooth backgrounds compress better than detailed textures, so results vary from photo to photo.
+Smooth backgrounds compress better than fine textures, so every photo comes out a little different.
 
 ## Good uses for 500KB
 
-- **Website images.** Large hero images and blog photos look sharp while still loading quickly. For smaller images, 100–300KB is often enough.
-- **Email.** Several photos at 500KB each keep a message light without losing quality.
-- **Document scans.** Certificates, transcripts and multi-page letters stay readable even with small print.
-- **Marketplace listings** that allow larger images for zoom.
+- **Website images.** Large banner and blog photos look sharp and still load quickly. Smaller images are usually fine at 100KB to 300KB.
+- **Email.** A handful of 500KB photos keeps the message light.
+- **Document scans.** Certificates, transcripts and long letters stay readable, small print included.
+- **Marketplace listings** that let buyers zoom in.
 - **School and work portals** with generous attachment limits.
 
-## Website images: resize first
+## For websites, resize first
 
-For a website, the best results come from resizing to the displayed width first, then compressing. A blog image shown at 740 pixels only needs to be about 1500 pixels wide for sharp screens. Use the [Image Resizer](tool:image-resizer) to set the width, then compress here. Our guide on [how to lower image file size without losing quality](post:how-to-lower-image-file-size) explains why this order matters.
+The best results come from resizing to the width the image is shown at, then compressing. A blog image shown at 740 pixels only needs to be about 1500 pixels wide to look sharp on good screens. Set the width in the [image resizer](tool:image-resizer), then compress here. Our guide on [how to lower image file size without losing quality](post:how-to-lower-image-file-size) explains why the order matters.
 
 ## JPG or WebP?
 
-JPG is accepted everywhere. If you are publishing on your own website and it supports WebP, choose **WebP** under **Save as** for smaller files at the same quality. If your browser cannot create WebP, the tool uses JPG automatically.
+JPG works everywhere. If the images are going on your own website and it supports WebP, choose **WebP** under **Save as** for smaller files at the same quality. If your browser can't make WebP, you'll get a JPG instead. Not sure which format suits you? Our [WebP vs JPG](post:webp-vs-jpg) comparison has the details.
 
-## Keep originals for printing
+## Is it really the same quality?
 
-A 500KB copy is ideal for screens. For large prints, keep the original camera file. Compression is permanent, so always work on a copy and keep the original in a safe folder.
+Open the compressed copy and the original side by side at 100% zoom. Look at the sky for banding, at edges for halos, and at fine detail like hair. At 500KB you shouldn't see a difference in a normal photo. If you do, the image is unusually large or detailed. Make it a little smaller in pixels and try again.
 
-## Checking the result
-
-Open the compressed image and compare it with the original at 100% zoom. Look at skies for banding, edges for halos and fine textures such as hair. At 500KB, you should not see a difference in normal photos. If you do, the image may be unusually large or detailed; reduce its dimensions slightly and compress again.
+Keep your originals, though. A 500KB copy is great for screens, but for large prints you want the original camera file. Compression can't be undone.
 
 ## Other sizes
 
-- Stricter limits: [compress to 200KB](tool:compress-image-to-200kb) or [100KB](tool:compress-image-to-100kb)
-- More room: [compress to 1MB](tool:compress-image-to-1mb) or [2MB](tool:compress-image-to-2mb)
-- Any number: the main [Image Compressor](tool:compress-image)
+- Stricter limits: [compress image to 200KB](tool:compress-image-to-200kb) or [compress image to 100KB](tool:compress-image-to-100kb)
+- More room: [compress image to 1MB](tool:compress-image-to-1mb) or [compress image to 2MB](tool:compress-image-to-2mb)
+- Any number: the main [image compressor](tool:compress-image)
 
-For background on file sizes, read [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb), and for format choices see [PNG vs JPG](post:png-vs-jpg).
-
-## Private and free
-
-Everything happens on your device. Nothing is uploaded or stored, and there is no account or watermark. It works in any modern browser on Windows, Mac, Android and iPhone, and converts iPhone HEIC photos to JPG automatically.
-
-## Batch processing tips
-
-When you compress a whole folder, drop up to 20 images at a time and use **Download all**. Each file keeps its name with "-compressed" added, so the copies are easy to tell apart from the originals. For larger sets, run several batches with the same target.
+Doing a whole folder? Drop up to 20 images at a time and use **Download all**. Each file keeps its name with "-compressed" added, so you can always tell the copies from the originals. Everything is processed on your device, with no account and no watermark.
 
 <!-- more -->
-## 500KB vs 1MB
+## 500KB or 1MB?
 
-Both keep photos looking like the original on screens. 500KB loads faster and suits websites and forms; 1MB keeps a little more detail for zooming and printing small sizes. If the limit allows either, choose 500KB for the web and 1MB for sharing and archiving.
+Both look like the original on screen. 500KB loads faster, so it suits websites and forms. 1MB keeps a little more detail for zooming in and small prints. If you can choose, go with 500KB for the web and 1MB for sharing and keeping.
 
-## Tips for website owners
+## A tip for website owners
 
-Resize images to about twice the width they are displayed at, compress them to a sensible target, and use descriptive file names such as `blue-ceramic-mug.jpg`. Smaller, well-named images help pages load quickly and give search engines useful context about each picture.
+Resize images to about twice the width they're shown at, compress them to a sensible target, and give them names that describe them, like `blue-ceramic-mug.jpg`. Smaller files help pages load quickly, and good names tell search engines what each picture shows. To process a whole product folder at once, you can [resize images in bulk](tool:resize-image-in-bulk) first.

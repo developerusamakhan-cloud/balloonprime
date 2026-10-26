@@ -27,7 +27,7 @@ function lumipix_customize_register( $wp_customize ) {
 		'lumipix_hero_eyebrow' => array( __( 'Hero badge', 'lumipix' ), __( 'Free · No signup · 100% private', 'lumipix' ) ),
 		'lumipix_hero_title'   => array( __( 'Hero heading (wrap a word in *asterisks* for the serif accent)', 'lumipix' ), __( 'Image tools that *never* upload your photos', 'lumipix' ) ),
 		'lumipix_hero_text'    => array( __( 'Hero text', 'lumipix' ), __( 'Compress to an exact KB size, resize for print or Instagram, convert WebP, PNG and PDF, and remove backgrounds with AI that runs on your device. Fast, free, and private by design.', 'lumipix' ) ),
-		'lumipix_home_title'   => array( __( 'Home SEO title', 'lumipix' ), __( 'Free Image Tools – Compress, Resize & Remove Background', 'lumipix' ) ),
+		'lumipix_home_title'   => array( __( 'Home SEO title', 'lumipix' ), __( 'Free Image Tools: Compress, Resize & Remove Background', 'lumipix' ) ),
 		'lumipix_home_desc'    => array( __( 'Home meta description', 'lumipix' ), __( 'Compress images to an exact KB size, resize in pixels or cm, and remove backgrounds with on-device AI. Free, no signup, and your photos never leave your device.', 'lumipix' ) ),
 	);
 	foreach ( $home as $id => $def ) {

@@ -36,7 +36,7 @@
 			boxEl.className = 'crop-box';
 			boxEl.tabIndex = 0;
 			boxEl.setAttribute('role', 'group');
-			boxEl.setAttribute('aria-label', L.t('cropArea', 'Crop area – drag to move, use arrow keys to nudge'));
+			boxEl.setAttribute('aria-label', L.t('cropArea', 'Crop area: drag to move, use arrow keys to nudge'));
 			boxEl.innerHTML = '<span class="crop-box__grid"></span>' + ['nw', 'ne', 'sw', 'se'].map(function (c) {
 				return '<span class="crop-box__handle crop-box__handle--' + c + '" data-handle="' + c + '"></span>';
 			}).join('');

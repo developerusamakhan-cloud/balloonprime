@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'LUMIPIX_PACK_PUBLISH_NOW', 15 );
 
 /** Bump when the bundled article or page text changes, so Setup refreshes untouched content. */
-define( 'LUMIPIX_PACK_REV', 10 );
+define( 'LUMIPIX_PACK_REV', 11 );
 
 /** Days between scheduled articles. */
 define( 'LUMIPIX_PACK_INTERVAL_DAYS', 2 );
@@ -386,9 +386,10 @@ function lumipix_run_installer() {
  * Create the bundled articles: the first batch is published now, the rest
  * scheduled every LUMIPIX_PACK_INTERVAL_DAYS days at 09:00 site time.
  *
+ * @param bool $refresh_only Only update untouched articles from an older content revision.
  * @return array<int, string> Log lines.
  */
-function lumipix_install_pack_posts() {
+function lumipix_install_pack_posts( $refresh_only = false ) {
 	$log   = array();
 	$items = lumipix_pack_posts();
 	if ( ! $items ) {
@@ -412,6 +413,9 @@ function lumipix_install_pack_posts() {
 			if ( (int) get_post_meta( $post->ID, '_lumipix_pack_rev', true ) < LUMIPIX_PACK_REV ) {
 				$refresh[ $index ] = (int) $post->ID;
 			}
+			continue;
+		}
+		if ( $refresh_only ) {
 			continue;
 		}
 		$parsed = lumipix_md_parse( (string) file_get_contents( $item['file'] ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
@@ -636,6 +640,7 @@ function lumipix_tool_copy_maybe_refresh() {
 		}
 	}
 	lumipix_refresh_tool_pages();
+	lumipix_install_pack_posts( true );
 	foreach ( lumipix_tools() as $key => $tool ) {
 		$page_id = lumipix_tool_page_id( $key );
 		$page    = $page_id ? get_post( $page_id ) : null;

@@ -3,107 +3,99 @@ keywords: convert png to jpg on mac, png to jpg preview, png to jpg macos, batch
 title: How to Convert PNG to JPG on a Mac
 category: Formats & Printing
 tool: png-to-jpg
-seo_title: How to Convert PNG to JPG on Mac – 4 Easy Ways
+seo_title: How to Convert PNG to JPG on Mac: 4 Easy Ways
 seo_desc: Convert PNG to JPG on macOS using Preview, Finder Quick Actions, or a free browser tool for batches. Control quality and file size.
 excerpt: Preview, Finder and a batch-friendly browser method for turning PNGs into JPGs on macOS.
 ---
 
-macOS has excellent built-in tools for converting images, if you know where to look. Here are the quickest ways to convert PNG to JPG on Mac.
+macOS has really good built-in tools for converting images. You just need to know where they're hiding. Here are the quickest ways to convert PNG to JPG on a Mac.
 
 ## Method 1: Preview
 
-1. Open the PNG in **Preview** (double-click it).
+1. Open the PNG in **Preview** by double-clicking it.
 2. Choose **File → Export**.
 3. Set **Format** to **JPEG**.
-4. Drag the **Quality** slider. Preview shows the resulting file size below it.
+4. Drag the **Quality** slider. Preview shows the file size underneath as you go.
 5. Click **Save**.
 
-**Tip:** hold the Option key when opening the Format menu to see more formats.
+**Tip:** hold the Option key when you open the Format menu to see more formats.
 
-## Method 2: Several files with Preview
+## Method 2: Several files in Preview
 
 1. Select all the PNGs in Finder and open them together in Preview.
-2. In the sidebar, select all the thumbnails (Cmd+A).
-3. Choose **File → Export Selected Images**, then click **Options**, set the format to JPEG and choose a folder.
+2. In the sidebar, select all the thumbnails with Cmd+A.
+3. Choose **File → Export Selected Images**, click **Options**, set the format to JPEG and pick a folder.
 
 ## Method 3: Finder Quick Actions
 
-In recent versions of macOS, select one or more images in Finder, right-click, and choose **Quick Actions → Convert Image**. Pick **JPEG** and a size, then click **Convert to JPEG**. The new files appear next to the originals.
+In recent versions of macOS, select one or more images in Finder, right-click, and choose **Quick Actions → Convert Image**. Pick **JPEG** and a size, then click **Convert to JPEG**. The new files appear right next to the originals.
 
 ## Method 4: A browser tool
 
-To convert many files at once and choose the background colour for transparent areas, use the [PNG to JPG converter](tool:png-to-jpg). If you also want to resize or set an exact pixel size, use the [Image Resizer](tool:image-resizer):
+To convert lots of files at once and choose the background colour for transparent areas, [turn PNG to JPG](tool:png-to-jpg) in your browser:
 
-1. Drop up to 20 PNGs.
-2. Set **Save as** to **JPG**. Use the **%** unit at 100 to keep the original size.
-3. Pick a background colour for transparent areas.
-4. Download.
+1. Drop in up to 20 PNGs.
+2. **Convert to** is already set to JPG.
+3. Pick a background colour for any transparent areas.
+4. Download them one by one or as a ZIP.
 
-Nothing is uploaded; the conversion happens in Safari, Chrome or Firefox on your Mac.
+Nothing is uploaded. The conversion happens right there in Safari, Chrome or Firefox on your Mac.
 
-## Transparency and screenshots
+## Screenshots and transparency
 
-Mac screenshots are saved as PNG by default, which is why they can be large. Converting them to JPG saves space, but text can look slightly soft. For screenshots with lots of text, PNG is often the better choice. Our [PNG vs JPG guide](post:png-vs-jpg) explains the trade-off, and the Windows version of this guide is [here](post:how-to-convert-png-to-jpg-on-windows).
+Mac screenshots are saved as PNG by default, which is why they can be so big. Converting them to JPG saves space, but text can look a little soft. For screenshots with a lot of text, PNG is often the better choice. Our [PNG vs JPG guide](post:png-vs-jpg) explains the trade-off.
 
-## Hitting a size limit
+## Saving screenshots as JPG from the start
 
-If the JPG must be under a certain size for a form or email, use the [Image Compressor](tool:compress-image) and type the limit.
-
-## Changing the default screenshot format
-
-If you would rather your Mac saved screenshots as JPG from the start, you can change the default with a Terminal command:
+If you'd rather your Mac saved screenshots as JPG to begin with, you can change the default with a Terminal command:
 
 `defaults write com.apple.screencapture type jpg`
 
-Log out and back in, or restart, for it to take effect. To switch back to PNG, run the same command with `png` instead of `jpg`. Most people keep PNG for crisp text and convert only the screenshots they need to share.
+Log out and back in, or restart, for it to kick in. To switch back to PNG, run the same command with `png` instead of `jpg`. Most people keep PNG for crisp text and only convert the screenshots they want to share.
 
-## Converting HEIC photos at the same time
+## HEIC photos too
 
-iPhone photos synced to a Mac are often HEIC files. Preview and the Finder **Convert Image** quick action can convert HEIC to JPEG in the same way as PNG. The browser method also accepts HEIC in Safari, which can decode it. If you want your iPhone to save JPG in the first place, choose **Settings → Camera → Formats → Most Compatible**.
+iPhone photos synced to a Mac are often HEIC files. Preview and the Finder **Convert Image** quick action turn HEIC into JPEG the same way as PNG. Safari can also read HEIC, so the browser method works for them there too. If you'd like your iPhone to save JPG in the first place, go to **Settings → Camera → Formats → Most Compatible**.
 
-## Controlling quality and file size
+## Quality and file size
 
-In Preview's export window, the **Quality** slider changes the JPG quality and shows the estimated file size. As a guide:
+In Preview's export window, the **Quality** slider changes the JPG quality and shows the estimated file size. As a rough guide:
 
-| Slider position | Typical use |
+| Slider position | Good for |
 |---|---|
-| Best | Archiving, printing |
-| Around three quarters | Sharing, websites |
-| Around half | Email, messaging |
-| Least | Rarely useful; artefacts appear |
+| Best | Keeping and printing |
+| About three quarters | Sharing, websites |
+| About half | Email, messaging |
+| Least | Rarely useful, blocky patches appear |
 
-For an exact target, such as an online form limit, the [Image Compressor](tool:compress-image) is easier because you type the KB value directly.
+For an exact target, like a form's KB limit, the [image compressor](tool:compress-image) is easier, because you just type the number.
 
-## Using Automator or Shortcuts for many files
+## Shortcuts for big batches
 
-If you convert images regularly, the **Shortcuts** app on recent versions of macOS can convert images in bulk. Create a shortcut with the **Convert Image** action, set the format to JPEG, and add it to the Finder's Quick Actions. The Finder method described above does the same without setup, so start there.
+If you convert images a lot, the **Shortcuts** app on recent macOS versions can do it in bulk. Make a shortcut with the **Convert Image** action, set the format to JPEG, and add it to Finder's Quick Actions. The Finder method above does the same with no setup, though, so start there.
 
-## Troubleshooting
+## If something goes wrong
 
-- **Transparent areas turn black or white:** JPG cannot store transparency. If you need a specific background colour, use the [PNG to JPG converter](tool:png-to-jpg) and choose the **Background** colour before converting.
-- **The JPG looks blurry:** the quality slider was too low. Export again at a higher setting.
-- **The file is still large:** the image has a lot of pixels. Reduce the dimensions in **Tools → Adjust Size** before exporting.
+- **Transparent areas turn black or white.** JPG can't store transparency. If you want a particular colour, use the browser converter and pick the **Background** colour first.
+- **The JPG looks blurry.** The quality slider was too low. Export again at a higher setting.
+- **The file is still big.** The image has a lot of pixels. Shrink it in **Tools → Adjust Size** before exporting, or use the [image resizer](tool:image-resizer).
 
-## Mac vs Windows: same result, different menus
+## Keep your originals safe
 
-Whichever computer you use, the conversion is the same: the image is decoded and re-encoded as JPG. If you switch between machines, the Windows steps are in our [PNG to JPG on Windows guide](post:how-to-convert-png-to-jpg-on-windows). For deciding whether to convert at all, see [PNG vs JPG](post:png-vs-jpg), and for strict size limits, read [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
+Preview's **Export** makes a new file and leaves the original alone. In some apps, **Save** after changing the format may replace the original. When in doubt, use Export or work on a copy, so you can always go back to the full quality PNG.
 
-## Keeping originals safe
+On a Windows PC as well? Here's [how to convert PNG to JPG on Windows](post:how-to-convert-png-to-jpg-on-windows). For strict size limits, read [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb). And if you ever need to go the other way, you can [convert JPG to PNG](tool:jpg-to-png) just as easily.
 
-Preview's **Export** creates a new file and leaves the original untouched. **Save** after changing the format in some apps may replace the original. When in doubt, use Export, or work on a copy, so you can always go back to the full-quality PNG.
+## The short version
 
-## Key takeaways
+- **Preview → File → Export → JPEG** converts one image and shows the file size as you adjust quality.
+- **Export Selected Images** in Preview, or Finder's **Convert Image** quick action, does many at once.
+- **HEIC photos** from an iPhone convert to JPG the same way.
+- **Transparency is lost** in JPG. Choose a background colour with a browser tool, or keep the PNG.
+- **Use Export, not Save**, to leave the original untouched.
+- **For an exact KB limit**, use a target size compressor after converting.
 
-- **Preview → File → Export → JPEG** converts a single image and shows the file size as you adjust quality.
-- **Export Selected Images** in Preview, or the Finder **Convert Image** quick action, converts many files at once.
-- **HEIC photos** from an iPhone convert to JPG in the same way.
-- **Transparency is lost** in JPG; choose a background colour with a browser tool, or keep PNG.
-- **Use Export, not Save**, to keep the original untouched.
-- **For an exact KB limit**, use a target-size compressor after converting.
-
-## Which method should you use?
-
-For one image, Preview is quickest. For a folder of images, the Finder quick action saves time. If you also need to resize to an exact size, choose a background colour, or hit a file size for a form, a browser tool does it all in one step and works the same on any Mac.
+For one image, Preview is quickest. For a folder, the Finder quick action saves time. If you also need a set background colour or a file size for a form, a browser tool does it all in one step and works the same on any Mac.
 
 <!-- topup -->
 <!-- expanded -->
@@ -111,7 +103,7 @@ For one image, Preview is quickest. For a folder of images, the Finder quick act
 
 ### How do I change a PNG to JPG on a Mac?
 
-Open it in Preview, choose File → Export, set Format to JPEG and save.
+Open it in Preview, choose File, Export, set Format to JPEG and save.
 
 ### Can I convert many PNGs to JPG at once on a Mac?
 
@@ -119,7 +111,7 @@ Yes. Use Finder's Convert Image quick action, Preview's Export Selected Images, 
 
 ### Why is my JPG blurry after converting?
 
-The quality slider was set low. Export again at a higher quality setting.
+The quality slider was set low. Export again at a higher quality.
 
 ### How do I make my Mac save screenshots as JPG?
 
@@ -127,8 +119,8 @@ Run defaults write com.apple.screencapture type jpg in Terminal, then log out an
 
 ### Can Preview convert HEIC to JPG?
 
-Yes. Open the HEIC photo in Preview, choose File → Export and select JPEG.
+Yes. Open the HEIC photo in Preview, choose File, Export and pick JPEG.
 
 ### Does converting to JPG change the image dimensions?
 
-Not unless you choose to resize. Preview and the Finder quick action keep the original size by default, and the browser tool keeps it when you use 100%.
+Not unless you choose to resize. Preview, the Finder quick action and the browser converter all keep the original size by default.

@@ -8,15 +8,15 @@ seo_desc: Seven practical ways to lower image file size without losing quality: 
 excerpt: Seven practical techniques that make images much smaller while keeping them looking sharp.
 ---
 
-"Without losing quality" is the hard part of making images smaller. Any compression removes some information, but the trick is to remove information nobody will notice. These seven ways to lower image file size, used together, routinely cut file sizes by 80–95% with no visible difference.
+"Without losing quality" is the tricky part of making images smaller. All compression removes some information. The trick is to remove information nobody will ever notice. Use these seven ways to lower image file size together and you can often cut a file down to a small fraction of its size with no visible difference.
 
 ## 1. Match the dimensions to where the image is shown
 
-This is the biggest win. A photo displayed 800 pixels wide on a website does not need to be 4000 pixels wide. Reducing the dimensions to the size actually displayed (or twice that for sharp screens) removes most of the file without any visible change. Use the [Image Resizer](tool:image-resizer).
+This is the biggest win by far. A photo shown 800 pixels wide on a website doesn't need to be 4000 pixels wide. Bring the dimensions down to the size it's actually displayed at, or twice that for sharp screens, and most of the file disappears without any visible change. Use the [image resizer](tool:image-resizer).
 
-## 2. Use sensible JPG quality
+## 2. Use a sensible JPG quality
 
-JPG quality between about 75 and 85 is the sweet spot for most photos: the file is far smaller than at 100, and differences are very hard to spot. Below about 60, blocky artefacts start to appear, especially around edges and in skies.
+A JPG quality of roughly 75 to 85 is the sweet spot for most photos. The file is far smaller than at 100, and the difference is very hard to spot. Below about 60, blocky patches start to show, especially around edges and in skies.
 
 ## 3. Pick the right format
 
@@ -24,94 +24,92 @@ JPG quality between about 75 and 85 is the sweet spot for most photos: the file 
 - **Logos, screenshots, flat graphics:** PNG
 - **Websites that support it:** WebP or AVIF for both
 
-A photo saved as PNG can easily be ten times the size of the same photo as JPG. Our [PNG vs JPG guide](post:png-vs-jpg) explains when to use each.
+A photo saved as PNG can easily be ten times the size of the same photo as JPG. Our [PNG vs JPG guide](post:png-vs-jpg) explains when to use which.
 
-## 4. Crop away what you do not need
+## 4. Crop out what you don't need
 
-Empty sky, walls and floor still cost bytes. Cropping tightly around the subject reduces the pixel count and lets the remaining detail get more of the file budget.
+Empty sky, walls and floor still cost bytes. Crop tight around the subject and you cut the pixel count, so the detail that's left gets more of the file.
 
 ## 5. Let a tool find the quality for you
 
-Instead of guessing a quality number, tell the tool the file size you need. The [Image Compressor](tool:compress-image) searches for the highest quality that fits your limit and only reduces dimensions when it must. That gives you the best possible image for the size.
+Instead of guessing a quality number, tell the tool the size you need. The [image compressor](tool:compress-image) looks for the highest quality that fits your limit and only shrinks the dimensions when it has to. That gives you the best possible image for the size.
 
-## 6. Avoid re-compressing compressed images
+## 6. Don't compress compressed images again
 
-Every time a JPG is opened and saved again, more detail is lost. Images sent through messaging apps are already heavily compressed. Always go back to the original file when you can.
+Every time a JPG is opened and saved again, a bit more detail goes. Images sent through chat apps are already heavily compressed. Go back to the original whenever you can.
 
-## 7. Remove what you cannot see
+## 7. Strip out what you can't see
 
-Photos carry hidden data such as camera details, location and sometimes a thumbnail preview. Re-saving an image through a browser-based tool like Lumi Pix produces a clean file without that extra baggage, which also helps privacy.
+Photos carry hidden data like camera details, location and sometimes a thumbnail preview. Saving the image again through a browser tool like Lumi Pix gives you a clean file without that extra baggage, which is also good for privacy.
 
 ## How much smaller can you expect?
 
 | Starting point | After resizing and compressing |
 |---|---|
-| 4MB phone photo for a website | 150–300KB |
-| 3MB photo for an email | 300KB–1MB |
-| 5MB photo for a form | 50–100KB |
+| A 4MB phone photo for a website | 150 to 300KB |
+| A 3MB photo for an email | 300KB to 1MB |
+| A 5MB photo for a form | 50 to 100KB |
 
-Results vary with the content of the image. Fine textures such as grass and gravel need more bytes than smooth skin and skies.
+It depends on what's in the image. Fine textures like grass and gravel need more bytes than smooth skin and skies.
 
-## A quick workflow
+## A quick routine
 
 1. Crop to the subject.
-2. Resize to the display size with the [Image Resizer](tool:image-resizer).
-3. Compress to your target with the [Image Compressor](tool:compress-image), or use a preset such as [compress to 200KB](tool:compress-image-to-200kb).
-4. Compare the result at 100% zoom with the original.
+2. Resize to the display size.
+3. Compress to your target, or use a preset like [compress image to 200KB](tool:compress-image-to-200kb).
+4. Compare the result with the original at 100% zoom.
 
-For quick answers about specific sizes, see [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
+## Where the savings come from
 
-## A before-and-after example
+Here's roughly what happens to a phone photo going onto a blog, step by step:
 
-Here is a typical workflow applied to a phone photo for a blog post:
-
-| Step | Dimensions | File size |
+| Step | What changes | Effect on file size |
 |---|---|---|
-| Original from phone | 4032 × 3024 | 3.6MB |
-| Cropped to the subject | 3200 × 2400 | 2.6MB |
-| Resized for the blog | 1480 × 1110 | 640KB |
-| Compressed to a target | 1480 × 1110 | 180KB |
+| The original from your phone | Around 4000 x 3000 pixels | Usually a few MB |
+| Cropped to the subject | Fewer pixels | A bit smaller |
+| Resized for the blog, about 1500 px wide | Far fewer pixels | Much smaller, often under 1MB |
+| Compressed to a target | Same pixels, tuned quality | A few hundred KB or less |
 
-The final image is about 5% of the original size and looks the same in the article. Most of the saving came from resizing, which is why it should always be the first step.
+Most of the saving comes from resizing, which is why it should always be the first step.
 
-## Lowering file size for specific platforms
+## Platform by platform
 
-**WordPress and other websites.** Upload images at a sensible width (1200–2000 pixels) instead of straight from the camera. Many image plugins can also serve WebP versions automatically.
+**WordPress and other websites.** Upload images at a sensible width, 1200 to 2000 pixels, instead of straight from the camera. You can also [convert PNG to WebP](tool:png-to-webp) for lighter pages.
 
-**Email.** Bring photos under 1MB each with [compress to 1MB](tool:compress-image-to-1mb) so messages send quickly and do not fill the recipient's inbox.
+**Email.** [Compress image to 1MB](tool:compress-image-to-1mb) per photo so messages send quickly and don't fill up the other person's inbox.
 
-**Online forms.** Use the exact KB limit with the [Image Compressor](tool:compress-image). Our [50KB guide](post:how-to-compress-image-to-50kb) explains the process in detail.
+**Online forms.** Use the exact KB limit in the image compressor. Our [50KB guide](post:how-to-compress-image-to-50kb) explains the process in detail.
 
-**Messaging apps.** Apps compress images anyway. Sending a pre-compressed image avoids a second round of heavy compression and often looks better.
+**Chat apps.** They compress images anyway. Sending one that's already compressed avoids a second heavy round and often looks better.
 
 ## What not to do
 
-- **Do not use a very low quality on a large image.** Shrink the dimensions instead.
-- **Do not save photos as PNG** to make them "better"; it makes them much bigger.
-- **Do not compress screenshots of text as JPG at low quality.** Text becomes fuzzy; use PNG or a higher quality.
-- **Do not delete your originals.** Compression is permanent; keep the full-size files for printing.
+- **Don't use a very low quality on a big image.** Shrink the dimensions instead.
+- **Don't save photos as PNG** to make them "better". It just makes them much bigger.
+- **Don't save screenshots of text as low quality JPGs.** The text goes fuzzy. Use PNG or a higher quality.
+- **Don't delete your originals.** Compression is permanent, so keep the full-size files for printing.
 
-## Checking quality properly
+## Checking the quality properly
 
 Compare the original and the compressed version side by side at 100% zoom, not zoomed out. Look at:
 
-- **Skies and smooth gradients**, where banding appears first.
-- **Edges and text**, where blocky artefacts show up.
-- **Faces and skin**, where over-compression looks waxy.
+- **Skies and smooth gradients**, where banding shows up first.
+- **Edges and text**, where blocky bits appear.
+- **Faces and skin**, where too much compression looks waxy.
 
-If everything looks right at the size the image will be displayed, the compression is good.
+If it all looks right at the size the image will be shown, you're good.
 
-## Batch processing a folder
+## Doing a whole folder
 
-When you have many images, the same settings can be applied to all of them at once. Drop up to 20 images into the [Image Resizer](tool:image-resizer) to reduce dimensions, download them, and then drop the results into the compressor with your target size. Both tools work in your browser, so even a folder of private photos never leaves your device. For format choices along the way, see [PNG vs JPG](post:png-vs-jpg).
+When you've got lots of images, apply the same settings to all of them at once. You can [resize images in bulk](tool:resize-image-in-bulk), up to 20 at a time, download them, then drop the results into the compressor with your target size. Both tools run in your browser, so even a folder of private photos stays on your device. Want the theory behind it all? Read [image compression explained](post:image-compression-explained).
 
-## Key takeaways
+## The short version
 
-- **Resize first:** matching the dimensions to where the image is shown gives the biggest saving.
-- **Use quality 75–85** for photos, or let a target-size compressor choose for you.
+- **Resize first.** Matching the dimensions to where the image is shown gives the biggest saving.
+- **Use quality 75 to 85** for photos, or let a target size compressor choose.
 - **Pick the right format:** JPG or WebP for photos, PNG for graphics.
-- **Crop away empty space** and avoid re-compressing already compressed images.
-- **Keep your originals** for printing; compression is permanent.
+- **Crop away empty space**, and don't compress already compressed images.
+- **Keep your originals** for printing. Compression is permanent.
 
 <!-- topup -->
 <!-- expanded -->
@@ -119,15 +117,15 @@ When you have many images, the same settings can be applied to all of them at on
 
 ### Can I reduce file size without any quality loss at all?
 
-Lossless optimisation of PNG files can save some space with zero change, but for big savings you need lossy compression. At sensible settings, the difference is invisible to the eye.
+Lossless optimisation of PNG files can save a little with zero change, but for big savings you need lossy compression. At sensible settings, you won't see the difference.
 
 ### What JPG quality should I use?
 
-Around 75–85 for photos is a good balance. Use a target-size compressor if you have a specific limit.
+Around 75 to 85 for photos is a good balance. If you have a specific limit, use a target size compressor.
 
 ### Why are photos from my phone so large?
 
-Phone cameras capture 12 megapixels or more at high quality. That is great for printing but far more than websites, emails and forms need.
+Phone cameras capture 12 megapixels or more at high quality. Great for printing, but far more than websites, emails and forms need.
 
 ### What is the fastest way to reduce file size?
 

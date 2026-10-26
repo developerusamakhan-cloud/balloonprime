@@ -11,7 +11,7 @@ get_header();
 
 if ( is_home() ) {
 	$heading = get_the_title( (int) get_option( 'page_for_posts' ) );
-	$lead    = __( 'Short, practical guides for everyday image tasks – and the free tools to finish them.', 'lumipix' );
+	$lead    = __( 'Short, practical guides for everyday image tasks, and the free tools to finish them.', 'lumipix' );
 } elseif ( is_search() ) {
 	/* translators: %s: search query */
 	$heading = sprintf( __( 'Results for “%s”', 'lumipix' ), get_search_query() );

@@ -8,27 +8,27 @@ seo_desc: How image compression works, the difference between lossy and lossless
 excerpt: What actually happens when an image is compressed, and why some methods lose quality while others do not.
 ---
 
-Every image you see online has been compressed. Without compression, a single phone photo would take around 36MB, and web pages would load painfully slowly. This guide explains, without the maths, how image compression works and how to use it well.
+Every image you see online has been compressed. Without it, a single phone photo would be around 36MB and web pages would crawl. This is image compression explained without the maths: how it works, and how to use it well.
 
 ## Why images need compressing
 
-A photo is a grid of pixels, and each pixel stores colour information, typically three bytes. A 12-megapixel photo therefore needs about 36 million bytes in raw form. Compression finds ways to store the same picture in far fewer bytes.
+A photo is a grid of pixels, and each pixel stores colour information, usually three bytes. So a 12 megapixel photo needs about 36 million bytes in its raw form. Compression finds clever ways to store the same picture in far fewer bytes.
 
 ## Lossless compression
 
-Lossless compression shrinks the file **without changing a single pixel**. It works by spotting patterns. If a row has 500 identical white pixels, it is more efficient to store "500 × white" than to list each one.
+Lossless compression makes the file smaller **without changing a single pixel**. It works by spotting patterns. If a row has 500 identical white pixels, it's much cheaper to store "500 x white" than to list each one.
 
-PNG uses lossless compression. It works brilliantly for logos, diagrams and screenshots with large flat areas, but not for photos, where neighbouring pixels are rarely identical.
+PNG uses lossless compression. It's brilliant for logos, diagrams and screenshots with big flat areas, but not for photos, where neighbouring pixels are rarely identical.
 
 ## Lossy compression
 
-Lossy compression achieves much bigger savings by **discarding information people are unlikely to notice**. JPG, for example:
+Lossy compression makes much bigger savings by **throwing away information you're unlikely to notice**. JPG, for example:
 
-1. separates brightness from colour, because our eyes are more sensitive to brightness detail;
-2. stores colour at lower resolution;
-3. splits the image into small blocks and simplifies fine detail within each block.
+1. separates brightness from colour, because your eyes are more sensitive to brightness detail
+2. stores the colour at a lower resolution
+3. splits the image into small blocks and simplifies the fine detail inside each one
 
-The **quality setting** controls how aggressively detail is simplified. At high quality the changes are invisible. At very low quality, the blocks become visible as "artefacts": blocky skies, smudged edges and halos around text.
+The **quality setting** controls how hard that simplifying goes. At high quality you can't see the changes. At very low quality the blocks start showing: blocky skies, smudged edges and halos around text.
 
 ## Lossy vs lossless at a glance
 
@@ -37,80 +37,80 @@ The **quality setting** controls how aggressively detail is simplified. At high 
 | Changes pixels? | No | Yes, slightly |
 | Typical savings for photos | Small | Very large |
 | Formats | PNG, lossless WebP | JPG, lossy WebP, AVIF |
-| Best for | Graphics, text, editing | Photos for web, email, forms |
+| Best for | Graphics, text, editing | Photos for the web, email, forms |
 
-## Why re-saving JPGs makes them worse
+## Why saving a JPG again makes it worse
 
-Each time a JPG is decoded and saved again, the lossy steps run again and a little more detail is lost. After many rounds, images become visibly degraded. That is why you should always compress from the original file, and why images forwarded through messaging apps look worse over time.
+Every time a JPG is opened and saved again, the lossy steps run again and a little more detail goes. After many rounds, the image looks noticeably worse. That's why you should always compress from the original, and why photos forwarded through chat apps look worse and worse over time.
 
 ## Resolution vs compression
 
 Two different things make a file smaller:
 
-- **Fewer pixels** (resizing), and
+- **fewer pixels** (resizing), and
 - **fewer bytes per pixel** (compression).
 
-For a strict limit, the best result usually comes from a combination: a sensible pixel size plus moderate compression. That is exactly what the [Image Compressor](tool:compress-image) does when you give it a target such as [50KB](tool:compress-image-to-50kb). For practical tips, see [how to lower image file size without losing quality](post:how-to-lower-image-file-size).
+For a strict limit, the best result nearly always comes from both: a sensible pixel size plus moderate compression. That's exactly what the [image compressor](tool:compress-image) does when you give it a target like [compress image to 50KB](tool:compress-image-to-50kb). For practical tips, see [how to lower image file size without losing quality](post:how-to-lower-image-file-size).
 
-## Newer formats
+## What's in the picture changes everything
 
-WebP and AVIF use more advanced techniques to get smaller files at the same visual quality and support both lossy and lossless modes. Our [WebP vs JPG guide](post:webp-vs-jpg) explains when to use them.
-
-## How file size relates to what is in the picture
-
-Compression works by finding patterns and removing detail the eye will not miss. That means the content of an image strongly affects its final size:
+Compression works by finding patterns and removing detail your eye won't miss. So what's in an image has a big effect on its final size:
 
 | Image content | Compresses | Why |
 |---|---|---|
-| Clear sky, plain wall, studio background | Very well | Large smooth areas |
-| Portrait with soft background | Well | Smooth skin and blur |
-| City street, foliage, gravel | Poorly | Fine detail everywhere |
-| Screenshot with flat colours | Very well as PNG | Repeated identical pixels |
-| Photo noise from low light | Poorly | Random detail is hard to compress |
+| Clear sky, plain wall, studio background | Very well | Big smooth areas |
+| Portrait with a soft background | Well | Smooth skin and blur |
+| Busy street, leaves, gravel | Poorly | Fine detail everywhere |
+| Screenshot with flat colours | Very well as PNG | Lots of identical pixels |
+| Grainy low light photo | Poorly | Random detail is hard to compress |
 
-This is why two photos with the same dimensions can produce very different file sizes, and why a plain background helps when you need to hit a strict limit.
+That's why two photos with the same dimensions can end up very different sizes, and why a plain background helps when you're trying to hit a strict limit.
 
-## Chroma subsampling in plain English
+## Chroma subsampling, in plain English
 
-One trick JPG uses is called chroma subsampling. The eye notices changes in brightness far more than changes in colour, so JPG stores colour at a lower resolution than brightness. For photos this is invisible. For images with thin coloured lines or red text on blue, it can cause slight colour fringing, which is another reason to save graphics as PNG.
+One trick JPG uses is called chroma subsampling. Your eye notices changes in brightness far more than changes in colour, so JPG stores colour at a lower resolution than brightness. In photos you'll never see it. In images with thin coloured lines, or red text on blue, it can cause slight colour fringing. That's another reason to save graphics as PNG.
 
-## Compression artefacts and how to spot them
+## Spotting compression problems
 
-- **Blocking:** visible 8×8 squares in smooth areas such as skies.
-- **Ringing:** halos around sharp edges and text.
-- **Banding:** smooth gradients turning into visible steps.
-- **Smearing:** fine textures such as hair or grass becoming mushy.
+- **Blocking.** Visible 8 x 8 squares in smooth areas like skies.
+- **Ringing.** Halos around sharp edges and text.
+- **Banding.** Smooth gradients turning into visible steps.
+- **Smearing.** Fine textures like hair or grass going mushy.
 
-If you see these at normal viewing size, the image has been compressed too hard. The fix is usually to reduce the dimensions a little and use a higher quality.
+If you see these at normal viewing size, the image has been squeezed too hard. The fix is usually to make it a little smaller in pixels and use a higher quality.
 
-## How a target-size compressor works
+## How a target size compressor works
 
-When you ask the [Image Compressor](tool:compress-image) for, say, 100KB, it does not simply pick a quality number. It:
+When you ask the image compressor for, say, 100KB, it doesn't just pick a quality number. It:
 
-1. tries a high quality first and checks the size;
-2. if the file is too large, searches for the highest quality that fits;
-3. if that quality would be too low, reduces the dimensions slightly and searches again.
+1. tries a high quality first and checks the size
+2. if the file's too big, searches for the highest quality that fits
+3. if that quality would be too low, shrinks the dimensions slightly and searches again
 
-This is the same process an expert would follow by hand, done in a second. The presets, such as [compress to 50KB](tool:compress-image-to-50kb) and [compress to 200KB](tool:compress-image-to-200kb), run the same logic with the target already set.
+It's the same process an expert would follow by hand, done in about a second. The ready-made pages, like [compress image to 200KB](tool:compress-image-to-200kb), run the same logic with the target already set.
 
 ## Compression in everyday apps
 
-Many apps compress images without asking. Messaging apps reduce photos to save data, social networks recompress uploads, and some cloud services offer "storage saver" modes. This is why a photo forwarded several times looks worse each time. When quality matters, share the original file as a document, or compress it yourself once to a sensible size before sending.
+Lots of apps compress images without asking. Chat apps shrink photos to save data, social networks recompress uploads, and some cloud services have "storage saver" modes. That's why a photo forwarded several times looks worse each time. When quality matters, send the original as a document, or compress it yourself once to a sensible size before sending.
+
+## Newer formats
+
+WebP and AVIF use more advanced techniques to get smaller files at the same quality, and they support both lossy and lossless modes. Our [WebP vs JPG guide](post:webp-vs-jpg) explains when to use them, and you can [convert PNG to WebP](tool:png-to-webp) when you want lighter images on a website.
 
 ## Choosing the right approach
 
-- **For a strict upload limit:** use a target-size compressor.
-- **For a website:** resize to the displayed width, then compress to around 100–300KB, or use WebP. See [WebP vs JPG](post:webp-vs-jpg).
-- **For archiving:** keep the originals untouched.
+- **For a strict upload limit:** use a target size compressor.
+- **For a website:** resize to the width it's shown at, then compress to around 100 to 300KB, or use WebP.
+- **For keeping:** leave the originals untouched.
 - **For graphics and screenshots:** use PNG, which is lossless. See [PNG vs JPG](post:png-vs-jpg).
 
-Understanding the trade-off between pixels and quality lets you make smaller files that still look great, which is the whole point of compression.
+Once you understand the trade-off between pixels and quality, you can make small files that still look great. And that's really the whole point.
 
-## Key takeaways
+## The short version
 
-- **Lossless** keeps every pixel; **lossy** removes detail you are unlikely to see.
-- **Fewer pixels plus moderate quality** beats many pixels at very low quality.
-- **Avoid re-saving JPGs repeatedly**; always start from the original.
+- **Lossless** keeps every pixel. **Lossy** removes detail you're unlikely to see.
+- **Fewer pixels at moderate quality** beats lots of pixels at very low quality.
+- **Don't keep saving JPGs over and over.** Always start from the original.
 
 <!-- topup -->
 <!-- expanded -->
@@ -118,20 +118,20 @@ Understanding the trade-off between pixels and quality lets you make smaller fil
 
 ### Does compressing an image reduce its quality?
 
-Lossless compression does not. Lossy compression removes some detail, but at sensible settings the difference is not visible.
+Lossless compression doesn't. Lossy compression removes some detail, but at sensible settings you won't see the difference.
 
 ### Which is better, lossy or lossless?
 
-Lossy for photos where small files matter. Lossless for graphics, text and images you will edit further.
+Lossy for photos where small files matter. Lossless for graphics, text and images you'll edit further.
 
 ### Why does my compressed image look blocky?
 
-The quality setting was too low for the image's size. Reduce the dimensions a little so a higher quality fits the same file size.
+The quality was too low for the image's size. Make it a little smaller in pixels so a higher quality fits in the same file size.
 
 ### Why do some photos compress much smaller than others?
 
-Smooth areas such as skies and plain walls compress very well, while detailed textures such as leaves or gravel need many more bytes.
+Smooth areas like skies and plain walls compress really well, while detailed textures like leaves or gravel need far more bytes.
 
 ### Does sending photos on messaging apps reduce their quality?
 
-Usually yes. Many apps compress photos to save data. Send the original as a document if quality matters.
+Usually, yes. Many apps compress photos to save data. Send the original as a document if quality matters.

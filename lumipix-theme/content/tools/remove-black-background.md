@@ -3,94 +3,85 @@ keywords: remove black background from image, remove black background, make blac
 seo_desc: Remove black background from image files such as logos, icons, light effects and screenshots in one click. Transparent PNG, free and private.
 ---
 
-Use this tool to remove black background from image files such as logos, icons and light effects, and download a transparent PNG.
+Logos, neon glows, sparks, fireworks and plenty of icons come on a solid black background, and that black gets in the way the moment you put them on a website or a slide. Drop the file here to remove the black background from the image in one click. You get a transparent PNG with smooth edges, and nothing is uploaded.
 
 ## Make black transparent in one click
 
-Logos, icons, neon effects, light leaks, fireworks, stars and many screenshots come on a solid black background. To place them on a website, a slide or a design, you need that black to be transparent. This tool removes black, or any dark solid colour, instantly and keeps the edges smooth. It runs in your browser, so your image never leaves your device.
+The tool removes black, or any dark solid colour, instantly and keeps the edges soft. It works on your own device, so it's quick even with large files.
 
-## How to use it
+## How to remove a black background
 
-1. **Drop your image.** Black areas turn transparent immediately.
-2. **Check the preview.** The checkerboard on the right shows transparency.
-3. **Adjust Tolerance** if dark grey areas remain.
+1. **Drop your image.** Black areas turn transparent straight away.
+2. **Check the preview.** The checkerboard on the right shows what's transparent.
+3. **Raise Tolerance** if dark grey patches are left.
 4. **Adjust Edge softness** for smooth, natural edges.
 5. **Download as PNG** (or WebP) to keep the transparency.
 
-To remove a different dark colour, such as navy or charcoal, click **Pick from image** and then click on the background.
+Want to remove a different dark colour, like navy or charcoal? Click **Pick from image** and then click the background.
 
-## Best uses
+## What it works well on
 
 | Image | Why it works |
 |---|---|
-| Logo or icon on black | Flat background, clean edges |
-| Neon, glow and light effects | Edge softness keeps the glow natural |
-| Fireworks, stars, sparks | Bright subjects on dark backgrounds |
-| White text on black | Text stays, black disappears |
-| Dark-mode screenshots | Remove a solid dark panel |
+| A logo or icon on black | Flat background, clean edges |
+| Neon, glow and light effects | Edge softness keeps the glow looking natural |
+| Fireworks, stars and sparks | Bright subjects on a dark background |
+| White text on black | The text stays and the black goes |
+| Dark mode screenshots | Takes out a solid dark panel |
 
-## Glow and light effects
+## Glows and light effects
 
-Effects such as glows, lens flares and smoke are bright on black, with soft fading edges. The edge softness setting turns the dark parts of those soft edges partly transparent, so the effect blends naturally when you place it on a new background. For strong glows, raise **Edge softness** and keep **Tolerance** low.
+Glows, lens flares and smoke are bright on black with soft, fading edges. Edge softness turns the dark parts of those edges partly transparent, so the effect blends in when you put it on a new background. For strong glows, raise **Edge softness** and keep **Tolerance** low.
 
-## Understanding the sliders
+## The sliders
 
-- **Tolerance** decides how close to black a pixel must be to disappear. Raise it if dark grey patches remain; lower it if dark parts of your design start to vanish.
-- **Edge softness** controls how gradually pixels fade near the threshold. Raise it for smoother edges; lower it for crisper ones.
+- **Tolerance** decides how close to black a pixel has to be before it disappears. Raise it if dark grey patches are left. Lower it if dark parts of your design start vanishing.
+- **Edge softness** controls how gradually pixels fade near the edge. Raise it for smoother edges, lower it for crisper ones.
 
-Make small adjustments while watching the preview.
+Small changes while you watch the preview work best.
 
-## When the design contains black
+## When the design has black in it
 
-If your logo has black elements, such as black text inside a coloured shape, they may be removed along with the background. Lower the tolerance carefully, or use the AI [Background Remover](tool:background-remover), which detects objects instead of colours. The cleanest option is always to export the logo with a transparent background from the original design file.
+If your logo has black parts, like black text inside a coloured shape, they may go along with the background. Lower the tolerance carefully, or [remove background for free online](tool:background-remover) with the AI tool, which looks for objects instead of colours. The cleanest option is always to export the logo with a transparent background from the original design file.
 
 ## Black or white background?
 
-Use this tool for dark backgrounds and the [white background remover](tool:remove-white-background) for paper, scans and logos on white. Both use the same colour-key method with soft edges and no halo. For photos with busy backgrounds, use AI instead. Our guide on [how to remove the background from an image](post:how-to-remove-background-from-image) compares the methods.
+Use this page for dark backgrounds, and the tool to [remove white background from image](tool:remove-white-background) files for paper, scans and logos on white. Both use the same colour method with soft edges and no halo. For photos with busy backgrounds, use AI instead. Our guide on [how to remove the background from an image](post:how-to-remove-background-from-image) compares the options.
 
 ## Formats
 
-**PNG** keeps transparency everywhere. **WebP** also supports transparency with smaller files for websites. JPG cannot store transparency, so it is not offered here. To resize the result, use the [Image Resizer](tool:image-resizer) and choose PNG under **Save as**.
+**PNG** keeps transparency everywhere. **WebP** supports transparency too, with smaller files for websites. JPG can't store transparency, so it isn't offered. To resize the result, use the [image resizer](tool:image-resizer) and choose PNG under **Save as**.
 
-## Testing the result
+## Test it on different backgrounds
 
-Place the PNG on a white page, a coloured slide and a dark background. Any leftover dark fringe will be obvious on white. If you see one, raise the tolerance slightly or increase edge softness, then download again.
+Put the PNG on a white page, a coloured slide and a dark background. Any leftover dark fringe shows up clearly on white. If you see one, raise the tolerance a little or add edge softness, then download again.
 
-## Private and instant
-
-Everything happens on your device, with no upload and no waiting for a server. There is no account or watermark, and it works on Windows, Mac, Android and iPhone.
-
-## Related
-
-- [White background photo](tool:white-background-photo) to put a subject on a clean background
-- [PNG vs JPG](post:png-vs-jpg) for choosing the right format
+No upload, no account and no watermark, on Windows, Mac, Android and iPhone.
 
 <!-- more -->
-## Black background vs AI removal
+## Colour removal or AI?
 
 | Image | Best tool |
 |---|---|
-| Logo or icon on solid black | This tool |
-| Glow, fire or light effect on black | This tool, with higher edge softness |
-| Person or product photographed in a dark room | AI [Background Remover](tool:background-remover) |
-| Text on a black slide | This tool |
+| A logo or icon on solid black | This page |
+| A glow, fire or light effect on black | This page, with more edge softness |
+| A person or product photographed in a dark room | The AI background remover |
+| Text on a black slide | This page |
 
-Colour removal is instant and exact for solid backgrounds. AI is better when the background is a real scene rather than a flat colour.
+Colour removal is instant and exact for solid backgrounds. AI does better when the background is a real scene.
 
-## Step by step for a logo on black
+## A logo on black, step by step
 
-1. Start from the largest version of the logo.
-2. Drop it here; black turns transparent immediately.
-3. Check that dark parts of the logo are still visible; lower the tolerance if they fade.
-4. Raise edge softness slightly if the outline looks jagged.
-5. Download as PNG and test it on a white background.
+1. Start from the biggest version of the logo.
+2. Drop it here. The black turns transparent straight away.
+3. Check that the dark parts of the logo are still there, and lower the tolerance if they fade.
+4. Add a little edge softness if the outline looks jagged.
+5. Download as PNG and test it on white.
 
-## Step by step for a glow effect
+## A glow effect, step by step
 
-1. Drop the effect image (fire, sparks, neon or light leak on black).
-2. Keep the tolerance low and raise **Edge softness**, so the soft glow fades gradually.
+1. Drop the effect image, like fire, sparks, neon or a light leak on black.
+2. Keep the tolerance low and raise **Edge softness** so the glow fades gradually.
 3. Download as PNG and place it over your photo or design.
 
-## Keep the original
-
-Save the original image alongside the transparent PNG. If you later need a different tolerance or softness, for example for a lighter or darker new background, you can process the original again in seconds instead of working from an already edited copy.
+Keep the original next to the transparent PNG. If you need a different setting later, say for a lighter or darker background, you can run the original again in seconds. For format questions, see [PNG vs JPG](post:png-vs-jpg).

@@ -1,6 +1,6 @@
 ---
 keywords: cookie policy, lumi pix cookies, cookie consent, analytics cookies, manage cookies
-seo_title: Cookie Policy – How Lumi Pix Uses Cookies
+seo_title: Cookie Policy: How Lumi Pix Uses Cookies
 seo_desc: Our cookie policy explains which cookies Lumi Pix uses, why, and how you can change your choice at any time.
 ---
 

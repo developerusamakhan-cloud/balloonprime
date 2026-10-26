@@ -26,7 +26,7 @@ $steps = array(
 	'convert'  => array( __( 'Drop up to 20 images', 'lumipix' ), __( 'Pick the format and quality', 'lumipix' ), __( 'Download one by one or as a ZIP', 'lumipix' ) ),
 	'pdf'      => array( __( 'Drop your images', 'lumipix' ), __( 'Drag them into the right order', 'lumipix' ), __( 'Click Create PDF', 'lumipix' ) ),
 	'favicon'  => array( __( 'Drop a logo or type a letter', 'lumipix' ), __( 'Choose shape, colours and padding', 'lumipix' ), __( 'Download the favicon package', 'lumipix' ) ),
-	'dpi'      => array( __( 'Drop JPG or PNG images', 'lumipix' ), __( 'Choose the DPI you need', 'lumipix' ), __( 'Download – pixels untouched', 'lumipix' ) ),
+	'dpi'      => array( __( 'Drop JPG or PNG images', 'lumipix' ), __( 'Choose the DPI you need', 'lumipix' ), __( 'Download: pixels untouched', 'lumipix' ) ),
 	'crop'     => array( __( 'Drop an image', 'lumipix' ), __( 'Drag the box or pick a ratio', 'lumipix' ), __( 'Download at full resolution', 'lumipix' ) ),
 );
 if ( 'dpi' === $tool['app'] && 'check' === ( $tool['config']['mode'] ?? '' ) ) {

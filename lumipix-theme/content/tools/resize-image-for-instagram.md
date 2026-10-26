@@ -3,88 +3,80 @@ keywords: resize photo for instagram, resize image for ig, how to resize photo i
 seo_desc: Resize photo for Instagram posts (1080×1080), portraits (1080×1350) and stories (1080×1920) without cropping important parts. Free and private.
 ---
 
-Use this tool to resize photo for Instagram posts, portraits and stories without cutting off what matters.
+Ever posted a photo and watched Instagram chop off someone's head? It crops anything that doesn't match its shapes, and it softens what it doesn't like. Here you can resize a photo for Instagram before you post, so it fits exactly. Fill the frame, or keep the whole picture with a background colour. Your photos stay on your phone.
 
 ## Instagram sizes in one tap
 
-Instagram crops and recompresses every image you upload. If your photo does not match the shapes it expects, it cuts off edges or softens details. This tool resizes photos to the exact sizes Instagram uses, with a choice of filling the frame or keeping the whole picture with a background colour. It runs in your browser, so your photos stay on your device.
-
-## The presets
-
 | Preset | Size | Shape | Use |
 |---|---|---|---|
-| Instagram post | 1080 × 1080 | 1:1 | Classic square posts, graphics |
-| Instagram portrait | 1080 × 1350 | 4:5 | Photos; largest space in the feed |
-| Story | 1080 × 1920 | 9:16 | Stories, reel covers |
-| Landscape | 1080 × 566 | 1.91:1 | Wide scenery |
+| Instagram post | 1080 x 1080 | 1:1 | Classic square posts and graphics |
+| Instagram portrait | 1080 x 1350 | 4:5 | Photos. Takes up the most room in the feed |
+| Story | 1080 x 1920 | 9:16 | Stories and reel covers |
+| Landscape | 1080 x 566 | 1.91:1 | Wide scenery |
 
-## How to use it
+## How to resize a photo for Instagram
 
-1. **Drop one or more photos.** Carousels and weekly batches of up to 20 are fine.
-2. **Tap a preset**, usually **Instagram portrait 1080×1350**.
-3. **Choose a fit mode:** **Fit – add background** keeps the whole photo and adds bars in a colour you choose, while **Fill – crop edges** fills the frame and trims the edges from the centre.
-4. **Download** one at a time or click **Download all**.
+1. **Drop one or more photos.** A carousel or a week's worth, up to 20, is fine.
+2. **Tap a preset.** For most photos that's **Instagram portrait 1080 x 1350**.
+3. **Choose a fit mode.** **Fit** keeps the whole photo and adds bars in a colour you pick. **Fill** covers the frame and trims the edges from the centre.
+4. **Download** one at a time or tap **Download all**.
 
-## Posting a full photo without cropping
+## Posting the whole photo without cropping
 
-Instagram does not allow very tall or very wide images, so it crops them. To show the whole photo, choose **Fit** and pick a background colour: white for a clean gallery look, black for a cinematic feel, or a brand colour for consistency. This is especially useful for products, screenshots, group photos and artwork where nothing should be cut off.
+Instagram won't show very tall or very wide images, so it crops them. To keep everything in, choose **Fit** and pick a background colour. White looks clean, black looks cinematic, and a brand colour keeps your feed consistent. It's perfect for products, screenshots, group photos and artwork where nothing should be cut.
 
 ## Carousels
 
-In a carousel, every slide uses the shape of the first one. Resize all the images with the same preset before posting, so no slide is cropped unexpectedly. Drop them all together, choose the preset and fit mode, and use **Download all**.
+Every slide in a carousel takes the shape of the first one. Resize them all with the same preset before you post, so nothing gets cropped by surprise. Drop them in together, choose the preset and fit mode, and use **Download all**.
 
-## Stories and reels safe zones
+## Safe zones in stories and reels
 
-Stories and reels show your name and buttons on top of the image. Keep text and faces away from the top and bottom of the 1080×1920 frame, and away from the right edge on reels, where the like and share buttons sit. When resizing a landscape photo for a story, **Fit** with a coloured background often looks better than cropping.
+Stories and reels put your name and buttons over the picture. Keep text and faces away from the top and bottom of the 1080 x 1920 frame, and away from the right edge on reels, where the like and share buttons sit. For a landscape photo in a story, **Fit** with a coloured background usually looks better than cropping.
 
 ## Why 1080 pixels?
 
-Instagram displays feed images at a width of 1080 pixels. Uploading much larger files does not make them sharper; Instagram scales them down and compresses them more. Uploading at exactly 1080 wide gives Instagram a clean starting point and usually results in sharper posts.
+Instagram shows feed images at 1080 pixels wide. Uploading something much bigger doesn't make it sharper. Instagram just shrinks it and compresses it harder. Give it exactly 1080 wide and it has a clean starting point, which usually means a sharper post.
 
 ## Profile pictures
 
-Your profile picture is shown in a small circle. Use a square image of at least 320×320 pixels with your face centred. For a clean background behind you, use the [Background Remover](tool:background-remover) first and choose a solid colour, then resize here with the square preset.
+Your profile picture shows up as a small circle. Use a square image of at least 320 x 320 pixels with your face in the middle. Want a clean background behind you? [Remove background for free online](tool:background-remover), pick a solid colour, then come back and use the square preset.
 
 ## Text and graphics
 
-For quote posts, infographics and designs with text, save as **PNG** under **Save as**. PNG keeps edges sharp before Instagram processes the image. Use JPG for photos.
+For quote posts, infographics and anything with text, choose **PNG** under **Save as**. It keeps the edges sharp before Instagram gets its hands on it. Use JPG for photos.
 
-## Same sizes work on other platforms
+## Use the same sizes elsewhere
 
-Square and 4:5 portrait images also work well in Facebook feeds, and 9:16 images work for stories and reels on other apps. One resized set can often be reused across platforms.
+Square and 4:5 images look good in Facebook feeds too, and 9:16 works for stories on other apps. For cover photos and link previews, the tool to [resize photo for Facebook cover](tool:resize-image-for-facebook) has the right presets.
 
-## Learn more
+Our [Instagram image sizes guide](post:instagram-image-sizes) goes through every format, carousels and safe zones included. For other sizes, use the main [image resizer](tool:image-resizer).
 
-Our [Instagram image sizes guide](post:instagram-image-sizes) explains each format in detail, including carousels and safe zones. For other dimensions, use the general [Image Resizer](tool:image-resizer), and for smaller files to share in messages, see [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
-
-## Private and free
-
-No account, no watermark and no upload. Your photos are processed on your own phone or computer, which also means it works quickly even on a slow connection. Open the page in your mobile browser, resize, and post straight from your Downloads or Files folder.
+No account, no watermark and nothing uploaded. Since your photos are processed on your own phone or computer, it's quick even on slow mobile data. Open the page in your phone's browser, resize, and post straight from Downloads or Files.
 
 <!-- more -->
-## Fit or Fill: which looks better?
+## Fit or Fill?
 
 | Photo | Best mode | Why |
 |---|---|---|
-| Portrait of one person | Fill | The face stays centred and fills the frame |
-| Group photo | Fit | Nobody at the edges gets cut off |
-| Product on a table | Fit with white or a brand colour | The whole product stays visible |
-| Landscape scenery for a portrait post | Fit with a colour from the photo | Keeps the wide view |
-| Screenshot or infographic | Fit | Text at the edges stays readable |
+| A portrait of one person | Fill | The face stays centred and fills the frame |
+| A group photo | Fit | Nobody on the edge gets cut off |
+| A product on a table | Fit with white or a brand colour | The whole product stays in view |
+| A wide landscape in a portrait post | Fit with a colour from the photo | You keep the wide view |
+| A screenshot or infographic | Fit | Text near the edges stays readable |
 
-## Choosing a background colour for Fit
+## Picking a colour for Fit
 
-White gives a clean, gallery-like grid. Black feels cinematic and suits night and travel photos. A colour taken from the photo, such as a sky blue or a warm beige, makes the border look designed rather than added. For brands, using the same colour on every post creates a recognisable feed.
+White gives you a clean, gallery style grid. Black feels moody and suits night and travel shots. A colour picked from the photo itself makes the border look designed rather than tacked on. For a brand, using the same colour on every post makes your feed easy to recognise.
 
-## Planning a consistent grid
+## A tidy profile grid
 
-Instagram's profile grid shows posts as tall rectangles, so portrait images crop most gracefully there. If you post a mix of photos, resize everything to 1080×1350 and use the same fit mode. The grid will look tidy, and every post will take up the maximum space in followers' feeds.
+Instagram's profile grid shows posts as tall rectangles, so portrait images crop most nicely there. If you post a mix of photos, resize everything to 1080 x 1350 and stick to one fit mode. The grid looks neat, and every post gets as much space as possible in people's feeds.
 
-## Workflow for creators and small businesses
+## A weekly routine for creators and small shops
 
-1. Collect a week of photos in one folder.
-2. Drop up to 20 of them here and choose the portrait preset.
+1. Put a week of photos in one folder.
+2. Drop up to 20 here and choose the portrait preset.
 3. Use **Fill** for lifestyle shots and **Fit** with your brand colour for product shots.
-4. Click **Download all** and schedule the posts.
+4. Tap **Download all** and schedule your posts.
 
-Because nothing is uploaded, this works quickly even with large photo batches on mobile data.
+If you've got more than 20, you can [resize images in bulk](tool:resize-image-in-bulk) in several rounds with the same settings.

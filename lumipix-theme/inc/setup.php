@@ -125,7 +125,7 @@ function lumipix_enqueue_app( $app ) {
 					'runningModel' => __( 'Removing background…', 'lumipix' ),
 					'modelFailed'  => __( 'The AI model could not be loaded. Check your connection and try again.', 'lumipix' ),
 					'underTarget'  => __( 'Fits target', 'lumipix' ),
-					'overTarget'   => __( 'Smallest possible – still above target', 'lumipix' ),
+					'overTarget'   => __( 'Smallest possible, still above target', 'lumipix' ),
 					'page'         => __( 'page', 'lumipix' ),
 					'pages'        => __( 'pages', 'lumipix' ),
 					'pdfReady'     => __( 'PDF ready', 'lumipix' ),

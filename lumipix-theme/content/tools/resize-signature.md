@@ -3,100 +3,90 @@ keywords: resize signature online, signature resize, signature 20kb, signature 1
 seo_desc: Resize signature online and compress it to 10KB, 20KB or 50KB for application forms. Free, private and works on mobile.
 ---
 
-Use this tool to resize signature online to 10KB, 20KB or 50KB and keep every stroke clear.
+The form wants your signature as a JPG under 20KB, and all you've got is a piece of paper and a phone. That's fine. Take a photo, crop it, and resize your signature online here to 10KB, 20KB, 30KB or 50KB. Every stroke stays clear, and your signature is never uploaded anywhere.
 
 ## A clear signature that fits any form
 
-Online applications for jobs, admissions, scholarships and government services almost always ask for a scanned signature. The rules are usually strict: a JPG file under 10KB, 20KB or 50KB, sometimes with specific dimensions. This tool turns a quick phone photo of your signature into a small, clear file that fits.
+Online applications for jobs, admissions, scholarships and government services nearly always ask for a scanned signature. The rules are usually strict: a JPG under 10KB, 20KB or 50KB, sometimes with set dimensions as well. This tool turns a quick phone photo into a small, clean file that fits.
 
-It works in your browser, so your signature is never uploaded to Lumi Pix. That matters, because a signature is personal.
-
-## How to use it
+## How to resize your signature
 
 1. **Sign** on plain white paper with a dark pen.
-2. **Photograph** the signature from directly above in good light.
-3. **Crop** tightly around the signature in your gallery app.
-4. **Tap the size limit** from your form: 10KB, 20KB, 30KB or 50KB, or type your own.
-5. **Drop the cropped photo** and download the JPG once it shows **Fits target**.
+2. **Take a photo** from straight above in good light.
+3. **Crop it** tight around the signature in your gallery app.
+4. **Tap the limit** from your form: 10KB, 20KB, 30KB or 50KB, or type your own.
+5. **Drop the cropped photo** and download the JPG once it says **Fits target**.
 
-The tool keeps the width modest (around 500 pixels by default), which is plenty for any form and helps reach very small limits without blurring the ink.
+The width is kept modest, around 500 pixels by default. That's plenty for any form, and it helps reach very small limits without blurring the ink.
 
-## Why signatures compress so well
+## Why signatures shrink so well
 
-A signature is mostly white paper with a few dark lines. Compression handles large plain areas very efficiently, so even a 10KB limit is achievable, as long as:
+A signature is mostly white paper with a few dark lines. Compression handles big plain areas really efficiently, so even 10KB is doable, as long as:
 
-- the paper looks **white**, not grey or shadowed
-- the photo is **cropped tightly**, with little empty paper
-- the lines are **bold** enough to survive compression
+- the paper looks **white**, not grey or shadowy
+- the photo is **cropped tight**, with very little empty paper
+- the lines are **bold** enough to survive
 
 ## Getting a cleaner signature
 
 | Problem | Fix |
 |---|---|
-| Grey or yellowish paper | Increase brightness and contrast in your phone's editor before compressing |
-| Shadow across the page | Retake in daylight, holding the phone higher |
-| Thin or broken lines | Re-sign with a gel or felt-tip pen |
-| Skewed signature | Hold the phone parallel to the paper |
+| Grey or yellowish paper | Turn up brightness and contrast in your phone's editor first |
+| A shadow across the page | Retake it in daylight, holding the phone higher |
+| Thin or broken lines | Sign again with a gel or felt-tip pen |
+| A wonky signature | Hold the phone flat, parallel to the paper |
 | Lined paper | Use plain paper instead |
 
-## Dimensions as well as file size
+## When the form gives dimensions too
 
-Some forms ask for a signature of a specific size, such as a wide rectangle in pixels or a size in centimetres. In that case:
+Some forms want a signature at a set size, like a wide rectangle in pixels or a size in centimetres. Then:
 
-1. Use the [Image Resizer](tool:image-resizer) with the link off, type the dimensions, and choose **Fit** with a white background.
-2. Bring the result back here and compress to the KB limit, leaving the maximum width empty under **Advanced options**.
+1. Open the [image resizer](tool:image-resizer), turn the link off, type the dimensions and choose **Fit** with a white background.
+2. Bring the result back here and compress it to the KB limit, with the maximum width left empty under **Advanced options**.
 
-If the form only gives a maximum width, set it under **Advanced options** here.
+If the form only gives a maximum width, just set that under **Advanced options** here.
 
-## Transparent signatures for documents
+## A transparent signature for documents
 
-Forms usually want a JPG on white. For signing Word documents, PDFs and letters, a **transparent PNG** looks more natural. Use the [white background remover](tool:remove-white-background) to make the paper transparent, then download as PNG. Our guide on [removing the white background from a signature](post:remove-white-background-from-signature) shows the full process.
+Forms usually want a JPG on white. For signing Word documents, PDFs and letters, a **transparent PNG** looks much more natural. [Remove white background from image](tool:remove-white-background) files to make the paper see-through, then download as PNG. Our guide on [removing the white background from a signature](post:remove-white-background-from-signature) shows the whole process.
 
-## Keep a reusable set
+## Keep a set for next time
 
-Once you have a good signature, keep three files in a private folder:
+Once you've got a good signature, keep three files in a private folder:
 
 - the **original photo**
 - a **small JPG** for forms
 - a **transparent PNG** for documents
 
-When a new form has a different limit, re-compress the original rather than the already compressed copy.
+When a new form has a different limit, compress the original again instead of the copy you already shrank.
 
-## Common rejection reasons
+## Why it might get rejected
 
-- **Over the limit by a few bytes:** some portals count 1KB as 1,000 bytes; pick a slightly lower target.
-- **Wrong format:** upload the downloaded JPG, not a HEIC or PNG.
-- **Wrong dimensions:** resize to the stated size first.
-- **Faint signature:** re-sign with a bolder pen.
+- **A few bytes over.** Some portals count 1KB as 1,000 bytes. Pick a slightly lower target.
+- **Wrong format.** Upload the JPG you downloaded, not a HEIC or PNG.
+- **Wrong dimensions.** Resize to the stated size first.
+- **Too faint.** Sign again with a bolder pen.
 
-## Learn more
+Our step-by-step [signature resizing guide](post:resize-signature-for-online-form) covers phones, dimensions and ink colour. For the photo that usually goes with the signature, use the [passport size photo creator](tool:passport-size-photo), then [resize image to 20KB](tool:compress-image-to-20kb) or [compress image to 10KB](tool:compress-image-to-10kb) if the limits are tight. Applying for a Punjab government post? You can [compress photo for PPSC](tool:compress-photo-for-ppsc) on its own page.
 
-Our step-by-step [signature resizing guide](post:resize-signature-for-online-form) covers phones, dimensions and ink colour. For the photograph and documents that usually go with a signature, see [how to compress a photo for online application forms](post:compress-photo-for-online-forms), the [passport size photo maker](tool:passport-size-photo) and [compress to 20KB](tool:compress-image-to-20kb).
-
-## Private and free
-
-Your signature is processed on your device and never uploaded, stored or shared. No account, no watermark and no limit. Works on Android, iPhone, Windows and Mac.
+Your signature is processed on your device and never uploaded, stored or shared. No account, no watermark and no limit, on Android, iPhone, Windows and Mac.
 
 <!-- more -->
-## Ink colour and pen choice
+## Which pen?
 
-| Pen | Result after compression |
+| Pen | After compression |
 |---|---|
-| Black gel or felt-tip | Bold, clear, best for small files |
-| Dark blue ballpoint | Good if pressed firmly |
-| Light blue or coloured gel | May fade at small sizes |
-| Pencil | Too faint; avoid |
+| Black gel or felt-tip | Bold and clear, best for small files |
+| Dark blue ballpoint | Good if you press firmly |
+| Light blue or coloured gel | Can fade at small sizes |
+| Pencil | Too faint, avoid it |
 
-If the form specifies an ink colour, always follow it.
-
-## Typical signature limits
-
-Signature limits on online forms are often between 10KB and 50KB, sometimes with a fixed pixel size such as a wide rectangle. Check the instructions for your form and choose the matching quick button. If your number is not listed, type it into the custom field.
+If the form asks for a particular ink colour, use that.
 
 ## Signing on a phone screen
 
-Some people prefer to sign directly on a phone or tablet using a drawing app, then export the image. This gives a clean white background with no shadows. However, finger signatures can look shaky; a stylus helps. If the form expects a handwritten signature, a photo of a paper signature usually looks more natural.
+Some people sign straight onto a phone or tablet with a drawing app and export the image. You get a clean white background with no shadows. Finger signatures can look shaky, though, and a stylus helps a lot. If the form expects a handwritten signature, a photo of one on paper usually looks more natural.
 
-## After uploading
+## After you upload
 
-Keep a copy of the exact file you uploaded. If the form is reviewed later, or you need to apply again, you will know precisely what was submitted. Store it with your original signature photo in a private folder, not on a shared computer.
+Keep a copy of the exact file you sent. If the application is checked later, or you need to apply again, you'll know exactly what you submitted. Keep it with your original signature photo in a private folder, not on a shared computer.

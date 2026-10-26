@@ -1,6 +1,6 @@
 ---
 keywords: terms of use, lumi pix terms, website terms, acceptable use, free image tools terms
-seo_title: Terms of Use – Lumi Pix Free Online Image Tools
+seo_title: Terms of Use: Lumi Pix Free Online Image Tools
 seo_desc: Terms of use for the Lumi Pix website and its free image tools: what you can expect from us and what we ask of you.
 ---
 

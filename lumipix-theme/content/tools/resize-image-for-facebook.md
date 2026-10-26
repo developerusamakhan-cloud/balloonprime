@@ -3,91 +3,76 @@ keywords: resize photo for facebook cover, resize photo to facebook cover, resiz
 seo_desc: Resize photo for Facebook cover, posts, link previews and stories without awkward crops. Free, private and works on mobile.
 ---
 
-Use this tool to resize photo for Facebook cover images, posts, link previews and stories in one tap.
+Facebook cover photos are a strange, wide shape, and Facebook crops them differently on a phone and on a computer. That's why so many covers end up with half a logo. Use this page to resize a photo for your Facebook cover, posts, link previews and stories, so you decide what people see. It all happens in your browser.
 
-## The right shape for every Facebook placement
+## The right shape for each spot on Facebook
 
-Facebook shows images in many places: the feed, link previews, page and profile covers, and stories. Each one has its own shape, and an image that does not match is cropped or shrunk. This tool resizes photos to the sizes Facebook works with, so you decide what is visible. It runs in your browser, so your photos are never uploaded.
+Facebook shows images in lots of places: the feed, link previews, page and profile covers, and stories. Each has its own shape, and anything that doesn't match gets cropped or shrunk.
 
-Meta adjusts its layouts from time to time, so check its help pages before a big campaign. The sizes below are widely used and work well today.
-
-## The presets
+Meta changes its layouts now and then, so check its help pages before a big campaign. The sizes below are widely used and work well right now.
 
 | Preset | Size | Use |
 |---|---|---|
-| Square 1080×1080 | 1:1 | Feed posts, carousels |
-| Portrait 1080×1350 | 4:5 | Feed posts with the most space on phones |
-| Link preview 1200×630 | 1.91:1 | Shared links and Open Graph images |
-| Cover 1640×624 | about 2.6:1 | Page and profile cover photos |
-| Story 1080×1920 | 9:16 | Stories and reels |
+| Square 1080 x 1080 | 1:1 | Feed posts, carousels |
+| Portrait 1080 x 1350 | 4:5 | Feed posts that take up the most room on phones |
+| Link preview 1200 x 630 | 1.91:1 | Shared links and Open Graph images |
+| Cover 1640 x 624 | about 2.6:1 | Page and profile cover photos |
+| Story 1080 x 1920 | 9:16 | Stories and reels |
 
-## How to use it
+## How to resize a photo for a Facebook cover
 
-1. **Drop one or more images.**
-2. **Tap a preset** for the placement you need.
-3. **Choose Fit** to keep the whole image with a background colour, or **Fill** to fill the frame and crop the edges.
-4. **Download** and upload to Facebook.
+1. **Drop your image**, or several.
+2. **Tap the Cover 1640 x 624 preset**, or whichever placement you need.
+3. **Choose Fit** to keep the whole image with a background colour, or **Fill** to cover the frame and trim the edges.
+4. **Download** and upload it to Facebook.
+
+## Getting the cover right
+
+Covers are cropped differently on desktop and on phones. The 1640 x 624 preset gives a sharp result, but keep titles, logos and faces in the middle so nothing important gets cut on either. For a logo, **Fit** with your brand colour is the safe bet.
 
 ## Feed posts
 
-On phones, where most people scroll, square and 4:5 portrait images take up the most space. Portrait 1080×1350 is a strong default for photos. For graphics and quotes, square 1080×1080 keeps layouts tidy. These are the same sizes Instagram uses, so one set of images can be reused on both. See our [Instagram image sizes guide](post:instagram-image-sizes) for more.
+Most people scroll on their phones, and there square and 4:5 portrait images take up the most room. Portrait 1080 x 1350 is a good default for photos. For graphics and quotes, square 1080 x 1080 keeps things tidy. These are the same sizes Instagram uses, so you can [resize photo for Instagram](tool:resize-image-for-instagram) once and post the same file on both. Our [Facebook image sizes guide](post:facebook-image-sizes) has more on every placement.
 
 ## Link previews
 
-When you share a link, Facebook shows the page's preview image, ideally 1200×630. Keep text and faces near the centre, because some placements crop the edges. If you manage a website, set this image for each page. Every Lumi Pix page and article already has one.
-
-## Cover photos
-
-Covers are cropped differently on desktop and phones. Use the 1640×624 preset for a sharp result, and keep titles, logos and faces in the central area so nothing important is cut off on either device. **Fit** with a brand colour is a safe choice for logos.
+When you share a link, Facebook shows that page's preview image, ideally 1200 x 630. Keep text and faces near the middle, because some placements crop the edges. If you run a website, set one of these for every page.
 
 ## Stories
 
-Stories fill the screen at 1080×1920. Keep text away from the top and bottom, where Facebook places your name and reply bar. For landscape photos, **Fit** with a coloured background often looks better than cropping.
+Stories fill the screen at 1080 x 1920. Keep text away from the top and bottom, where Facebook puts your name and the reply bar. For a landscape photo, **Fit** with a coloured background often looks better than cropping.
 
 ## Profile pictures
 
-Profile pictures are shown in a circle. Use the square preset with your face centred, and leave space around it. For a clean, solid background, use [White background photo](tool:white-background-photo) or the [Background Remover](tool:background-remover) first.
+These are shown as a circle. Use the square preset with your face in the middle and a bit of space around it. For a clean background, the [passport photo with white background](tool:white-background-photo) tool swaps whatever is behind you for plain white. Or [remove background for free online](tool:background-remover) and pick any colour you like.
 
-## Text and quality
+## Keeping it sharp
 
-Facebook recompresses every upload. To keep images sharp:
+Facebook recompresses everything you upload. To keep it looking good:
 
-- Upload at the recommended size, not huge camera files.
-- Use **PNG** for graphics with text, and **JPG** for photos.
-- Avoid images that have been forwarded through messaging apps.
+- Upload at the recommended size, not a giant camera file.
+- Use **PNG** for graphics with text and **JPG** for photos.
+- Don't use photos that have been forwarded through chat apps.
 
-## Related tools
-
-- [Resize for Instagram](tool:resize-image-for-instagram) with portrait, square and story presets
-- [YouTube thumbnail](tool:resize-youtube-thumbnail) for 1280×720 thumbnails
-- [Image Resizer](tool:image-resizer) for any other size
-- [How to resize a picture in pixels](post:resize-picture-in-pixels)
-
-## Private and free
-
-No upload, no account and no watermark. It works on Android, iPhone, Windows and Mac. Resize a week of posts at once, up to 20 images per batch, and use **Download all**.
+No upload, no account and no watermark, on Android, iPhone, Windows and Mac. You can resize a week of posts at once, up to 20 images, and use **Download all**.
 
 <!-- more -->
-## Quick guide: which preset for which post?
+## Which preset for which post?
 
-- **Sharing a photo:** Portrait 1080×1350 for the most space in the feed.
-- **Sharing a graphic or quote:** Square 1080×1080.
-- **Promoting a blog post or product page:** set its link preview to 1200×630.
-- **Updating your page:** Cover 1640×624 with key content centred.
-- **Posting a story:** Story 1080×1920 with text away from the top and bottom.
+- **Sharing a photo:** Portrait 1080 x 1350 for the most space in the feed.
+- **Sharing a graphic or quote:** Square 1080 x 1080.
+- **Promoting a blog post or product page:** set its link preview to 1200 x 630.
+- **Updating your page:** Cover 1640 x 624 with the important bits in the middle.
+- **Posting a story:** Story 1080 x 1920 with text away from the top and bottom.
 
-Resize the same photo to several presets in one session: drop it once, tap a preset, download, then tap the next preset and download again.
-
-## Facebook and Instagram from one image
-
-Square and 4:5 portrait images work in both feeds. Resize once to 1080×1350, post the same file on both platforms, and keep it in a folder for reuse. For Instagram's other formats, see [Resize for Instagram](tool:resize-image-for-instagram).
+You can make several sizes from one photo in a single go. Drop it once, tap a preset, download, then tap the next preset and download again.
 
 ## Common mistakes
 
-- **Uploading huge camera files.** Facebook compresses them heavily; a 1080-pixel-wide image often looks sharper.
-- **Text near the edges.** Different placements crop differently; keep text in the middle.
-- **Mixing shapes in a carousel.** Use the same preset for every image in the set.
+- **Uploading huge camera files.** Facebook compresses them hard. A 1080 pixel wide image often looks sharper.
+- **Text close to the edges.** Different placements crop differently, so keep text in the middle.
+- **Mixed shapes in a carousel.** Use the same preset for every image.
 
-## Before you post
+## Check before you post
 
-Open the downloaded image on your phone before uploading. Check that faces and text are fully visible, that the background colour looks intentional, and that the file is a JPG for photos or a PNG for graphics. A ten-second check avoids reposting later.
+Open the downloaded image on your phone before you upload it. Make sure faces and text are fully visible, the background colour looks deliberate, and the file is a JPG for photos or a PNG for graphics. Ten seconds now saves you reposting later. Sharing a video too? The [YouTube thumbnail resizer](tool:resize-youtube-thumbnail) makes the matching 1280 x 720 image.

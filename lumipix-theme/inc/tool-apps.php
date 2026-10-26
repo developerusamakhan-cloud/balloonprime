@@ -222,8 +222,8 @@ function lumipix_render_resize_options( $c, $id ) {
 		<div class="field" data-fit-field>
 			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-fit"><?php esc_html_e( 'Fit', 'lumipix' ); ?></label>
 			<select class="select" id="<?php echo esc_attr( $id ); ?>-fit" data-opt="fit">
-				<option value="contain" <?php selected( $fit, 'contain' ); ?>><?php esc_html_e( 'Fit – add background', 'lumipix' ); ?></option>
-				<option value="cover" <?php selected( $fit, 'cover' ); ?>><?php esc_html_e( 'Fill – crop edges', 'lumipix' ); ?></option>
+				<option value="contain" <?php selected( $fit, 'contain' ); ?>><?php esc_html_e( 'Fit (add background)', 'lumipix' ); ?></option>
+				<option value="cover" <?php selected( $fit, 'cover' ); ?>><?php esc_html_e( 'Fill (crop edges)', 'lumipix' ); ?></option>
 				<option value="stretch" <?php selected( $fit, 'stretch' ); ?>><?php esc_html_e( 'Stretch', 'lumipix' ); ?></option>
 			</select>
 		</div>
@@ -326,7 +326,7 @@ function lumipix_dropzone_note( $app, $config, $multi ) {
 		return __( 'Up to 20 SVG files · processed on your device', 'lumipix' );
 	}
 	if ( 'favicon' === $app ) {
-		return __( 'PNG, SVG, JPG or WebP logo – or switch to Text · processed on your device', 'lumipix' );
+		return __( 'PNG, SVG, JPG or WebP logo, or switch to Text · processed on your device', 'lumipix' );
 	}
 	if ( 'pdf' === $app ) {
 		return __( 'Up to 20 images, one per page · processed on your device', 'lumipix' );

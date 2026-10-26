@@ -3,117 +3,108 @@ keywords: convert png to jpg on windows, png to jpg windows 10, png to jpg windo
 title: How to Convert PNG to JPG on Windows (3 Free Ways)
 category: Formats & Printing
 tool: png-to-jpg
-seo_title: How to Convert PNG to JPG on Windows 10 & 11 – 3 Free Methods
+seo_title: How to Convert PNG to JPG on Windows 10 & 11: 3 Free Methods
 seo_desc: Convert PNG to JPG on Windows using Paint, the Photos app, or a free browser tool that converts many files at once. Includes what happens to transparency.
 excerpt: Three free ways to turn PNG files into JPG on Windows, and what happens to transparent areas when you do.
 ---
 
-PNG files are great for screenshots and graphics, but they are often too large for email, and many forms only accept JPG. It is easy to convert PNG to JPG on Windows. Here are three free methods.
+PNG files are great for screenshots and graphics, but they're often too big for email, and lots of forms only take JPG. Luckily it's easy to convert PNG to JPG on Windows. Here are three free ways to do it.
 
 ## Method 1: Paint
 
 1. Right-click the PNG and choose **Open with → Paint**.
 2. Select **File → Save as → JPEG picture**.
-3. Choose a name and location, then click **Save**.
+3. Pick a name and a folder, then click **Save**.
 
-Paint may warn that transparency will be lost. Transparent areas become white.
+Paint may warn you that transparency will be lost. Any transparent areas turn white.
 
-**Best for:** a single quick conversion.
+**Best for:** one quick conversion.
 
 ## Method 2: The Photos app
 
 1. Open the PNG in **Photos**.
-2. Open the **…** menu and choose **Save as** (or **Resize image** in recent versions, which also lets you pick the format).
-3. Select **.jpg** as the file type and save.
+2. Open the **...** menu and choose **Save as**, or **Resize image** in recent versions, which also lets you pick the format.
+3. Choose **.jpg** as the file type and save.
 
-**Best for:** converting while you are already viewing photos.
+**Best for:** converting while you're already looking at your photos.
 
-## Method 3: A browser tool for many files at once
+## Method 3: A browser tool for lots of files
 
-1. Open the [PNG to JPG converter](tool:png-to-jpg).
-2. Drop up to 20 PNG files. **Convert to** is already set to **JPG**.
-3. Adjust **Quality** if you want a smaller file (around 85–92 suits most images).
-4. Choose a **Background** colour for any transparent areas (white is standard).
+1. Open the page to [turn PNG to JPG](tool:png-to-jpg).
+2. Drop in up to 20 PNG files. **Convert to** is already set to **JPG**.
+3. Adjust **Quality** if you want a smaller file. Around 85 to 92 suits most images.
+4. Choose a **Background** colour for any transparent areas. White is the usual choice.
 5. Download each file, or use **Download all** to get one ZIP.
 
 Files are converted in your browser and never uploaded.
 
-**Best for:** batches, and when you also need to resize or control the background colour.
+**Best for:** batches, and when you want to control the background colour.
 
 ## What happens to transparency?
 
-JPG cannot store transparency. Any transparent pixels are filled with a solid colour, usually white. If you need to keep transparency, stay with PNG, or use WebP, which supports it. Our [PNG vs JPG guide](post:png-vs-jpg) explains when each format makes sense.
+JPG can't store transparency. Any transparent pixels get filled with a solid colour, usually white. If you need to keep it, stay with PNG, or [convert PNG to WebP](tool:png-to-webp), which supports transparency in a much smaller file. Our [PNG vs JPG guide](post:png-vs-jpg) explains when each format makes sense.
 
 ## Should you convert at all?
 
 Convert when:
 
-- the file is a **photo** saved as PNG (JPG will be much smaller)
-- a form or website **requires JPG**
+- the file is a **photo** saved as PNG (the JPG will be much smaller)
+- a form or website **only takes JPG**
 - you need a **smaller email attachment**
 
-Keep PNG when the image is a logo, a screenshot with small text, or anything with transparency.
+Keep the PNG when it's a logo, a screenshot with small text, or anything with transparency.
 
-## Making the JPG smaller
+## Controlling the size
 
-After converting, you can hit an exact size with the [Image Compressor](tool:compress-image). Tips for doing that well are in [how to lower image file size without losing quality](post:how-to-lower-image-file-size).
+Paint and Photos don't let you choose the JPG quality, so the size of the result can vary. If you need control, the [image compressor](tool:compress-image) converts to JPG and lets you set an exact KB target. If you also need a new size in pixels, use the [image resizer](tool:image-resizer).
 
-## Changing the quality when converting
+## Using File Explorer and PowerToys
 
-Paint and Photos do not let you choose JPG quality, so the size of the result can vary. If you need control:
+Microsoft PowerToys, a free set of utilities from Microsoft, includes an **Image Resizer** that adds a right-click option in File Explorer. It can resize and re-save lots of files at once, which is handy if you do this often. Install it from the Microsoft Store, then right-click the images you've selected and choose **Resize with Image Resizer**.
 
-- Use the [Image Compressor](tool:compress-image), which converts to JPG and lets you set an exact KB target.
-- Or use the [PNG to JPG converter](tool:png-to-jpg) for batches, or the [Image Resizer](tool:image-resizer) if you also need a new size.
+## How to show file extensions
 
-## Converting with File Explorer and PowerToys
+Windows hides file extensions by default, which makes PNG and JPG hard to tell apart.
 
-Microsoft PowerToys, a free set of utilities from Microsoft, includes an **Image Resizer** that adds a right-click menu in File Explorer. It can resize and re-encode many files at once and is useful if you convert images often. Install it from the Microsoft Store, then right-click selected images and choose **Resize with Image Resizer**.
+- **Windows 11.** Open File Explorer and click **View → Show → File name extensions**.
+- **Windows 10.** Open File Explorer, click the **View** tab and tick **File name extensions**.
 
-## How to show file extensions in Windows
+Now you can see whether a file ends in .png or .jpg. Remember, renaming the extension doesn't convert the file. Use one of the methods above.
 
-Windows hides file extensions by default, which makes it hard to tell PNG and JPG apart.
+## Screenshots
 
-- **Windows 11:** open File Explorer, click **View → Show → File name extensions**.
-- **Windows 10:** open File Explorer, click the **View** tab and tick **File name extensions**.
+Windows screenshots taken with **Win+Shift+S** or **Print Screen** are saved as PNG. For sharing in chat or email, converting them to JPG makes them smaller. For screenshots full of small text, PNG stays sharper, so only convert when the file size actually matters.
 
-Now you can see whether a file ends in .png or .jpg. Remember that renaming the extension does not convert the file; use one of the methods above.
+## A rough idea of the difference
 
-## Converting screenshots
-
-Windows screenshots taken with **Win+Shift+S** or **Print Screen** are saved as PNG. For sharing in chat or email, converting to JPG makes them smaller. For screenshots with lots of small text, PNG stays sharper, so convert only when file size matters.
-
-## Real size differences
-
-| Image | PNG | JPG after conversion |
+| Image | As PNG | As JPG |
 |---|---|---|
-| Phone photo exported as PNG | 18MB | 2–3MB |
-| Full-screen screenshot | 1.2MB | 250–400KB |
-| Simple logo | 25KB | 40KB with fuzzy edges |
+| A phone photo exported as PNG | Often well over 10MB | Usually a few MB |
+| A full-screen screenshot | Around 1MB | A few hundred KB |
+| A simple logo | Small | Often bigger, with fuzzy edges |
 
-The table shows why converting photos saves a lot of space, while converting logos is usually a mistake.
+That's why converting photos saves loads of space, while converting logos is usually a mistake.
 
-## Troubleshooting
+## If something goes wrong
 
-- **"Save as JPEG" is greyed out:** the image may be open in an app that does not support it. Try Paint or the browser tool.
-- **The JPG has a black background:** the PNG had transparency and the app filled it with black. Use a tool that lets you choose the background colour.
-- **Colours look different:** some apps handle colour profiles differently. The browser tool converts to the standard sRGB colour space used on the web.
+- **"Save as JPEG" is greyed out.** The app may not support it. Try Paint or the browser tool.
+- **The JPG has a black background.** The PNG had transparency and the app filled it with black. Use a tool that lets you pick the background colour.
+- **Colours look different.** Apps handle colour profiles differently. The browser tool converts to sRGB, the standard used on the web.
 
-## When the destination needs a size limit
+## Converting for an online form
 
-If you are converting for an online form, you probably also need a KB limit. Convert and compress in one step with [compress to 100KB](tool:compress-image-to-100kb) or another target, as explained in [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb). For a broader comparison of the two formats, see [PNG vs JPG](post:png-vs-jpg).
+If you're converting for an online form, you probably have a KB limit too. You can convert and compress in one go with [compress image to 100KB](tool:compress-image-to-100kb) or another target. Our guide on [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb) explains how. On a Mac instead? Here's [how to convert PNG to JPG on a Mac](post:how-to-convert-png-to-jpg-on-mac).
 
-## Key takeaways
+## The short version
 
-- **Paint** converts a single PNG to JPG with Save as → JPEG picture.
-- **The Photos app** can also save as JPG, and resize at the same time in recent versions.
-- **A browser converter** handles batches, lets you choose the background colour for transparency and can hit an exact file size.
-- **Transparency is lost** in JPG; keep PNG or use WebP if you need it.
-- **Show file extensions** in File Explorer so you can tell PNG and JPG apart.
-- **Convert photos, not logos**: photos shrink dramatically, logos get blurry.
+- **Paint** converts a single PNG with Save as → JPEG picture.
+- **Photos** can save as JPG too, and resize at the same time in recent versions.
+- **A browser converter** handles batches, lets you choose the background colour and can hit an exact file size.
+- **Transparency is lost** in JPG. Keep the PNG, or use WebP, if you need it.
+- **Show file extensions** in File Explorer so you can tell them apart.
+- **Convert photos, not logos.** Photos shrink a lot, logos just get blurry.
 
-## When to keep the PNG
-
-Keep the original PNG when the image contains small text, sharp lines, a logo or a transparent background, or when you plan to edit it again. Convert a copy for sharing instead, so you always have the lossless version to go back to.
+Keep the original PNG when it has small text, sharp lines, a logo or a transparent background, or when you'll edit it again. Convert a copy for sharing instead, so you always have the lossless version to go back to.
 
 <!-- topup -->
 <!-- expanded -->
@@ -121,24 +112,24 @@ Keep the original PNG when the image contains small text, sharp lines, a logo or
 
 ### How do I convert PNG to JPG without losing quality?
 
-Save with high JPG quality. Some fine detail is always discarded by JPG, but at high quality the difference is invisible for photos.
+Save at a high JPG quality. JPG always throws away a little fine detail, but at high quality you won't see the difference in a photo.
 
 ### How do I convert multiple PNG files to JPG at once?
 
-Drop them all into a browser tool such as the Lumi Pix Image Resizer, set Save as to JPG and use Download all.
+Drop them all into a browser tool like the Lumi Pix PNG to JPG converter and use Download all.
 
 ### Why did my transparent PNG get a white background?
 
-JPG does not support transparency, so transparent areas are filled with a solid colour when converting.
+JPG doesn't support transparency, so transparent areas are filled with a solid colour when you convert.
 
 ### How do I convert a screenshot to JPG on Windows?
 
-Open it in Paint and choose Save as → JPEG picture, or drop it into a browser converter and set Save as to JPG.
+Open it in Paint and choose Save as, JPEG picture, or drop it into a browser converter set to JPG.
 
 ### How do I show .png and .jpg extensions in Windows?
 
-In File Explorer, choose View → Show → File name extensions on Windows 11, or tick File name extensions on the View tab in Windows 10.
+In File Explorer, choose View, Show, File name extensions on Windows 11, or tick File name extensions on the View tab in Windows 10.
 
 ### Is it safe to convert images online?
 
-It depends on the tool. Many websites upload your files. A browser-based converter that processes images on your device, such as Lumi Pix, never sends them anywhere.
+It depends on the tool. Many websites upload your files. A browser-based converter that works on your device, like Lumi Pix, never sends them anywhere.

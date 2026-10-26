@@ -3,87 +3,83 @@ keywords: compress photo for fpsc, fpsc photo size, fpsc signature size, fpsc on
 seo_desc: Compress photo for FPSC online applications: photo, signature and documents under the upload limit. Free, no signup, processed on your device.
 ---
 
-Use this tool to compress photo for FPSC online applications, so your picture and documents fit the upload limit.
+Filling in an FPSC application or registering for CSS? Each upload has a size limit, and phone photos are almost always too big. Use this page to compress your photo for FPSC to the exact limit in the instructions. You'll get a clean JPG, and your photo and documents stay on your own device.
 
-## Preparing your photo for an FPSC application
+## Getting your files ready for FPSC
 
-The Federal Public Service Commission (FPSC) recruits for posts in the federal government of Pakistan and conducts competitive examinations, including the CSS examination. Its online application system asks candidates to upload a photograph and, depending on the post, a signature and scanned documents. Each upload has rules on file size, format and sometimes dimensions.
+The Federal Public Service Commission recruits for federal government posts in Pakistan and runs competitive exams, including CSS. Its online system asks for a photograph and, depending on the post, a signature and scanned documents. Each one has rules for file size, format and sometimes dimensions.
 
-This page lets you match those rules quickly. Choose the limit from the instructions for your application, drop your photo, and download a JPG that fits. The processing happens in your browser, so your personal files never leave your device.
+Choose the limit from your instructions, drop your photo and download a JPG that fits.
 
-**Important:** requirements are set by FPSC and can change between advertisements and examinations. Always check the latest official instructions. Lumi Pix is an independent tool and is not affiliated with FPSC.
+**Please note:** FPSC sets these requirements, and they can change between advertisements and exams. Always check the latest official instructions. Lumi Pix is an independent tool and isn't connected to FPSC.
 
 ## Step by step
 
-1. **Open the official instructions** for your post or examination and write down the photo limit, format and any dimensions.
-2. **Take or choose a recent photo** with a plain, light background and even lighting.
-3. **Crop it** to the required proportions. Use the [passport size photo maker](tool:passport-size-photo) for sizes such as 35×45 mm.
-4. **Set the limit** on this page with the quick buttons or the custom field.
-5. **Drop the photo** and wait for the **Fits target** badge.
-6. **Download** and upload the file in the FPSC application.
+1. **Open the official instructions** for your post or exam and write down the photo limit, format and any dimensions.
+2. **Take or pick a recent photo** with a plain, light background and even light.
+3. **Crop it** to the right shape. The [passport size photo creator](tool:passport-size-photo) handles sizes like 35 x 45 mm.
+4. **Set the limit** with the quick buttons or type it in.
+5. **Drop the photo** and wait for **Fits target**.
+6. **Download it** and upload the file in your FPSC application.
 
-## Documents you may need
+## Documents you might need
 
-| Item | Preparation |
+| Item | How to get it ready |
 |---|---|
-| Photograph | Compress here to the stated limit |
-| Signature | Use the [signature resizer](tool:resize-signature) after cropping tightly |
-| CNIC | Scan both sides and compress, for example with [compress to 200KB](tool:compress-image-to-200kb) |
-| Educational certificates | Scan each page clearly; check small text at 100% zoom |
-| Domicile and other documents | Prepare according to the advertisement |
+| Photograph | Compress it here to the stated limit |
+| Signature | Crop it tight, then [resize signature online](tool:resize-signature) |
+| CNIC | Scan both sides and [compress image to 200KB](tool:compress-image-to-200kb), or whatever the limit is |
+| Educational certificates | Scan each page clearly and check the small print at 100% zoom |
+| Domicile and other papers | Follow the advertisement |
 
-## Photo quality tips
+If the form wants several pages in a single file, compress each page and then [make JPG to PDF online](tool:image-to-pdf).
 
-- **Daylight from a window** in front of you gives soft, even light.
-- **Stand away from the wall** to avoid shadows behind your head.
+## For a better photo
+
+- **Face a window** in daylight for soft, even light.
+- **Stand a step away from the wall** so there's no shadow behind your head.
 - **Look straight at the camera** with a neutral expression.
-- **Wear clothes that contrast** with the background.
-- **Avoid filters**, beauty modes and heavy retouching.
+- **Wear something that stands out** from the background.
+- **Skip the filters**, beauty modes and retouching.
 
-If the background is busy, use the [Background Remover](tool:background-remover) to replace it with plain white, then crop and compress.
+If the background is busy, [remove background for free online](tool:background-remover), replace it with plain white, then crop and compress.
 
-## Applying from a phone
+## Applying from your phone
 
-All the tools work in mobile browsers. Tap **Choose files** to select a photo from your gallery, then download the result. Android saves it to **Downloads**; iPhone saves it to the **Files** app. When the FPSC form asks for the photo, choose the compressed file from that location.
+Everything works in a mobile browser. Tap **Choose files**, pick the photo from your gallery and download the result. Android saves it to **Downloads** and iPhone to the **Files** app. When the FPSC form asks for your photo, choose the compressed file from there.
 
-## Common upload issues
+## Common upload problems
 
-- **File slightly over the limit:** pick a lower target; some systems count 1KB as 1,000 bytes.
-- **Wrong format:** iPhone photos are often HEIC. Lumi Pix saves JPG automatically.
-- **Dimension errors:** resize first with the [Image Resizer](tool:image-resizer), then compress.
-- **Blurry result:** crop tighter and use a plain background so more detail fits.
+- **A little over the limit.** Choose a slightly lower target. Some systems count 1KB as 1,000 bytes.
+- **Wrong format.** iPhone photos are often HEIC. Lumi Pix saves JPG automatically.
+- **Dimension errors.** Set the size in the [image resizer](tool:image-resizer) first, then compress.
+- **Blurry result.** Crop tighter and use a plain background so more detail fits.
 
-## Plan ahead for examinations
+## Plan ahead for exams
 
-Competitive examinations attract many applicants, and portals can be slow close to the closing date. Prepare your photo, signature and documents a few days early, check them, and keep copies. If you apply for multiple posts or later stages, you will already have clean originals ready to re-compress to any new limit.
+Competitive exams get a lot of applicants, and the portal can slow right down near the closing date. Get your photo, signature and documents ready a few days early, check them, and keep copies. If you apply for more posts or later stages, you'll already have clean originals to compress to any new limit.
 
-## Privacy
-
-Your photo and documents are processed locally in your browser and are never uploaded to Lumi Pix. There is no account to create and no watermark.
-
-## Related guides and tools
-
-Read [how to compress a photo for online application forms](post:compress-photo-for-online-forms) for a full example, and [how to resize a signature for an online form](post:resize-signature-for-online-form) for signature tips. For other portals, see the pages for [PPSC](tool:compress-photo-for-ppsc) and [NTS](tool:compress-photo-for-nts), or use the main [Image Compressor](tool:compress-image) for any limit. For general size questions, see [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
+Your photo and documents are processed in your browser and never uploaded to Lumi Pix. No account and no watermark. Our guide on [how to compress a photo for online application forms](post:compress-photo-for-online-forms) shows a full example, and if you're applying elsewhere too, you can [compress photo for PPSC](tool:compress-photo-for-ppsc) or [compress photo for NTS](tool:compress-photo-for-nts) on their own pages.
 
 <!-- more -->
-## A sample preparation plan
+## A five-step routine
 
 | Step | What to do |
 |---|---|
-| 1 | Read the advertisement or examination notice and list each file with its limit |
-| 2 | Take a fresh photo; sign on white paper; scan CNIC and certificates |
-| 3 | Crop and compress each file; rename them clearly |
-| 4 | Check each file at 100% zoom for clarity and readability |
+| 1 | Read the advertisement or exam notice and list every file with its limit |
+| 2 | Take a fresh photo, sign on white paper, scan your CNIC and certificates |
+| 3 | Crop and compress each file and give it a clear name |
+| 4 | Check every file at 100% zoom |
 | 5 | Upload well before the deadline and save the confirmation |
 
-## Keeping files organised for multiple stages
+## Keeping files for later stages
 
-Competitive processes can involve several stages, and you may be asked for documents again later. Keep a folder with the original photo, signature and scans, and a separate folder with the compressed copies you uploaded. That way you can show exactly what you submitted and quickly prepare new copies if a later stage has different limits.
+Competitive processes can have several stages, and you may be asked for documents again. Keep one folder with your original photo, signature and scans, and another with the exact copies you uploaded. That way you can show what you sent and quickly make new copies if a later stage has different limits.
 
-## Clear documents matter
+## Make sure the documents are readable
 
-Educational certificates and transcripts often contain small print, roll numbers and dates. When compressing, check that every number is readable. If text looks soft, crop the page more tightly, increase contrast slightly, or use a higher limit if the instructions allow it.
+Certificates and transcripts are full of small print, roll numbers and dates. After compressing, check that every number can be read. If it looks soft, crop tighter, add a little contrast, or use a higher limit if the instructions allow.
 
-## Quick sizes on this page
+## Sizes on this page
 
-This page offers quick buttons for 20KB, 50KB, 100KB, 200KB and 500KB, covering the limits commonly seen on federal recruitment forms. For a different value, type it in the custom field. If dimensions are specified, resize first with the Image Resizer and then compress.
+The quick buttons cover 20KB, 50KB, 100KB, 200KB and 500KB, which are the limits you'll see most on federal recruitment forms. For anything else, type it in. If dimensions are given, resize first and then compress.

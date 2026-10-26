@@ -3,122 +3,122 @@ keywords: reduce image size in online, reduce image size kb, compress image, com
 seo_desc: Reduce image size in KB online: compress JPG, PNG and WebP to an exact size like 20KB, 50KB, 100KB or 200KB. Free, no signup, nothing uploaded.
 ---
 
-Reduce image size in KB online with this free image compressor: choose the exact file size you need, and it does the rest in your browser.
+You've got a photo, a form that says "max 100KB", and a file that's 3MB. That's the moment this page is for. Type the size you need, drop the image, and you'll get the sharpest version that fits. It's the quickest way to reduce image size in KB online, and the photo never leaves your phone or computer.
 
-## Compress images to the exact size you need
+## Pick the size, not a quality slider
 
-Most image compressors give you a quality slider and leave you to guess. You move it, save, check the file size, and try again. The Lumi Pix Image Compressor works the other way round: you tell it the size you need, such as 20KB, 100KB or 1MB, and it finds the sharpest version of your image that fits under that limit.
+Most compressors hand you a slider from 1 to 100 and wish you luck. You guess 70, save, check the size, find it's still too big, and go again. Here you skip all that. Tell the compressor "50KB" and it does the guessing for you, in about a second.
 
-It runs entirely in your browser. Your photos are never uploaded to a server, which makes it fast on slow connections and safe for personal documents such as ID cards, certificates and signatures.
+It runs inside your browser, so there's nothing to install and nothing to upload. That matters when the file is a CNIC copy, a certificate or your signature.
 
-## How to use the compressor
+## How to compress an image to a size in KB
 
-1. **Choose a target.** Tap one of the quick sizes or type your own number and pick KB or MB.
-2. **Drop your images.** Drag them onto the drop area, click **Choose files**, or paste an image with Ctrl+V. You can add up to 20 at once.
-3. **Download.** Each result shows its new size and a **Fits target** badge. Download files one by one or use **Download all**.
+1. **Set the target.** Tap a quick size or type your own number, then choose KB or MB.
+2. **Add your images.** Drag them in, tap **Choose files**, or paste with Ctrl+V. Up to 20 at a time is fine.
+3. **Download.** Each file shows its new size and a **Fits target** badge. Save them one by one or tap **Download all**.
 
-If you change the target after adding images, they are compressed again automatically.
+Changed your mind about the size? Just change the target. Everything you've added is compressed again straight away.
 
-## How the target-size engine works
+## What happens behind the scenes
 
-Behind the scenes, the compressor does what an expert would do by hand, in about a second:
+The compressor works the way a careful person would, only much faster:
 
-1. It tries a high quality first. If that already fits, you get the best possible result.
-2. If not, it searches for the highest quality that still fits your limit.
-3. If that quality would be too low to look good, it reduces the image dimensions slightly and searches again.
+1. It tries a high quality first. If that already fits, you're done and you get the best result possible.
+2. If it doesn't fit, it hunts for the highest quality that does.
+3. If that quality would look poor, it trims the dimensions a little and searches again.
 
-This balance matters. A large photo squeezed into a small file at very low quality looks blocky. A slightly smaller photo at a sensible quality looks clean. The compressor always aims for the clean result.
+Why the third step? Because a big photo crushed into a tiny file looks blocky, while a slightly smaller photo at decent quality looks clean. On a form or a website, nobody can tell the second one was resized. Everyone can tell the first one was squashed.
 
-## Which target should you choose?
+## Which size should you choose?
 
-| Use | Typical target |
+| What you're uploading | Usual limit |
 |---|---|
-| Signature for an online form | 10–30KB |
-| Passport-style photo for a form | 20–100KB |
-| Document scan, ID card, certificate | 100–300KB |
-| Profile picture | 100–200KB |
-| Website image | 100–300KB |
+| Signature on an online form | 10 to 30KB |
+| Passport-style photo on a form | 20 to 100KB |
+| Document scan, ID card, certificate | 100 to 300KB |
+| Profile picture | 100 to 200KB |
+| Image for your own website | 100 to 300KB |
 | Email attachment | Under 1MB |
 
-When a form gives a limit, always follow it exactly. Our guide to [compressing photos for online application forms](post:compress-photo-for-online-forms) walks through a complete example with a photo, signature and document.
+If the form states a limit, use that exact number. Our walkthrough on [how to compress a photo for online application forms](post:compress-photo-for-online-forms) goes through a real set of uploads: a photo, a signature and a document.
 
-## Ready-made sizes
+## Pages with the size already set
 
-If you know the limit, these pages open with the target already set:
+Know your limit? These open with the target ready to go:
 
-- [Compress to 20KB](tool:compress-image-to-20kb) for signatures and small profile photos
-- [Compress to 50KB](tool:compress-image-to-50kb) for passport-style photographs
-- [Compress to 100KB](tool:compress-image-to-100kb), the most common form limit
-- [Compress to 200KB](tool:compress-image-to-200kb) for document scans
-- [Compress to 1MB](tool:compress-image-to-1mb) when you want to keep nearly all the detail
+- [Compress image to 10KB](tool:compress-image-to-10kb) for tiny signatures and thumbnails
+- [Resize image to 20KB](tool:compress-image-to-20kb) for signatures and small photos
+- [Compress image to 50KB](tool:compress-image-to-50kb) for passport-style photos
+- [Compress image to 100KB](tool:compress-image-to-100kb), the limit you'll see most often
+- [Compress image to 200KB](tool:compress-image-to-200kb) for scans and documents
+- [Compress image to 500KB](tool:compress-image-to-500kb) when quality matters more
+- [Compress image to 1MB](tool:compress-image-to-1mb) for email and marketplaces
 
-For recruitment forms, there are dedicated pages for [PPSC](tool:compress-photo-for-ppsc), [FPSC](tool:compress-photo-for-fpsc) and [NTS](tool:compress-photo-for-nts) with suitable quick sizes.
+Applying for a government job in Pakistan? You can [compress photo for PPSC](tool:compress-photo-for-ppsc), [FPSC](tool:compress-photo-for-fpsc) and [NTS](tool:compress-photo-for-nts) forms on pages set up for each one.
 
 ## JPG or WebP?
 
-By default, results are saved as **JPG**, which every website and form accepts. If you are preparing images for your own website, choose **WebP** under **Save as**; WebP files are usually smaller at the same visual quality. If your browser cannot create WebP, the tool falls back to JPG automatically.
+Results are saved as **JPG** by default, because every form and website accepts it. If the images are for your own site, switch **Save as** to **WebP**. WebP files are usually smaller at the same quality. If your browser can't make WebP, you'll get a JPG instead, so nothing breaks.
 
-PNG files you add are converted to JPG, which is far more efficient for photos. Transparent areas become white. If you need to keep transparency, use the [Image Resizer](tool:image-resizer) and save as PNG instead.
+PNG files are turned into JPG, which is much lighter for photos. Any transparent areas become white. If you need to keep the transparency, use the [image resizer](tool:image-resizer) and save as PNG.
 
-## Advanced option: maximum width
+## Maximum width (in Advanced options)
 
-Under **Advanced options** you can set a maximum width in pixels. This is useful when:
+Open **Advanced options** to set a maximum width in pixels. It helps when:
 
-- a form also limits the dimensions, for example to 600 pixels wide
-- you are preparing images for a website and know the display width
-- you want small text in a document to stay readable rather than very large but blurry
+- the form also limits the width, say to 600 pixels
+- you know how wide the image will show on your website
+- you want small text in a scan to stay readable
 
-Leave it empty to let the compressor decide.
+Leave it empty and the compressor decides on its own.
 
-## Tips for the best result
+## A few habits that help
 
-- **Start from the original file.** Photos forwarded through messaging apps have already lost detail.
-- **Crop first.** Removing empty background gives more of the file budget to what matters.
-- **Use a plain background** for portraits; patterns and textures need many more bytes.
-- **Check at 100% zoom** before uploading anything important.
-- **Keep your originals.** Compression is permanent, so always work on a copy.
+- **Use the original file.** Photos sent through WhatsApp or other chat apps have already lost detail.
+- **Crop first.** Cut away empty background so more of the file goes to what matters.
+- **Shoot against a plain wall.** Patterns and busy backgrounds eat up kilobytes.
+- **Zoom to 100%** and check the result before you upload something important.
+- **Keep your originals.** Compression can't be undone, so always work on a copy.
 
-For a deeper explanation of what makes files large and how to shrink them without visible loss, read [how to lower image file size without losing quality](post:how-to-lower-image-file-size) and [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
+Want to know why some files are huge and others aren't? Read [how to lower image file size without losing quality](post:how-to-lower-image-file-size) and [how to reduce image size in KB](post:how-to-reduce-image-size-in-kb).
 
-## Private by design
+## Your files stay with you
 
-Many online compressors upload your images, process them on a server and send them back. Lumi Pix uses the image encoder built into your browser, so the work happens on your device. Nothing is stored, nothing is shared, and there is no account to create. When you close the tab, the images are gone from the page's memory.
+A lot of online compressors upload your image, process it on a server and send it back. This one uses the image encoder already built into your browser, so the work happens on your own device. There's no account, nothing is stored, and once you close the tab the images are gone.
 
-## Works on every device
-
-The compressor works in current versions of Chrome, Safari, Edge and Firefox on Windows, Mac, Android and iPhone. On a phone, tap **Choose files** to pick photos from your gallery; downloads are saved to the Downloads folder on Android and the Files app on iPhone. iPhone HEIC photos are converted to JPG automatically in Safari.
+It works in current Chrome, Safari, Edge and Firefox on Windows, Mac, Android and iPhone. On a phone, tap **Choose files** to pick from your gallery. Android saves downloads to the Downloads folder, and iPhone saves them to the Files app. Safari also turns iPhone HEIC photos into JPG automatically.
 
 <!-- more -->
-## Real-world scenarios
+## Everyday situations
 
-**A job application with three uploads.** The form wants a photo under 50KB, a signature under 20KB and a CNIC copy under 200KB. Set 50KB and drop the photo, then switch to 20KB for the signature, then 200KB for the ID card. Each result is ready in seconds.
+**A job form with three uploads.** It wants a photo under 50KB, a signature under 20KB and a CNIC copy under 200KB. Set 50KB and drop the photo. Switch to 20KB for the signature, then 200KB for the ID card. You're done in under a minute.
 
-**An email that keeps bouncing.** Ten holiday photos at 4MB each make a 40MB email. Set 1MB, drop all ten, and click **Download all**. The new set is under 10MB and looks the same on screen.
+**An email that won't send.** Ten holiday photos at 4MB each come to 40MB. Set 1MB, drop all ten and tap **Download all**. The new set is under 10MB and looks the same on screen.
 
-**A slow website.** Product photos straight from the camera slow every page. Set a maximum width of 1600 pixels under **Advanced options**, a target of 250KB, and process the whole folder in batches of 20.
+**A slow website.** Camera photos straight onto product pages make everything crawl. Set a maximum width of 1600 pixels, a target of 250KB, and run the folder through in batches of 20.
 
-**A marketplace listing.** Many listing sites limit images to around 1MB or less. Compress to the limit and your photos upload without errors, even on mobile data.
+**A marketplace listing.** Plenty of listing sites cap images at about 1MB. Compress to the limit and your photos go up first time, even on mobile data.
 
-## Compression vs resizing
+## Compressing vs resizing
 
-Compression makes the file smaller in kilobytes. Resizing changes the dimensions in pixels. They are related: fewer pixels almost always mean a smaller file. The compressor reduces dimensions only when necessary to reach your target. If you need exact dimensions, such as 600×800 pixels, use the [Image Resizer](tool:image-resizer) first, then compress here with the maximum width left empty.
+Compressing makes the file smaller in kilobytes. Resizing changes the width and height in pixels. They're linked, because fewer pixels nearly always means a smaller file. This tool only reduces the dimensions when it has to. If you need an exact size like 600 x 800 pixels, set it in the image resizer first, then compress here with the maximum width left empty. To shrink a whole folder to the same width, use the tool to [resize images in bulk](tool:resize-image-in-bulk).
 
-## Supported formats
+## Formats
 
-| You can open | You can save as |
+| You can add | You can save as |
 |---|---|
 | JPG, PNG, WebP, AVIF, GIF (first frame), HEIC in Safari | JPG or WebP |
 
-PNG and other formats are converted to the format you choose. Animated GIFs are compressed as a still image.
+Animated GIFs are saved as a still image of the first frame.
 
-## Frequently compared limits
+## Rough guide to sizes
 
 | Target | Good for | Typical width of a portrait |
 |---|---|---|
-| 20KB | Signatures, thumbnails | 300–500 px |
-| 50KB | Form photographs | 600–1000 px |
-| 100KB | Most forms, profile photos | 1000–1600 px |
-| 200KB | Documents, website images | 1500–2000 px |
+| 20KB | Signatures, thumbnails | 300 to 500 px |
+| 50KB | Form photos | 600 to 1000 px |
+| 100KB | Most forms, profile photos | 1000 to 1600 px |
+| 200KB | Documents, website images | 1500 to 2000 px |
 | 1MB | Email, listings, sharing | Usually full size |
 
-These are guides; each image compresses differently depending on its content.
+Treat these as a rough idea. Every photo compresses a bit differently depending on what's in it.

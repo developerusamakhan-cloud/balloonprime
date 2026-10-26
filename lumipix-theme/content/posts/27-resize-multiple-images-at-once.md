@@ -3,121 +3,121 @@ keywords: resize multiple images at once, batch resize images, bulk image resize
 title: How to Resize Multiple Images at Once (Batch Resize, Free)
 category: Resizing
 tool: image-resizer
-seo_title: How to Resize Multiple Images at Once – Free Batch Image Resizer
+seo_title: How to Resize Multiple Images at Once: Free Batch Image Resizer
 seo_desc: How to resize multiple images at once on any device: batch resize by pixels, percent or preset with a free browser tool.
 excerpt: Resize a whole folder of photos to the same size in one go, without installing anything.
 ---
 
-Product photos for a shop, holiday pictures for a website, a set of images for a presentation: resizing them one by one is tedious. Batch resizing lets you resize multiple images at once with the same settings.
+Product photos for a shop, holiday pictures for a website, a set of images for a presentation: resizing them one by one is mind-numbing. Batch resizing lets you resize multiple images at once with the same settings, and it takes about as long as doing one.
 
-## Batch resize in the browser
+## Batch resize in your browser
 
-1. Open the [Image Resizer](tool:image-resizer).
+1. Open the page to [resize images in bulk](tool:resize-image-in-bulk).
 2. Select or drag in up to **20 images** at once.
-3. Choose how to size them (see the options below).
+3. Choose how to size them (the options are below).
 4. Pick a format under **Save as**.
-5. Click **Download all**.
+5. Click **Download all** to get them in one ZIP file.
 
-The three ways to size a batch:
+There are three ways to size a batch:
 
-- **Same width, natural height:** keep the link icon on and type a width, such as 1200 px. Each image keeps its own proportions.
-- **Exact same size:** turn the link off, type width and height, then choose **Fill** (crop) or **Fit** (add background).
-- **Percentage:** set the unit to **%**, for example 50% to halve every image.
+- **Same width, natural height.** Keep the link icon on and type a width, like 1200 px. Each image keeps its own shape.
+- **Exactly the same size.** Turn the link off, type the width and height, then choose **Fill** (crop) or **Fit** (add a background).
+- **Percentage.** Set the unit to **%**, say 50% to halve every image.
 
-The images are processed on your device, so even large batches never upload anything. For more than 20 images, run several batches with the same settings.
+The images are processed on your device, so even big batches don't upload anything. For more than 20, run several batches with the same settings.
 
-## Which batch mode should you choose?
+## Which mode should you pick?
 
 | Goal | Setting |
 |---|---|
-| Website or blog images | Same width (e.g. 1200 px), lock on |
-| Online shop grid | Exact square size, Fit with white |
-| Social media set | Exact size, Fill |
+| Website or blog images | Same width (like 1200 px), link on |
+| An online shop grid | An exact square size, Fit with white |
+| A social media set | An exact size, Fill |
 | Shrink everything | Percentage |
 
 ## Batch compressing to a file size
 
-If your goal is a file size rather than dimensions, for example getting every image under 200KB, use the [Image Compressor](tool:compress-image) instead. It also accepts up to 20 images and compresses each to the same target. Many people resize first and then compress; see [how to lower image file size](post:how-to-lower-image-file-size).
+If what you really need is a file size, like every image under 200KB, use the [image compressor](tool:compress-image) instead. It also takes up to 20 images and compresses each one to the same target. Lots of people resize first and then compress. Our guide on [how to lower image file size](post:how-to-lower-image-file-size) explains why.
 
-## Built-in alternatives
+## Options already on your computer
 
-**Windows:** PowerToys includes an Image Resizer that adds a right-click option in File Explorer for resizing many files.
+**Windows.** PowerToys includes an Image Resizer that adds a right-click option in File Explorer for resizing lots of files.
 
-**Mac:** select several images, open them in Preview, select all thumbnails and use **Tools → Adjust Size**, or use the Finder **Convert Image** quick action, which can also change size.
+**Mac.** Select several images, open them in Preview, select all the thumbnails and use **Tools → Adjust Size**. Or use Finder's **Convert Image** quick action, which can change the size too.
 
-These are useful if you resize regularly and do not mind setting them up.
-
-## Tips for batch resizing
-
-- **Start with originals,** not previously resized copies.
-- **Check one result** before processing hundreds of images.
-- **Use consistent shapes** for galleries. Mixed portrait and landscape photos look neater with Fit and a background colour.
-- **Rename afterwards** if your platform needs specific file names. Lumi Pix adds the new size to each file name, such as `photo-1200x800.jpg`.
-
-For resizing to an exact size in general, see [how to resize a picture in pixels](post:resize-picture-in-pixels). For a shop catalogue, our guide to [white background product photos](post:white-background-product-photos) shows a complete workflow.
+They're handy if you resize regularly and don't mind setting them up.
 
 ## Batch resizing on a phone
 
-You can batch resize on Android and iPhone in the browser:
+You can batch resize on Android and iPhone right in the browser:
 
-1. Open the [Image Resizer](tool:image-resizer).
-2. Tap **Choose files** and select several photos at once from your gallery.
+1. Open the bulk resizer.
+2. Tap **Choose files** and pick several photos at once from your gallery.
 3. Set the size or tap a preset.
-4. Tap **Download all**. Your browser may ask for permission to download multiple files; allow it.
+4. Tap **Download all** to save them as one ZIP.
 
-On iPhone the files appear in the **Files** app, in Downloads. On Android they are in the **Downloads** folder.
+On iPhone the ZIP goes into the **Files** app, in Downloads, and tapping it unpacks the photos. On Android it's in the **Downloads** folder.
 
-## Naming and organising the results
+## Tips for batch resizing
 
-Batch resizing produces many files, so organisation matters:
+- **Start from the originals**, not copies you've already resized.
+- **Check one result** before you process a whole pile.
+- **Think about mixed shapes.** In a gallery, mixed portrait and landscape photos look neater with Fit and a background colour.
+- **Rename afterwards** if your platform needs particular names. Lumi Pix adds the new size to each file name, like `photo-1200x800.jpg`.
 
-- The resizer adds the new size to each file name, such as `beach-1200x900.jpg`, so originals and resized copies never get mixed up.
-- Create a new folder for each batch, for example "Website 1200px" or "Shop 2000x2000".
-- Keep the originals in their own folder; never overwrite them.
+## Keeping things organised
 
-## Batch resizing for common platforms
+Batch resizing makes a lot of files, so a little organisation goes a long way:
 
-| Platform | Suggested batch setting |
+- The new size is in every file name, like `beach-1200x900.jpg`, so originals and copies never get mixed up.
+- Make a new folder for each batch, like "Website 1200px" or "Shop 2000x2000".
+- Keep the originals in their own folder and never overwrite them.
+
+## Settings for common platforms
+
+| Platform | Suggested setting |
 |---|---|
-| WordPress blog | Width 1600 px, lock on, JPG |
-| Shopify or WooCommerce products | 2000 × 2000, Fit with white, JPG |
-| Instagram carousel | 1080 × 1350, Fill or Fit |
-| Email newsletter | Width 1200 px, lock on |
-| Presentation slides | 1920 × 1080, Fill |
+| A WordPress blog | Width 1600 px, link on, JPG |
+| Shopify or WooCommerce products | 2000 x 2000, Fit with white, JPG |
+| An Instagram carousel | 1080 x 1350, Fill or Fit |
+| An email newsletter | Width 1200 px, link on |
+| Presentation slides | 1920 x 1080, Fill |
 
-## Combining resize and compress
+For the social media sizes, there are pages to [resize photo for Instagram](tool:resize-image-for-instagram) and [resize image to 1920x1080](tool:resize-image-to-1920x1080) with the presets ready.
 
-If you also need each file under a certain size, do it in two quick steps:
+## Resize and compress together
+
+If every file also has to be under a certain size, it's two quick steps:
 
 1. Batch resize the images to the right dimensions.
-2. Drop the resized files into the [Image Compressor](tool:compress-image) with your target, for example 200KB, and click **Download all** again.
+2. Drop the resized files into the image compressor with your target, like 200KB, and click **Download all** again.
 
-Doing both steps in the browser means your photos never leave your device, which matters for client work and private photos.
+Doing both in the browser means your photos never leave your device, which matters for client work and private photos.
 
-## Handling mixed portrait and landscape photos
+## Mixed portrait and landscape photos
 
-When a batch contains both orientations, choose based on where they will appear:
+When a batch has both, decide based on where they'll appear:
 
-- **Same width, lock on:** keeps each photo's own shape. Ideal for blogs and articles.
-- **Exact square with Fit:** every image becomes the same square with padding. Ideal for shop grids.
-- **Exact size with Fill:** every image fills the frame, with some cropping. Ideal for slideshows.
+- **Same width, link on.** Each photo keeps its own shape. Ideal for blogs and articles.
+- **An exact square with Fit.** Every image becomes the same square with padding. Ideal for shop grids.
+- **An exact size with Fill.** Every image fills the frame, with some cropping. Ideal for slideshows.
 
-## Troubleshooting batch downloads
+## If something goes wrong
 
-- **Only one file downloaded:** your browser blocked multiple downloads. Look for a blocked-download icon in the address bar and allow it.
-- **Files have the wrong orientation:** the resizer reads the phone's rotation data, so this is rare. If it happens, rotate the original first and run the batch again.
-- **Some files failed:** unusual formats may not open in every browser. Convert them to JPG first.
+- **A photo comes out sideways.** Modern browsers apply your phone's rotation automatically, so this is rare. If it happens, rotate the original first and run the batch again.
+- **Some files won't open.** Unusual formats may not open in every browser. Convert them to JPG first.
+- **You can't find the ZIP.** Check your browser's downloads list. On iPhone, look in the Files app under Downloads.
 
-For exact sizes in general, see [how to resize a picture in pixels](post:resize-picture-in-pixels), and for making many files smaller, read [how to lower image file size](post:how-to-lower-image-file-size).
+For exact sizes in general, see [how to resize a picture in pixels](post:resize-picture-in-pixels). For a shop catalogue, our guide to [white background product photos](post:white-background-product-photos) shows the complete process.
 
-## Key takeaways
+## The short version
 
-- **Drop up to 20 images** into the resizer and apply the same settings to all of them.
-- **Lock on** keeps each photo's own shape; **lock off** with Fill or Fit gives identical sizes.
+- **Drop up to 20 images** in and apply the same settings to all of them.
+- **Link on** keeps each photo's shape. **Link off** with Fill or Fit gives identical sizes.
 - **Use percentage** to shrink a whole batch by the same amount.
-- **Download all** saves every file; allow multiple downloads if your browser asks.
-- **Resize first, then compress** when you also need a file size limit.
-- **Your originals are never overwritten**; resized copies get the new size in their names.
+- **Download all** saves everything in one ZIP.
+- **Resize first, then compress** when you also have a file size limit.
+- **Your originals are never overwritten.** The copies get the new size in their names.
 
 <!-- topup -->
 <!-- expanded -->
@@ -125,7 +125,7 @@ For exact sizes in general, see [how to resize a picture in pixels](post:resize-
 
 ### How do I resize multiple images at once for free?
 
-Drop them into a batch resizer such as the Lumi Pix Image Resizer, choose the size and click Download all.
+Drop them into a batch resizer like the Lumi Pix bulk resizer, choose the size and click Download all.
 
 ### Can I resize images to the same size without stretching them?
 
@@ -133,11 +133,11 @@ Yes. Use Fill to crop each image to the frame, or Fit to keep the whole picture 
 
 ### Is there a limit on how many images I can resize?
 
-The Lumi Pix resizer handles up to 20 images per batch. Run more batches for larger sets.
+The Lumi Pix resizer handles up to 20 images per batch. Run more batches for bigger sets.
 
 ### Can I batch resize photos on my phone?
 
-Yes. Select several photos in the browser-based resizer, set the size and tap Download all.
+Yes. Pick several photos in the browser-based resizer, set the size and tap Download all.
 
 ### Will batch resizing overwrite my original photos?
 
@@ -145,4 +145,4 @@ No. The resized copies are new files with the size in their names. Your original
 
 ### Can I batch resize and convert to JPG at the same time?
 
-Yes. Choose JPG under Save as before you download, and every resized image in the batch is saved as a JPG.
+Yes. Choose JPG under Save as before you download, and every image in the batch is saved as a JPG.

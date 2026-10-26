@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled keywords, titles or descriptions change. */
-define( 'LUMIPIX_RM_REV', 5 );
+define( 'LUMIPIX_RM_REV', 6 );
 
 /**
  * SEO data for everything the theme manages.
@@ -30,7 +30,7 @@ function lumipix_rm_items() {
 		}
 		if ( 'blog' === $key ) {
 			$items[ $id ] = array(
-				'title'    => __( 'Image Guides & Tutorials – Compress, Resize, Edit | Lumi Pix', 'lumipix' ),
+				'title'    => __( 'Image Guides & Tutorials: Compress, Resize, Edit | Lumi Pix', 'lumipix' ),
 				'desc'     => __( 'Image guides and tutorials: short, practical guides to compressing, resizing and editing images, from exact KB sizes to passport photos.', 'lumipix' ),
 				'keywords' => 'image guides, image tutorials, how to compress image, how to resize image, remove background guide',
 				'image'    => 'assets/og/home.jpg',
