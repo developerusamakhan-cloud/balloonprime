@@ -242,6 +242,16 @@ function lumipix_render_resize_options( $c, $id ) {
 			</select>
 		</div>
 	</div>
+	<?php if ( isset( $c['sheet'] ) ) : ?>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-sheet"><?php esc_html_e( 'Print sheet', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-sheet" data-opt="sheet">
+				<option value="" <?php selected( $c['sheet'], '' ); ?>><?php esc_html_e( 'Single photo', 'lumipix' ); ?></option>
+				<option value="15x10cm" <?php selected( $c['sheet'], '15x10cm' ); ?>><?php esc_html_e( '10×15 cm photo paper', 'lumipix' ); ?></option>
+				<option value="6x4in" <?php selected( $c['sheet'], '6x4in' ); ?>><?php esc_html_e( '4×6 in photo paper', 'lumipix' ); ?></option>
+			</select>
+		</div>
+	<?php endif; ?>
 	<p class="field__hint" data-dims-hint></p>
 	<input type="hidden" data-opt="lockDefault" value="<?php echo $lock ? '1' : '0'; ?>">
 	<?php

@@ -72,6 +72,21 @@ function lumipix_title_separator() {
 add_filter( 'document_title_separator', 'lumipix_title_separator' );
 
 /**
+ * Keep sizes such as 3x4 or 1920x1080 as typed. WordPress turns the x between
+ * two numbers into a multiplication sign, which no longer matches what people
+ * search for.
+ *
+ * @param string $text Title or content.
+ * @return string
+ */
+function lumipix_keep_size_x( $text ) {
+	return preg_replace( '/(\d)&#215;(\d)/', '$1x$2', (string) $text );
+}
+add_filter( 'the_title', 'lumipix_keep_size_x', 20 );
+add_filter( 'the_content', 'lumipix_keep_size_x', 20 );
+add_filter( 'document_title', 'lumipix_keep_size_x', 20 );
+
+/**
  * Meta description for the current request.
  *
  * @return string

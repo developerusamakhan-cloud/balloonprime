@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled language pages change, so untouched pages are refreshed. */
-define( 'LUMIPIX_LANG_REV', 4 );
+define( 'LUMIPIX_LANG_REV', 5 );
 
 /**
  * Languages with their own pages.
@@ -84,7 +84,7 @@ function lumipix_lang_pack() {
 	);
 	$base = lumipix_tools();
 	// Display order of the translated tools (menus, cards, chips).
-	$order = array( '_hub', 'compress-image', 'image-resizer', 'image-to-pdf', 'background-remover', 'webp-to-jpg', 'png-to-jpg' );
+	$order = array( '_hub', 'compress-image', 'image-resizer', 'image-to-pdf', 'background-remover', 'webp-to-jpg', 'png-to-jpg', 'passport-size-photo' );
 	foreach ( array_keys( lumipix_languages() ) as $lang ) {
 		$files = glob( LUMIPIX_DIR . '/content/lang/' . $lang . '/*.md' );
 		usort(
@@ -121,6 +121,15 @@ function lumipix_lang_pack() {
 			$key    = $lang . '-' . $name;
 			$keys[] = $key;
 			$tool   = $base[ $name ];
+			// Optional tool settings for this language, e.g. config_width: 3 and config_presets: foto-3x4.
+			foreach ( array( 'width', 'height', 'unit', 'sheet' ) as $opt ) {
+				if ( isset( $meta[ 'config_' . $opt ] ) ) {
+					$tool['config'][ $opt ] = is_numeric( $meta[ 'config_' . $opt ] ) ? (float) $meta[ 'config_' . $opt ] : $meta[ 'config_' . $opt ];
+				}
+			}
+			if ( ! empty( $meta['config_presets'] ) ) {
+				$tool['config']['presets'] = array_map( 'trim', explode( ',', $meta['config_presets'] ) );
+			}
 
 			$pack['tools'][ $key ] = array_merge(
 				$tool,

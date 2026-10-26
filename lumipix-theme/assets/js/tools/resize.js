@@ -1,6 +1,7 @@
 /**
  * Image resizer: pixels, percent, cm, mm and inches (with DPI), presets,
- * aspect lock, and fit / fill / stretch modes.
+ * aspect lock, fit / fill / stretch modes, and an optional print sheet that
+ * tiles the photo on 10×15 cm or 4×6 in photo paper.
  */
 (function () {
 	'use strict';
@@ -73,6 +74,39 @@
 		ctx.fillStyle = opts.background || '#ffffff';
 		ctx.fillRect(0, 0, tw, th);
 		ctx.drawImage(inner, Math.round((tw - iw) / 2), Math.round((th - ih) / 2));
+		return out;
+	}
+
+	/** Tile a sized photo on photo paper with thin cut lines. Null when it does not fit. */
+	function printSheet(photo, opts) {
+		var m = /^(\d+(?:\.\d+)?)x(\d+(?:\.\d+)?)(cm|in)$/.exec(opts.sheet || '');
+		if (!m) return null;
+		var dpi = opts.dpi || 300;
+		var W = Math.round(toPx(+m[1], m[3], dpi));
+		var H = Math.round(toPx(+m[2], m[3], dpi));
+		var gap = Math.round(toPx(3, 'mm', dpi));
+		var pw = photo.width;
+		var ph = photo.height;
+		var cols = Math.floor((W - gap) / (pw + gap));
+		var rows = Math.floor((H - gap) / (ph + gap));
+		if (cols < 1 || rows < 1) return null;
+		var out = L.makeCanvas(W, H);
+		var ctx = out.getContext('2d');
+		ctx.fillStyle = '#ffffff';
+		ctx.fillRect(0, 0, W, H);
+		ctx.strokeStyle = '#c8c8c8';
+		ctx.lineWidth = 1;
+		var ox = Math.round((W - (cols * pw + (cols - 1) * gap)) / 2);
+		var oy = Math.round((H - (rows * ph + (rows - 1) * gap)) / 2);
+		for (var r = 0; r < rows; r++) {
+			for (var c = 0; c < cols; c++) {
+				var x = ox + c * (pw + gap);
+				var y = oy + r * (ph + gap);
+				ctx.drawImage(photo, x, y);
+				ctx.strokeRect(x - 0.5, y - 0.5, pw + 1, ph + 1);
+			}
+		}
+		out.copies = cols * rows;
 		return out;
 	}
 
@@ -161,6 +195,14 @@
 					}
 					var size = targetSize(opts, locked, img.width, img.height);
 					var canvas = render(img, size, opts);
+					var copies = 0;
+					if (opts.sheet && size.exact && opts.unit in PHYSICAL) {
+						var sheet = printSheet(canvas, opts);
+						if (sheet) {
+							copies = sheet.copies;
+							canvas = sheet;
+						}
+					}
 					var type = outputType(opts, item.file);
 					if (type === 'image/jpeg') canvas = L.flatten(canvas, opts.background || '#ffffff');
 					var q = type === 'image/png' ? undefined : 0.92;
@@ -169,17 +211,17 @@
 					return L.canvasToBlob(canvas, type, q).then(function (blob) {
 						if (type === 'image/jpeg' && opts.unit in PHYSICAL) {
 							return L.setJpegDpi(blob, opts.dpi || 300).then(function (b) {
-								return { blob: b, type: type, w: canvas.width, h: canvas.height };
+								return { blob: b, type: type, w: canvas.width, h: canvas.height, copies: copies };
 							});
 						}
-						return { blob: blob, type: type, w: canvas.width, h: canvas.height };
+						return { blob: blob, type: type, w: canvas.width, h: canvas.height, copies: copies };
 					});
 				}).then(function (res) {
 					return {
 						blob: res.blob,
-						name: L.renameFile(item.file.name, res.type, res.w + 'x' + res.h),
+						name: L.renameFile(item.file.name, res.type, res.copies ? 'sheet-' + res.copies : res.w + 'x' + res.h),
 						meta:
-							'<span>' + L.formatBytes(item.file.size) + '</span><span class="arrow">→</span><strong>' + res.w + '×' + res.h + '</strong><span>' + L.formatBytes(res.blob.size) + '</span>'
+							'<span>' + L.formatBytes(item.file.size) + '</span><span class="arrow">→</span><strong>' + res.w + '×' + res.h + '</strong>' + (res.copies ? '<span>' + res.copies + ' ×</span>' : '') + '<span>' + L.formatBytes(res.blob.size) + '</span>'
 					};
 				});
 			},
@@ -230,7 +272,7 @@
 			app.rerun();
 		});
 
-		[dpiInput, fitSel, el.querySelector('[data-opt="background"]'), el.querySelector('[data-opt="format"]')].forEach(function (node) {
+		[dpiInput, fitSel, el.querySelector('[data-opt="background"]'), el.querySelector('[data-opt="format"]'), el.querySelector('[data-opt="sheet"]')].forEach(function (node) {
 			if (!node) return;
 			node.addEventListener('input', function () {
 				refresh();
