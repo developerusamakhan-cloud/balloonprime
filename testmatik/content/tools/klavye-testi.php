@@ -66,7 +66,7 @@ return array(
 <tr><td>Aynı bölgedeki birkaç tuş birlikte çalışmıyor</td><td>Klavye devresinde bir hat kopukluğu veya laptopta yassı kablo sorunu</td><td>Harici klavyede kabloyu ve portu değiştirin; laptopta servise başvurun</td></tr>
 <tr><td>Bastığınız tuş yerine başka karakter çıkıyor</td><td>İşletim sisteminde yanlış klavye düzeni seçili</td><td>Windows 11: Ayarlar &gt; Zaman ve dil &gt; Dil ve bölge; macOS: Sistem Ayarları &gt; Klavye &gt; Metin Girişi</td></tr>
 <tr><td>Tek basışta iki kayıt düşüyor</td><td>Yıpranmış veya kirli switch</td><td>Switch'i temizleyin ya da değiştirin; garantideyse değişim talep edin</td></tr>
-<tr><td>Aynı anda basılan tuş sayısı 2–3'te kalıyor</td><td>Membran klavyenin ghosting sınırı</td><td>Oyun için anti-ghosting veya NKRO destekli klavye tercih edin</td></tr>
+<tr><td>Aynı anda basılan tuş sayısı 2-3'te kalıyor</td><td>Membran klavyenin ghosting sınırı</td><td>Oyun için anti-ghosting veya NKRO destekli klavye tercih edin</td></tr>
 <tr><td>Kablosuz klavyede tuşlar kaçıyor</td><td>Zayıf pil, uzak alıcı, kablosuz parazit</td><td>Pili değiştirin, alıcıyı klavyeye yakın bir porta takın</td></tr>
 <tr><td>Hiçbir tuş algılanmıyor</td><td>Sayfa odakta değil, bağlantı veya sürücü sorunu</td><td>Sayfaya tıklayın; Aygıt Yöneticisi &gt; Klavyeler altından aygıtı kaldırıp bilgisayarı yeniden başlatın</td></tr>
 <tr><td>Tuş bırakıldığı hâlde basılı görünüyor</td><td>Sıkışan tuş veya Yapışkan Tuşlar özelliği</td><td>Tuşu birkaç kez basıp bırakın; Ayarlar &gt; Erişilebilirlik &gt; Klavye bölümünden Yapışkan tuşları kapatın</td></tr>
@@ -77,7 +77,7 @@ return array(
 <h2>Laptop klavyesi ve mekanik klavye: nelere dikkat etmeli?</h2>
 <h3>Laptop klavyeleri</h3>
 <p>Laptop klavyeleri genellikle ince makas mekanizmalıdır ve anakarta yassı bir kabloyla bağlanır. Bu yüzden sıvı teması veya kablo gevşemesi çoğu zaman tek bir tuşu değil, bir sırayı ya da bölgeyi etkiler. Aynı anda algılanan tuş sayısı da oyun klavyelerine göre düşük çıkabilir; bu genellikle tasarım sınırıdır, arıza değildir.</p>
-<p>Testi yaparken harici bir klavye bağlıysa çıkarın; böylece yalnızca dahili klavyeyi ölçtüğünüzden emin olursunuz. Sayısal tuş takımı olmayan modellerde Num Lock ve benzeri kombinasyonların üreticiye göre değiştiğini unutmayın.</p>
+<p>Testi yaparken harici bir klavye bağlıysa çıkarın; böylece yalnızca dahili klavyeyi ölçtüğünüzden emin olursunuz. Sayısal tuş takımı olmayan modellerde Num Lock ve benzeri kombinasyonların üreticiye göre değiştiğini hesaba katın.</p>
 <h3>Mekanik klavyeler</h3>
 <p>Mekanik klavyelerde her tuşun altında ayrı bir switch bulunur. Bir tuş tek basışta iki kez yazıyorsa ya da bazen hiç tepki vermiyorsa sorun çoğunlukla o switch'tedir. Switch'leri çıkarılabilen (hot-swap) modellerde sorunlu switch'i başka bir tuşunkiyle yer değiştirerek arızanın switch'te mi yoksa devrede mi olduğunu anlayabilirsiniz.</p>
 <p>Bazı klavyelerde NKRO bir tuş kombinasyonuyla veya üreticinin yazılımından açılır. Ayarı değiştirdikten sonra aynı anda basılan tuş sayacını tekrar kontrol ederek değişikliğin işe yarayıp yaramadığını görebilirsiniz.</p>
@@ -92,13 +92,14 @@ return array(
 
 <h2>Diğer donanım testleri</h2>
 <p>Görüntülü görüşmeden önce <a href="{tool:kamera-testi}">kamera testi</a> ile görüntünüzü, <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol ses kanallarını kontrol edebilirsiniz. Tüm araçlar ücretsizdir, kayıt gerektirmez ve aynı gizlilik ilkesiyle çalışır.</p>
+<p>Tuşlarınız testte yanmıyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları deneyin. Lenovo kullanıyorsanız Fn Lock ve Vantage ayarları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı daha hızlı sonuç verir.</p>
 HTML
 	,
 	'faqs'        => array(
 		array( 'q' => 'Klavye testi nasıl yapılır?', 'a' => 'Sayfayı açın, klavyenizin dizilimine göre Türkçe Q veya Türkçe F düzenini seçin ve tuşlara tek tek basın. Algılanan tuşlar yeşile döner, hiç renk almayan tuşlar sinyal göndermiyor olabilir. Testi baştan almak için Sıfırla düğmesini kullanabilirsiniz.' ),
 		array( 'q' => 'Fn tuşu neden testte görünmüyor?', 'a' => 'Fn tuşu laptopun klavye denetleyicisinde donanımsal olarak işlenir ve tarayıcıya hiçbir zaman ayrı bir tuş olarak ulaşmaz. Bu nedenle hiçbir online klavye testi Fn tuşunu algılayamaz. Fn ile çalışan ses veya parlaklık kısayolları çalışıyorsa tuş sağlamdır.' ),
 		array( 'q' => 'Türkçe F klavye testi yapabilir miyim?', 'a' => 'Evet. Düzen düğmesiyle Türkçe F dizilimine geçtiğinizde ekrandaki klavyenin etiketleri F düzenine göre değişir. Böylece bastığınız tuş ekranda doğru yerde yanar ve Ğ, Ş, İ gibi Türkçe karakterleri kolayca kontrol edersiniz.' ),
-		array( 'q' => 'Aynı anda basılan tuş sayısı kaç olmalı?', 'a' => 'Günlük yazı için iki veya üç tuş yeterlidir. Oyunlarda ise birden fazla tuşa aynı anda basıldığı için en az altı tuşu algılayan bir klavye daha rahat bir deneyim sunar. NKRO destekli klavyeler basılan tüm tuşları ayrı ayrı iletebilir.' ),
+		array( 'q' => 'Aynı anda basılan tuş sayısı kaç olmalı?', 'a' => 'Günlük yazı için iki veya üç tuş yeterlidir. Oyunlarda ise birden fazla tuşa aynı anda basıldığı için en az altı tuşu algılayan bir klavye daha rahat kullanılır. NKRO destekli klavyeler basılan tüm tuşları ayrı ayrı iletebilir.' ),
 		array( 'q' => 'Tuş testte doğru görünüyor ama yazarken farklı karakter çıkıyor, neden?', 'a' => 'Bu durumda donanım büyük ihtimalle sağlamdır ve sorun işletim sistemindeki klavye düzenidir. Windows 11 için Ayarlar > Zaman ve dil > Dil ve bölge, macOS için Sistem Ayarları > Klavye > Metin Girişi bölümünden doğru Türkçe Q veya F düzenini seçin.' ),
 		array( 'q' => 'Klavye testi tuş vuruşlarımı kaydediyor mu?', 'a' => 'Hayır. Test tamamen tarayıcınızda çalışır, bastığınız tuşlar hiçbir sunucuya gönderilmez ve saklanmaz. Yine de test sırasında şifre gibi kişisel bilgiler yazmamanızı öneririz.' ),
 		array( 'q' => 'Mekanik ve kablosuz klavyelerle çalışır mı?', 'a' => 'Evet. Test, laptop klavyeleri, masaüstü klavyeler, mekanik klavyeler ve Bluetooth ya da USB alıcılı kablosuz klavyelerle aynı şekilde çalışır. Kablosuz klavyede tuşlar kaçıyorsa önce pili ve alıcının konumunu kontrol edin.' ),

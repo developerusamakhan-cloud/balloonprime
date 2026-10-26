@@ -35,7 +35,7 @@ return array(
 <li>Her renkte ekranı yakından inceleyin. Siyah zeminde parlayan nokta sıkışmış piksele, beyaz zeminde siyah nokta ölü piksele işaret eder.</li>
 <li>İsterseniz "Otomatik" modu açın; renkler her 3 saniyede bir kendiliğinden değişir.</li>
 </ol>
-<p>Sıkışmış bir piksel bulursanız piksel onarıcıyı deneyebilirsiniz: hızla renk değiştiren küçük kareyi pikselin üzerine sürükleyip 10–30 dakika bırakın. Bu yöntem her zaman sonuç vermez ama denemeye değer. Ayrıntılar için <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel nasıl düzeltilir</a> rehberimize bakabilirsiniz.</p>
+<p>Sıkışmış bir piksel bulursanız piksel onarıcıyı deneyebilirsiniz: hızla renk değiştiren küçük kareyi pikselin üzerine sürükleyip 10-30 dakika bırakın. Bu yöntem her zaman sonuç vermez ama denemeye değer. Ayrıntılar için <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel nasıl düzeltilir</a> rehberimize bakabilirsiniz.</p>
 <div class="tm-callout tm-callout--warn">
 <p><strong>Uyarı:</strong> Piksel onarıcı hızlı yanıp sönen renkler kullanır. Işığa duyarlı epilepsiniz varsa bu özelliği kullanmayın.</p>
 </div>
@@ -51,7 +51,7 @@ return array(
 <li><strong>Dokunmaları göster</strong> seçeneğini açın; her dokunuşunuz ekranda küçük bir daireyle gösterilir.</li>
 <li><strong>İşaretçi konumu</strong> seçeneğini açın; parmağınızı sürüklediğinizde çizgi oluşur ve ekranın üstünde koordinatlar görünür.</li>
 </ol>
-<p>Şimdi parmağınızı ekranın bir kenarından diğerine yavaşça, satır satır sürükleyin. Çizginin kesildiği veya kaydığı yerler ölü bölgeye işaret eder. Köşeleri ve klavyenin açıldığı alt bölgeyi özellikle dikkatle deneyin. Testi bitirince iki seçeneği de kapatmayı unutmayın.</p>
+<p>Şimdi parmağınızı ekranın bir kenarından diğerine yavaşça, satır satır sürükleyin. Çizginin kesildiği veya kaydığı yerler ölü bölgeye işaret eder. Köşeleri ve klavyenin açıldığı alt bölgeyi özellikle dikkatle deneyin. Testi bitirince iki seçeneği de kapatın.</p>
 <h3>Üreticilerin test menüleri ve kodları</h3>
 <p>Bazı üreticiler telefonlara gizli bir donanım test menüsü ekler. Bunlar resmi olarak her modelde garanti edilmez ve yazılım sürümüne göre değişebilir:</p>
 <ul>

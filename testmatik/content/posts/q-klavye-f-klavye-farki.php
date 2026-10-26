@@ -12,7 +12,7 @@ return array(
 	'tool'        => 'klavye-testi',
 	'html'        => <<<'HTML'
 <h2>Q klavye ve F klavye nedir?</h2>
-<p>Klavye düzenleri adını genellikle sol üst sıradaki ilk harften alır. <strong>Q klavye</strong>, dünyada en yaygın kullanılan QWERTY düzeninin Türkçe karakterlerle genişletilmiş hâlidir. <strong>F klavye</strong> ise Türkçe için özel olarak tasarlanmış, sol üst sırası F, G, Ğ, I, O, D harfleriyle başlayan yerli bir düzendir.</p>
+<p>Klavye düzenleri adını genellikle sol üst sıradaki ilk harften alır. <strong>Q klavye</strong>, dünyada en yaygın kullanılan QWERTY düzeninin Türkçe karakterlerle genişletilmiş hâlidir. <strong>F klavye</strong> ise Türkçe için özel olarak tasarlanmış, sol üst sırası F, G, Ğ, I, O, D harfleriyle başlayan yerli bir düzendir. Q klavye F klavye farkı da burada başlar: aynı tuşların üzerinde bambaşka harfler durur.</p>
 <p>Türkiye'de satılan bilgisayarların büyük bölümü Türkçe Q klavyeyle gelir. F klavye ise özellikle kamu kurumlarında, uzun süre daktilo kullanmış kişilerde ve on parmak yazanlar arasında hâlâ tercih edilir. İki düzen de Ğ, Ü, Ş, İ, Ö ve Ç harflerini içerir; fark, harflerin tuşlara nasıl dağıtıldığındadır.</p>
 
 <h2>F klavyenin kısa tarihi</h2>
@@ -39,13 +39,13 @@ return array(
 <p>Nokta, virgül ve bazı semboller de iki düzende farklı yerlerdedir. Örneğin Türkçe Q klavyede nokta Ç harfinin hemen sağındadır, virgül ise orta sırada İ harfinin yanındadır. F klavyede nokta ve virgül alt sırada, B harfinin sağında yan yana bulunur. <kbd>AltGr</kbd> ile yazılan bazı semboller de iki düzende farklı tuşlara denk gelebilir. Bir düzenden diğerine geçen kullanıcıların en çok zorlandığı yer genellikle harfler değil, bu sembollerdir.</p>
 
 <h2>Yazma hızı açısından hangisi daha iyi?</h2>
-<p>F klavyenin Türkçe metinlerde parmak hareketini azaltacak şekilde tasarlandığı açıktır. On parmak yazan ve düzeni iyi öğrenmiş biri için Türkçe yazarken daha az yorucu ve daha akıcı bir deneyim sunabilir. Ancak hız yalnızca düzene bağlı değildir; alışkanlık, pratik süresi ve doğru parmak tekniği en az düzen kadar belirleyicidir.</p>
+<p>F klavyenin Türkçe metinlerde parmak hareketini azaltacak şekilde tasarlandığı açıktır. On parmak yazan ve düzeni iyi öğrenmiş biri için Türkçe yazarken daha az yorar ve daha akıcı yazdırır. Ancak hız yalnızca düzene bağlı değildir; alışkanlık, pratik süresi ve doğru parmak tekniği en az düzen kadar belirleyicidir.</p>
 <p>Yıllardır Q klavye kullanan biri F'ye geçtiğinde ilk haftalarda belirgin biçimde yavaşlar. Bu geçiş dönemi kişiden kişiye değişir. Ayrıca İngilizce metin, yazılım kodu veya kısayol tuşlarını yoğun kullanıyorsanız Q düzeni daha pratik olabilir; çünkü pek çok programın kısayolları QWERTY düzenine göre düşünülmüştür.</p>
 <h3>Q'dan F'ye geçmek isteyenler için öneriler</h3>
 <ul>
 <li><strong>Kademeli ilerleyin:</strong> İlk günlerde yalnızca orta sıradaki tuşlara odaklanın, ardından üst ve alt sıraları ekleyin.</li>
 <li><strong>Klavyeye bakmamayı alışkanlık hâline getirin:</strong> Tuş etiketleri Q düzenindeyse bakarak yazmak sizi sürekli yanıltır.</li>
-<li><strong>Kısa ama düzenli pratik yapın:</strong> Her gün 15–20 dakikalık çalışma, haftada bir yapılan uzun bir seanstan daha kalıcı sonuç verir.</li>
+<li><strong>Kısa ama düzenli pratik yapın:</strong> Her gün 15-20 dakikalık çalışma, haftada bir yapılan uzun bir seanstan daha kalıcı sonuç verir.</li>
 <li><strong>Tek düzene bağlı kalın:</strong> Gün içinde sürekli Q ile F arasında gidip gelmek kas hafızasının oturmasını geciktirir.</li>
 </ul>
 <p>Geçiş sürecinde iş yerinde Q, evde F kullanmak zorundaysanız iki düzeni de ekleyip kısayolla değiştirmek en pratik çözümdür.</p>
@@ -80,12 +80,12 @@ return array(
 <p>Tek bir doğru cevap yok, ama kullanım alışkanlıklarınıza göre net bir öneri yapmak mümkün:</p>
 <ul>
 <li><strong>Q klavyeyi seçin:</strong> Hazır bilgisayarların çoğu Q ile geldiği için cihaz ve yedek parça bulmak kolaydır. Kod yazıyorsanız, İngilizce metinlerle çalışıyorsanız ya da sık sık farklı bilgisayarlar kullanıyorsanız Q daha pratiktir.</li>
-<li><strong>F klavyeyi seçin:</strong> Ağırlıklı olarak Türkçe metin yazıyorsanız, on parmak klavye eğitimi alacaksanız veya zaten F ile yazmayı biliyorsanız F düzeni size daha rahat bir deneyim sunabilir.</li>
+<li><strong>F klavyeyi seçin:</strong> Ağırlıklı olarak Türkçe metin yazıyorsanız, on parmak klavye eğitimi alacaksanız veya zaten F ile yazmayı biliyorsanız F düzeni size daha rahat gelecektir.</li>
 </ul>
 <p>Laptop alırken klavye düzenini mutlaka kontrol edin; F klavyeli modeller daha az bulunur ve sonradan klavye değiştirmek masraflı olabilir. Masaüstü kullanıyorsanız işiniz daha kolaydır; F düzeninde harici klavyeler satılır ve klavyeyi değiştirmek bilgisayarı değiştirmekten çok daha ucuzdur. Çocuğunuza ya da öğrencinize klavye seçiyorsanız okulda veya kursta hangi düzenin öğretildiğini sormanız da faydalı olur. İkinci el bir cihaz alıyorsanız düzenin yanı sıra tüm tuşların çalıştığını da doğrulayın. Bunun için <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> rehberimiz işinize yarayacaktır.</p>
 
 <h2>Klavye dışında da kontrol edin</h2>
-<p>Yeni bir klavye ya da bilgisayar aldıysanız sadece düzeni değil, donanımın genel durumunu da test etmek iyi bir alışkanlıktır. Oyun oynuyorsanız aynı anda birden çok tuşa bastığınızda sorun yaşamamak için <a href="{post:klavye-ghosting-nedir}">klavye ghosting ve NKRO</a> rehberimize göz atın. Faredeki tuşların sağlığını <a href="{tool:mouse-testi}">mouse testi</a> ile, toplantılardan önce sesinizin düzgün gidip gitmediğini <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile kontrol edebilirsiniz. Son olarak hangi düzende olursanız olun, tüm tuşları <a href="{tool:klavye-testi}">online klavye tuş testi</a> ile bir kez deneyip yeşile döndüklerinden emin olun.</p>
+<p>Yeni bir klavye ya da bilgisayar aldıysanız sadece düzeni değil, donanımın genel durumunu da test etmek iyi bir alışkanlıktır. Oyun oynuyorsanız aynı anda birden çok tuşa bastığınızda sorun yaşamamak için <a href="{post:klavye-ghosting-nedir}">klavye ghosting ve NKRO</a> rehberini de okuyun. Faredeki tuşların sağlığını <a href="{tool:mouse-testi}">mouse testi</a> ile, toplantılardan önce sesinizin düzgün gidip gitmediğini <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile kontrol edebilirsiniz. Son olarak hangi düzende olursanız olun, tüm tuşları <a href="{tool:klavye-testi}">online klavye tuş testi</a> ile bir kez deneyip yeşile döndüklerinden emin olun.</p>
 HTML
 	,
 	'faqs'        => array(

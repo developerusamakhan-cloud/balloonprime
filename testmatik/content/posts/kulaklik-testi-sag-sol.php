@@ -39,7 +39,7 @@ return array(
 <li><strong>Ani kaybolma:</strong> Belirli bir aralıkta sesin bir anda kesilip geri gelmesi normal değildir.</li>
 <li><strong>Tek tarafta farklılık:</strong> Bir kulakta ses daha boğuk veya daha tiz geliyorsa iki sürücü aynı performansı vermiyordur.</li>
 </ul>
-<p>Belirli bir frekansı ayrıntılı dinlemek isterseniz özel ton üretecinden istediğiniz değeri seçebilirsiniz. Örneğin 50–100 Hz arası bas tepkisini, 1 kHz civarı orta frekansları gösterir.</p>
+<p>Belirli bir frekansı ayrıntılı dinlemek isterseniz özel ton üretecinden istediğiniz değeri seçebilirsiniz. Örneğin 50-100 Hz arası bas tepkisini, 1 kHz civarı orta frekansları gösterir.</p>
 <div class="tm-callout tm-callout--info">
 <p><strong>Bilgi:</strong> İnsan kulağının duyma aralığı genellikle 20 Hz ile 20 kHz arasında kabul edilir, ancak üst sınır yaşla birlikte düşer. Çok yüksek frekansları duymamanız kulaklığın bozuk olduğu anlamına gelmez; aynı sesi başka bir kulaklıkla da deneyerek karşılaştırın.</p>
 </div>
@@ -95,7 +95,7 @@ return array(
 <p>Ses testi tamamen tarayıcınızda çalışır. Test tonları cihazınızda üretilir; hiçbir ses kaydı alınmaz ve hiçbir veri sunucuya gönderilmez. Herhangi bir uygulama yüklemeniz veya hesap açmanız gerekmez.</p>
 
 <h2>İlgili testler ve rehberler</h2>
-<p>Laptopunuzun dahili hoparlörlerinde cızırtı duyuyorsanız <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberimize göz atın. Kulaklığınızın mikrofonu sesinizi iletmiyorsa <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> yazımızı, genel Windows ayarları için de <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberini okuyabilirsiniz. Kullanılmış bir bilgisayar alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ses çıkışlarını da kapsar. Görüntülü görüşmelere hazırlanıyorsanız <a href="{tool:kamera-testi}">web kamera testi</a> ile kameranızı da kontrol edin.</p>
+<p>Laptopunuzun dahili hoparlörlerinde cızırtı duyuyorsanız <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberindeki adımlarla nedenini bulabilirsiniz. Kulaklığınızın mikrofonu sesinizi iletmiyorsa <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> yazımızı, genel Windows ayarları için de <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberini okuyabilirsiniz. Kullanılmış bir bilgisayar alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ses çıkışlarını da kapsar. Görüntülü görüşmelere hazırlanıyorsanız <a href="{tool:kamera-testi}">web kamera testi</a> ile kameranızı da kontrol edin.</p>
 <p>Ayarları düzelttikten ya da kulaklığı değiştirdikten sonra <a href="{tool:hoparlor-testi}">kulaklık testi</a> aracında sağ ve sol kanalı tekrar dinleyerek sorunun gerçekten çözüldüğünden emin olun.</p>
 HTML
 	,

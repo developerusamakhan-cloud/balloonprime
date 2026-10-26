@@ -21,6 +21,14 @@ return array(
 <li><strong>Kamera ve mouse:</strong> <a href="{tool:kamera-testi}">Kamera testi</a> çözünürlüğü ve FPS değerini gösterir, <a href="{tool:mouse-testi}">mouse testi</a> çift tıklamayı yakalar. Ayrıntılar için <a href="{post:mouse-cift-tiklama-sorunu}">mouse çift tıklama sorunu</a> yazısına bakın.</li>
 </ul>
 
+<h2>Belirli bir sorun için</h2>
+<ul>
+<li><strong>Marka ve klavye düzeni:</strong> <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a>, <a href="{post:q-klavye-f-klavye-farki}">Q klavye ve F klavye farkı</a>, <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a>.</li>
+<li><strong>Ekran ve kamera:</strong> <a href="{post:monitor-hz-ayarlama}">monitör Hz ayarlama</a>, <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a>, <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a>, <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a>.</li>
+<li><strong>Ses:</strong> <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a>, <a href="{post:kulaklik-testi-sag-sol}">kulaklık sağ sol testi</a>, <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a>, <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a>.</li>
+<li><strong>Mouse:</strong> <a href="{post:mouse-tekerlegi-sorunu}">mouse tekerleği sorunu</a>, <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a>.</li>
+</ul>
+
 <h2>İkinci el cihaz alıyorsanız</h2>
 <p>Kullanılmış bir laptop veya monitör alırken birkaç dakikalık kontrol, sonradan çıkabilecek masraflı sorunları önler. <a href="{post:ikinci-el-laptop-kontrol}">İkinci el laptop kontrol listesi</a>, tüm testleri satıcının yanında hangi sırayla yapmanız gerektiğini anlatır.</p>
 <p>Yeni rehberler düzenli olarak eklenir. Aradığınız konuyu bulamazsanız <a href="{page:iletisim}">iletişim</a> sayfasından bize yazabilirsiniz.</p>

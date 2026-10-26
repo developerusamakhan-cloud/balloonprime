@@ -13,7 +13,7 @@ return array(
 	'date'        => '2026-11-08 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Cızırtının türünü belirleyin</h2>
-<p>"Laptop ses bozuk geliyor" dediğimizde aslında birbirinden farklı birkaç sesten söz ediyor olabiliriz. Sürekli bir hışırtı, yalnızca yüksek seste ortaya çıkan çatallanma, düzensiz aralıklarla gelen tıkırtı ve pıtırtılar ya da belirli bas notalarında duyulan titreşim farklı nedenlere işaret eder. Çözüme ulaşmanın en kısa yolu, önce hangi tür cızırtıyı duyduğunuzu netleştirmektir.</p>
+<p>"Laptop ses bozuk geliyor" dediğimizde aslında birbirinden farklı birkaç sesten söz ediyor olabiliriz. Sürekli bir hışırtı, yalnızca yüksek seste ortaya çıkan çatallanma, düzensiz aralıklarla gelen tıkırtı ve pıtırtılar ya da belirli bas notalarında duyulan titreşim farklı nedenlere işaret eder. Laptop hoparlör cızırtı sorununda çözüme ulaşmanın en kısa yolu, önce hangi tür cızırtıyı duyduğunuzu netleştirmektir.</p>
 <table>
 <thead>
 <tr><th>Belirti</th><th>Olası neden</th><th>Çözüm yönü</th></tr>
@@ -69,7 +69,7 @@ return array(
 </ol>
 <p>Laptopunuzda üreticinin yüklediği ayrı bir ses uygulaması (ekolayzır, "bas artırma" veya surround efektleri sunan bir yazılım) varsa bu efektleri de geçici olarak kapatın. Küçük laptop hoparlörlerinde aşırı bas artırma, hoparlörün fiziksel sınırını zorlayarak çatallanmaya neden olur.</p>
 <div class="tm-callout tm-callout--tip">
-<p><strong>İpucu:</strong> Ses seviyesini yüzde 100 yerine yüzde 70–80 civarında tutmak, küçük hoparlörlerde bozulmayı belirgin biçimde azaltır. Daha yüksek ses gerekiyorsa harici bir hoparlör veya kulaklık daha iyi bir seçenektir.</p>
+<p><strong>İpucu:</strong> Ses seviyesini yüzde 100 yerine yüzde 70-80 civarında tutmak, küçük hoparlörlerde bozulmayı belirgin biçimde azaltır. Daha yüksek ses gerekiyorsa harici bir hoparlör veya kulaklık daha iyi bir seçenektir.</p>
 </div>
 
 <h2>Sürücü ve sistem gecikmesi</h2>

@@ -45,7 +45,7 @@ return array(
 <p>Hissettiğiniz sorunu ölçülebilir hâle getirmek için <a href="{tool:mouse-testi}">çift tıklama testi</a> aracını kullanabilirsiniz. Testteki çift tıklama (chatter) dedektörü, aynı tuşa ait iki tıklama belirlenen eşikten daha kısa aralıkla gelirse bunu işaretler. Varsayılan eşik 80 milisaniyedir. Bir insanın bilerek bu kadar kısa aralıkla iki kez tıklaması zordur; bu yüzden işaretlenen tıklamalar yıpranmış switch için güçlü bir işarettir.</p>
 <ol class="tm-steps">
 <li>Testi açın ve fareyi test alanının üzerine getirin.</li>
-<li>Şüphelendiğiniz tuşa, normal hızda ve her seferinde tek bir kez olacak şekilde 50–100 kez basın.</li>
+<li>Şüphelendiğiniz tuşa, normal hızda ve her seferinde tek bir kez olacak şekilde 50-100 kez basın.</li>
 <li>Tıklama sayacının bastığınız sayıyla uyuşup uyuşmadığına bakın.</li>
 <li>Dedektörün çift tıklama uyarısı verip vermediğini kontrol edin.</li>
 <li>Aynı denemeyi sağ, orta, geri ve ileri tuşlarla da tekrarlayın.</li>
@@ -89,7 +89,7 @@ return array(
 
 <h2>Garanti kapsamında değişim</h2>
 <p>Fareniz hâlâ garanti süresindeyse kendiniz müdahale etmeden önce satıcıya veya üreticiye başvurun. Türkiye'de tüketicilere satılan ürünlerde yasal garanti süresi en az iki yıldır. Test aracında aldığınız çift tıklama uyarısının ekran görüntüsünü ve sorunu gösteren kısa bir video kaydını başvurunuza eklemek, arızayı açıkça anlatmanıza yardımcı olur.</p>
-<p>Fatura veya sipariş kaydınızı saklamayı unutmayın. Bazı üreticiler yasal sürenin üzerinde kendi garanti sürelerini de sunar; ürün kutusunu, kullanım kılavuzunu veya üreticinin destek sayfasını kontrol ederek farenizin hangi kapsama girdiğini öğrenebilirsiniz.</p>
+<p>Fatura veya sipariş kaydınızı saklayın. Bazı üreticiler yasal sürenin üzerinde kendi garanti sürelerini de sunar; ürün kutusunu, kullanım kılavuzunu veya üreticinin destek sayfasını kontrol ederek farenizin hangi kapsama girdiğini öğrenebilirsiniz.</p>
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Fare sorunu genellikle tek başına gelmez; bir laptopu veya masaüstü seti kontrol ediyorsanız <a href="{tool:klavye-testi}">klavye testi</a> ile tüm tuşları, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı da kontrol edin. Touchpad ve klavye sorunları için <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberimize, kullanılmış bir cihaz alacaksanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesine</a> bakabilirsiniz. Ghosting gibi klavyeye özgü konular için de <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> yazımızı okuyabilirsiniz.</p>

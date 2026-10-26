@@ -14,7 +14,7 @@ return array(
 <li>Ekranı yumuşak, kuru bir mikrofiber bezle silin. Toz zerresi ile kusurlu piksel ilk bakışta birbirine çok benzer.</li>
 <li>Ekran parlaklığını orta-yüksek bir seviyeye getirin; gece ışığı, mavi ışık filtresi gibi renk değiştiren modları geçici olarak kapatın.</li>
 <li><strong>Testi başlat</strong> düğmesine basın. Test tam ekran açılır ve ekranın tamamı tek renge boyanır.</li>
-<li>Rengi değiştirmek için ekrana tıklayın ya da dokunun, ok tuşlarını veya boşluk tuşunu kullanın. Her renkte ekranı köşeden köşeye, yaklaşık 30–50 cm mesafeden dikkatle tarayın.</li>
+<li>Rengi değiştirmek için ekrana tıklayın ya da dokunun, ok tuşlarını veya boşluk tuşunu kullanın. Her renkte ekranı köşeden köşeye, yaklaşık 30-50 cm mesafeden dikkatle tarayın.</li>
 <li>Elleriniz serbest kalsın istiyorsanız <strong>Otomatik</strong> modunu açın; renk her 3 saniyede bir kendiliğinden değişir.</li>
 <li>Testten çıkmak için <kbd>Esc</kbd> tuşuna basın. Bulduğunuz noktaların yerini ve hangi renklerde göründüğünü not edin.</li>
 </ol>
@@ -72,7 +72,7 @@ return array(
 <ol class="tm-steps">
 <li>Önce ölü piksel testiyle sorunlu noktanın yerini bulun ve hangi renklerde göründüğünü not edin.</li>
 <li>Piksel onarıcıyı açın ve yanıp sönen kareyi sürükleyerek sıkışmış pikselin tam üzerine getirin.</li>
-<li>Kareyi 10–30 dakika boyunca orada bırakın. Ekran koruyucunun veya uyku modunun devreye girmediğinden emin olun.</li>
+<li>Kareyi 10-30 dakika boyunca orada bırakın. Ekran koruyucunun veya uyku modunun devreye girmediğinden emin olun.</li>
 <li>Süre dolunca testi yeniden çalıştırıp noktayı kontrol edin. Gerekirse işlemi birkaç kez tekrarlayın.</li>
 </ol>
 <p>Piksel onarıcı yalnızca sıkışmış piksellerde işe yarayabilir; hiç ışık vermeyen ölü piksellerde sonuç beklemeyin. Başarı her ekranda farklıdır ve garanti edilemez. Ekrana bastırarak düzeltme gibi fiziksel yöntemleri ve diğer seçenekleri <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel ve sıkışmış piksel nasıl düzeltilir</a> rehberimizde riskleriyle birlikte anlattık.</p>
@@ -93,7 +93,7 @@ return array(
 </thead>
 <tbody>
 <tr><td>Nokta ekranı silince kayboldu</td><td>Toz veya leke</td><td>Sorun yok; ekranı düzenli temizleyin.</td></tr>
-<tr><td>Her renkte aynı renkli nokta</td><td>Sıkışmış piksel</td><td>Piksel onarıcıyı 10–30 dakika deneyin.</td></tr>
+<tr><td>Her renkte aynı renkli nokta</td><td>Sıkışmış piksel</td><td>Piksel onarıcıyı 10-30 dakika deneyin.</td></tr>
 <tr><td>Açık renklerde siyah nokta</td><td>Ölü piksel</td><td>Garanti koşullarını kontrol edin.</td></tr>
 <tr><td>Siyah zeminde kenarlarda ışık</td><td>Arka aydınlatma sızması</td><td>Odayı karartıp normal parlaklıkta tekrar bakın; belirginse satıcıya danışın.</td></tr>
 <tr><td>Test tam ekran açılmıyor</td><td>Tarayıcı kısıtlaması veya gömülü pencere</td><td>Sayfayı ana tarayıcıda açın ya da tarayıcının tam ekran kısayolunu kullanın.</td></tr>
@@ -105,12 +105,13 @@ return array(
 
 <h2>Diğer testler ve rehberler</h2>
 <p>Ekranı kontrol ettikten sonra tuşları <a href="{tool:klavye-testi}">klavye testi</a> ile, dahili kamerayı <a href="{tool:kamera-testi}">web kamera testi</a> ile, fare tuşlarını ve çift tıklama sorununu <a href="{tool:mouse-testi}">mouse testi</a> ile, hoparlörleri de <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile deneyebilirsiniz. İkinci el bir cihaz alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> listesi tüm kontrolleri tek sayfada topluyor.</p>
+<p>Telefon veya tabletin ekranı dokunmaya geç tepki veriyorsa <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberine bakın. Yeni monitörünüz beklediğinizden daha az akıcı görünüyorsa <a href="{post:monitor-hz-ayarlama}">monitör Hz ayarlama</a> yazısıyla yenileme hızını kontrol edin.</p>
 HTML
 	,
 	'faqs'        => array(
 		array( 'q' => 'Ölü piksel testi nasıl yapılır?', 'a' => 'Ekranı temizleyin, Testi başlat düğmesine basın ve tam ekranda renkleri tıklayarak, ok tuşlarıyla veya boşluk tuşuyla değiştirin. Her renkte ekranı köşeden köşeye tarayın. Otomatik modda renk her 3 saniyede bir değişir, Esc tuşu testten çıkarır.' ),
 		array( 'q' => 'Ölü piksel ile sıkışmış piksel arasındaki fark nedir?', 'a' => 'Ölü piksel hiç ışık vermez ve açık renklerde siyah nokta olarak görünür. Sıkışmış pikselde bir veya iki alt piksel sürekli açık kalır, bu yüzden nokta kırmızı, yeşil, mavi veya karışım bir renkte görünür. Sıkışmış pikseller bazen düzelebilir, ölü pikseller genellikle kalıcıdır.' ),
-		array( 'q' => 'Piksel onarıcı ölü pikseli düzeltir mi?', 'a' => 'Piksel onarıcı yalnızca sıkışmış piksellerde işe yarayabilir. Hiç ışık vermeyen ölü piksellerde genellikle sonuç alınmaz. Sıkışmış piksellerde de başarı garanti değildir; kareyi 10–30 dakika bırakıp birkaç kez denemek gerekebilir.' ),
+		array( 'q' => 'Piksel onarıcı ölü pikseli düzeltir mi?', 'a' => 'Piksel onarıcı yalnızca sıkışmış piksellerde işe yarayabilir. Hiç ışık vermeyen ölü piksellerde genellikle sonuç alınmaz. Sıkışmış piksellerde de başarı garanti değildir; kareyi 10-30 dakika bırakıp birkaç kez denemek gerekebilir.' ),
 		array( 'q' => 'Telefon ölü piksel testi yapılabilir mi?', 'a' => 'Evet. Sayfayı telefonun tarayıcısında açın, Testi başlat düğmesine dokunun ve renkleri dokunarak değiştirin. Bazı tarayıcılarda sistem çubukları görünür kalabileceği için telefonu yatay ve dikey çevirerek kenarları ayrıca kontrol edin.' ),
 		array( 'q' => 'Piksel onarıcı epilepsi için tehlikeli mi?', 'a' => 'Piksel onarıcı hızla yanıp sönen renkler kullandığı için ışığa duyarlı epilepsisi olan kişilerde risk oluşturabilir. Böyle bir rahatsızlığınız varsa bu özelliği kullanmayın. Kullanırken de kareye doğrudan bakmamanızı öneririz.' ),
 		array( 'q' => 'Kaç ölü piksel garanti kapsamına girer?', 'a' => 'Bu tamamen üreticinin piksel politikasına bağlıdır. ISO 9241-307 standardı kusurlu piksel sınıflarını tanımlar, markalar da panellerinin hangi sınıfa uyduğunu ve hangi durumda değişim yapacaklarını kendileri belirler. Kesin bilgi için cihazınızın garanti belgesine veya üreticinin destek sayfasına bakın.' ),

@@ -32,7 +32,7 @@ function testmatik_seo_title() {
 			$id = (int) get_option( 'page_on_front' );
 			$t  = $id ? (string) get_post_meta( $id, '_testmatik_seo_title', true ) : '';
 		}
-		return $t ? $t : get_bloginfo( 'name' ) . ' – ' . get_bloginfo( 'description' );
+		return $t ? $t : get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description' );
 	}
 	if ( is_singular() || ( is_home() && get_option( 'page_for_posts' ) ) ) {
 		$t = (string) get_post_meta( is_singular() ? get_queried_object_id() : (int) get_option( 'page_for_posts' ), '_testmatik_seo_title', true );
@@ -300,6 +300,84 @@ add_action(
 		) . "</script>\n";
 	},
 	30
+);
+
+/*
+ * Rank Math prints only a BreadcrumbList on pages whose schema type is "None", which is
+ * its default for pages. Add the Organization, WebSite and WebPage nodes it leaves out,
+ * with the same @ids Rank Math uses elsewhere, so tool and legal pages join the site graph.
+ */
+add_filter(
+	'rank_math/json_ld',
+	function ( $data ) {
+		if ( ! is_page() || is_front_page() || ! is_array( $data ) ) {
+			return $data;
+		}
+		$types = array();
+		foreach ( $data as $node ) {
+			if ( is_array( $node ) && isset( $node['@type'] ) ) {
+				$types = array_merge( $types, (array) $node['@type'] );
+			}
+		}
+		if ( array_intersect( $types, array( 'WebPage', 'AboutPage', 'ContactPage', 'CollectionPage' ) ) ) {
+			return $data;
+		}
+		$home    = home_url( '/' );
+		$url     = get_permalink();
+		$org_id  = $home . '#organization';
+		$site_id = $home . '#website';
+		if ( ! in_array( 'Organization', $types, true ) ) {
+			$org  = array(
+				'@type' => 'Organization',
+				'@id'   => $org_id,
+				'name'  => get_bloginfo( 'name' ),
+				'url'   => $home,
+			);
+			$icon = get_site_icon_url( 512 );
+			if ( $icon ) {
+				$org['logo'] = $icon;
+			}
+			$data['testmatikOrganization'] = $org;
+		}
+		if ( ! in_array( 'WebSite', $types, true ) ) {
+			$data['testmatikWebSite'] = array(
+				'@type'      => 'WebSite',
+				'@id'        => $site_id,
+				'url'        => $home,
+				'name'       => get_bloginfo( 'name' ),
+				'inLanguage' => 'tr',
+				'publisher'  => array( '@id' => $org_id ),
+			);
+		}
+		$slug = get_post_field( 'post_name', get_queried_object_id() );
+		$page = array(
+			'@type'         => 'hakkimizda' === $slug ? 'AboutPage' : ( 'iletisim' === $slug ? 'ContactPage' : 'WebPage' ),
+			'@id'           => $url . '#webpage',
+			'url'           => $url,
+			'name'          => wp_get_document_title(),
+			'description'   => testmatik_seo_description(),
+			'datePublished' => get_the_date( 'c' ),
+			'dateModified'  => get_the_modified_date( 'c' ),
+			'isPartOf'      => array( '@id' => $site_id ),
+			'publisher'     => array( '@id' => $org_id ),
+			'inLanguage'    => 'tr',
+		);
+		if ( in_array( 'BreadcrumbList', $types, true ) ) {
+			$page['breadcrumb'] = array( '@id' => $url . '#breadcrumb' );
+		}
+		if ( testmatik_page_tool() ) {
+			$page['mainEntity'] = array( '@id' => $url . '#app' );
+		}
+		if ( has_post_thumbnail() ) {
+			$page['primaryImageOfPage'] = array(
+				'@type' => 'ImageObject',
+				'url'   => get_the_post_thumbnail_url( null, 'full' ),
+			);
+		}
+		$data['testmatikWebPage'] = $page;
+		return $data;
+	},
+	99
 );
 
 // Better core sitemap: drop users and tags, keep pages, posts and categories.

@@ -23,7 +23,7 @@ return array(
 
 <h3>Ölü piksel testi</h3>
 <p><a href="{tool:olu-piksel-testi}">Ölü piksel testi</a>, ekranınızı tam ekran düz renklerle doldurarak bozuk pikselleri görünür hâle getirir. "Testi başlat" düğmesine bastığınızda sırasıyla siyah, beyaz, kırmızı, yeşil, mavi, gri, camgöbeği, macenta ve sarı renkleri görebilirsiniz. Rengi tıklayarak, ekrana dokunarak, ok tuşlarıyla ya da boşluk tuşuyla değiştirirsiniz. "Otomatik" mod rengi her 3 saniyede bir kendiliğinden değiştirir, <kbd>Esc</kbd> ile çıkarsınız.</p>
-<p>Siyah zeminde parlayan bir nokta genellikle sıkışmış pikseldir; beyaz zeminde siyah kalan bir nokta ise ölü piksel olabilir. Sıkışmış pikseller için araçtaki piksel onarıcıyı kullanabilirsiniz: hızla rastgele renkler yanıp sönen küçük bir kareyi sorunlu noktanın üzerine sürükleyip 10–30 dakika bırakırsınız. Hızlı yanıp sönen ışıklar nedeniyle ışığa duyarlı epilepsisi olan kişilerin bu bölümü kullanmaması gerekir. Test monitör, laptop, telefon ve tarayıcısı olan televizyonlarda çalışır.</p>
+<p>Siyah zeminde parlayan bir nokta genellikle sıkışmış pikseldir; beyaz zeminde siyah kalan bir nokta ise ölü piksel olabilir. Sıkışmış pikseller için araçtaki piksel onarıcıyı kullanabilirsiniz: hızla rastgele renkler yanıp sönen küçük bir kareyi sorunlu noktanın üzerine sürükleyip 10-30 dakika bırakırsınız. Hızlı yanıp sönen ışıklar nedeniyle ışığa duyarlı epilepsisi olan kişilerin bu bölümü kullanmaması gerekir. Test monitör, laptop, telefon ve tarayıcısı olan televizyonlarda çalışır.</p>
 
 <h3>Mikrofon testi</h3>
 <p><a href="{tool:mikrofon-testi}">Online mikrofon testi</a>, tarayıcınızın mikrofon izni istemesiyle başlar. İzin verdikten sonra açılır listeden test etmek istediğiniz mikrofonu seçersiniz. Konuştuğunuzda canlı seviye göstergesi ve dalga formu hareket eder, en yüksek seviye (tepe değeri) ayrıca gösterilir.</p>
@@ -52,7 +52,7 @@ return array(
 <h2>Testmatik kimler için?</h2>
 <p>Donanım testine ihtiyaç duymak için teknisyen olmak gerekmez. Testmatik'i en sık şu durumlarda kullanabilirsiniz:</p>
 <ul>
-<li><strong>İkinci el alım yapanlar:</strong> Laptop, monitör ya da telefon alırken satıcının yanında birkaç dakikada klavyeyi, ekranı, kamerayı ve sesi kontrol edebilirsiniz. Adım adım kontrol listesi için <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberine göz atın.</li>
+<li><strong>İkinci el alım yapanlar:</strong> Laptop, monitör ya da telefon alırken satıcının yanında birkaç dakikada klavyeyi, ekranı, kamerayı ve sesi kontrol edebilirsiniz. Adım adım kontrol listesi için <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberinde bulabilirsiniz.</li>
 <li><strong>Oyuncular:</strong> Mouse'ta çift tıklama, klavyede ghosting ya da kulaklıkta yanlış kanal gibi sorunlar oyun deneyimini doğrudan etkiler. Polling rate ve aynı anda basılan tuş sayısı gibi değerleri kendiniz görebilirsiniz.</li>
 <li><strong>Uzaktan çalışanlar:</strong> Önemli bir görüntülü toplantıdan önce kameranın ve mikrofonun doğru seçildiğini, sesin net gittiğini kontrol etmek birkaç dakikanızı alır.</li>
 <li><strong>Öğrenciler:</strong> Online derse ya da sınava girmeden önce kamera ve mikrofonun çalıştığından emin olmak, son dakika sürprizlerini önler.</li>

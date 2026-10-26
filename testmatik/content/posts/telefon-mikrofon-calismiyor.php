@@ -13,7 +13,7 @@ return array(
 	'date'        => '2026-10-29 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Telefon mikrofonu neden çalışmaz?</h2>
-<p>Telefonda mikrofon sorunu genellikle iki şekilde ortaya çıkar: ya hiçbir uygulamada ses alınmaz ya da yalnızca belirli bir uygulamada, örneğin WhatsApp'ta veya bir oyunda sorun yaşanır. Bu ayrım, nedeni bulmak için en önemli ipucudur. Tüm uygulamaları etkileyen bir sorun donanıma veya sistem ayarına, tek bir uygulamayı etkileyen sorun ise çoğu zaman izinlere işaret eder.</p>
+<p>Telefon mikrofon çalışmıyor şikâyeti genellikle iki şekilde ortaya çıkar: ya hiçbir uygulamada ses alınmaz ya da yalnızca belirli bir uygulamada, örneğin WhatsApp'ta veya bir oyunda sorun yaşanır. Bu ayrım, nedeni bulmak için en önemli ipucudur. Tüm uygulamaları etkileyen bir sorun donanıma veya sistem ayarına, tek bir uygulamayı etkileyen sorun ise çoğu zaman izinlere işaret eder.</p>
 <p>Modern telefonların çoğunda birden fazla mikrofon bulunur. Genellikle biri alt kenarda, biri üstte veya kulaklık hoparlörünün yakınında, biri de arka kamera çevresindedir. Telefon görüşmeleri, video kaydı ve gürültü engelleme bu mikrofonları farklı kombinasyonlarla kullanır. Bu yüzden bir mikrofon arızalıyken diğer işlevler normal çalışmaya devam edebilir.</p>
 
 <h2>Belirtilere göre olası nedenler</h2>
@@ -90,7 +90,7 @@ return array(
 <p>Servise gitmeden önce önemli verilerinizi yedekleyin. Bazı onarımlarda cihaz sıfırlanabilir. Sorunu tarif ederken hangi uygulamalarda ve hangi durumlarda yaşandığını, hangi adımları denediğinizi not almanız teşhisi hızlandırır.</p>
 
 <h2>İlgili testler ve rehberler</h2>
-<p>Kulaklıklı görüşmelerde sorun yaşıyorsanız <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> rehberimize, bilgisayarda yaşanan sorunlar için <a href="{post:mikrofon-calismiyor}">Windows 11 mikrofon çalışmıyor</a> yazımıza göz atın. Telefonunuzun hoparlörünü veya kulaklığını kontrol etmek için <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol kanalı dinleyebilir, <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi</a> rehberimizden yöntemin ayrıntılarını öğrenebilirsiniz. Görüntülü aramalar için <a href="{tool:kamera-testi}">kamera testi</a> ile ön ve arka kamerayı, ekran sorunları için <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberimizi kullanabilirsiniz.</p>
+<p>Kulaklıklı görüşmelerde sorun yaşıyorsanız <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> rehberimize, bilgisayarda yaşanan sorunlar için <a href="{post:mikrofon-calismiyor}">Windows 11 mikrofon çalışmıyor</a> yazısına bakın. Telefonunuzun hoparlörünü veya kulaklığını kontrol etmek için <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol kanalı dinleyebilir, <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi</a> rehberimizden yöntemin ayrıntılarını öğrenebilirsiniz. Görüntülü aramalar için <a href="{tool:kamera-testi}">kamera testi</a> ile ön ve arka kamerayı, ekran sorunları için <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberimizi kullanabilirsiniz.</p>
 <p>Çözümleri uyguladıktan sonra <a href="{tool:mikrofon-testi}">online mikrofon test</a> aracında 5 saniyelik bir kayıt daha yapın; sesinizi net duyuyorsanız sorun giderilmiş demektir.</p>
 HTML
 	,

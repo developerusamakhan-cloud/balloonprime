@@ -13,7 +13,7 @@ return array(
 	'date'        => '2026-11-10 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Görüntü kalitesini ne belirler?</h2>
-<p>Web kamerası görüntü kalitesi tek bir değere bağlı değildir. Kameranın sensörü ve lensi, ortamdaki ışık, kameranın gerçekte hangi çözünürlükte çalıştığı, kullandığınız uygulamanın ayarları ve internet bağlantınız birlikte sonucu belirler. Laptoplardaki kameralar ince ekran çerçevesine sığmak zorunda olduğu için çok küçük sensörler kullanır; bu yüzden özellikle düşük ışıkta zorlanırlar.</p>
+<p>Web kamera görüntü kalitesi tek bir değere bağlı değildir. Kameranın sensörü ve lensi, ortamdaki ışık, kameranın gerçekte hangi çözünürlükte çalıştığı, kullandığınız uygulamanın ayarları ve internet bağlantınız birlikte sonucu belirler. Laptoplardaki kameralar ince ekran çerçevesine sığmak zorunda olduğu için çok küçük sensörler kullanır; bu yüzden özellikle düşük ışıkta zorlanırlar.</p>
 <p>İyi haber şu ki bu zincirin çoğu halkası sizin kontrolünüzdedir. Aşağıdaki dokuz yöntemi sırayla uyguladığınızda, aynı kamerayla çok daha net bir görüntü elde edebilirsiniz. Kameranız hiç açılmıyorsa önce <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> rehberimize bakın; bu yazı çalışan ama kötü görüntü veren kameralar içindir.</p>
 
 <h2>Başlamadan önce: mevcut durumu ölçün</h2>
@@ -73,7 +73,7 @@ return array(
 <h2>6. İnternet bağlantınızı kontrol edin</h2>
 <p>Kamera testinde görüntünüz net, ancak toplantıda bulanık görünüyorsa sorun büyük olasılıkla kamera değil, bağlantıdır. Görüntülü görüşme platformları bağlantı yetersiz kaldığında görüntüyü otomatik olarak sıkıştırır ve çözünürlüğü düşürür; karşı taraf sizi pikselli veya donuk görür.</p>
 <p>Mümkünse kablolu Ethernet bağlantısı kullanın, Wi-Fi'da ise modeme yaklaşın. Görüşme sırasında arka planda büyük dosya indiren veya yükleyen uygulamaları, bulut eşitlemeyi ve video akışlarını duraklatın.</p>
-<p>Unutmayın ki karşı tarafın gördüğü görüntü, onun bağlantısına ve ekranına da bağlıdır. Toplantıdan önce bir arkadaşınızla kısa bir deneme görüşmesi yapmak veya uygulamanın kendi önizlemesini açmak, sorunun sizin tarafınızda olup olmadığını anlamanın kolay bir yoludur. Kamera testindeki görüntü ile toplantıdaki görüntü arasındaki fark büyüdükçe, sorunun kaynağı olarak bağlantıyı düşünmek daha mantıklı hâle gelir.</p>
+<p>Karşı tarafın gördüğü görüntü onun bağlantısına ve ekranına da bağlıdır. Toplantıdan önce bir arkadaşınızla kısa bir deneme görüşmesi yapmak veya uygulamanın kendi önizlemesini açmak, sorunun sizin tarafınızda olup olmadığını anlamanın kolay bir yoludur. Kamera testindeki görüntü ile toplantıdaki görüntü arasındaki fark büyüdükçe, sorunun kaynağı olarak bağlantıyı düşünmek daha mantıklı hâle gelir.</p>
 
 <h2>7. Harici kamerada bağlantıyı ve kabloyu kontrol edin</h2>
 <p>USB web kameralarında görüntü takılıyor, renkler bozuluyor veya kamera arada kopuyorsa bağlantıya bakın. Kamerayı USB çoğaltıcı yerine doğrudan bilgisayara takın; çok sayıda cihazın bağlı olduğu bir çoğaltıcı yeterli güç ve bant genişliği sağlamayabilir. Kabloyu ve farklı bir USB portunu da deneyin. Değişiklikten sonra kamera testinde FPS değerinin sabitlenip sabitlenmediğini kontrol edin.</p>

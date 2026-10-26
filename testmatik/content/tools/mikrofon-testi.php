@@ -99,7 +99,7 @@ return array(
 <p>Mikrofon testi tamamen tarayıcınızda çalışır. Canlı ses ve 5 saniyelik kayıt hiçbir sunucuya yüklenmez, hiçbir yerde saklanmaz. Kayıt yalnızca siz dinleyebilesiniz diye tarayıcının belleğinde tutulur ve sayfadan ayrıldığınızda kaybolur.</p>
 
 <h2>Görüntülü görüşme öncesi diğer kontroller</h2>
-<p>Mikrofonunuz hazırsa görüntünüzü <a href="{tool:kamera-testi}">kamera testi</a> ile, karşı tarafı net duyup duymadığınızı <a href="{tool:hoparlor-testi}">hoparlör ve kulaklık testi</a> ile kontrol edin. Kamera görüntü vermiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> rehberine göz atın. İkinci el laptop alırken mikrofonu, tuşları <a href="{tool:klavye-testi}">klavye testi</a> ile ve tüm donanımı <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ile birlikte deneyin.</p>
+<p>Mikrofonunuz hazırsa görüntünüzü <a href="{tool:kamera-testi}">kamera testi</a> ile, karşı tarafı net duyup duymadığınızı <a href="{tool:hoparlor-testi}">hoparlör ve kulaklık testi</a> ile kontrol edin. Kamera görüntü vermiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> rehberine bakın. Mikrofon kulaklıkta ya da telefonda sorun çıkarıyorsa <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> ve <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberleri işinize yarar. İkinci el laptop alırken mikrofonu, tuşları <a href="{tool:klavye-testi}">klavye testi</a> ile ve tüm donanımı <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ile birlikte deneyin.</p>
 HTML
 	,
 	'faqs'        => array(

@@ -12,7 +12,7 @@ return array(
 	'tool'        => 'olu-piksel-testi',
 	'html'        => <<<'HTML'
 <h2>Ölü piksel ile sıkışmış piksel arasındaki fark</h2>
-<p>Bir LCD ekran milyonlarca pikselden oluşur ve her piksel genellikle kırmızı, yeşil ve mavi olmak üzere üç alt pikselden meydana gelir. Bu alt piksellerin parlaklığını her biri için ayrı bir transistör kontrol eder. Bir noktanın "bozuk" görünmesinin nedeni, bu yapının neresinde sorun olduğuna göre değişir.</p>
+<p>Bir LCD ekran milyonlarca pikselden oluşur ve her piksel genellikle kırmızı, yeşil ve mavi olmak üzere üç alt pikselden meydana gelir. Bu alt piksellerin parlaklığını her biri için ayrı bir transistör kontrol eder. Bir noktanın "bozuk" görünmesinin nedeni, bu yapının neresinde sorun olduğuna göre değişir. Ölü piksel nasıl düzeltilir sorusunun yanıtı da buna bağlı.</p>
 <p><strong>Ölü piksel</strong>, hiçbir renkte ışık vermeyen pikseldir. Beyaz bir arka planda küçük siyah bir nokta olarak görünür. Genellikle pikseli kontrol eden transistörün ya da bağlantısının kalıcı olarak arızalanmasından kaynaklanır.</p>
 <p><strong>Sıkışmış piksel</strong> (stuck pixel) ise bir ya da birkaç alt pikselin sürekli açık kalmasıdır. Ekranda ne gösterilirse gösterilsin kırmızı, yeşil, mavi ya da bunların karışımı bir renkte yanar. Özellikle siyah arka planda belirgin şekilde fark edilir. Sürekli beyaz yanan noktalar da çoğu zaman bu gruba girer ve bazen "sıcak piksel" olarak adlandırılır.</p>
 <table>
@@ -55,7 +55,7 @@ return array(
 <ol class="tm-steps">
 <li>Ölü piksel testi sayfasındaki <strong>piksel onarıcı</strong> bölümünü açın.</li>
 <li>Ekranda beliren küçük yanıp sönen kareyi sürükleyerek sıkışmış pikselin tam üzerine yerleştirin.</li>
-<li>Kareyi 10–30 dakika boyunca orada bırakın. Bu sırada ekrana bakmanıza gerek yoktur.</li>
+<li>Kareyi 10-30 dakika boyunca orada bırakın. Bu sırada ekrana bakmanıza gerek yoktur.</li>
 <li>Süre dolunca kareyi kaldırın ve test ekranlarıyla pikseli yeniden kontrol edin.</li>
 <li>Sonuç alamazsanız işlemi birkaç kez, farklı günlerde tekrarlayabilirsiniz.</li>
 </ol>
@@ -99,7 +99,7 @@ return array(
 <p>Hangi cihazda olursa olsun, sorunu ilk fark ettiğiniz anda belgelemek, ileride garanti başvurusu yapmanız gerektiğinde işinizi kolaylaştırır.</p>
 
 <h2>Diğer donanımları da test edin</h2>
-<p>Ekranı kontrol ederken diğer bileşenleri de gözden geçirmek iyi bir fikirdir. Laptopunuzun dahili kamerasını <a href="{tool:kamera-testi}">kamera testi</a> ile, tüm tuşları ise <a href="{tool:klavye-testi}">klavye testi</a> ile birkaç dakikada deneyebilirsiniz. Kamerada görüntü gelmiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a>, klavyede tuşlar tepki vermiyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberlerimiz adım adım çözüm sunar. Piksel onarımından sonra sonucu kontrol etmek için <a href="{tool:olu-piksel-testi}">monitör ölü piksel testini</a> yeniden çalıştırmayı unutmayın.</p>
+<p>Ekranı kontrol ederken diğer bileşenleri de gözden geçirmek iyi bir fikirdir. Laptopunuzun dahili kamerasını <a href="{tool:kamera-testi}">kamera testi</a> ile, tüm tuşları ise <a href="{tool:klavye-testi}">klavye testi</a> ile birkaç dakikada deneyebilirsiniz. Kamerada görüntü gelmiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a>, klavyede tuşlar tepki vermiyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberlerimiz adım adım çözüm sunar. Piksel onarımından sonra sonucu kontrol etmek için <a href="{tool:olu-piksel-testi}">monitör ölü piksel testini</a> yeniden çalıştırın.</p>
 HTML
 	,
 	'faqs'        => array(

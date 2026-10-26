@@ -88,7 +88,7 @@ return array(
 <h2>Markaya göre dikkat edilmesi gerekenler</h2>
 <p>Lenovo, HP, Asus, Casper ve Monster gibi markaların çoğu, klavye davranışını etkileyen kendi yardımcı uygulamalarını sunar. Bu uygulamalar Fn Lock, klavye aydınlatması, kısayol tuşları ve sürücü güncellemelerini yönetebilir.</p>
 <ul>
-<li><strong>Lenovo:</strong> Lenovo Vantage uygulamasında Fn tuşu davranışı ve sistem güncellemeleri yer alır. Birçok modelde <kbd>Fn</kbd> + <kbd>Esc</kbd> Fn Lock'u değiştirir.</li>
+<li><strong>Lenovo:</strong> Lenovo Vantage uygulamasında Fn tuşu davranışı ve sistem güncellemeleri yer alır. Modele göre ayrıntılı adımlar <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> rehberinde. Birçok modelde <kbd>Fn</kbd> + <kbd>Esc</kbd> Fn Lock'u değiştirir.</li>
 <li><strong>HP:</strong> HP Support Assistant sürücü güncellemelerini ve donanım tanılamayı içerir. Eylem tuşu modu birçok modelde BIOS'tan değiştirilebilir.</li>
 <li><strong>Asus:</strong> MyASUS uygulaması sürücü güncellemeleri, tanılama ve kısayol tuşu ayarları sunar.</li>
 <li><strong>Casper ve Monster:</strong> Özellikle oyuncu serilerinde üreticinin kendi kontrol merkezi yazılımı klavye aydınlatmasını ve tuş işlevlerini yönetir. Bu yazılım güncel değilse ya da bozulmuşsa klavye beklenmedik davranabilir.</li>
@@ -105,7 +105,7 @@ return array(
 <li>Cihaz garanti kapsamında ve kasayı açmak garantiyi etkileyebilir.</li>
 </ul>
 <p>Servise gitmeden önce hangi tuşların çalışmadığını not almanız işi kolaylaştırır. Klavye testinde yeşile dönmeyen tuşların ekran görüntüsünü alarak teknisyene somut bilgi verebilirsiniz.</p>
-<p>Onarım beklerken işinizi aksatmamak için harici bir USB ya da Bluetooth klavye kullanabilirsiniz. Servise vermeden önce önemli dosyalarınızı yedeklemeyi ve gerekiyorsa hesap şifrelerinizi güvenceye almayı da unutmayın. Garanti dışı onarımlarda klavyenin tek başına mı yoksa üst kasayla birlikte mi değiştirileceğini önceden sormak, maliyet konusunda sürpriz yaşamamanızı sağlar.</p>
+<p>Onarım beklerken işinizi aksatmamak için harici bir USB ya da Bluetooth klavye kullanabilirsiniz. Servise vermeden önce önemli dosyalarınızı yedeklemeyi ve gerekiyorsa hesap şifrelerinizi güvenceye alın. Garanti dışı onarımlarda klavyenin tek başına mı yoksa üst kasayla birlikte mi değiştirileceğini önceden sormak, maliyet konusunda sürpriz yaşamamanızı sağlar.</p>
 
 <h2>Diğer donanımları da kontrol edin</h2>
 <p>Klavye sorunu bazen tek başına gelmez. Özellikle düşme veya sıvı teması sonrası diğer bileşenleri de test etmek iyi bir fikirdir. Dokunmatik yüzey ya da harici farenin tuşlarını <a href="{tool:mouse-testi}">mouse testi</a> ile, ekranda hasar olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile kontrol edebilirsiniz. Klavyeniz çalışıyor ama aynı anda basılan tuşlardan bazıları algılanmıyorsa sorun arıza değil, <a href="{post:klavye-ghosting-nedir}">klavye ghosting</a> sınırı olabilir.</p>

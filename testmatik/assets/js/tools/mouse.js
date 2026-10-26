@@ -130,7 +130,7 @@
 	root.querySelector('[data-action="reset"]').addEventListener('click', function () {
 		counts = [0, 0, 0, 0, 0]; chatter = [0, 0, 0, 0, 0]; lastDown = [0, 0, 0, 0, 0]; scroll = { up: 0, down: 0 };
 		hzMax = 0; lastClickAt = 0;
-		$('hz').textContent = '0'; $('hzmax').textContent = '0'; $('gap').textContent = '–';
+		$('hz').textContent = '0'; $('hzmax').textContent = '0'; $('gap').textContent = '-';
 		$('chatteralert').hidden = true;
 		area.querySelectorAll('.is-ok').forEach(function (el) { el.classList.remove('is-ok'); });
 		$('cpsmain').textContent = 'Başlat'; $('cpssub').textContent = 'Tıklayarak başlayın';

@@ -26,7 +26,7 @@ return array(
 <p>Mekanik bir fare tuşu basıldığında içindeki metal kontaklar çok kısa bir süre titreşir. Sağlam bir mouse bu titreşimi filtreler ve tek bir tıklama gönderir. Kontaklar aşındığında ise titreşim filtreyi aşar ve bilgisayar tek basışınızı iki tıklama olarak algılar. Buna <strong>chatter</strong> ya da halk arasında <strong>çift tıklama sorunu</strong> denir.</p>
 <p>Araç, aynı tuştan gelen iki tıklama arasındaki süreyi ölçer. Bu süre eşik değerinden kısaysa (varsayılan <strong>80 ms</strong>) tıklamayı şüpheli olarak işaretler. İnsan parmağı bilinçli olarak art arda tıklasa bile iki tıklama arasında genellikle bundan daha uzun süre geçer; bu yüzden 80 ms altındaki çift tıklamalar çoğunlukla aşınmış bir switch işaretidir.</p>
 <div class="tm-callout tm-callout--tip">
-<p><strong>İpucu:</strong> Double click mouse test sırasında bilerek hızlı çift tıklamayın. Rahat bir tempoda 50–100 kez tek tek tıklayın. Birkaç tane bile uyarı çıkıyorsa sorun büyük olasılıkla tuşun kendisindedir.</p>
+<p><strong>İpucu:</strong> Double click mouse test sırasında bilerek hızlı çift tıklamayın. Rahat bir tempoda 50-100 kez tek tek tıklayın. Birkaç tane bile uyarı çıkıyorsa sorun büyük olasılıkla tuşun kendisindedir.</p>
 </div>
 <h3>Polling rate (Hz)</h3>
 <p>Polling rate, farenin konum bilgisini bilgisayara saniyede kaç kez gönderdiğidir. 125 Hz, her 8 milisaniyede bir; 500 Hz her 2 ms'de bir; 1000 Hz ise her 1 ms'de bir güncelleme demektir. Ofis farelerinin çoğu 125 Hz civarında çalışır, oyuncu fareleri genellikle 1000 Hz destekler, bazı yeni modeller 4000 Hz ve üzerini sunar.</p>
@@ -93,7 +93,8 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Farenizi kontrol ettikten sonra klavyenizi de denemek için <a href="{tool:klavye-testi}">online klavye testi</a> aracımızı kullanabilirsiniz; oyuncular için aynı anda kaç tuşun algılandığını da gösterir. Ekranınızda takılı veya ölü nokta olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile, kulaklığınızın sağ ve sol kanalını <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile kontrol edin. Yayın veya görüntülü görüşme düzeninizi tamamlamak için <a href="{tool:kamera-testi}">web kamera testi</a> de yapabilirsiniz.</p>
-<p>Klavye kaynaklı sorunlar için <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> rehberimize, ikinci el bir laptop veya oyuncu bilgisayarı alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> yazımıza göz atın.</p>
+<p>Klavye kaynaklı sorunlar için <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> rehberimize, ikinci el bir laptop veya oyuncu bilgisayarı alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> yazısına bakın.</p>
+<p>Testte tekerlek ters yöne kayıyor ya da zıplıyorsa <a href="{post:mouse-tekerlegi-sorunu}">mouse tekerleği aşağı yukarı sorunu</a> rehberindeki temizlik ve ayar adımlarını deneyin. Ölçtüğünüz Hz değerinin ne anlama geldiğini <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazısında bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

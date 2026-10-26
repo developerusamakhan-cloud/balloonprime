@@ -39,7 +39,7 @@
 		$('startlabel').textContent = 'Mikrofonu başlat';
 		recBtn.disabled = true;
 		$('fill').style.width = '0%';
-		$('level').textContent = '–';
+		$('level').textContent = '-';
 	}
 
 	function start(deviceId) {
@@ -110,8 +110,8 @@
 		$('fill').style.width = pct(db) + '%';
 		$('fill').classList.toggle('is-hot', db > -6);
 		$('peak').style.left = pct(peakShown) + '%';
-		$('level').textContent = isFinite(db) ? db.toFixed(1) + ' dB' : '–∞ dB';
-		$('peakv').textContent = isFinite(peakDb) ? peakDb.toFixed(1) + ' dB' : '–';
+		$('level').textContent = isFinite(db) ? db.toFixed(1) + ' dB' : '-∞ dB';
+		$('peakv').textContent = isFinite(peakDb) ? peakDb.toFixed(1) + ' dB' : '-';
 		draw(buf);
 		raf = requestAnimationFrame(loop);
 	}

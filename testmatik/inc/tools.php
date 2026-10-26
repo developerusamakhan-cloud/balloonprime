@@ -84,7 +84,7 @@ function testmatik_tools() {
 				'tone'     => 'violet',
 				'script'   => 'speaker',
 				'category' => 'Ses',
-				'blurb'    => 'Sol ve sağ kanalı ayrı dinleyin, 20 Hz – 20 kHz frekans taraması yapın.',
+				'blurb'    => 'Sol ve sağ kanalı ayrı dinleyin, 20 Hz ile 20 kHz arası frekans taraması yapın.',
 				'tags'     => array( 'Sağ / sol', 'Frekans', 'Kulaklık' ),
 				'keywords' => 'hoparlör kulaklık ses sağ sol stereo frekans',
 			),

@@ -25,7 +25,7 @@ return array(
 <h3>Çözünürlük</h3>
 <p>Ekranda <code>1280×720</code> görüyorsanız kamera 720p (HD), <code>1920×1080</code> görüyorsanız 1080p (Full HD) görüntü veriyordur. 4K düğmesine bastığınız halde 1080p görünüyorsa kameranız 4K desteklemiyordur; araç size kameranın verebildiği en iyi değeri gösterir. Birçok laptop kamerası hâlâ 720p'dir, bu nedenle bu sonuç normaldir.</p>
 <h3>FPS (kare hızı)</h3>
-<p>Ölçülen FPS, saniyede kaç kare geldiğini gösterir. Görüntülü görüşme için 24–30 FPS akıcı bir görüntü sağlar. Kare hızı 15'in altına düşüyorsa görüntü takılır gibi görünür. Pek çok kamera karanlık ortamda daha fazla ışık toplamak için kare hızını kendiliğinden düşürür; odayı aydınlattığınızda FPS'nin yükseldiğini görebilirsiniz.</p>
+<p>Ölçülen FPS, saniyede kaç kare geldiğini gösterir. Görüntülü görüşme için 24-30 FPS akıcı bir görüntü sağlar. Kare hızı 15'in altına düşüyorsa görüntü takılır gibi görünür. Pek çok kamera karanlık ortamda daha fazla ışık toplamak için kare hızını kendiliğinden düşürür; odayı aydınlattığınızda FPS'nin yükseldiğini görebilirsiniz.</p>
 <h3>En-boy oranı ve kamera adı</h3>
 <p>En-boy oranı genellikle 16:9 veya 4:3 olur. Kamera adı, tarayıcının hangi cihazı kullandığını gösterir. Burada beklemediğiniz bir isim, örneğin sanal bir kamera yazılımının adı görüyorsanız listeden doğru kamerayı seçin.</p>
 
@@ -42,7 +42,7 @@ return array(
 <tr><td><code>3840×2160</code></td><td>4K / UHD</td><td>Üst segment webcam'ler; görüşme uygulamaları çoğu zaman bunu daha düşük çözünürlüğe indirir</td></tr>
 </tbody>
 </table>
-<p>Unutmayın, görüşme uygulamaları internet hızınıza göre görüntüyü sıkıştırır. Testte 1080p görmeniz, karşı tarafın da her zaman 1080p göreceği anlamına gelmez; ancak kameranın kendisinin bu kaliteyi verebildiğini kanıtlar.</p>
+<p>Bir şeyi bilmekte fayda var: görüşme uygulamaları internet hızınıza göre görüntüyü sıkıştırır. Testte 1080p görmeniz, karşı tarafın da her zaman 1080p göreceği anlamına gelmez; ancak kameranın kendisinin bu kaliteyi verebildiğini kanıtlar.</p>
 
 <h2>Sık görülen kamera sorunları ve çözümleri</h2>
 <table>
@@ -97,7 +97,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Kamerayı kontrol ettikten sonra diğer donanımları da test etmek isteyebilirsiniz. Ekranınızda parlamayan noktalar olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile, görüşmede karşı tarafı duyup duymadığınızı <a href="{tool:hoparlor-testi}">hoparlör ve kulaklık testi</a> ile kontrol edebilirsiniz. Tuşlarda sorun varsa <a href="{tool:klavye-testi}">klavye testi</a> aracımızı kullanın.</p>
-<p>İkinci el bir laptop almayı düşünüyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimiz kamera dahil tüm kontrolleri tek listede toplar. Mikrofonunuz da sorun çıkarıyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> yazımıza göz atın.</p>
+<p>İkinci el bir laptop almayı düşünüyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimiz kamera dahil tüm kontrolleri tek listede toplar. Mikrofonunuz da sorun çıkarıyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> yazısına bakın. Görüntü çalışıyor ama soluk veya bulanıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesini artırma</a> yazısındaki ışık ve ayar önerileri işe yarar.</p>
 HTML
 	,
 	'faqs'        => array(

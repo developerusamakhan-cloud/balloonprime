@@ -24,7 +24,7 @@ return array(
 <tr><td>250 Hz</td><td>4 ms</td><td>Bazı eski oyuncu fareleri</td></tr>
 <tr><td>500 Hz</td><td>2 ms</td><td>Orta seviye oyuncu fareleri, günlük kullanım</td></tr>
 <tr><td>1000 Hz</td><td>1 ms</td><td>Çoğu oyuncu faresinin varsayılan değeri</td></tr>
-<tr><td>4000–8000 Hz</td><td>0,25–0,125 ms</td><td>Yeni nesil üst seviye oyuncu fareleri</td></tr>
+<tr><td>4000-8000 Hz</td><td>0,25-0,125 ms</td><td>Yeni nesil üst seviye oyuncu fareleri</td></tr>
 </tbody>
 </table>
 
@@ -87,10 +87,10 @@ return array(
 <tr><th>Kullanım</th><th>Önerilen değer</th><th>Neden</th></tr>
 </thead>
 <tbody>
-<tr><td>Ofis, internet, belge işleri</td><td>125–500 Hz</td><td>Fark hissedilmez, pil daha uzun dayanır</td></tr>
-<tr><td>Genel oyun, 60–144 Hz monitör</td><td>500–1000 Hz</td><td>Akıcı hareket, düşük sistem yükü</td></tr>
+<tr><td>Ofis, internet, belge işleri</td><td>125-500 Hz</td><td>Fark hissedilmez, pil daha uzun dayanır</td></tr>
+<tr><td>Genel oyun, 60-144 Hz monitör</td><td>500-1000 Hz</td><td>Akıcı hareket, düşük sistem yükü</td></tr>
 <tr><td>Rekabetçi FPS, 240 Hz ve üzeri monitör</td><td>1000 Hz veya üzeri</td><td>Daha sık güncelleme, daha düşük gecikme</td></tr>
-<tr><td>Eski veya zayıf bilgisayar</td><td>500–1000 Hz</td><td>Çok yüksek değerler takılmaya yol açabilir</td></tr>
+<tr><td>Eski veya zayıf bilgisayar</td><td>500-1000 Hz</td><td>Çok yüksek değerler takılmaya yol açabilir</td></tr>
 </tbody>
 </table>
 <p>Monitörünüzün yenileme hızı da bu seçimi etkiler. Kendi ekranınızın kaç Hz'de çalıştığını Windows 11'de <strong>Ayarlar &gt; Sistem &gt; Ekran &gt; Gelişmiş ekran</strong> sayfasından görebilirsiniz. Testmatik şu an monitör yenileme hızını ölçmüyor; ekranın kendisini kontrol etmek için <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> aracımızı kullanabilirsiniz. Ayarın nasıl değiştirileceğini <a href="{post:monitor-hz-ayarlama}">monitör Hz ayarlama</a> rehberimizde ayrıntılı anlatıyoruz.</p>

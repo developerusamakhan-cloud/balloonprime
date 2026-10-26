@@ -39,7 +39,7 @@ function testmatik_render_tool_app( $key ) {
  * @param string $ref   data-ref name.
  * @param string $value Initial value.
  */
-function testmatik_stat( $label, $ref, $value = '–' ) {
+function testmatik_stat( $label, $ref, $value = '-' ) {
 	printf(
 		'<div class="stat"><span class="stat__label">%1$s</span><span class="stat__value" data-ref="%2$s">%3$s</span></div>',
 		esc_html( $label ),
@@ -110,7 +110,7 @@ function testmatik_app_pixel() {
 			<span class="fixer__icon"><?php echo testmatik_icon( 'zap', 20 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
 			<div>
 				<h3 class="fixer__title"><?php esc_html_e( 'Piksel onarıcı', 'testmatik' ); ?></h3>
-				<p><?php esc_html_e( 'Hızla renk değiştiren kareyi sıkışmış pikselin üzerine sürükleyin ve 10–30 dakika bekleyin.', 'testmatik' ); ?></p>
+				<p><?php esc_html_e( 'Hızla renk değiştiren kareyi sıkışmış pikselin üzerine sürükleyin ve 10-30 dakika bekleyin.', 'testmatik' ); ?></p>
 			</div>
 		</div>
 		<div class="callout callout--warn"><?php echo testmatik_icon( 'alert', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><p><strong><?php esc_html_e( 'Işığa duyarlı epilepsi uyarısı:', 'testmatik' ); ?></strong> <?php esc_html_e( 'Onarıcı hızlı yanıp sönen renkler gösterir. Işığa duyarlılığınız varsa kullanmayın ve çalışırken ekrana bakmayın.', 'testmatik' ); ?></p></div>

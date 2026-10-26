@@ -13,7 +13,7 @@ return array(
 	'date'        => '2026-11-02 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Kulaklık mikrofonu neden çalışmaz?</h2>
-<p>Kulaklık mikrofonu sorunları, bilgisayarın dahili mikrofonundaki sorunlardan farklıdır. Burada işin içine kablo ve jak tipi, Bluetooth bağlantı profili, kulaklığın üzerindeki sessize alma düğmesi ve kullandığınız platformun (PC, PS5, Xbox, Discord) kendi ses ayarları girer. Bu yüzden genel Windows çözümlerinden önce kulaklığa özgü noktaları kontrol etmek daha hızlı sonuç verir.</p>
+<p>Kulaklık mikrofonu sorunları, bilgisayarın dahili mikrofonundaki sorunlardan farklıdır. Burada işin içine kablo ve jak tipi, Bluetooth bağlantı profili, kulaklığın üzerindeki sessize alma düğmesi ve kullandığınız platformun (PC, PS5, Xbox, Discord) kendi ses ayarları girer. Bu yüzden kulaklık mikrofon çalışmıyor sorununda genel Windows çözümlerinden önce kulaklığa özgü noktaları kontrol etmek daha hızlı sonuç verir.</p>
 <p>Windows'taki genel adımları, yani gizlilik izinlerini ve sürücü ayarlarını <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberimizde anlatıyoruz. Bu yazı kulaklıklara, konsollara ve Bluetooth bağlantılara odaklanıyor.</p>
 <table>
 <thead>

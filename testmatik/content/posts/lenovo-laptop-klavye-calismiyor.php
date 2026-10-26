@@ -13,7 +13,7 @@ return array(
 	'date'        => '2026-11-06 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Önce sorunu tanımlayın</h2>
-<p>"Lenovo laptop klavye çalışmıyor" şikâyeti aslında birkaç farklı durumu kapsar. Klavyenin tamamı mı susuyor, yalnızca birkaç tuş mu basmıyor, yoksa F1–F12 tuşları beklediğinizden farklı mı davranıyor? Her birinin nedeni ve çözümü ayrıdır, bu yüzden ilk adım belirtiyi netleştirmektir.</p>
+<p>"Lenovo laptop klavye çalışmıyor" şikâyeti aslında birkaç farklı durumu kapsar. Klavyenin tamamı mı susuyor, yalnızca birkaç tuş mu basmıyor, yoksa F1-F12 tuşları beklediğinizden farklı mı davranıyor? Her birinin nedeni ve çözümü ayrıdır, bu yüzden ilk adım belirtiyi netleştirmektir.</p>
 <p>Bu rehber Lenovo'ya özgü ayarlara odaklanır: Fn Lock, Lenovo Vantage, BIOS ve ThinkPad'lerdeki tuş düzeni. Markadan bağımsız genel Windows adımlarını daha ayrıntılı görmek isterseniz <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberimize de göz atabilirsiniz.</p>
 <table>
 <thead>
@@ -43,7 +43,7 @@ return array(
 <div class="tm-cta" data-tool="klavye-testi"></div>
 
 <h2>Fn Lock ve F tuşları sorunu</h2>
-<p>Lenovo laptoplarda en sık karşılaşılan şikâyet, F1–F12 tuşlarının işlev tuşu yerine ses, parlaklık veya mikrofon kısayolu gibi davranmasıdır. Bu bir arıza değil, tercihtir. Birçok Lenovo modelinde varsayılan ayar kısayol tuşlarına öncelik verir; <kbd>F5</kbd> ile sayfayı yenilemek için <kbd>Fn</kbd> + <kbd>F5</kbd> basmanız gerekir.</p>
+<p>Lenovo laptoplarda en sık karşılaşılan şikâyet, F1-F12 tuşlarının işlev tuşu yerine ses, parlaklık veya mikrofon kısayolu gibi davranmasıdır. Bu bir arıza değil, tercihtir. Birçok Lenovo modelinde varsayılan ayar kısayol tuşlarına öncelik verir; <kbd>F5</kbd> ile sayfayı yenilemek için <kbd>Fn</kbd> + <kbd>F5</kbd> basmanız gerekir.</p>
 <p>Birçok modelde <kbd>Fn</kbd> + <kbd>Esc</kbd> kombinasyonu Fn Lock'u açıp kapatır. Esc tuşunun üzerinde küçük bir kilit simgesi veya ışık varsa modelinizde bu özellik büyük olasılıkla bulunur; ışığın yanması Fn Lock'un açık olduğunu gösterir. Kombinasyon işe yaramıyorsa ayarı Lenovo Vantage'dan veya BIOS'tan değiştirebilirsiniz.</p>
 <h3>Lenovo Vantage ile klavye ayarları</h3>
 <p>Lenovo Vantage, birçok Lenovo laptopta önceden yüklü gelen ve Microsoft Store'dan da indirilebilen resmi yardımcı uygulamadır. Uygulamanın cihaz ayarları bölümünde, sürüme göre adı değişebilen giriş veya klavye ayarları bulunur. Burada genellikle şunları yönetebilirsiniz:</p>
@@ -81,26 +81,26 @@ return array(
 </div>
 
 <h2>Güç sıfırlama ve batarya</h2>
-<p>Tüm tuşların aniden kilitlendiği bazı durumlarda kısa bir güç sıfırlaması işe yarar. Şarj adaptörünü çıkarın ve güç düğmesini 10–15 saniye basılı tutun, ardından laptopu yeniden açın. Bazı Lenovo modellerinde alt kasada acil durum sıfırlama deliği de bulunur; varsa yerini modelinizin kullanım kılavuzunda bulabilirsiniz.</p>
+<p>Tüm tuşların aniden kilitlendiği bazı durumlarda kısa bir güç sıfırlaması işe yarar. Şarj adaptörünü çıkarın ve güç düğmesini 10-15 saniye basılı tutun, ardından laptopu yeniden açın. Bazı Lenovo modellerinde alt kasada acil durum sıfırlama deliği de bulunur; varsa yerini modelinizin kullanım kılavuzunda bulabilirsiniz.</p>
 <p>Batarya şişmesi de klavyeyi dolaylı olarak etkileyebilir. Klavye yüzeyi yukarı doğru kabarıyor, touchpad zor basıyor veya kasa aralanıyorsa laptopu kullanmayı bırakın ve servise başvurun. Şişmiş bir batarya güvenlik riski taşır.</p>
 
 <h2>Tek tek tuşlar takılıyorsa: temizlik</h2>
 <p>Yalnızca bir veya iki tuş zor basıyor, takılıyor ya da bazen hiç algılanmıyorsa sorun çoğu zaman tuşun altına giren toz veya kırıntıdır. Laptopu kapatın, şarjdan çıkarın ve tuş aralıklarını basınçlı havayla, kısa püskürtmelerle temizleyin. Kutuyu dik tutun; ters tutulduğunda soğuk sıvı püskürtebilir.</p>
-<p>Laptop klavyelerindeki tuş kapakları ince plastik mandallarla tutturulur ve kolayca kırılabilir. Bu yüzden tuş kapağını sökmeyi yalnızca modelinize ait servis kılavuzundaki talimatlara göre deneyin. Temizlikten sonra klavye testinde ilgili tuşa 20–30 kez basın; tuş her seferinde mavi yanıyorsa sorun giderilmiştir.</p>
+<p>Laptop klavyelerindeki tuş kapakları ince plastik mandallarla tutturulur ve kolayca kırılabilir. Bu yüzden tuş kapağını sökmeyi yalnızca modelinize ait servis kılavuzundaki talimatlara göre deneyin. Temizlikten sonra klavye testinde ilgili tuşa 20-30 kez basın; tuş her seferinde mavi yanıyorsa sorun giderilmiştir.</p>
 <h3>Klavye arka ışığı yanmıyor</h3>
-<p>Arka ışık yanmıyorsa önce <kbd>Fn</kbd> + <kbd>Boşluk</kbd> kombinasyonuyla seviyeleri deneyin; birçok modelde kapalı, düşük ve yüksek arasında geçiş yapar. Lenovo Vantage'da arka ışığın belirli bir süre sonra otomatik kapanması gibi bir seçenek de bulunabilir. Modelinizde arka ışıklı klavye olup olmadığını teknik özelliklerinden kontrol etmeyi unutmayın; aynı serinin her yapılandırmasında bulunmayabilir.</p>
+<p>Arka ışık yanmıyorsa önce <kbd>Fn</kbd> + <kbd>Boşluk</kbd> kombinasyonuyla seviyeleri deneyin; birçok modelde kapalı, düşük ve yüksek arasında geçiş yapar. Lenovo Vantage'da arka ışığın belirli bir süre sonra otomatik kapanması gibi bir seçenek de bulunabilir. Modelinizde arka ışıklı klavye olup olmadığını teknik özelliklerinden kontrol edin; aynı serinin her yapılandırmasında bulunmayabilir.</p>
 
 <h2>Garanti ve servis</h2>
 <p>Lenovo, cihazınızın garanti durumunu seri numarasıyla sorgulayabileceğiniz bir destek sitesi sunar. Seri numarası genellikle laptopun altındaki etikette yazar. Servise başvurmadan önce klavye testinde çalışmayan tuşların ekran görüntüsünü almanız, arızayı açıkça anlatmanızı kolaylaştırır. Türkiye'de tüketicilere satılan ürünlerde yasal garanti süresi en az iki yıldır.</p>
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Klavyeyi kontrol ederken laptopun diğer parçalarını da gözden geçirmek iyi bir fikirdir. <a href="{tool:mouse-testi}">mouse testi</a> ile touchpad ve fare tuşlarını, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı kontrol edebilirsiniz. Oyunlarda aynı anda basılan tuşlar kayboluyorsa <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> yazımız, düzen değiştirmeyi düşünüyorsanız <a href="{post:q-klavye-f-klavye-farki}">Q klavye ve F klavye farkı</a> rehberimiz işinize yarar.</p>
-<p>İkinci el bir Lenovo almayı düşünüyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listemize</a> göz atın. Sorunu çözdükten sonra <a href="{tool:klavye-testi}">online klavye testi</a> ile tüm tuşların yeşile döndüğünü bir kez daha doğrulayın.</p>
+<p>İkinci el bir Lenovo almayı düşünüyorsanız satıcıyla buluşmadan önce <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesini</a> yanınıza alın. Sorunu çözdükten sonra <a href="{tool:klavye-testi}">online klavye testi</a> ile tüm tuşların yeşile döndüğünü bir kez daha doğrulayın.</p>
 HTML
 	,
 	'faqs'        => array(
 		array( 'q' => 'Lenovo laptopta Fn Lock nasıl açılır veya kapatılır?', 'a' => 'Birçok Lenovo modelinde Fn + Esc kombinasyonu Fn Lock\'u açıp kapatır. Esc tuşundaki küçük ışık genellikle Fn Lock\'un açık olduğunu gösterir. Bu kombinasyon modelinizde çalışmıyorsa ayarı Lenovo Vantage uygulamasından veya BIOS\'tan değiştirebilirsiniz.' ),
-		array( 'q' => 'Lenovo laptopta F tuşları neden ses ve parlaklık değiştiriyor?', 'a' => 'Birçok Lenovo modelinde varsayılan olarak kısayol tuşlarına öncelik verilir. Bu durumda klasik F1–F12 işlevi için Fn tuşuyla birlikte basmanız gerekir. Fn Lock\'u değiştirerek veya Lenovo Vantage\'daki ilgili ayarla bu davranışı tersine çevirebilirsiniz.' ),
+		array( 'q' => 'Lenovo laptopta F tuşları neden ses ve parlaklık değiştiriyor?', 'a' => 'Birçok Lenovo modelinde varsayılan olarak kısayol tuşlarına öncelik verilir. Bu durumda klasik F1-F12 işlevi için Fn tuşuyla birlikte basmanız gerekir. Fn Lock\'u değiştirerek veya Lenovo Vantage\'daki ilgili ayarla bu davranışı tersine çevirebilirsiniz.' ),
 		array( 'q' => 'Lenovo laptopta BIOS\'a nasıl girilir?', 'a' => 'IdeaPad, Yoga ve Legion modellerinin çoğunda açılışta F2, ThinkPad modellerinin çoğunda ise F1 tuşu kullanılır. Birçok IdeaPad modelinde laptop kapalıyken Novo düğmesine basarak açılan menüden de BIOS\'a girebilirsiniz. Tam yöntem modele göre değişebileceği için kullanım kılavuzunu kontrol edin.' ),
 		array( 'q' => 'Klavye BIOS\'ta çalışıyor ama Windows\'ta çalışmıyorsa ne yapmalıyım?', 'a' => 'Bu durumda donanım büyük olasılıkla sağlamdır ve sorun Windows tarafındadır. Filtre tuşları ve yapışkan tuşlar ayarlarını kontrol edin, Aygıt Yöneticisi\'nden klavye sürücüsünü kaldırıp yeniden başlatın ve Lenovo Vantage üzerinden güncellemeleri yükleyin.' ),
 		array( 'q' => 'Klavye testinde Fn tuşu neden yanmıyor?', 'a' => 'Fn tuşu laptopun kendi donanımı tarafından işlenir ve işletim sistemine ayrı bir tuş olarak gönderilmez. Bu yüzden hiçbir tarayıcı Fn tuşunu algılayamaz. Testte yanmaması tuşun bozuk olduğu anlamına gelmez.' ),

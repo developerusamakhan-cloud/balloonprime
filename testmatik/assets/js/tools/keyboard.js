@@ -97,7 +97,7 @@
 	function log(e) {
 		var t = new Date();
 		var time = ('0' + t.getHours()).slice(-2) + ':' + ('0' + t.getMinutes()).slice(-2) + ':' + ('0' + t.getSeconds()).slice(-2);
-		history.unshift('<li><kbd>' + escapeHtml(keyName(e)) + '</kbd><code>' + escapeHtml(e.code || '–') + '</code><span>' + time + '</span></li>');
+		history.unshift('<li><kbd>' + escapeHtml(keyName(e)) + '</kbd><code>' + escapeHtml(e.code || '-') + '</code><span>' + time + '</span></li>');
 		history = history.slice(0, 12);
 		$('log').innerHTML = history.join('');
 	}
@@ -128,7 +128,7 @@
 		var down = Object.keys(pressed).length;
 		if (down > maxDown) { maxDown = down; }
 		$('last').textContent = keyName(e);
-		$('code').textContent = code || '–';
+		$('code').textContent = code || '-';
 		if (!e.repeat) { log(e); }
 		updateStats();
 	}
@@ -174,7 +174,7 @@
 	$('full').addEventListener('change', function () { render(); this.blur(); });
 	root.querySelector('[data-action="reset"]').addEventListener('click', function () {
 		tested = {}; maxDown = 0; history = []; clearDown();
-		$('log').innerHTML = ''; $('last').textContent = '–'; $('code').textContent = '–';
+		$('log').innerHTML = ''; $('last').textContent = '-'; $('code').textContent = '-';
 		root.classList.remove('is-live');
 		render();
 		this.blur();

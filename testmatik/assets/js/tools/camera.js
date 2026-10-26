@@ -55,7 +55,7 @@
 		fpsTimer = setInterval(function () {
 			var now = performance.now();
 			var fps = frames / ((now - fpsStart) / 1000);
-			$('fps').textContent = fps ? fps.toFixed(1) : '–';
+			$('fps').textContent = fps ? fps.toFixed(1) : '-';
 			frames = 0; fpsStart = now;
 			showRes();
 		}, 1000);

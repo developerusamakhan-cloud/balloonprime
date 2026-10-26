@@ -41,7 +41,7 @@ return array(
 <p>Hissettiğiniz zıplamayı sayılarla görmek, çözümün işe yarayıp yaramadığını anlamanın da en kolay yoludur. <a href="{tool:mouse-testi}">Mouse testi</a> aracı yukarı ve aşağı kaydırmaları ayrı sayaçlarla sayar, tekerlek tuşuna (orta tuş) yapılan tıklamaları da ayrıca gösterir.</p>
 <ol class="tm-steps">
 <li>Testi açın ve fareyi test alanının üzerine getirin.</li>
-<li>Tekerleği yalnızca aşağı doğru, yavaş ve düzenli şekilde 20–30 adım çevirin.</li>
+<li>Tekerleği yalnızca aşağı doğru, yavaş ve düzenli şekilde 20-30 adım çevirin.</li>
 <li>Yukarı kaydırma sayacına bakın. Sağlam bir tekerlekte bu sayaç hiç artmamalıdır.</li>
 <li>Aynı denemeyi yalnızca yukarı yönde yapın ve bu kez aşağı sayacını kontrol edin.</li>
 <li>Denemeyi bir de hızlı çevirerek tekrarlayın; bazı aşınmış encoder'lar yalnızca hızlı dönüşte hata verir.</li>
@@ -91,7 +91,7 @@ return array(
 <h2>Encoder değişimi ve garanti</h2>
 <p>Encoder aşınması özellikle uzun süre yoğun kullanılan farelerde görülür. Oyunlarda tekerleği silah değiştirmek için sık kullanıyorsanız veya gün boyu uzun belgeler ve tablolar arasında kaydırma yapıyorsanız bu parça diğerlerinden daha çabuk yıpranabilir. Sorun önce ara sıra ortaya çıkar, sonra sıklaşır; bu yüzden erken fark etmek, garanti süresi dolmadan başvurmanızı sağlar.</p>
 <p>Temizlik ve ayarlar sorunu çözmüyorsa encoder büyük olasılıkla aşınmıştır. Encoder değiştirmek teknik olarak mümkündür, ancak fareyi açmayı ve parçayı devre kartından lehimle sökmeyi gerektirir. Yeni parçanın boyutu ve eksen yüksekliği eskisiyle uyumlu olmalıdır; aksi hâlde tekerlek ya oturmaz ya da adımları doğru algılamaz.</p>
-<p>Fareniz garanti süresindeyse kendiniz müdahale etmeden önce satıcıya veya üreticiye başvurun. Türkiye'de tüketicilere satılan ürünlerde yasal garanti süresi en az iki yıldır. Test aracında ters yön sayacının arttığını gösteren bir ekran görüntüsü, arızayı açıkça anlatmanıza yardımcı olur. Fareyi açmanın çoğu zaman garantiyi geçersiz kıldığını unutmayın.</p>
+<p>Fareniz garanti süresindeyse kendiniz müdahale etmeden önce satıcıya veya üreticiye başvurun. Türkiye'de tüketicilere satılan ürünlerde yasal garanti süresi en az iki yıldır. Test aracında ters yön sayacının arttığını gösteren bir ekran görüntüsü, arızayı açıkça anlatmanıza yardımcı olur. Fareyi açmak çoğu zaman garantiyi geçersiz kılar.</p>
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Fare tuşlarınız tek tıklamada iki kez basıyorsa <a href="{post:mouse-cift-tiklama-sorunu}">mouse çift tıklama sorunu</a> rehberimize bakın. Oyuncuysanız <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazımız 125, 500 ve 1000 Hz farkını anlatıyor. Bir laptopu baştan sona kontrol ediyorsanız <a href="{tool:klavye-testi}">klavye testi</a> ile tuşları, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı da gözden geçirin; touchpad ve klavye sorunları için <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberimiz, kullanılmış cihazlar için <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> işinize yarayacaktır.</p>

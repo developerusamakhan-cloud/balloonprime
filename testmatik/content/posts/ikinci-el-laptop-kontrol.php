@@ -61,7 +61,7 @@ return array(
 <p>Tüm USB portlarına USB belleği tek tek takıp tanındığını doğrulayın. HDMI çıkışı varsa ve imkânınız olursa bir monitöre bağlayın. Şarj aletini taktığınızda şarj göstergesinin hemen "şarj oluyor" durumuna geçmesi gerekir. Şarj soketi gevşekse veya kablo oynatıldığında şarj kesilip geliyorsa soket hasarlı olabilir. USB-C ile şarj olan modellerde şarjın hangi portlardan yapılabildiğini de deneyin.</p>
 
 <h2>9. Performans ve ısı</h2>
-<p>Laptopu 10–15 dakika boyunca yüksek çözünürlüklü bir video oynatarak veya birkaç ağır sekme açarak çalıştırın. Bu sürede fanın sürekli yüksek devirde çalışıp çalışmadığını, klavyenin üst kısmının aşırı ısınıp ısınmadığını ve sistemin donup donmadığını gözlemleyin. Aşırı ısınma çoğu zaman tozla tıkanmış fanlara veya kurumuş termal macuna işaret eder.</p>
+<p>Laptopu 10-15 dakika boyunca yüksek çözünürlüklü bir video oynatarak veya birkaç ağır sekme açarak çalıştırın. Bu sürede fanın sürekli yüksek devirde çalışıp çalışmadığını, klavyenin üst kısmının aşırı ısınıp ısınmadığını ve sistemin donup donmadığını gözlemleyin. Aşırı ısınma çoğu zaman tozla tıkanmış fanlara veya kurumuş termal macuna işaret eder.</p>
 <p>Görev Yöneticisi'ni (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Esc</kbd>) açarak <strong>Performans</strong> sekmesinde işlemci, bellek ve disk bilgilerinin ilandakiyle uyuştuğunu kontrol edin. Bu sırada Windows'un etkin olduğunu, BIOS şifresi ve kurumsal yönetim kilidi bulunmadığını da doğrulayın.</p>
 
 <h2>Testlerin yanında sorulması gerekenler</h2>
@@ -100,7 +100,7 @@ HTML
 		array( 'q' => 'Pil sağlığı yüzde kaç olursa kabul edilebilir?', 'a' => 'Kesin bir sınır yoktur, ama tam şarj kapasitesinin tasarım kapasitesinin yüzde 80 civarında veya üstünde olması genellikle iyi kabul edilir. Daha düşük değerlerde pil süresi belirgin biçimde kısalır. Bu durumda pil değişim maliyetini fiyata yansıtabilirsiniz.' ),
 		array( 'q' => 'powercfg /batteryreport komutu nerede çalıştırılır?', 'a' => 'Komut İstemi veya PowerShell penceresinde çalıştırılır ve yönetici yetkisi gerekmez. Komut, battery-report.html adlı raporu oluşturup kaydedildiği yolu gösterir. Dosyayı tarayıcıda açarak kapasite değerlerini görebilirsiniz.' ),
 		array( 'q' => 'Testleri satıcının bilgisayarında yapmak güvenli mi?', 'a' => 'Evet. Testmatik testleri tamamen tarayıcıda çalışır ve kamera görüntüsü, ses veya tuş basışları hiçbir sunucuya gönderilmez. Herhangi bir program kurmanıza da gerek yoktur.' ),
-		array( 'q' => 'Testlerin hepsi ne kadar sürer?', 'a' => 'Ekran, klavye, kamera, mikrofon ve hoparlör testleri birkaç dakika içinde tamamlanır. Pil raporu ve port kontrolüyle birlikte yaklaşık 15 dakika ayırın. Isı testi için de 10–15 dakika eklerseniz toplamda yarım saat yeterlidir.' ),
+		array( 'q' => 'Testlerin hepsi ne kadar sürer?', 'a' => 'Ekran, klavye, kamera, mikrofon ve hoparlör testleri birkaç dakika içinde tamamlanır. Pil raporu ve port kontrolüyle birlikte yaklaşık 15 dakika ayırın. Isı testi için de 10-15 dakika eklerseniz toplamda yarım saat yeterlidir.' ),
 		array( 'q' => 'Mac alırken de aynı testler geçerli mi?', 'a' => 'Ekran, klavye, kamera, mikrofon, hoparlör ve mouse testleri tarayıcıda çalıştığı için Mac\'te de aynı şekilde yapılır. Pil sağlığı için powercfg yerine Sistem Ayarları > Pil bölümüne ve Sistem Bilgisi\'ndeki döngü sayısına bakın.' ),
 	),
 );

@@ -13,8 +13,8 @@ return array(
 	'date'        => '2026-10-25 06:00:00',
 	'html'        => <<<'HTML'
 <h2>Monitör Hz nedir?</h2>
-<p>Hz (hertz), monitörün ekrandaki görüntüyü saniyede kaç kez yenilediğini gösterir. 60 Hz bir monitör görüntüyü saniyede 60 kez, 144 Hz bir monitör 144 kez çizer. Yenileme hızı arttıkça iki kare arasındaki süre kısalır: 60 Hz'de her kare yaklaşık 16,7 milisaniye ekranda kalırken bu süre 144 Hz'de yaklaşık 6,9 milisaniyeye düşer.</p>
-<p>Bunun pratik karşılığı daha akıcı hareket ve daha net takiptir. Fare imleci, kaydırılan web sayfaları ve özellikle hızlı oyunlar yüksek yenileme hızında belirgin şekilde daha yumuşak görünür. Yalnız şunu unutmayın: Hz, monitörün gösterebileceği kare sayısının üst sınırıdır. Oyunun saniyede ürettiği kare sayısı (FPS) bu değerin çok altındaysa yüksek Hz'in faydası sınırlı kalır.</p>
+<p>Hz (hertz), monitörün ekrandaki görüntüyü saniyede kaç kez yenilediğini gösterir. 60 Hz bir monitör görüntüyü saniyede 60 kez, 144 Hz bir monitör 144 kez çizer. Yenileme hızı arttıkça iki kare arasındaki süre kısalır: 60 Hz'de her kare yaklaşık 16,7 milisaniye ekranda kalırken bu süre 144 Hz'de yaklaşık 6,9 milisaniyeye düşer. Monitör Hz ayarlama, bu değeri monitörün desteklediği en yüksek seviyeye çekmek demektir.</p>
+<p>Bunun pratik karşılığı daha akıcı hareket ve daha net takiptir. Fare imleci, kaydırılan web sayfaları ve özellikle hızlı oyunlar yüksek yenileme hızında belirgin şekilde daha yumuşak görünür. Yalnız bir ayrıntı var: Hz, monitörün gösterebileceği kare sayısının üst sınırıdır. Oyunun saniyede ürettiği kare sayısı (FPS) bu değerin çok altındaysa yüksek Hz'in faydası sınırlı kalır.</p>
 
 <h2>Monitör neden düşük Hz'de çalışır?</h2>
 <p>Yeni bir yüksek yenileme hızlı monitör takıldığında Windows her zaman en yüksek değeri otomatik seçmez. Birçok kullanıcı aylarca 60 Hz'de çalıştığını fark etmez. En sık nedenler şunlardır:</p>

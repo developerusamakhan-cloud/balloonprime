@@ -66,10 +66,10 @@ return array(
 
 <h2>6. Tarayıcı kamera iznini düzeltin</h2>
 <p>Kamera Windows Kamera uygulamasında çalışıyor ama bir web sitesinde çalışmıyorsa site izni engellenmiştir. Chrome ve Edge'de adres çubuğunun solundaki site ayarları simgesine tıklayın, <strong>Kamera</strong> iznini <strong>İzin ver</strong> yapın ve sayfayı yenileyin. Birden fazla kamera varsa tarayıcı ayarlarında varsayılan kameranın doğru seçildiğinden emin olun. Tarayıcılar kamera erişimini yalnızca HTTPS bağlantılı sayfalara verir.</p>
-<p>Firefox'ta da adres çubuğundaki simgeden engellenen izni kaldırabilirsiniz. Gizli pencerede izinlerin her oturumda yeniden sorulduğunu unutmayın.</p>
+<p>Firefox'ta da adres çubuğundaki simgeden engellenen izni kaldırabilirsiniz. Gizli pencerede izinler her oturumda yeniden sorulur.</p>
 
 <h2>7. Antivirüsün web kamerası korumasını kontrol edin</h2>
-<p>Bazı güvenlik yazılımlarında "web kamerası koruması" gibi adlarla anılan bir özellik bulunur. Bu özellik, izin listesinde olmayan programların kameraya erişimini engeller. Antivirüs programınızın gizlilik veya koruma ayarlarını açın, kullandığınız uygulamaya izin verin ya da kısa süreliğine korumayı kapatıp deneyin. Testten sonra korumayı yeniden açmayı unutmayın.</p>
+<p>Bazı güvenlik yazılımlarında "web kamerası koruması" gibi adlarla anılan bir özellik bulunur. Bu özellik, izin listesinde olmayan programların kameraya erişimini engeller. Antivirüs programınızın gizlilik veya koruma ayarlarını açın, kullandığınız uygulamaya izin verin ya da kısa süreliğine korumayı kapatıp deneyin. Testten sonra korumayı yeniden açın.</p>
 
 <h2>8. Windows Kamera uygulamasıyla deneyin</h2>
 <p>Başlat menüsünde "Kamera" yazarak Windows'un yerleşik Kamera uygulamasını açın. Bu uygulama tarayıcıdan ve üçüncü taraf programlardan bağımsız olduğu için iyi bir karşılaştırma noktasıdır. Burada görüntü geliyorsa sorun diğer uygulamanın ayarlarındadır. "Kameranızı bulamıyoruz" mesajı ve 0xA00F4244 hata kodu alıyorsanız Windows kamerayı hiç görmüyordur; 2, 5 ve 9 numaralı çözümlere dönün.</p>
@@ -97,7 +97,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Görüntülü görüşmelerde sesiniz de gitmiyorsa <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile mikrofonunuzu, karşı tarafı duyamıyorsanız <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile çıkış sesini kontrol edin. Ayrıntılı ses çözümleri için <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberimize bakabilirsiniz.</p>
-<p>Kullanılmış bir bilgisayar almayı düşünüyorsanız kamerayı da kapsayan <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılacak testler</a> yazımız işinize yarayacak. Sorunu çözdükten sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile çözünürlüğü ve FPS değerini kontrol ederek kameranın tam performansla çalıştığından emin olun.</p>
+<p>Kullanılmış bir bilgisayar almayı düşünüyorsanız kamerayı da kapsayan <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılacak testler</a> yazımız işinize yarayacak. Sorunu çözdükten sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile çözünürlüğü ve FPS değerini kontrol ederek kameranın tam performansla çalıştığından emin olun. Kamera çalışıyor ama görüntü bulanık ya da karanlıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a> yazısındaki ışık ve ayar önerilerini deneyin.</p>
 HTML
 	,
 	'faqs'        => array(

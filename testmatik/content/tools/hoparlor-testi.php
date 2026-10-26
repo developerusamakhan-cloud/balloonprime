@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) || exit;
 return array(
 	'title'       => 'Hoparlör Testi',
 	'seo_title'   => 'Hoparlör Testi: Sağ Sol Ses ve Kulaklık Testi | Testmatik',
-	'description' => 'Ücretsiz hoparlör testi: sağ sol ses testiyle kanalları ayrı ayrı dinleyin, kulaklığınızı deneyin, 20 Hz–20 kHz frekans taraması ile cızırtıyı yakalayın.',
+	'description' => 'Ücretsiz hoparlör testi: sağ sol ses testiyle kanalları ayrı ayrı dinleyin, kulaklığınızı deneyin, 20 Hz\'den 20 kHz\'e frekans taramasıyla cızırtıyı yakalayın.',
 	'keywords'    => array( 'hoparlör testi', 'sağ sol ses testi', 'kulaklık testi', 'stereo ses testi', 'ses frekans testi' ),
 	'intro'       => 'Hoparlörünüzün veya kulaklığınızın sol ve sağ kanalını ayrı ayrı dinleyin, frekans taramasıyla bas ve tiz performansını kontrol edin. Kurulum gerekmez, her şey tarayıcıda çalışır.',
 	'html'        => <<<'HTML'
@@ -14,7 +14,7 @@ return array(
 <p><strong>Uyarı:</strong> Teste mutlaka düşük ses seviyesiyle başlayın, özellikle kulaklık kullanıyorsanız. Test tonları sürekli ve tek frekanslı olduğu için müzikten daha yüksek ve rahatsız edici algılanabilir. Sesi ancak tonu rahatça duyduktan sonra yavaşça artırın.</p>
 </div>
 <ol class="tm-steps">
-<li><strong>Ses seviyesini düşürün.</strong> Bilgisayarınızın genel sesini yaklaşık %20–30'a, sayfadaki ses kaydırıcısını da düşük bir seviyeye getirin.</li>
+<li><strong>Ses seviyesini düşürün.</strong> Bilgisayarınızın genel sesini yaklaşık %20-30'a, sayfadaki ses kaydırıcısını da düşük bir seviyeye getirin.</li>
 <li><strong>Sol kanalı deneyin.</strong> <strong>Sol</strong> düğmesine basın. Ses yalnızca sol hoparlörden veya sol kulaklıktan gelmelidir.</li>
 <li><strong>Sağ kanalı deneyin.</strong> <strong>Sağ</strong> düğmesine basın. Bu kez ses yalnızca sağ taraftan gelmelidir.</li>
 <li><strong>İki kanalı birlikte dinleyin.</strong> <strong>Her iki</strong> düğmesiyle ses ortadan, iki taraftan eşit gelmelidir.</li>
@@ -28,17 +28,17 @@ return array(
 <p>“Her iki” modunda ses bir tarafa kaymış gibi geliyorsa denge (balance) ayarını kontrol edin. Kulaklıklarda bu durum tek bir kulaklık hoparlörünün zayıflamasından da kaynaklanabilir.</p>
 <h3>Frekans taraması ve duyma aralığı</h3>
 <p>İnsan kulağı yaklaşık olarak 20 Hz ile 20 kHz arasındaki sesleri duyar. Bu aralık kişiden kişiye değişir ve üst sınır yaşla birlikte belirgin biçimde düşer. Bu yüzden tarama sonuna yaklaşırken sesi duymayı bırakmanız genellikle hoparlörünüzle değil, kulağınızın doğal sınırıyla ilgilidir. Aynı testi daha genç biri yaptığında daha yüksek frekansları duyabilir.</p>
-<p>Alt uçta durum farklıdır: çok düşük frekanslarda (yaklaşık 20–60 Hz) sesi duymuyorsanız bunun nedeni büyük olasılıkla hoparlörün kendisidir. Küçük hoparlörler fiziksel olarak derin bas üretemez. Bu aralıkta sesi duymak yerine titreşim olarak hissedebilirsiniz.</p>
+<p>Alt uçta durum farklıdır: çok düşük frekanslarda (yaklaşık 20-60 Hz) sesi duymuyorsanız bunun nedeni büyük olasılıkla hoparlörün kendisidir. Küçük hoparlörler fiziksel olarak derin bas üretemez. Bu aralıkta sesi duymak yerine titreşim olarak hissedebilirsiniz.</p>
 <table>
 <thead>
 <tr><th>Frekans aralığı</th><th>Ne duyulur?</th><th>Dikkat edilecek nokta</th></tr>
 </thead>
 <tbody>
-<tr><td>20–60 Hz</td><td>Derin bas, daha çok hissedilir</td><td>Laptop ve küçük hoparlörler bu aralıkta çoğunlukla sessizdir</td></tr>
-<tr><td>60–250 Hz</td><td>Bas ve davul vuruşları</td><td>Kasa titremesi ve cızırtı en sık bu aralıkta ortaya çıkar</td></tr>
-<tr><td>250 Hz – 4 kHz</td><td>Konuşma ve vokaller</td><td>Bu aralıkta bozulma, görüşmelerde konuşmayı anlaşılmaz yapar</td></tr>
-<tr><td>4–12 kHz</td><td>Netlik, “s” ve “ş” sesleri</td><td>Tiz hoparlörü (tweeter) arızasında bu bölge kaybolur</td></tr>
-<tr><td>12–20 kHz</td><td>Çok ince tiz</td><td>Duyamamanız çoğunlukla yaşa bağlı ve normaldir</td></tr>
+<tr><td>20-60 Hz</td><td>Derin bas, daha çok hissedilir</td><td>Laptop ve küçük hoparlörler bu aralıkta çoğunlukla sessizdir</td></tr>
+<tr><td>60-250 Hz</td><td>Bas ve davul vuruşları</td><td>Kasa titremesi ve cızırtı en sık bu aralıkta ortaya çıkar</td></tr>
+<tr><td>250 Hz-4 kHz</td><td>Konuşma ve vokaller</td><td>Bu aralıkta bozulma, görüşmelerde konuşmayı anlaşılmaz yapar</td></tr>
+<tr><td>4-12 kHz</td><td>Netlik, “s” ve “ş” sesleri</td><td>Tiz hoparlörü (tweeter) arızasında bu bölge kaybolur</td></tr>
+<tr><td>12-20 kHz</td><td>Çok ince tiz</td><td>Duyamamanız çoğunlukla yaşa bağlı ve normaldir</td></tr>
 </tbody>
 </table>
 
@@ -65,7 +65,7 @@ return array(
 
 <h3>Masaüstü hoparlör ve subwoofer kurulumu</h3>
 <p>2.1 sistemlerde (iki hoparlör ve bir subwoofer) frekans taraması, kurulumun dengeli olup olmadığını görmenin pratik bir yoludur. Tarama düşük frekanslardayken sesin büyük kısmı subwoofer'dan, yükseldikçe uydu hoparlörlerden gelmelidir. Geçiş sırasında sesin belirgin biçimde kaybolduğu bir bölge varsa subwoofer'ın ses ve geçiş (crossover) düğmelerini ayarlayın.</p>
-<p>Subwoofer'ı duvara veya köşeye çok yakın koymak bası abartabilir ve belirli frekanslarda uğultu yaratabilir. Ton üretecinde 40–100 Hz arasında birkaç değer çalıp subwoofer'ı birkaç on santimetre oynatarak en dengeli konumu bulabilirsiniz. Uydu hoparlörleri ise kulak hizasına yakın ve size doğru hafifçe çevrilmiş olarak yerleştirin; bu, sağ sol ses ayrımını da belirginleştirir.</p>
+<p>Subwoofer'ı duvara veya köşeye çok yakın koymak bası abartabilir ve belirli frekanslarda uğultu yaratabilir. Ton üretecinde 40-100 Hz arasında birkaç değer çalıp subwoofer'ı birkaç on santimetre oynatarak en dengeli konumu bulabilirsiniz. Uydu hoparlörleri ise kulak hizasına yakın ve size doğru hafifçe çevrilmiş olarak yerleştirin; bu, sağ sol ses ayrımını da belirginleştirir.</p>
 
 <h2>Laptop hoparlörü, kulaklık ve Bluetooth farkları</h2>
 <p><strong>Laptop hoparlörleri:</strong> Küçük boyutları nedeniyle derin bası iyi veremezler; taramanın başında sesi zayıf duymanız normaldir. Hoparlörler laptopun altında veya yanında olabilir, bu yüzden laptopu yumuşak bir yüzeye koymak sesi boğar. Sol ve sağ hoparlör birbirine yakın olduğu için stereo ayrımı kulaklıktaki kadar belirgin değildir.</p>
@@ -81,7 +81,7 @@ return array(
 </div>
 
 <h2>Güvenli ses seviyesi</h2>
-<p>Uzun süre yüksek seste dinlemek işitmeye kalıcı zarar verebilir. Test tonlarını kısa süreli ve düşük–orta seviyede çalın. Özellikle yüksek frekanslarda sesi duymadığınızı düşünerek sesi sonuna kadar açmayın; duymasanız bile ses kulaklarınıza ve hoparlörünüze ulaşıyor olabilir. Kulaklarınızda çınlama veya rahatsızlık hissederseniz testi hemen durdurun.</p>
+<p>Uzun süre yüksek seste dinlemek işitmeye kalıcı zarar verebilir. Test tonlarını kısa süreli ve düşük ile orta seviyede çalın. Özellikle yüksek frekanslarda sesi duymadığınızı düşünerek sesi sonuna kadar açmayın; duymasanız bile ses kulaklarınıza ve hoparlörünüze ulaşıyor olabilir. Kulaklarınızda çınlama veya rahatsızlık hissederseniz testi hemen durdurun.</p>
 <p>Kulak içi kulaklıklar ses kaynağını kulak kanalına çok yakın getirdiği için aynı ses seviyesi bunlarda daha yüksek algılanır. Bu nedenle kulaklıkla test yaparken ses kaydırıcısını hoparlöre göre daha da düşük tutun. Çocukların kullandığı cihazlarda testi bir yetişkinin başlatması ve ses seviyesini önceden ayarlaması iyi bir alışkanlıktır.</p>
 
 <h2>Gizlilik</h2>
@@ -89,7 +89,8 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Ses düzeninizin tamamını kontrol etmek için <a href="{tool:mikrofon-testi}">online mikrofon testi</a> ile kaydınızı dinleyin, görüntülü görüşmeler öncesinde <a href="{tool:kamera-testi}">web kamera testi</a> yapın. Oyun kurulumunuzu tamamlıyorsanız <a href="{tool:mouse-testi}">mouse test</a> aracıyla çift tıklama ve polling rate kontrolü, <a href="{tool:klavye-testi}">klavye testi</a> ile de tuş kontrolü yapabilirsiniz.</p>
-<p>Mikrofonunuz sesinizi iletmiyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> rehberimize, ikinci el bir laptop alacaksanız hoparlör dahil tüm donanım kontrollerini içeren <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken 9 test</a> yazımıza göz atın.</p>
+<p>Mikrofonunuz sesinizi iletmiyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> rehberimize, ikinci el bir laptop alacaksanız hoparlör dahil tüm donanım kontrollerini içeren <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken 9 test</a> yazısına bakın.</p>
+<p>Laptopunuzun hoparlörü test sırasında cızırdıyorsa <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberi nedenleri tek tek ayırır. Kulaklıkta sağ ve sol kanal karışıyorsa <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi: sağ sol kanal kontrolü</a> yazısında Bluetooth ve kablolu kulaklıklar için ayrı adımlar var.</p>
 HTML
 	,
 	'faqs'        => array(
