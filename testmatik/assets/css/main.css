@@ -191,6 +191,8 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 @media (max-width: 860px) {
 	.nav-toggle { display: inline-grid; }
 	.site-header__cta { display: none; }
+	.site-header__inner { gap: 12px; }
+	.site-header__actions { margin-left: auto; }
 	.nav { position: fixed; inset: var(--header-h) 0 auto 0; max-height: calc(100vh - var(--header-h)); overflow: auto; background: var(--bg-elev); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-lg); padding: 12px var(--gutter) 20px; display: none; margin: 0; }
 	.nav-open .nav { display: block; }
 	.nav-open .nav-toggle__open { display: none; }
