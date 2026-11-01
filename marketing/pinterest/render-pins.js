@@ -17,7 +17,7 @@ const PINS = [
   ['pin-05-mouse-testi', 'amber', 'mouse', "Mouse'un", 'çift tıklıyor mu?', 'Arızalı tuşu saniyeler içinde yakala.',
     ['Çift tıklama (chatter) dedektörü', 'Polling rate (Hz) tahmini', '5 saniyelik CPS testi']],
   ['pin-06-hoparlor-testi', 'violet', 'speaker', 'Sağ ve sol ses', 'doğru mu çalıyor?', 'Hoparlör ve kulaklık testi. Kurulum yok.',
-    ['Sol, sağ ve iki kanal testi', '20 Hz – 20 kHz frekans taraması', 'İstediğin frekansta ton üret']],
+    ['Sol, sağ ve iki kanal testi', "20 Hz'den 20 kHz'e frekans taraması", 'İstediğin frekansta ton üret']],
 ];
 
 const logo = `<svg width="56" height="56" viewBox="0 0 32 32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c55e"/><stop offset="1" stop-color="#0ea5e9"/></linearGradient></defs><rect x="2" y="2" width="28" height="28" rx="8" fill="url(#lg)"/><path d="m10.5 15.5 3.8 3.8 7.2-8" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>`;

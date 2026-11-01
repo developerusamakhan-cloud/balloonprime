@@ -550,6 +550,25 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .cps__pad small { font-size: 13px; font-weight: 600; color: var(--ink-2); }
 .cps__pad.is-running { background: var(--tone); color: #fff; }
 .cps__pad.is-running small { color: rgba(255,255,255,.85); }
+/* Typing speed test */
+.typing { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 18px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--bg-elev); }
+.typing__timer { position: absolute; top: 12px; right: 14px; padding: 4px 10px; border-radius: 99px; background: var(--tone-soft); color: var(--tone); font-family: var(--mono); font-size: 15px; font-weight: 800; }
+.typing__words { position: relative; height: 7.2em; overflow: hidden; padding-right: 64px; font-size: 21px; line-height: 2.4em; color: var(--ink-2); cursor: text; scroll-behavior: smooth; }
+.typing__words span { padding: 3px 4px; border-radius: 6px; }
+.typing__words span.is-current { background: var(--tone-soft); color: var(--ink); box-shadow: inset 0 -2px 0 var(--tone); }
+.typing__words span.is-typing-bad { background: var(--danger-soft); color: var(--danger); }
+.typing__words span.is-ok { color: var(--brand-text); }
+.typing__words span.is-bad { color: var(--danger); text-decoration: line-through; text-decoration-thickness: 2px; }
+.typing__input { width: 100%; padding: 14px 16px; border-radius: var(--radius); border: 2px solid var(--line-strong); background: var(--bg); color: var(--ink); font-size: 20px; font-family: inherit; }
+.typing__input:focus { outline: none; border-color: var(--tone); box-shadow: 0 0 0 4px var(--tone-soft); }
+.typing__input:disabled { opacity: .6; }
+.typing__result { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 22px 18px; border-radius: var(--radius-lg); background: var(--tone-soft); text-align: center; }
+.typing__result[hidden] { display: none; }
+.typing__score { margin: 0; font-family: var(--mono); font-size: 46px; font-weight: 800; color: var(--tone); line-height: 1.1; }
+.typing__score small { display: block; font-family: "Jakarta", system-ui, sans-serif; font-size: 14px; font-weight: 700; color: var(--ink-2); }
+.typing__level { margin: 0; font-weight: 700; color: var(--ink); }
+.typing__detail { margin: 0 0 8px; color: var(--muted); font-size: 14.5px; }
+@media (max-width: 560px) { .typing { padding: 44px 14px 14px; } .typing__words { font-size: 18px; padding-right: 0; } }
 @media (max-width: 600px) { .cps { grid-template-columns: 1fr; } }
 
 /* Speaker */

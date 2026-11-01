@@ -15,7 +15,7 @@ return array(
 <h2>Önce test edin, sonra çözün</h2>
 <p>Birçok sorun aslında bir ayardan kaynaklanır. Bu yüzden bir parçayı değiştirmeden veya servise götürmeden önce cihazı test etmek zaman ve para kazandırır:</p>
 <ul>
-<li><strong>Klavye:</strong> <a href="{tool:klavye-testi}">Klavye testi</a> ile hangi tuşların sinyal gönderdiğini görün, ardından <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları uygulayın.</li>
+<li><strong>Klavye:</strong> <a href="{tool:klavye-testi}">Klavye testi</a> ile hangi tuşların sinyal gönderdiğini görün, ardından <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları uygulayın. Yazma hızınızı merak ediyorsanız <a href="{tool:klavye-hiz-testi}">klavye hız testi</a> yapabilirsiniz.</li>
 <li><strong>Ekran:</strong> <a href="{tool:olu-piksel-testi}">Ölü piksel testi</a> kusurlu pikselleri gösterir; <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel nasıl düzeltilir</a> yazısı neyin onarılabileceğini anlatır.</li>
 <li><strong>Ses:</strong> <a href="{tool:mikrofon-testi}">Mikrofon testi</a> ve <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile giriş ve çıkışı ayrı ayrı kontrol edin; <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberi Windows ayarlarını adım adım açıklar.</li>
 <li><strong>Kamera ve mouse:</strong> <a href="{tool:kamera-testi}">Kamera testi</a> çözünürlüğü ve FPS değerini gösterir, <a href="{tool:mouse-testi}">mouse testi</a> çift tıklamayı yakalar. Ayrıntılar için <a href="{post:mouse-cift-tiklama-sorunu}">mouse çift tıklama sorunu</a> yazısına bakın.</li>

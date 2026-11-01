@@ -33,6 +33,17 @@ function testmatik_tools() {
 				'tags'     => array( 'Q klavye', 'F klavye', 'NKRO' ),
 				'keywords' => 'klavye tuş q f keyboard ghosting nkro',
 			),
+			'klavye-hiz-testi' => array(
+				'name'     => 'Klavye Hız Testi',
+				'short'    => 'Hız',
+				'icon'     => 'clock',
+				'tone'     => 'sky',
+				'script'   => 'typing',
+				'category' => 'Klavye',
+				'blurb'    => 'Dakikada kaç kelime yazdığınızı ölçün. 1, 3 veya 5 dakika, Türkçe kelimelerle.',
+				'tags'     => array( 'Kelime/dk', '10 parmak', 'Katiplik' ),
+				'keywords' => 'klavye hız testi yazma hızı kelime dakika 10 parmak on parmak katiplik wpm',
+			),
 			'olu-piksel-testi' => array(
 				'name'     => 'Ölü Piksel Testi',
 				'short'    => 'Ekran',

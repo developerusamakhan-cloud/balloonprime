@@ -39,7 +39,7 @@ return array(
 <p>Nokta, virgül ve bazı semboller de iki düzende farklı yerlerdedir. Örneğin Türkçe Q klavyede nokta Ç harfinin hemen sağındadır, virgül ise orta sırada İ harfinin yanındadır. F klavyede nokta ve virgül alt sırada, B harfinin sağında yan yana bulunur. <kbd>AltGr</kbd> ile yazılan bazı semboller de iki düzende farklı tuşlara denk gelebilir. Bir düzenden diğerine geçen kullanıcıların en çok zorlandığı yer genellikle harfler değil, bu sembollerdir.</p>
 
 <h2>Yazma hızı açısından hangisi daha iyi?</h2>
-<p>F klavyenin Türkçe metinlerde parmak hareketini azaltacak şekilde tasarlandığı açıktır. On parmak yazan ve düzeni iyi öğrenmiş biri için Türkçe yazarken daha az yorar ve daha akıcı yazdırır. Ancak hız yalnızca düzene bağlı değildir; alışkanlık, pratik süresi ve doğru parmak tekniği en az düzen kadar belirleyicidir.</p>
+<p>F klavyenin Türkçe metinlerde parmak hareketini azaltacak şekilde tasarlandığı açıktır. On parmak yazan ve düzeni iyi öğrenmiş biri için Türkçe yazarken daha az yorar ve daha akıcı yazdırır. Ancak hız yalnızca düzene bağlı değildir; alışkanlık, pratik süresi ve doğru parmak tekniği en az düzen kadar belirleyicidir. Hangi düzende ne kadar hızlı olduğunuzu <a href="{tool:klavye-hiz-testi}">klavye hız testi</a> ile ölçüp karşılaştırabilirsiniz.</p>
 <p>Yıllardır Q klavye kullanan biri F'ye geçtiğinde ilk haftalarda belirgin biçimde yavaşlar. Bu geçiş dönemi kişiden kişiye değişir. Ayrıca İngilizce metin, yazılım kodu veya kısayol tuşlarını yoğun kullanıyorsanız Q düzeni daha pratik olabilir; çünkü pek çok programın kısayolları QWERTY düzenine göre düşünülmüştür.</p>
 <h3>Q'dan F'ye geçmek isteyenler için öneriler</h3>
 <ul>

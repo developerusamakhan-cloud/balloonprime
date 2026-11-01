@@ -1,4 +1,4 @@
-# Testmatik – Pinterest pins (6 tools)
+# Testmatik: Pinterest pins (7 tools)
 
 All images are 1000 × 1500 px (2:3), in this folder. Every feature line on the images and in the descriptions was checked against what each tool actually does.
 
@@ -7,11 +7,11 @@ All images are 1000 × 1500 px (2:3), in this folder. Every feature line on the 
 ```
 Klavye, ekran, mikrofon, kamera, mouse ve hoparlör için ücretsiz online testler ve adım adım çözüm rehberleri. Laptop ve bilgisayar sorunlarını program kurmadan tarayıcıda kontrol et.
 ```
-**Posting plan:** 1 pin a day, in the order below, weekday evenings 20:00–22:00 (Türkiye time).
+**Posting plan:** 1 pin a day, in the order below, weekday evenings 20:00-22:00 (Türkiye time).
 
 ---
 
-## Pin 01 – Klavye Testi
+## Pin 01: Klavye Testi
 **Image:** `pin-01-klavye-testi.png`
 **Link:**
 ```
@@ -33,7 +33,7 @@ Ekran üzerinde Türkçe Q klavye çizimi; W, A, F ve Ö tuşları yeşil, D tu�
 
 ---
 
-## Pin 02 – Ölü Piksel Testi
+## Pin 02: Ölü Piksel Testi
 **Image:** `pin-02-olu-piksel-testi.png`
 **Link:**
 ```
@@ -55,7 +55,7 @@ Siyah ekranlı bir laptop ve büyüteç altında kırmızı renkte tek bir kusur
 
 ---
 
-## Pin 03 – Mikrofon Testi
+## Pin 03: Mikrofon Testi
 **Image:** `pin-03-mikrofon-testi.png`
 **Link:**
 ```
@@ -77,7 +77,7 @@ Ses dalgaları arasında yeşil bir mikrofon çizimi ve onay işareti. Üstte "M
 
 ---
 
-## Pin 04 – Kamera Testi
+## Pin 04: Kamera Testi
 **Image:** `pin-04-kamera-testi.png`
 **Link:**
 ```
@@ -99,7 +99,7 @@ Ekranında bir kişi silüeti görünen laptop ve üstünde web kamerası, köş
 
 ---
 
-## Pin 05 – Mouse Testi
+## Pin 05: Mouse Testi
 **Image:** `pin-05-mouse-testi.png`
 **Link:**
 ```
@@ -121,7 +121,7 @@ Sol tuşu turuncu renkte vurgulanmış bir mouse çizimi; yanında "2× 14ms" ve
 
 ---
 
-## Pin 06 – Hoparlör Testi
+## Pin 06: Hoparlör Testi
 **Image:** `pin-06-hoparlor-testi.png`
 **Link:**
 ```
@@ -137,9 +137,31 @@ Kulaklığın ya da hoparlörün tek taraftan mı ses veriyor? Ücretsiz online 
 ```
 **Alt text:**
 ```
-Mor renkli sol ve sağ hoparlör çizimi, aralarında ses dalgaları ve "20 Hz – 20 kHz" etiketi. Üstte "Sağ ve sol ses doğru mu çalıyor?" başlığı, altta testin özellikleri ve testmatik.app adresi.
+Mor renkli sol ve sağ hoparlör çizimi, aralarında ses dalgaları ve "20 Hz - 20 kHz" etiketi. Üstte "Sağ ve sol ses doğru mu çalıyor?" başlığı, altta testin özellikleri ve testmatik.app adresi.
 ```
 **Hashtags:** `#kulakliktesti #hoparlör #sestesti`
+
+---
+
+## Pin 07: Klavye Hız Testi
+**Image:** `pin-07-klavye-hiz-testi.png`
+**Link:**
+```
+https://testmatik.app/klavye-hiz-testi/?utm_source=pinterest&utm_medium=social&utm_campaign=pin07_klavyehiz
+```
+**Title:**
+```
+Klavye Hız Testi: Dakikada Kaç Kelime Yazıyorsun? Ücretsiz Online Test
+```
+**Description:**
+```
+Yazma hızını merak ediyor musun? Ücretsiz klavye hız testi ile Türkçe kelimelerle 1, 3 veya 5 dakika yaz; net kelime/dakika, vuruş/dakika ve doğruluk oranını anında gör. Doğru kelimeler yeşile, hatalılar kırmızıya döner. On parmak yazmayı öğrenenler ve katiplik sınavına hazırlananlar için düzenli pratik yapmanın kolay yolu. Kayıt yok, kurulum yok; yazdıkların hiçbir yere gönderilmez.
+```
+**Alt text:**
+```
+Kronometre, mavi tuşları yanan koyu renkli bir klavye ve "62 kelime / dk" yazan konuşma balonu. Üstte "Dakikada kaç kelime yazıyorsun?" başlığı, altta testin özellikleri ve testmatik.app adresi.
+```
+**Hashtags:** `#klavyehıztesti #onparmak #katiplik`
 
 ---
 
@@ -149,4 +171,4 @@ Mor renkli sol ve sağ hoparlör çizimi, aralarında ses dalgaları ve "20 Hz �
 3. Create the board above and upload the pins one by one.
 
 ## Track results
-In GA4, go to Reports → Acquisition → Traffic acquisition and set the dimension to "Session campaign". Each pin shows up separately (`pin01_klavye` … `pin06_hoparlor`).
+In GA4, go to Reports → Acquisition → Traffic acquisition and set the dimension to "Session campaign". Each pin shows up separately (`pin01_klavye` … `pin07_klavyehiz`).

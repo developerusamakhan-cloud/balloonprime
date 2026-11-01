@@ -74,6 +74,42 @@ function testmatik_app_keyboard() {
 	<?php
 }
 
+/** Typing speed test. */
+function testmatik_app_typing() {
+	?>
+	<div class="app__bar">
+		<div class="seg" role="group" aria-label="<?php esc_attr_e( 'Test süresi', 'testmatik' ); ?>">
+			<button type="button" class="seg__btn is-active" data-duration="60" aria-pressed="true"><?php esc_html_e( '1 dakika', 'testmatik' ); ?></button>
+			<button type="button" class="seg__btn" data-duration="180" aria-pressed="false"><?php esc_html_e( '3 dakika', 'testmatik' ); ?></button>
+			<button type="button" class="seg__btn" data-duration="300" aria-pressed="false"><?php esc_html_e( '5 dakika', 'testmatik' ); ?></button>
+		</div>
+		<button type="button" class="btn btn--ghost btn--sm" data-action="reset"><?php echo testmatik_icon( 'refresh', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Yeni metin', 'testmatik' ); ?></button>
+	</div>
+	<p class="app__hint" data-ref="hint"><?php echo testmatik_icon( 'keyboard', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><span><?php esc_html_e( 'Kutuya yazmaya başladığınızda süre işler. Her kelimeden sonra boşluk tuşuna basın; doğru kelime yeşil, hatalı kelime kırmızı olur.', 'testmatik' ); ?></span></p>
+	<div class="typing">
+		<div class="typing__timer"><span data-ref="timer">1:00</span></div>
+		<div class="typing__words" data-ref="words" aria-live="off"></div>
+		<label class="visually-hidden" for="tm-typing-input"><?php esc_html_e( 'Kelimeleri buraya yazın', 'testmatik' ); ?></label>
+		<input id="tm-typing-input" class="typing__input" type="text" data-ref="input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="<?php esc_attr_e( 'Buraya yazın…', 'testmatik' ); ?>">
+	</div>
+	<div class="stats">
+		<?php
+		testmatik_stat( __( 'Net kelime / dk', 'testmatik' ), 'wpm', '0' );
+		testmatik_stat( __( 'Vuruş / dk', 'testmatik' ), 'kpm', '0' );
+		testmatik_stat( __( 'Doğruluk', 'testmatik' ), 'acc', '-' );
+		testmatik_stat( __( 'Hatalı kelime', 'testmatik' ), 'wrong', '0' );
+		?>
+	</div>
+	<div class="typing__result" data-ref="result" hidden>
+		<p class="typing__score"><span data-ref="rwpm">0</span> <small><?php esc_html_e( 'net kelime / dakika', 'testmatik' ); ?></small></p>
+		<p class="typing__level" data-ref="rlevel"></p>
+		<p class="typing__detail" data-ref="rdetail"></p>
+		<button type="button" class="btn btn--primary" data-action="again"><?php echo testmatik_icon( 'refresh', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Tekrar dene', 'testmatik' ); ?></button>
+	</div>
+	<p class="app__note"><?php echo testmatik_icon( 'info', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><span data-ref="best"><?php esc_html_e( 'En iyi sonucunuz yalnızca bu tarayıcıda saklanır; hiçbir yere gönderilmez.', 'testmatik' ); ?></span></p>
+	<?php
+}
+
 /** Dead pixel test. */
 function testmatik_app_pixel() {
 	$colors = array(

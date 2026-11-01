@@ -10,7 +10,7 @@ return array(
 	'html'        => <<<'HTML'
 <h2>Testmatik nedir?</h2>
 <p>Testmatik, bilgisayarınızın ve telefonunuzun temel donanımlarını doğrudan tarayıcıdan kontrol etmenizi sağlayan ücretsiz bir online donanım testi sitesidir. Program indirmeniz, hesap açmanız ya da bir şey kurmanız gerekmez. Sayfayı açar, testi başlatır ve sonucu anında görürsünüz.</p>
-<p>Sitede altı araç bulunur: klavye, ölü piksel, mikrofon, kamera, mouse ve hoparlör testi. Her biri tek bir soruya net cevap vermek için tasarlandı: "Bu parça gerçekten çalışıyor mu?" Bir tuşun basıp basmadığını, ekranda takılı kalmış bir piksel olup olmadığını ya da mikrofonun sesinizi alıp almadığını birkaç dakika içinde öğrenebilirsiniz.</p>
+<p>Sitede yedi araç bulunur: klavye, klavye hız, ölü piksel, mikrofon, kamera, mouse ve hoparlör testi. Her biri tek bir soruya net cevap vermek için tasarlandı: "Bu parça gerçekten çalışıyor mu?" Bir tuşun basıp basmadığını, ekranda takılı kalmış bir piksel olup olmadığını ya da mikrofonun sesinizi alıp almadığını birkaç dakika içinde öğrenebilirsiniz.</p>
 <p>Testmatik bağımsız bir projedir. Amacımız, teknik bilgisi az olan kullanıcıların da donanım sorunlarını kendi başına tespit edebilmesi ve gerekirse servise giderken elinde somut bir bulgu olmasıdır.</p>
 
 <h2>Testmatik araçları</h2>
@@ -20,6 +20,9 @@ return array(
 <p><a href="{tool:klavye-testi}">Online klavye testi</a>, ekranda gerçek bir klavye düzeni gösterir ve bastığınız her tuşu anında işaretler. Varsayılan düzen Türkçe Q'dur; tek tıkla Türkçe F düzenine geçebilirsiniz. Basılı tuş mavi yanar, en az bir kez çalışmış tuş yeşile döner. Böylece tüm klavyeyi gezdikten sonra hâlâ gri kalan tuşlar, sorunlu olanları gösterir.</p>
 <p>Araç ayrıca test edilen tuş sayısını, son basılan tuşun adını ve <code>code</code> değerini, son basışların geçmişini ve aynı anda basılı tutulan en fazla tuş sayısını gösterir. Bu son değer, ghosting, anti-ghosting ve NKRO desteğini kontrol etmek için kullanışlıdır. Laptop, masaüstü, mekanik ve kablosuz klavyelerle çalışır.</p>
 <p>Dürüst olmak gerekirse <kbd>Fn</kbd> tuşu ve bazı medya tuşları hiçbir tarayıcı tarafından algılanamaz, çünkü bunları laptop donanım düzeyinde kendisi işler. Bu tuşlar testte yanmıyorsa bu, arızalı oldukları anlamına gelmez.</p>
+
+<h3>Klavye hız testi</h3>
+<p><a href="{tool:klavye-hiz-testi}">Klavye hız testi</a>, Türkçe kelimelerle dakikada kaç kelime yazdığınızı ölçer. 1, 3 veya 5 dakikalık süre seçersiniz; test bitince net kelime/dakika, vuruş/dakika ve doğruluk oranı gösterilir. On parmak yazmayı öğrenenler ve katiplik sınavına hazırlananlar için düzenli pratik yapmanın kolay bir yoludur.</p>
 
 <h3>Ölü piksel testi</h3>
 <p><a href="{tool:olu-piksel-testi}">Ölü piksel testi</a>, ekranınızı tam ekran düz renklerle doldurarak bozuk pikselleri görünür hâle getirir. "Testi başlat" düğmesine bastığınızda sırasıyla siyah, beyaz, kırmızı, yeşil, mavi, gri, camgöbeği, macenta ve sarı renkleri görebilirsiniz. Rengi tıklayarak, ekrana dokunarak, ok tuşlarıyla ya da boşluk tuşuyla değiştirirsiniz. "Otomatik" mod rengi her 3 saniyede bir kendiliğinden değiştirir, <kbd>Esc</kbd> ile çıkarsınız.</p>

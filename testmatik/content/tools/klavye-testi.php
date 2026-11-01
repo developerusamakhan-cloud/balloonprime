@@ -91,7 +91,7 @@ return array(
 <p>Klavye testi tamamen tarayıcınızda çalışır. Bastığınız tuşlar hiçbir sunucuya gönderilmez ve hiçbir yerde saklanmaz. Yine de alışkanlık olarak test sırasında şifre gibi kişisel bilgiler yazmamanızı öneririz.</p>
 
 <h2>Diğer donanım testleri</h2>
-<p>Görüntülü görüşmeden önce <a href="{tool:kamera-testi}">kamera testi</a> ile görüntünüzü, <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol ses kanallarını kontrol edebilirsiniz. Tüm araçlar ücretsizdir, kayıt gerektirmez ve aynı gizlilik ilkesiyle çalışır.</p>
+<p>Görüntülü görüşmeden önce <a href="{tool:kamera-testi}">kamera testi</a> ile görüntünüzü, <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol ses kanallarını kontrol edebilirsiniz. Tuşlarınızın hepsi çalışıyorsa sıra hızda: <a href="{tool:klavye-hiz-testi}">klavye hız testi</a> dakikada kaç kelime yazdığınızı ölçer. Tüm araçlar ücretsizdir, kayıt gerektirmez ve aynı gizlilik ilkesiyle çalışır.</p>
 <p>Tuşlarınız testte yanmıyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları deneyin. Lenovo kullanıyorsanız Fn Lock ve Vantage ayarları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı daha hızlı sonuç verir.</p>
 HTML
 	,
