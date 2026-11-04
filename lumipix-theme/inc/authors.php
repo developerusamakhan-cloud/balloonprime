@@ -3,9 +3,9 @@
  * Editorial team: author accounts for the content pack, local avatars,
  * the author box under articles and the author archive header.
  *
- * Authors are created by Lumi Pix Setup with the "author" role and a random
- * password (they cannot log in until someone resets it). Rename them, change
- * their bios or replace them with your real team in Users → Profile.
+ * Articles are credited to one team account, "Lumi Pix Team", created with
+ * the "author" role and a random password (it cannot log in until someone
+ * resets it). Change its bio in Users → Profile.
  *
  * @package Lumipix
  */
@@ -21,33 +21,90 @@ function lumipix_pack_authors() {
 	return apply_filters(
 		'lumipix_pack_authors',
 		array(
-			'emily-carter'  => array(
-				'name'       => 'Emily Carter',
-				'role_label' => __( 'Compression & online forms', 'lumipix' ),
-				'bio'        => __( 'Emily writes the Lumi Pix guides on compressing photos and preparing images for online applications. She focuses on clear, step-by-step instructions that work on any phone.', 'lumipix' ),
-				'categories' => array( 'Compression' ),
-			),
-			'james-walker'  => array(
-				'name'       => 'James Walker',
-				'role_label' => __( 'Resizing, ID photos & signatures', 'lumipix' ),
-				'bio'        => __( 'James covers resizing, passport photos and signatures. He tests every method on real phones and computers before writing it up.', 'lumipix' ),
-				'categories' => array( 'Resizing', 'Photos & IDs' ),
-			),
-			'daniel-brooks' => array(
-				'name'       => 'Daniel Brooks',
-				'role_label' => __( 'Image formats & printing', 'lumipix' ),
-				'bio'        => __( 'Daniel explains image formats, DPI and printing in plain English, so you can choose the right file for screen or paper without the jargon.', 'lumipix' ),
-				'categories' => array( 'Formats & Printing' ),
-			),
-			'olivia-bennett' => array(
-				'name'       => 'Olivia Bennett',
-				'role_label' => __( 'Background removal & social media', 'lumipix' ),
-				'bio'        => __( 'Olivia writes about background removal, product photos and social media image sizes, with a focus on getting professional results from free tools.', 'lumipix' ),
-				'categories' => array( 'Background Removal', 'Comparisons', 'Social Media' ),
+			'lumipix-team' => array(
+				'name'       => 'Lumi Pix Team',
+				'role_label' => __( 'The team behind the tools', 'lumipix' ),
+				'bio'        => __( 'Lumi Pix guides are written by the team that builds the tools. Every method is tried on real phones and computers before it is published, and guides are updated when a tool or a common requirement changes.', 'lumipix' ),
+				'categories' => array( 'Compression', 'Resizing', 'Photos & IDs', 'Formats & Printing', 'Background Removal', 'Comparisons', 'Social Media' ),
 			),
 		)
 	);
 }
+
+/**
+ * Author profiles used by earlier theme versions. Their articles now belong
+ * to the team account and their archives redirect to it.
+ *
+ * @return string[]
+ */
+function lumipix_legacy_author_slugs() {
+	return array( 'emily-carter', 'james-walker', 'daniel-brooks', 'olivia-bennett', 'ayesha-khan', 'hamza-iqbal', 'sara-malik' );
+}
+
+/**
+ * Move every article written under a former persona to the team account.
+ * Runs once. Updates post_author directly so modified dates stay untouched.
+ */
+function lumipix_merge_pack_authors() {
+	if ( (int) get_option( 'lumipix_authors_rev' ) >= 3 ) {
+		return;
+	}
+	update_option( 'lumipix_authors_rev', 3 );
+	$team = lumipix_ensure_author( 'lumipix-team' );
+	if ( ! $team ) {
+		return;
+	}
+	$old = get_users(
+		array(
+			'meta_key'     => '_lumipix_author', // phpcs:ignore WordPress.DB.SlowDBQuery
+			'meta_value'   => lumipix_legacy_author_slugs(), // phpcs:ignore WordPress.DB.SlowDBQuery
+			'meta_compare' => 'IN',
+			'fields'       => 'ID',
+		)
+	);
+	global $wpdb;
+	foreach ( $old as $id ) {
+		$posts = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM {$wpdb->posts} WHERE post_author = %d", $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		$wpdb->update( $wpdb->posts, array( 'post_author' => $team ), array( 'post_author' => (int) $id ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		foreach ( $posts as $post_id ) {
+			clean_post_cache( (int) $post_id );
+		}
+	}
+	if ( defined( 'RANK_MATH_VERSION' ) && method_exists( '\\RankMath\\Sitemap\\Cache', 'invalidate_storage' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
+	}
+}
+add_action( 'init', 'lumipix_merge_pack_authors', 40 );
+
+/**
+ * Whether a user is the team account.
+ *
+ * @param int $user_id User ID.
+ * @return bool
+ */
+function lumipix_is_team_author( $user_id ) {
+	return $user_id && 'lumipix-team' === (string) get_user_meta( $user_id, '_lumipix_author', true );
+}
+
+/**
+ * Old persona archives point to the team archive.
+ */
+function lumipix_redirect_legacy_authors() {
+	if ( ! is_author() ) {
+		return;
+	}
+	$user = get_queried_object();
+	$slug = $user instanceof WP_User ? (string) get_user_meta( $user->ID, '_lumipix_author', true ) : '';
+	if ( ! $slug || ! in_array( $slug, lumipix_legacy_author_slugs(), true ) ) {
+		return;
+	}
+	$team = lumipix_ensure_author( 'lumipix-team' );
+	if ( $team ) {
+		wp_safe_redirect( get_author_posts_url( $team ), 301 );
+		exit;
+	}
+}
+add_action( 'template_redirect', 'lumipix_redirect_legacy_authors' );
 
 /**
  * Rename author accounts created by earlier theme versions to the current
@@ -192,6 +249,11 @@ function lumipix_pack_avatar( $args, $id_or_email ) {
 		return $args;
 	}
 	$slug = (string) get_user_meta( $user_id, '_lumipix_author', true );
+	if ( 'lumipix-team' === $slug ) {
+		$args['url']          = LUMIPIX_URI . '/assets/img/logo-512.png';
+		$args['found_avatar'] = true;
+		return $args;
+	}
 	if ( $slug && file_exists( LUMIPIX_DIR . '/assets/avatars/' . $slug . '.png' ) ) {
 		$args['url']          = LUMIPIX_URI . '/assets/avatars/' . $slug . '.png';
 		$args['found_avatar'] = true;

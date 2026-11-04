@@ -270,7 +270,7 @@ function lumipix_schema() {
 			'datePublished'    => get_the_date( 'c', $post ),
 			'dateModified'     => get_the_modified_date( 'c', $post ),
 			'author'           => array(
-				'@type'       => 'Person',
+				'@type'       => lumipix_is_team_author( (int) $post->post_author ) ? 'Organization' : 'Person',
 				'name'        => get_the_author_meta( 'display_name', $post->post_author ),
 				'url'         => get_author_posts_url( (int) $post->post_author ),
 				'description' => get_the_author_meta( 'description', $post->post_author ),
@@ -339,7 +339,20 @@ function lumipix_plugin_breadcrumb_schema() {
  * @return array
  */
 function lumipix_rm_json_ld( $data ) {
-	if ( ! is_page() || ! is_array( $data ) ) {
+	if ( ! is_array( $data ) ) {
+		return $data;
+	}
+	// Articles by the team account: the author is the organisation, not a person.
+	if ( is_singular( 'post' ) && lumipix_is_team_author( (int) get_post_field( 'post_author', get_queried_object_id() ) ) ) {
+		foreach ( $data as $key => $entity ) {
+			if ( is_array( $entity ) && isset( $entity['@type'] ) && in_array( 'Person', (array) $entity['@type'], true ) ) {
+				$data[ $key ]['@type'] = 'Organization';
+				unset( $data[ $key ]['image'], $data[ $key ]['sameAs'] );
+				$data[ $key ]['logo'] = LUMIPIX_URI . '/assets/img/logo-512.png';
+			}
+		}
+	}
+	if ( ! is_page() ) {
 		return $data;
 	}
 	foreach ( $data as $key => $entity ) {

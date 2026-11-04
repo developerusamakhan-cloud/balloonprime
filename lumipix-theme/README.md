@@ -18,7 +18,7 @@ A fast, premium theme for **Lumipix.tools**: a browser-based image tools site. T
 ## What's new in 1.3
 
 - **Longer content:** every article is 1,100–1,500 words, and every tool page has long-form copy (stored in `content/tools/<key>.md`), with more internal links.
-- **Authors:** four author profiles (Emily Carter, James Walker, Daniel Brooks, Olivia Bennett) with avatars, an author box under each article and author archive pages. Articles are assigned by category. Edit names and bios in **Users**, or replace the profiles with your real team.
+- **Authors:** articles are credited to one "Lumi Pix Team" account with the site logo as avatar, an author box under each article and a team archive page. Earlier persona archives redirect to it. Edit the bio in **Users**.
 - **Scheduled links:** links to articles that are still scheduled show as plain text until the article is published, so crawlers never hit a 404.
 - **Rank Math:** Setup fills each page, tool page and article's Rank Math SEO title, meta description, **five focus keywords** (the first is the primary keyword) and social image. The keywords come from the `keywords:` line in each Markdown file. Anything you change in the Rank Math box is never overwritten.
 - **Cookie banner:** Essential / Analytics / Marketing choices, stored for 180 days, wired to Google Consent Mode v2. Visitors can reopen it from **Cookie settings** in the footer. Scripts tagged `<script type="text/plain" data-lumipix-consent="analytics">` only run after consent.
