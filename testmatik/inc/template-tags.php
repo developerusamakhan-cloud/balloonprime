@@ -278,3 +278,29 @@ function testmatik_illustration( $name ) {
 	$file = TESTMATIK_DIR . '/assets/img/illus-' . sanitize_file_name( $name ) . '.svg';
 	return file_exists( $file ) ? (string) file_get_contents( $file ) : ''; // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
 }
+
+/**
+ * Byline: the editorial team and the date the page last changed.
+ *
+ * The date is the real modified date of the post, so it only moves when the content does.
+ *
+ * @param bool $with_date Also print the update date (posts already show it in their meta row).
+ */
+function testmatik_byline( $with_date = true ) {
+	$about = get_page_by_path( 'hakkimizda' );
+	$team  = __( 'Testmatik Teknik Ekibi', 'testmatik' );
+	?>
+	<p class="byline">
+		<span class="byline__who"><?php echo testmatik_icon( 'shield', 15 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Hazırlayan:', 'testmatik' ); ?>
+			<?php if ( $about && 'publish' === $about->post_status ) : ?>
+				<a href="<?php echo esc_url( get_permalink( $about ) ); ?>"><?php echo esc_html( $team ); ?></a>
+			<?php else : ?>
+				<?php echo esc_html( $team ); ?>
+			<?php endif; ?>
+		</span>
+		<?php if ( $with_date ) : ?>
+			<span class="byline__date"><?php esc_html_e( 'Güncellendi:', 'testmatik' ); ?> <time datetime="<?php echo esc_attr( get_the_modified_date( 'c' ) ); ?>"><?php echo esc_html( get_the_modified_date( 'j F Y' ) ); ?></time></span>
+		<?php endif; ?>
+	</p>
+	<?php
+}

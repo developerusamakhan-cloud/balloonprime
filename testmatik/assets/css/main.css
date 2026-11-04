@@ -405,6 +405,16 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .tool-hero__icon { flex-shrink: 0; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 18px; background: var(--bg-elev); color: var(--tone); box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
 .tool-hero__title { font-size: clamp(28px, 4vw, 42px); letter-spacing: -.03em; margin: 2px 0 6px; }
 .tool-hero__lead { color: var(--ink-2); font-size: 17px; margin: 0; max-width: 760px; }
+.byline { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+.byline span { display: inline-flex; align-items: center; gap: 6px; }
+.byline .icon { color: var(--brand-text); }
+.byline a { color: var(--ink-2); font-weight: 650; }
+.byline__date { padding: 2px 10px; border-radius: 99px; background: var(--brand-soft); color: var(--brand-text); font-weight: 650; font-size: 13px; }
+.article-hero .byline { margin: 0 0 8px; }
+.method { margin-top: 22px; padding: 18px 20px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--bg-elev); }
+.method__title { display: flex; align-items: center; gap: 8px; margin: 0 0 8px; font-size: 18px; }
+.method__title .icon { color: var(--tone); }
+.method p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.65; max-width: 860px; }
 .tool-shell { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); padding: clamp(16px, 2.6vw, 28px); }
 .tool-trust { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin: 16px 0 0; padding: 0; color: var(--muted); font-size: 14px; font-weight: 600; }
 .tool-trust li { display: inline-flex; align-items: center; gap: 6px; }

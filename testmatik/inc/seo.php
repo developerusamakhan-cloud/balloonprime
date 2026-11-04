@@ -207,6 +207,9 @@ add_action(
 				'description'         => testmatik_seo_description(),
 				'applicationCategory' => 'UtilitiesApplication',
 				'operatingSystem'     => 'Windows, macOS, Linux, Android, iOS',
+				'dateModified'        => get_the_modified_date( 'c' ),
+				'creator'             => array( '@id' => $org_id ),
+				'publisher'           => array( '@id' => $org_id ),
 				'browserRequirements' => 'Requires JavaScript. Requires HTML5.',
 				'inLanguage'          => 'tr-TR',
 				'isAccessibleForFree' => true,
@@ -229,7 +232,7 @@ add_action(
 				'dateModified'     => get_the_modified_date( 'c', $id ),
 				'inLanguage'       => 'tr-TR',
 				'mainEntityOfPage' => get_permalink( $id ),
-				'author'           => array( '@type' => 'Organization', 'name' => get_bloginfo( 'name' ), 'url' => $home ),
+				'author'           => testmatik_schema_author(),
 				'publisher'        => array( '@id' => $org_id ),
 			);
 			$img = testmatik_share_image();
@@ -378,6 +381,51 @@ add_filter(
 		return $data;
 	},
 	99
+);
+
+/**
+ * Author of guide posts: the editorial team as an Organization, linked to the About page.
+ *
+ * @return array
+ */
+function testmatik_schema_author() {
+	$about = get_page_by_path( 'hakkimizda' );
+	return array(
+		'@type'    => 'Organization',
+		'name'     => __( 'Testmatik Teknik Ekibi', 'testmatik' ),
+		'url'      => $about ? get_permalink( $about ) : home_url( '/' ),
+		'parentOrganization' => array( '@id' => home_url( '/' ) . '#organization' ),
+	);
+}
+
+// Rank Math names the WordPress user ("admin") as a Person on posts; use the team instead.
+add_filter(
+	'rank_math/json_ld',
+	function ( $data ) {
+		if ( ! is_singular( 'post' ) || ! is_array( $data ) ) {
+			return $data;
+		}
+		$person_ids = array();
+		foreach ( $data as $key => $node ) {
+			if ( is_array( $node ) && isset( $node['@type'] ) && 'Person' === $node['@type'] ) {
+				if ( ! empty( $node['@id'] ) ) {
+					$person_ids[] = $node['@id'];
+				}
+				unset( $data[ $key ] );
+			}
+		}
+		foreach ( $data as $key => $node ) {
+			if ( ! is_array( $node ) || ! isset( $node['author'] ) ) {
+				continue;
+			}
+			$ref = isset( $node['author']['@id'] ) ? $node['author']['@id'] : '';
+			if ( ! $ref || in_array( $ref, $person_ids, true ) || ( isset( $node['author']['@type'] ) && 'Person' === $node['author']['@type'] ) ) {
+				$data[ $key ]['author'] = testmatik_schema_author();
+			}
+		}
+		return $data;
+	},
+	100
 );
 
 // Better core sitemap: drop users and tags, keep pages, posts and categories.

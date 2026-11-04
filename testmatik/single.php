@@ -27,6 +27,7 @@ while ( have_posts() ) :
 				<?php endif; ?>
 				<h1 class="article-hero__title"><?php the_title(); ?></h1>
 				<?php if ( $intro ) : ?><p class="article-hero__lead"><?php echo esc_html( $intro ); ?></p><?php endif; ?>
+				<?php testmatik_byline( false ); ?>
 				<p class="article-meta">
 					<span><?php echo testmatik_icon( 'clock', 15 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php echo esc_html( sprintf( /* translators: %d minutes */ __( '%d dk okuma', 'testmatik' ), testmatik_reading_time( $id ) ) ); ?></span>
 					<span><?php esc_html_e( 'Güncellendi:', 'testmatik' ); ?> <time datetime="<?php echo esc_attr( get_the_modified_date( 'c' ) ); ?>"><?php echo esc_html( get_the_modified_date( 'j F Y' ) ); ?></time></span>

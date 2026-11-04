@@ -27,6 +27,7 @@ while ( have_posts() ) :
 					<div>
 						<h1 class="tool-hero__title"><?php the_title(); ?></h1>
 						<?php if ( $intro ) : ?><p class="tool-hero__lead"><?php echo esc_html( $intro ); ?></p><?php endif; ?>
+						<?php testmatik_byline(); ?>
 					</div>
 				</div>
 				<div class="tool-shell">
@@ -38,6 +39,12 @@ while ( have_posts() ) :
 					<li><?php echo testmatik_icon( 'laptop', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Bilgisayar ve telefonda çalışır', 'testmatik' ); ?></li>
 				</ul>
 				<?php testmatik_ad_slot( 'below_tool' ); ?>
+				<?php if ( ! empty( $tool['method'] ) ) : ?>
+					<section class="method" aria-labelledby="nasil-olcuyoruz">
+						<h2 class="method__title" id="nasil-olcuyoruz"><?php echo testmatik_icon( 'info', 18 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Bu test nasıl ölçüyor?', 'testmatik' ); ?></h2>
+						<p><?php echo esc_html( $tool['method'] ); ?></p>
+					</section>
+				<?php endif; ?>
 			</div>
 		</section>
 
