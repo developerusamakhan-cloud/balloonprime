@@ -237,7 +237,9 @@ function lumipix_md_emphasis( $html ) {
  */
 function lumipix_md_resolve_url( $target ) {
 	if ( 0 === strpos( $target, 'tool:' ) ) {
-		return lumipix_tool_url( substr( $target, 5 ) );
+		$key    = substr( $target, 5 );
+		$target = function_exists( 'lumipix_retired_target' ) ? lumipix_retired_target( $key ) : '';
+		return lumipix_tool_url( $target ? $target : $key );
 	}
 	if ( 0 === strpos( $target, 'page:' ) ) {
 		$key = substr( $target, 5 );

@@ -14,6 +14,7 @@ define( 'LUMIPIX_URI', get_template_directory_uri() );
 
 require LUMIPIX_DIR . '/inc/icons.php';
 require LUMIPIX_DIR . '/inc/tools.php';
+require LUMIPIX_DIR . '/inc/retired.php';
 require LUMIPIX_DIR . '/inc/setup.php';
 require LUMIPIX_DIR . '/inc/template-tags.php';
 require LUMIPIX_DIR . '/inc/tool-apps.php';
