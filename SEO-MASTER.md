@@ -80,6 +80,22 @@ Portuguese: `pt/foto-3x4-online`, keyword "foto 3x4 online", Brazil volume 4,400
 
 Reason: 12 near-identical preset pages with little US demand on a one-month-old site. To undo, remove the entry from `lumipix_retired_tools()` and republish the page.
 
+### French pages (France, Ubersuggest, checked 2026-11-07)
+
+Built 2026-10-18 (theme 1.8.0). No keyword research was recorded when they were made; volumes were checked afterwards.
+
+| Page | Main keyword | France volume | SD |
+|---|---|---|---|
+| fr/image-en-pdf | image en pdf | 49,500 | 35 |
+| fr/compresser-image | compresser image | 33,100 | 22 |
+| fr/redimensionner-image | redimensionner image | 18,100 | 25 |
+| fr/supprimer-arriere-plan | supprimer arrière plan | 12,100 | 41 |
+| fr/convertir-webp-en-jpg | convertir webp en jpg | 5,400 | 24 |
+| fr/convertir-png-en-jpg | convertir png en jpg | 4,400 | 10 |
+| fr/ (hub) | outils image en ligne gratuit | no data | |
+
+Decision: keep. Five of six tool pages meet the volume rule and four are under SD 30.
+
 ### New pages built on 2026-11-07
 
 | Page (slug) | Main keyword | US volume | SD | Engine |
