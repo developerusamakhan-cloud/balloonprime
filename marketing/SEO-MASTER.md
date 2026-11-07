@@ -1,7 +1,7 @@
 # Testmatik SEO master file
 
 The single source of truth for testmatik.app: what exists, what was decided, what went wrong, and what is next.
-Update the "Log" and "Next actions" sections at the end of every work session. Last updated: 2026-11-06.
+Update the "Log" and "Next actions" sections at the end of every work session. Last updated: 2026-11-07.
 
 ---
 
@@ -25,7 +25,7 @@ Update the "Log" and "Next actions" sections at the end of every work session. L
 |---|---|
 | Domain | https://testmatik.app (Hostinger, WordPress, Hostinger CDN) |
 | Theme | Custom `testmatik`, repo `developerusamakhan-cloud/balloonprime`, folder `testmatik/`, branch `ccr-a2f7fe03-qqgqms` |
-| Theme version live | 1.0.12 |
+| Theme version live | 1.0.13 |
 | SEO plugin | Rank Math (titles, sitemap `sitemap_index.xml`, IndexNow on) |
 | Multilingual | Polylang 3.9.1: tr default at root, pt in `/pt/`, pl in `/pl/`, no browser redirect |
 | Analytics | GA4 G-VVMQ6PHR40 (property 559438311) via Site Kit; consent mode v2 in theme |
@@ -39,7 +39,7 @@ Update the "Log" and "Next actions" sections at the end of every work session. L
 | Plan page | https://claude.ai/artifact/Wk13uunwGV5AtiYreW3ueY |
 
 ### Page IDs
-Home 18, Rehberler (blog) 21, İletişim 19, Hakkımızda 17, Klavye Hız Testi 285, iPhone kamera guide 366, Telefonda kamera guide 382. Site icon 146.
+Home 18, Rehberler (blog) 21, İletişim 19, Hakkımızda 17, Klavye Hız Testi 285, iPhone kamera guide 366, Telefonda kamera guide 382, Bilgisayar Testleri hub (/testler/) 434. Site icon 146.
 
 ### How to deploy (proven method)
 1. Edit locally, `php -l`, test tools in Playwright, run `testmatik/tools/build-zip.sh`, commit, push.
@@ -63,6 +63,8 @@ Note: testmatik.app is not reachable from the Claude sandbox; all live checks go
 | Kamera testi | /kamera-testi/ | kamera testi | | 16 |
 | Mouse testi | /mouse-testi/ | mouse test | 2,400 | 15 |
 | Hoparlör testi | /hoparlor-testi/ | hoparlör testi | | 20 |
+
+Hub page: /testler/ "Bilgisayar Testleri" (bilgisayar testleri 480, SD 16; bilgisayar test 480, SD 18; laptop test 110). Tools grouped by category from the registry, ItemList schema. Linked from the menu ("Tüm testler" item and "Tüm testleri gör" in the Testler dropdown), header button, footer, homepage and every tool breadcrumb.
 
 Every tool page has: WebApplication + FAQPage schema, team byline with real update date, "Bu test nasıl ölçüyor?" methodology written from the code, about 1,300+ words, featured image, Pinterest pin.
 
@@ -153,3 +155,4 @@ Long-tail queue (one a day, live immediately): `marketing/longtail-plan-tr.md`.
 | 4 Nov | IndexNow on (29 URLs accepted by Bing and Yandex); PT/PL keyword research and URL map; forum pack; DB backup; Polylang installed (31 Turkish URLs unchanged) |
 | 4 Nov | Team byline, real update date, methodology on every tool, team author schema |
 | 6 Nov | Long-tail research (14 guides, about 3,300 searches/mo); first 2 long-tail guides live with images, sent to IndexNow |
+| 7 Nov | Bilgisayar Testleri hub page /testler/ live (page 434), linked from menu, header, footer, homepage, breadcrumbs; sent to IndexNow |
