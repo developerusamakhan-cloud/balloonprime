@@ -96,7 +96,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Laptopunuzun dahili hoparlörlerinde cızırtı duyuyorsanız <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberindeki adımlarla nedenini bulabilirsiniz. Kulaklığınızın mikrofonu sesinizi iletmiyorsa <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> yazımızı, genel Windows ayarları için de <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberini okuyabilirsiniz. Kullanılmış bir bilgisayar alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ses çıkışlarını da kapsar. Görüntülü görüşmelere hazırlanıyorsanız <a href="{tool:kamera-testi}">web kamera testi</a> ile kameranızı da kontrol edin.</p>
-<p>Ayarları düzelttikten ya da kulaklığı değiştirdikten sonra <a href="{tool:hoparlor-testi}">kulaklık testi</a> aracında sağ ve sol kanalı tekrar dinleyerek sorunun gerçekten çözüldüğünden emin olun.</p>
+<p>Ayarları düzelttikten ya da kulaklığı değiştirdikten sonra <a href="{tool:hoparlor-testi}">kulaklık testi</a> aracında sağ ve sol kanalı tekrar dinleyerek sorunun gerçekten çözüldüğünden emin olun. Diğer araçların hepsini <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategorilere ayrılmış olarak bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

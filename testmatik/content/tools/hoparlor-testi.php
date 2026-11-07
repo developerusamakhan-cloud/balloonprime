@@ -90,7 +90,7 @@ return array(
 <h2>İlgili testler ve rehberler</h2>
 <p>Ses düzeninizin tamamını kontrol etmek için <a href="{tool:mikrofon-testi}">online mikrofon testi</a> ile kaydınızı dinleyin, görüntülü görüşmeler öncesinde <a href="{tool:kamera-testi}">web kamera testi</a> yapın. Oyun kurulumunuzu tamamlıyorsanız <a href="{tool:mouse-testi}">mouse test</a> aracıyla çift tıklama ve polling rate kontrolü, <a href="{tool:klavye-testi}">klavye testi</a> ile de tuş kontrolü yapabilirsiniz.</p>
 <p>Mikrofonunuz sesinizi iletmiyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> rehberimize, ikinci el bir laptop alacaksanız hoparlör dahil tüm donanım kontrollerini içeren <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken 9 test</a> yazısına bakın.</p>
-<p>Laptopunuzun hoparlörü test sırasında cızırdıyorsa <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberi nedenleri tek tek ayırır. Kulaklıkta sağ ve sol kanal karışıyorsa <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi: sağ sol kanal kontrolü</a> yazısında Bluetooth ve kablolu kulaklıklar için ayrı adımlar var.</p>
+<p>Laptopunuzun hoparlörü test sırasında cızırdıyorsa <a href="{post:laptop-hoparlor-cizirti}">laptop hoparlör cızırtı</a> rehberi nedenleri tek tek ayırır. Kulaklıkta sağ ve sol kanal karışıyorsa <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi: sağ sol kanal kontrolü</a> yazısında Bluetooth ve kablolu kulaklıklar için ayrı adımlar var. Diğer araçların hepsini <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategorilere ayrılmış olarak bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

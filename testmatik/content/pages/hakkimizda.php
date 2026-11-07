@@ -13,7 +13,7 @@ return array(
 <p>Fikrin çıkış noktası basit: Bir donanımın çalışıp çalışmadığını öğrenmek için yabancı dilde, reklamla dolu ya da kurulum isteyen araçlarla uğraşmak zorunda kalmamalısınız. Testmatik bu ihtiyaca sade ve anlaşılır bir cevap vermeyi amaçlar.</p>
 
 <h2>Ne sunuyoruz?</h2>
-<p>Şu anda sitede yedi test aracı bulunuyor:</p>
+<p>Şu anda sitede yedi test aracı bulunuyor. Hepsi <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategoriye göre listelenir:</p>
 <ul>
 <li><a href="{tool:klavye-testi}">Klavye testi</a>: Türkçe Q ve Türkçe F düzenleriyle tüm tuşları kontrol etmenizi, aynı anda kaç tuşun algılandığını görmenizi sağlar.</li>
 <li><a href="{tool:klavye-hiz-testi}">Klavye hız testi</a>: Türkçe kelimelerle dakikada kaç kelime yazdığınızı, vuruş sayınızı ve doğruluk oranınızı ölçer.</li>

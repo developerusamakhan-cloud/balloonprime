@@ -102,6 +102,7 @@ while ( have_posts() ) :
 					}
 					?>
 				</div>
+				<p class="tool-hub-link"><a class="btn btn--ghost" href="<?php echo esc_url( testmatik_tools_hub_url() ); ?>"><?php esc_html_e( 'Tüm testleri gör', 'testmatik' ); ?><?php echo testmatik_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a></p>
 			</div>
 		</section>
 

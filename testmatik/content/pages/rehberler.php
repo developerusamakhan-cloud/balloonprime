@@ -13,7 +13,7 @@ return array(
 <p>Yazılar Windows 11, macOS, Android ve iPhone için ayrı adımlar içerir. Teknik bilgi gerektirmez; menü yolları ve ayar adları ekranda gördüğünüz şekilde yazılmıştır.</p>
 
 <h2>Önce test edin, sonra çözün</h2>
-<p>Birçok sorun aslında bir ayardan kaynaklanır. Bu yüzden bir parçayı değiştirmeden veya servise götürmeden önce cihazı test etmek zaman ve para kazandırır:</p>
+<p>Tüm araçlar <a href="{page:testler}">bilgisayar testleri</a> sayfasında bir arada. Birçok sorun aslında bir ayardan kaynaklanır. Bu yüzden bir parçayı değiştirmeden veya servise götürmeden önce cihazı test etmek zaman ve para kazandırır:</p>
 <ul>
 <li><strong>Klavye:</strong> <a href="{tool:klavye-testi}">Klavye testi</a> ile hangi tuşların sinyal gönderdiğini görün, ardından <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları uygulayın. Yazma hızınızı merak ediyorsanız <a href="{tool:klavye-hiz-testi}">klavye hız testi</a> yapabilirsiniz.</li>
 <li><strong>Ekran:</strong> <a href="{tool:olu-piksel-testi}">Ölü piksel testi</a> kusurlu pikselleri gösterir; <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel nasıl düzeltilir</a> yazısı neyin onarılabileceğini anlatır.</li>

@@ -87,7 +87,7 @@ return array(
 <p>Klavye hız testi tamamen tarayıcınızda çalışır. Yazdığınız kelimeler hiçbir sunucuya gönderilmez. En iyi sonucunuz yalnızca kendi tarayıcınızın yerel depolamasında tutulur; tarayıcı verilerini temizlediğinizde silinir.</p>
 
 <h2>İlgili testler ve rehberler</h2>
-<p>Yazarken tuşların gerçekten çalıştığını <a href="{tool:klavye-testi}">online klavye testi</a> ile, farenizin çift tıklama yapıp yapmadığını <a href="{tool:mouse-testi}">mouse testi</a> ile kontrol edebilirsiniz. Lenovo kullanıyorsanız Fn ve arka ışık sorunları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı işinize yarar. İkinci el bir laptop alacaksanız klavyeyi de içeren tüm kontroller <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> listesinde.</p>
+<p>Yazarken tuşların gerçekten çalıştığını <a href="{tool:klavye-testi}">online klavye testi</a> ile, farenizin çift tıklama yapıp yapmadığını <a href="{tool:mouse-testi}">mouse testi</a> ile kontrol edebilirsiniz. Lenovo kullanıyorsanız Fn ve arka ışık sorunları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı işinize yarar. İkinci el bir laptop alacaksanız klavyeyi de içeren tüm kontroller <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> listesinde. Ekran, ses, kamera ve fare için diğer araçlar <a href="{page:testler}">tüm testler</a> sayfasında.</p>
 HTML
 	,
 	'faqs'        => array(

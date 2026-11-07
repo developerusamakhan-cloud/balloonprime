@@ -91,7 +91,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Kulaklıklı görüşmelerde sorun yaşıyorsanız <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> rehberimize, bilgisayarda yaşanan sorunlar için <a href="{post:mikrofon-calismiyor}">Windows 11 mikrofon çalışmıyor</a> yazısına bakın. Telefonunuzun hoparlörünü veya kulaklığını kontrol etmek için <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol kanalı dinleyebilir, <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi</a> rehberimizden yöntemin ayrıntılarını öğrenebilirsiniz. Görüntülü aramalar için <a href="{tool:kamera-testi}">kamera testi</a> ile ön ve arka kamerayı, ekran sorunları için <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberimizi kullanabilirsiniz.</p>
-<p>Çözümleri uyguladıktan sonra <a href="{tool:mikrofon-testi}">online mikrofon test</a> aracında 5 saniyelik bir kayıt daha yapın; sesinizi net duyuyorsanız sorun giderilmiş demektir.</p>
+<p>Çözümleri uyguladıktan sonra <a href="{tool:mikrofon-testi}">online mikrofon test</a> aracında 5 saniyelik bir kayıt daha yapın; sesinizi net duyuyorsanız sorun giderilmiş demektir. Diğer araçların hepsini <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategorilere ayrılmış olarak bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

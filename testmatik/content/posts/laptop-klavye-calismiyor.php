@@ -109,7 +109,7 @@ return array(
 
 <h2>Diğer donanımları da kontrol edin</h2>
 <p>Klavye sorunu bazen tek başına gelmez. Özellikle düşme veya sıvı teması sonrası diğer bileşenleri de test etmek iyi bir fikirdir. Dokunmatik yüzey ya da harici farenin tuşlarını <a href="{tool:mouse-testi}">mouse testi</a> ile, ekranda hasar olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile kontrol edebilirsiniz. Klavyeniz çalışıyor ama aynı anda basılan tuşlardan bazıları algılanmıyorsa sorun arıza değil, <a href="{post:klavye-ghosting-nedir}">klavye ghosting</a> sınırı olabilir.</p>
-<p>İkinci el bir laptop almayı düşünüyorsanız, klavyeyle birlikte tüm donanımı sırayla nasıl kontrol edeceğinizi <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimizde bulabilirsiniz. Sorunu çözdükten sonra son bir kez <a href="{tool:klavye-testi}">klavye tuş testi</a> yaparak tüm tuşların yeşile döndüğünden emin olun.</p>
+<p>İkinci el bir laptop almayı düşünüyorsanız, klavyeyle birlikte tüm donanımı sırayla nasıl kontrol edeceğinizi <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimizde bulabilirsiniz. Sorunu çözdükten sonra son bir kez <a href="{tool:klavye-testi}">klavye tuş testi</a> yaparak tüm tuşların yeşile döndüğünden emin olun. Cihazın diğer parçalarını kontrol etmek için <a href="{page:testler}">bilgisayar test araçlarının tam listesi</a> işinize yarar.</p>
 HTML
 	,
 	'faqs'        => array(

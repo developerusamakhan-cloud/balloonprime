@@ -93,7 +93,7 @@ return array(
 <li>Kabloyu jaka yakın yerden hafifçe oynatırken mikrofon testinde seviyenin kesilip gelmediğini izleyin; kesiliyorsa kabloda kopukluk vardır.</li>
 <li>Garanti süresi devam ediyorsa test sonuçlarınızla satıcıya veya üreticiye başvurun.</li>
 </ul>
-<p>Mikrofon tarafını çözdükten sonra kulaklığın iki kanalını da <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile kontrol edebilir, ayrıntılı adımlar için <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi</a> rehberimize bakabilirsiniz. Görüntülü görüşme kurulumunuzu tamamlamak için <a href="{tool:kamera-testi}">web kamera testi</a> yapabilir, görüntü sorunlarında <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> yazımızı okuyabilirsiniz. Sorun telefonunuzun kendi mikrofonundaysa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberimiz iPhone ve Android için ayrı çözümler sunuyor.</p>
+<p>Mikrofon tarafını çözdükten sonra kulaklığın iki kanalını da <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile kontrol edebilir, ayrıntılı adımlar için <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi</a> rehberimize bakabilirsiniz. Görüntülü görüşme kurulumunuzu tamamlamak için <a href="{tool:kamera-testi}">web kamera testi</a> yapabilir, görüntü sorunlarında <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> yazımızı okuyabilirsiniz. Sorun telefonunuzun kendi mikrofonundaysa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberimiz iPhone ve Android için ayrı çözümler sunuyor. Bütün testleri tek sayfada görmek için <a href="{page:testler}">bilgisayar testleri</a> listesine geçebilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

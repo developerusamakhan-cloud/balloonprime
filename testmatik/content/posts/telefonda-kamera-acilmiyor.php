@@ -59,7 +59,7 @@ return array(
 <p>Servise gitmeden önce fotoğraflarınızı yedekleyin. Kamera modülü değişimi genellikle verileri etkilemez ama servis yazılım sıfırlaması da yapabilir.</p>
 
 <h2>İlgili testler ve rehberler</h2>
-<p>Görüntülü görüşmede sesiniz de gitmiyorsa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberindeki adımlara bakın. Kamera açılıyor ama görüntü soluk veya bulanıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a> yazısındaki ışık önerileri telefonda da işe yarar. Bilgisayarınızın kamerası çalışmıyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> rehberi ayrı adımlar içerir. Telefon ekranında sorun olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile kontrol edebilirsiniz.</p>
+<p>Görüntülü görüşmede sesiniz de gitmiyorsa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberindeki adımlara bakın. Kamera açılıyor ama görüntü soluk veya bulanıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a> yazısındaki ışık önerileri telefonda da işe yarar. Bilgisayarınızın kamerası çalışmıyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a> rehberi ayrı adımlar içerir. Telefon ekranında sorun olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile kontrol edebilirsiniz. Tüm araçları tek listede görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasına bakın.</p>
 HTML
 	,
 	'faqs'        => array(

@@ -97,7 +97,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Kamerayı kontrol ettikten sonra diğer donanımları da test etmek isteyebilirsiniz. Ekranınızda parlamayan noktalar olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile, görüşmede karşı tarafı duyup duymadığınızı <a href="{tool:hoparlor-testi}">hoparlör ve kulaklık testi</a> ile kontrol edebilirsiniz. Tuşlarda sorun varsa <a href="{tool:klavye-testi}">klavye testi</a> aracımızı kullanın.</p>
-<p>İkinci el bir laptop almayı düşünüyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimiz kamera dahil tüm kontrolleri tek listede toplar. Mikrofonunuz da sorun çıkarıyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> yazısına bakın. Görüntü çalışıyor ama soluk veya bulanıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesini artırma</a> yazısındaki ışık ve ayar önerileri işe yarar.</p>
+<p>İkinci el bir laptop almayı düşünüyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> rehberimiz kamera dahil tüm kontrolleri tek listede toplar. Mikrofonunuz da sorun çıkarıyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor çözümleri</a> yazısına bakın. Görüntü çalışıyor ama soluk veya bulanıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesini artırma</a> yazısındaki ışık ve ayar önerileri işe yarar. Tüm araçları tek listede görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasına bakın.</p>
 HTML
 	,
 	'faqs'        => array(

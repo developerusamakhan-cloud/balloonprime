@@ -98,7 +98,7 @@ return array(
 <h2>Polling rate ile karıştırılan sorunlar</h2>
 <p>İmleç takılıyor veya tıklamalar garip davranıyorsa sorun her zaman polling rate değildir. Tek tıklamanın iki kez algılanması genellikle yıpranmış bir switch'e işaret eder; bunu <a href="{post:mouse-cift-tiklama-sorunu}">mouse çift tıklama sorunu</a> yazımızda inceliyoruz. Kaydırma sırasında sayfanın ters yöne zıplaması ise tekerlek sensörüyle ilgilidir ve <a href="{post:mouse-tekerlegi-sorunu}">mouse tekerleği sorunu</a> rehberimizde ele alınıyor.</p>
 <p>Oyun kurulumunuzu baştan sona kontrol ediyorsanız <a href="{tool:klavye-testi}">klavye testi</a> ile aynı anda basılan tuş sayısını ölçebilir, anti-ghosting konusunu <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> yazımızda okuyabilirsiniz. Yeni bir oyuncu faresi aldıysanız tüm tuşları ve polling rate değerini <a href="{tool:mouse-testi}">mouse test hz</a> aracıyla bir kez denemeniz, olası bir fabrika hatasını iade süresi bitmeden fark etmenizi sağlar.</p>
-<p>Fare değerleri normal ama imleç hâlâ takılıyorsa bir sonraki adım olarak <a href="{post:monitor-hz-ayarlama}">ekran yenileme hızı ayarları</a> rehberimize göz atmanızı öneririz.</p>
+<p>Fare değerleri normal ama imleç hâlâ takılıyorsa bir sonraki adım olarak <a href="{post:monitor-hz-ayarlama}">ekran yenileme hızı ayarları</a> rehberimize göz atmanızı öneririz. Ekran, ses, kamera ve fare için diğer araçlar <a href="{page:testler}">tüm testler</a> sayfasında.</p>
 HTML
 	,
 	'faqs'        => array(

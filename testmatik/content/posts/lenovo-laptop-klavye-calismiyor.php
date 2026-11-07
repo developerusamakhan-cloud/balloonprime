@@ -95,7 +95,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Klavyeyi kontrol ederken laptopun diğer parçalarını da gözden geçirmek iyi bir fikirdir. <a href="{tool:mouse-testi}">mouse testi</a> ile touchpad ve fare tuşlarını, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı kontrol edebilirsiniz. Oyunlarda aynı anda basılan tuşlar kayboluyorsa <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> yazımız, düzen değiştirmeyi düşünüyorsanız <a href="{post:q-klavye-f-klavye-farki}">Q klavye ve F klavye farkı</a> rehberimiz işinize yarar.</p>
-<p>İkinci el bir Lenovo almayı düşünüyorsanız satıcıyla buluşmadan önce <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesini</a> yanınıza alın. Sorunu çözdükten sonra <a href="{tool:klavye-testi}">online klavye testi</a> ile tüm tuşların yeşile döndüğünü bir kez daha doğrulayın.</p>
+<p>İkinci el bir Lenovo almayı düşünüyorsanız satıcıyla buluşmadan önce <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesini</a> yanınıza alın. Sorunu çözdükten sonra <a href="{tool:klavye-testi}">online klavye testi</a> ile tüm tuşların yeşile döndüğünü bir kez daha doğrulayın. Cihazın geri kalanını denemek isterseniz <a href="{page:testler}">online donanım testleri</a> sayfasında hepsi bir arada.</p>
 HTML
 	,
 	'faqs'        => array(

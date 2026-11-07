@@ -52,7 +52,7 @@ return array(
 <p>Zorla yeniden başlatmadan sonra da hiçbir kamera açılmıyorsa, tarayıcıdaki test de görüntü vermiyorsa ve tüm ayarları sıfırlamak işe yaramadıysa sorun donanımdadır. Garanti kapsamındaysanız Apple Destek uygulamasından ya da yetkili servisten randevu alın. Servise gitmeden önce iCloud veya bilgisayara tam yedek alın.</p>
 
 <h2>İlgili testler ve rehberler</h2>
-<p>Görüntülü aramada karşı taraf sizi duymuyorsa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberinde iPhone için ayrı adımlar bulunur. Mikrofonunuzu hemen kontrol etmek için <a href="{tool:mikrofon-testi}">mikrofon testi</a> de Safari'de çalışır. Görüntü açılıyor ama kalitesi düşükse <a href="{post:web-kamera-goruntu-kalitesi}">kamera görüntü kalitesini artırma</a> yazısındaki ışık önerileri telefonda da geçerlidir.</p>
+<p>Görüntülü aramada karşı taraf sizi duymuyorsa <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> rehberinde iPhone için ayrı adımlar bulunur. Mikrofonunuzu hemen kontrol etmek için <a href="{tool:mikrofon-testi}">mikrofon testi</a> de Safari'de çalışır. Görüntü açılıyor ama kalitesi düşükse <a href="{post:web-kamera-goruntu-kalitesi}">kamera görüntü kalitesini artırma</a> yazısındaki ışık önerileri telefonda da geçerlidir. Cihazın diğer parçalarını kontrol etmek için <a href="{page:testler}">bilgisayar test araçlarının tam listesi</a> işinize yarar.</p>
 HTML
 	,
 	'faqs'        => array(

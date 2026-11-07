@@ -99,7 +99,7 @@ return array(
 <p>Hangi cihazda olursa olsun, sorunu ilk fark ettiğiniz anda belgelemek, ileride garanti başvurusu yapmanız gerektiğinde işinizi kolaylaştırır.</p>
 
 <h2>Diğer donanımları da test edin</h2>
-<p>Ekranı kontrol ederken diğer bileşenleri de gözden geçirmek iyi bir fikirdir. Laptopunuzun dahili kamerasını <a href="{tool:kamera-testi}">kamera testi</a> ile, tüm tuşları ise <a href="{tool:klavye-testi}">klavye testi</a> ile birkaç dakikada deneyebilirsiniz. Kamerada görüntü gelmiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a>, klavyede tuşlar tepki vermiyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberlerimiz adım adım çözüm sunar. Piksel onarımından sonra sonucu kontrol etmek için <a href="{tool:olu-piksel-testi}">monitör ölü piksel testini</a> yeniden çalıştırın.</p>
+<p>Ekranı kontrol ederken diğer bileşenleri de gözden geçirmek iyi bir fikirdir. Laptopunuzun dahili kamerasını <a href="{tool:kamera-testi}">kamera testi</a> ile, tüm tuşları ise <a href="{tool:klavye-testi}">klavye testi</a> ile birkaç dakikada deneyebilirsiniz. Kamerada görüntü gelmiyorsa <a href="{post:laptop-kamera-calismiyor}">laptop kamera çalışmıyor</a>, klavyede tuşlar tepki vermiyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberlerimiz adım adım çözüm sunar. Piksel onarımından sonra sonucu kontrol etmek için <a href="{tool:olu-piksel-testi}">monitör ölü piksel testini</a> yeniden çalıştırın. Cihazın geri kalanını denemek isterseniz <a href="{page:testler}">online donanım testleri</a> sayfasında hepsi bir arada.</p>
 HTML
 	,
 	'faqs'        => array(

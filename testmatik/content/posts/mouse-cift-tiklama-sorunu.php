@@ -93,7 +93,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Fare sorunu genellikle tek başına gelmez; bir laptopu veya masaüstü seti kontrol ediyorsanız <a href="{tool:klavye-testi}">klavye testi</a> ile tüm tuşları, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı da kontrol edin. Touchpad ve klavye sorunları için <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberimize, kullanılmış bir cihaz alacaksanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesine</a> bakabilirsiniz. Ghosting gibi klavyeye özgü konular için de <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> yazımızı okuyabilirsiniz.</p>
-<p>Çözüm sonrasında <a href="{tool:mouse-testi}">mouse test</a> aracındaki dedektörle tuşları yeniden deneyin; birkaç yüz tıklamada hiç uyarı çıkmıyorsa sorun giderilmiş demektir.</p>
+<p>Çözüm sonrasında <a href="{tool:mouse-testi}">mouse test</a> aracındaki dedektörle tuşları yeniden deneyin; birkaç yüz tıklamada hiç uyarı çıkmıyorsa sorun giderilmiş demektir. Tüm araçları tek listede görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasına bakın.</p>
 HTML
 	,
 	'faqs'        => array(

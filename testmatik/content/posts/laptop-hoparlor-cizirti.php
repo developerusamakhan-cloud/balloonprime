@@ -98,7 +98,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Ses sorunlarını çözerken mikrofonunuzu da kontrol etmek isteyebilirsiniz: <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile kayıt yapıp kendi sesinizi dinleyebilirsiniz. Görüntülü görüşmeler için <a href="{tool:kamera-testi}">kamera testi</a> de işinize yarar. Mikrofonla ilgili sorunlar için <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberimize, kullanılmış bir cihaz alacaksanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listemize</a> bakın.</p>
-<p>Kulaklıkla ilgili ses dengesizliği yaşıyorsanız <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi: sağ ve sol kanal kontrolü</a> yazımız, kablolu ya da Bluetooth kulaklık mikrofonu sorunları için <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> rehberimiz en yakın kaynaktır. Çözümleri uyguladıktan sonra <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile her iki kanalı yeniden dinleyin.</p>
+<p>Kulaklıkla ilgili ses dengesizliği yaşıyorsanız <a href="{post:kulaklik-testi-sag-sol}">kulaklık testi: sağ ve sol kanal kontrolü</a> yazımız, kablolu ya da Bluetooth kulaklık mikrofonu sorunları için <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> rehberimiz en yakın kaynaktır. Çözümleri uyguladıktan sonra <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile her iki kanalı yeniden dinleyin. Tüm araçları tek listede görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasına bakın.</p>
 HTML
 	,
 	'faqs'        => array(

@@ -92,7 +92,7 @@ return array(
 
 <h2>Diğer donanım testleri</h2>
 <p>Görüntülü görüşmeden önce <a href="{tool:kamera-testi}">kamera testi</a> ile görüntünüzü, <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile sağ ve sol ses kanallarını kontrol edebilirsiniz. Tuşlarınızın hepsi çalışıyorsa sıra hızda: <a href="{tool:klavye-hiz-testi}">klavye hız testi</a> dakikada kaç kelime yazdığınızı ölçer. Tüm araçlar ücretsizdir, kayıt gerektirmez ve aynı gizlilik ilkesiyle çalışır.</p>
-<p>Tuşlarınız testte yanmıyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları deneyin. Lenovo kullanıyorsanız Fn Lock ve Vantage ayarları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı daha hızlı sonuç verir.</p>
+<p>Tuşlarınız testte yanmıyorsa <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberindeki adımları deneyin. Lenovo kullanıyorsanız Fn Lock ve Vantage ayarları için <a href="{post:lenovo-laptop-klavye-calismiyor}">Lenovo laptop klavye çalışmıyor</a> yazısı daha hızlı sonuç verir. Cihazın diğer parçalarını kontrol etmek için <a href="{page:testler}">bilgisayar test araçlarının tam listesi</a> işinize yarar.</p>
 HTML
 	,
 	'faqs'        => array(

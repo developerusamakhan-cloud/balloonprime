@@ -105,7 +105,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Ekranda sabit renkte bir nokta görürseniz <a href="{post:olu-piksel-nasil-duzeltilir}">ölü piksel nasıl düzeltilir</a> rehberimize bakın. Yüksek yenileme hızlı bir monitörü oyun için kuruyorsanız <a href="{tool:mouse-testi}">mouse test hz</a> aracıyla farenizin polling rate değerini ve <a href="{tool:klavye-testi}">online klavye testi</a> ile tuşlarınızı da kontrol edin. Fare tarafındaki Hz kavramı için <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazımız, telefon ve tablet ekranları için <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberimiz işinize yarayacaktır. Kullanılmış bir laptop alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> ekran kontrollerini de kapsar.</p>
-<p>Ekranla ilgili bir sonraki adım olarak <a href="{post:olu-piksel-nasil-duzeltilir}">sıkışmış piksel onarımı</a> rehberimiz panel kusurlarını nasıl ayırt edeceğinizi ayrıntılı anlatır.</p>
+<p>Ekranla ilgili bir sonraki adım olarak <a href="{post:olu-piksel-nasil-duzeltilir}">sıkışmış piksel onarımı</a> rehberimiz panel kusurlarını nasıl ayırt edeceğinizi ayrıntılı anlatır. Diğer araçların hepsini <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategorilere ayrılmış olarak bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

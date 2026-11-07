@@ -93,7 +93,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Görüntülü görüşmelerde ses de görüntü kadar önemlidir. <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile kayıt yapıp sesinizi dinleyebilir, <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile karşı tarafı duyduğunuz hoparlörleri kontrol edebilirsiniz. Mikrofonunuz sizi duyurmuyorsa <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberimize, kullanılmış bir laptop alacaksanız kamerayı da kapsayan <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listemize</a> bakabilirsiniz.</p>
-<p>Kulaklıkla toplantıya katılıyor ve mikrofon sorunları yaşıyorsanız <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> yazımız en yakın kaynaktır. Değişiklikleri yaptıktan sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile yeni bir fotoğraf çekip ilk fotoğrafınızla karşılaştırın.</p>
+<p>Kulaklıkla toplantıya katılıyor ve mikrofon sorunları yaşıyorsanız <a href="{post:kulaklik-mikrofon-calismiyor}">kulaklık mikrofonu çalışmıyor</a> yazımız en yakın kaynaktır. Değişiklikleri yaptıktan sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile yeni bir fotoğraf çekip ilk fotoğrafınızla karşılaştırın. Ekran, ses, kamera ve fare için diğer araçlar <a href="{page:testler}">tüm testler</a> sayfasında.</p>
 HTML
 	,
 	'faqs'        => array(

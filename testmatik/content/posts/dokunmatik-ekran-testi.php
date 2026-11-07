@@ -108,7 +108,7 @@ return array(
 <li>Klavyeyi açıp her harfe tek tek dokunun; alt bölgedeki ölü alanlar burada ortaya çıkar.</li>
 <li>Telefonu birkaç dakika şarja takıp hayalet dokunma olup olmadığını izleyin.</li>
 </ul>
-<p>Telefonun diğer donanımlarını kontrol etmek için <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> yazımıza bakabilirsiniz. Bir laptop alıyorsanız tüm adımları içeren <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> rehberimiz de işinizi kolaylaştıracaktır.</p>
+<p>Telefonun diğer donanımlarını kontrol etmek için <a href="{post:telefon-mikrofon-calismiyor}">telefon mikrofonu çalışmıyor</a> yazımıza bakabilirsiniz. Bir laptop alıyorsanız tüm adımları içeren <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> rehberimiz de işinizi kolaylaştıracaktır. Tüm araçları tek listede görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasına bakın.</p>
 HTML
 	,
 	'faqs'        => array(

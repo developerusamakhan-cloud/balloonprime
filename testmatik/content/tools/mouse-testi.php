@@ -94,7 +94,7 @@ return array(
 <h2>İlgili testler ve rehberler</h2>
 <p>Farenizi kontrol ettikten sonra klavyenizi de denemek için <a href="{tool:klavye-testi}">online klavye testi</a> aracımızı kullanabilirsiniz; oyuncular için aynı anda kaç tuşun algılandığını da gösterir. Ekranınızda takılı veya ölü nokta olup olmadığını <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile, kulaklığınızın sağ ve sol kanalını <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile kontrol edin. Yayın veya görüntülü görüşme düzeninizi tamamlamak için <a href="{tool:kamera-testi}">web kamera testi</a> de yapabilirsiniz.</p>
 <p>Klavye kaynaklı sorunlar için <a href="{post:klavye-ghosting-nedir}">klavye ghosting nedir</a> rehberimize, ikinci el bir laptop veya oyuncu bilgisayarı alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> yazısına bakın.</p>
-<p>Testte tekerlek ters yöne kayıyor ya da zıplıyorsa <a href="{post:mouse-tekerlegi-sorunu}">mouse tekerleği aşağı yukarı sorunu</a> rehberindeki temizlik ve ayar adımlarını deneyin. Ölçtüğünüz Hz değerinin ne anlama geldiğini <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazısında bulabilirsiniz.</p>
+<p>Testte tekerlek ters yöne kayıyor ya da zıplıyorsa <a href="{post:mouse-tekerlegi-sorunu}">mouse tekerleği aşağı yukarı sorunu</a> rehberindeki temizlik ve ayar adımlarını deneyin. Ölçtüğünüz Hz değerinin ne anlama geldiğini <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazısında bulabilirsiniz. Bütün testleri tek sayfada görmek için <a href="{page:testler}">bilgisayar testleri</a> listesine geçebilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

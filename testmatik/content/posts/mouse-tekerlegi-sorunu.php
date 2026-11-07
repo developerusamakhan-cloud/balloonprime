@@ -95,7 +95,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Fare tuşlarınız tek tıklamada iki kez basıyorsa <a href="{post:mouse-cift-tiklama-sorunu}">mouse çift tıklama sorunu</a> rehberimize bakın. Oyuncuysanız <a href="{post:mouse-polling-rate-nedir}">mouse polling rate nedir</a> yazımız 125, 500 ve 1000 Hz farkını anlatıyor. Bir laptopu baştan sona kontrol ediyorsanız <a href="{tool:klavye-testi}">klavye testi</a> ile tuşları, <a href="{tool:olu-piksel-testi}">ölü piksel testi</a> ile ekranı da gözden geçirin; touchpad ve klavye sorunları için <a href="{post:laptop-klavye-calismiyor}">laptop klavye çalışmıyor</a> rehberimiz, kullanılmış cihazlar için <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop kontrol listesi</a> işinize yarayacaktır.</p>
-<p>Temizlik veya ayar değişikliğinden sonra <a href="{tool:mouse-testi}">scroll testi</a> sayaçlarıyla tekerleği yeniden deneyin; birkaç yüz adımda ters yön sayacı hiç artmıyorsa sorun giderilmiş demektir.</p>
+<p>Temizlik veya ayar değişikliğinden sonra <a href="{tool:mouse-testi}">scroll testi</a> sayaçlarıyla tekerleği yeniden deneyin; birkaç yüz adımda ters yön sayacı hiç artmıyorsa sorun giderilmiş demektir. Cihazın diğer parçalarını kontrol etmek için <a href="{page:testler}">bilgisayar test araçlarının tam listesi</a> işinize yarar.</p>
 HTML
 	,
 	'faqs'        => array(

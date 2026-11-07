@@ -105,7 +105,7 @@ return array(
 
 <h2>Diğer testler ve rehberler</h2>
 <p>Ekranı kontrol ettikten sonra tuşları <a href="{tool:klavye-testi}">klavye testi</a> ile, dahili kamerayı <a href="{tool:kamera-testi}">web kamera testi</a> ile, fare tuşlarını ve çift tıklama sorununu <a href="{tool:mouse-testi}">mouse testi</a> ile, hoparlörleri de <a href="{tool:hoparlor-testi}">sağ sol ses testi</a> ile deneyebilirsiniz. İkinci el bir cihaz alıyorsanız <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılması gereken testler</a> listesi tüm kontrolleri tek sayfada topluyor.</p>
-<p>Telefon veya tabletin ekranı dokunmaya geç tepki veriyorsa <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberine bakın. Yeni monitörünüz beklediğinizden daha az akıcı görünüyorsa <a href="{post:monitor-hz-ayarlama}">monitör Hz ayarlama</a> yazısıyla yenileme hızını kontrol edin.</p>
+<p>Telefon veya tabletin ekranı dokunmaya geç tepki veriyorsa <a href="{post:dokunmatik-ekran-testi}">dokunmatik ekran testi</a> rehberine bakın. Yeni monitörünüz beklediğinizden daha az akıcı görünüyorsa <a href="{post:monitor-hz-ayarlama}">monitör Hz ayarlama</a> yazısıyla yenileme hızını kontrol edin. Diğer araçların hepsini <a href="{page:testler}">bilgisayar testleri</a> sayfasında kategorilere ayrılmış olarak bulabilirsiniz.</p>
 HTML
 	,
 	'faqs'        => array(

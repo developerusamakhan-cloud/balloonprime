@@ -14,6 +14,7 @@ return array(
 <p>Testmatik bağımsız bir projedir. Amacımız, teknik bilgisi az olan kullanıcıların da donanım sorunlarını kendi başına tespit edebilmesi ve gerekirse servise giderken elinde somut bir bulgu olmasıdır.</p>
 
 <h2>Testmatik araçları</h2>
+<p>Aşağıda her aracı kısaca anlatıyoruz. Hepsini kategoriye göre görmek için <a href="{page:testler}">bilgisayar testleri</a> sayfasını açabilirsiniz.</p>
 <p>Aşağıda her aracın ne yaptığını, hangi durumlarda işinize yarayacağını ve sonuçları nasıl yorumlayacağınızı kısaca bulabilirsiniz. Ayrıntılı kullanım adımları her aracın kendi sayfasında yer alır.</p>
 
 <h3>Klavye testi</h3>

@@ -97,7 +97,7 @@ return array(
 
 <h2>İlgili testler ve rehberler</h2>
 <p>Görüntülü görüşmelerde sesiniz de gitmiyorsa <a href="{tool:mikrofon-testi}">mikrofon testi</a> ile mikrofonunuzu, karşı tarafı duyamıyorsanız <a href="{tool:hoparlor-testi}">hoparlör testi</a> ile çıkış sesini kontrol edin. Ayrıntılı ses çözümleri için <a href="{post:mikrofon-calismiyor}">mikrofon çalışmıyor</a> rehberimize bakabilirsiniz.</p>
-<p>Kullanılmış bir bilgisayar almayı düşünüyorsanız kamerayı da kapsayan <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılacak testler</a> yazımız işinize yarayacak. Sorunu çözdükten sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile çözünürlüğü ve FPS değerini kontrol ederek kameranın tam performansla çalıştığından emin olun. Kamera çalışıyor ama görüntü bulanık ya da karanlıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a> yazısındaki ışık ve ayar önerilerini deneyin.</p>
+<p>Kullanılmış bir bilgisayar almayı düşünüyorsanız kamerayı da kapsayan <a href="{post:ikinci-el-laptop-kontrol}">ikinci el laptop alırken yapılacak testler</a> yazımız işinize yarayacak. Sorunu çözdükten sonra <a href="{tool:kamera-testi}">web kamera testi</a> ile çözünürlüğü ve FPS değerini kontrol ederek kameranın tam performansla çalıştığından emin olun. Kamera çalışıyor ama görüntü bulanık ya da karanlıksa <a href="{post:web-kamera-goruntu-kalitesi}">web kamera görüntü kalitesi</a> yazısındaki ışık ve ayar önerilerini deneyin. Ekran, ses, kamera ve fare için diğer araçlar <a href="{page:testler}">tüm testler</a> sayfasında.</p>
 HTML
 	,
 	'faqs'        => array(

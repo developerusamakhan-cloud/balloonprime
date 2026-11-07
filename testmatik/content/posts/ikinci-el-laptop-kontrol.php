@@ -92,7 +92,7 @@ return array(
 <tr><td>Performans ve ısı</td><td>15 dakikalık yük, Görev Yöneticisi</td><td>Donma yok, makul ısı, donanım ilanla uyumlu</td></tr>
 </tbody>
 </table>
-<p>Kontrol listesinde bir veya iki küçük kusur çıkması alımdan vazgeçmeniz gerektiği anlamına gelmez. Bu kusurları fiyat pazarlığında kullanabilirsiniz. Ancak ekran, ana kart veya şişmiş pil gibi pahalı sorunlarda daha temkinli olun.</p>
+<p>Kontrol listesinde bir veya iki küçük kusur çıkması alımdan vazgeçmeniz gerektiği anlamına gelmez. Bu kusurları fiyat pazarlığında kullanabilirsiniz. Ancak ekran, ana kart veya şişmiş pil gibi pahalı sorunlarda daha temkinli olun. Ekran, ses, kamera ve fare için diğer araçlar <a href="{page:testler}">tüm testler</a> sayfasında.</p>
 HTML
 	,
 	'faqs'        => array(
