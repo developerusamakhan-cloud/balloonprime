@@ -53,7 +53,7 @@ Se alguns fios de cabelo ficarem irregulares, colocar o recorte sobre uma cor pa
 ## Usos mais comuns
 
 - **Foto de perfil** com uma cor sólida e limpa atrás de você, para LinkedIn, WhatsApp ou currículo.
-- **Fotos de documento** que pedem fundo branco liso. Remova o fundo, escolha branco e depois ajuste as medidas com o [redimensionador de imagens](tool:pt-image-resizer). Confira sempre as regras do órgão ou do formulário que vai receber a foto.
+- **Fotos de documento** que pedem fundo branco liso. Remova o fundo, escolha branco e depois ajuste as medidas com o [redimensionador de imagens](tool:pt-image-resizer). Para documentos brasileiros, depois de trocar o fundo por branco, use a ferramenta de [foto 3x4 online](tool:pt-passport-size-photo), que recorta no tamanho certo e monta uma folha 10x15 para imprimir. Confira sempre as regras do órgão ou do formulário que vai receber a foto.
 - **Fotos de produto** para lojas virtuais e marketplaces. Escolha branco para manter um padrão em todo o catálogo.
 - **Posts para redes sociais** com um fundo colorido chamativo.
 - **Montagens e apresentações**, usando o PNG transparente sobre qualquer fundo.

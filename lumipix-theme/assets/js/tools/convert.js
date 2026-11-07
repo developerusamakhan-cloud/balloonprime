@@ -69,6 +69,51 @@
 		});
 	}
 
+	var ICO_SIZES = [16, 32, 48, 64, 128, 256];
+
+	/** Centre the image on a transparent square, scaled to `size`. */
+	function squareAt(canvas, size) {
+		var k = Math.min(size / canvas.width, size / canvas.height);
+		var w = Math.max(1, Math.round(canvas.width * k));
+		var h = Math.max(1, Math.round(canvas.height * k));
+		var scaled = L.resample(canvas, canvas.width, canvas.height, w, h);
+		var out = L.makeCanvas(size, size);
+		out.getContext('2d').drawImage(scaled, Math.round((size - w) / 2), Math.round((size - h) / 2));
+		return out;
+	}
+
+	/** Build a .ico file holding PNG images at the standard icon sizes. */
+	function makeIco(canvas) {
+		return Promise.all(
+			ICO_SIZES.map(function (s) {
+				return L.canvasToBlob(squareAt(canvas, s), 'image/png').then(function (b) {
+					return b.arrayBuffer().then(function (buf) {
+						return { size: s, bytes: new Uint8Array(buf) };
+					});
+				});
+			})
+		).then(function (pngs) {
+			var header = new DataView(new ArrayBuffer(6 + 16 * pngs.length));
+			header.setUint16(0, 0, true);
+			header.setUint16(2, 1, true);
+			header.setUint16(4, pngs.length, true);
+			var offset = 6 + 16 * pngs.length;
+			pngs.forEach(function (p, i) {
+				var o = 6 + 16 * i;
+				header.setUint8(o, p.size >= 256 ? 0 : p.size);
+				header.setUint8(o + 1, p.size >= 256 ? 0 : p.size);
+				header.setUint8(o + 2, 0);
+				header.setUint8(o + 3, 0);
+				header.setUint16(o + 4, 1, true);
+				header.setUint16(o + 6, 32, true);
+				header.setUint32(o + 8, p.bytes.length, true);
+				header.setUint32(o + 12, offset, true);
+				offset += p.bytes.length;
+			});
+			return new Blob([header.buffer].concat(pngs.map(function (p) { return p.bytes; })), { type: 'image/x-icon' });
+		});
+	}
+
 	function toCanvas(img) {
 		var c = L.makeCanvas(img.width, img.height);
 		c.getContext('2d').drawImage(img.source, 0, 0);
@@ -95,7 +140,7 @@
 
 		function refresh() {
 			var to = fmtSel.value;
-			qualityField.hidden = to === 'image/png';
+			qualityField.hidden = to === 'image/png' || to === 'image/x-icon';
 			bgField.hidden = to !== 'image/jpeg';
 			if (svgField) svgField.hidden = !config.svg;
 			scaleBtns.forEach(function (b) {
@@ -115,6 +160,22 @@
 					? loadSvg(file, scale, opts.svgWidth || 0)
 					: L.loadImage(file).then(toCanvas);
 				return job.then(function (canvas) {
+					if (to === 'image/x-icon') {
+						return makeIco(canvas).then(function (blob) {
+							return {
+								blob: blob,
+								name: L.renameFile(file.name, to),
+								meta:
+									L.escapeHtml(L.formatBytes(file.size)) +
+									' → <strong>' +
+									L.escapeHtml(L.formatBytes(blob.size)) +
+									'</strong> · ICO · ' +
+									ICO_SIZES.join(', ') +
+									' px',
+								badge: ''
+							};
+						});
+					}
 					var out = to === 'image/jpeg' ? L.flatten(canvas, opts.background || '#ffffff') : canvas;
 					var q = to === 'image/png' ? undefined : Math.max(0.01, Math.min(1, (opts.quality || 92) / 100));
 					return L.canvasToBlob(out, to, q).then(function (blob) {

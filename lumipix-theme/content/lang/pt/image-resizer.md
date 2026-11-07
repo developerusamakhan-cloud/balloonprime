@@ -50,6 +50,8 @@ Quando você escolhe cm, mm ou polegada, informe o DPI, normalmente 300 para fot
 | 10 × 15 cm | 1181 × 1772 |
 | A4 | 2480 × 3508 |
 
+Para foto de documento no tamanho 3 x 4 cm, a ferramenta de [foto 3x4 online](tool:pt-passport-size-photo) já vem configurada e ainda monta uma folha 10x15 com várias cópias.
+
 Quando você troca de unidade, a ferramenta converte os números atuais para que o tamanho continue o mesmo. Por exemplo, 1181×1772 pixels a 300 DPI aparecem como 10×15 cm. Isso facilita entender o que uma medida em pixels significa no papel, e vice-versa.
 
 ## Redimensionar imagem para Instagram e outros atalhos

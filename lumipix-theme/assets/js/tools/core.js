@@ -26,7 +26,7 @@
 	}
 
 	function extFor(type) {
-		return { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/avif': 'avif' }[type] || 'png';
+		return { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/avif': 'avif', 'image/x-icon': 'ico' }[type] || 'png';
 	}
 
 	function renameFile(name, type, suffix) {

@@ -86,6 +86,9 @@ function lumipix_render_tool_app( $key ) {
 					case 'crop':
 						lumipix_render_crop_options( $config, $id );
 						break;
+					case 'pixelate':
+						lumipix_render_pixelate_options( $config, $id );
+						break;
 				}
 				?>
 			</div>
@@ -350,6 +353,9 @@ function lumipix_render_convert_options( $c, $id ) {
 				<option value="image/jpeg" <?php selected( $to, 'image/jpeg' ); ?>>JPG</option>
 				<option value="image/png" <?php selected( $to, 'image/png' ); ?>>PNG</option>
 				<option value="image/webp" <?php selected( $to, 'image/webp' ); ?>>WebP</option>
+				<?php if ( ! empty( $c['ico'] ) ) : ?>
+					<option value="image/x-icon" <?php selected( $to, 'image/x-icon' ); ?>>ICO</option>
+				<?php endif; ?>
 			</select>
 		</div>
 		<div class="field" data-bg-field>
@@ -534,6 +540,55 @@ function lumipix_render_crop_options( $c, $id ) {
 		<button type="button" class="btn btn--ghost btn--sm" data-rotate="-90" disabled><?php echo lumipix_icon( 'rotate-left', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Rotate left', 'lumipix' ); ?></button>
 		<button type="button" class="btn btn--ghost btn--sm" data-rotate="90" disabled><?php echo lumipix_icon( 'rotate-right', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Rotate right', 'lumipix' ); ?></button>
 		<button type="button" class="btn btn--ghost btn--sm" data-flip disabled><?php echo lumipix_icon( 'flip', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?><?php esc_html_e( 'Flip', 'lumipix' ); ?></button>
+	</div>
+	<?php
+}
+
+/**
+ * Pixelate / pixel art options.
+ *
+ * @param array<string, mixed> $c  Config.
+ * @param string               $id App ID.
+ */
+function lumipix_render_pixelate_options( $c, $id ) {
+	$block  = isset( $c['block'] ) ? (int) $c['block'] : 12;
+	$levels = isset( $c['levels'] ) ? (int) $c['levels'] : 0;
+	$output = isset( $c['output'] ) ? $c['output'] : 'full';
+	?>
+	<div class="field">
+		<label class="field__label" for="<?php echo esc_attr( $id ); ?>-block"><?php esc_html_e( 'Pixel size', 'lumipix' ); ?> <output data-out="block"><?php echo esc_html( $block . ' px' ); ?></output></label>
+		<input class="range" id="<?php echo esc_attr( $id ); ?>-block" type="range" min="2" max="64" value="<?php echo esc_attr( $block ); ?>" data-opt="block">
+	</div>
+	<div class="field-row">
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-levels"><?php esc_html_e( 'Colours', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-levels" data-opt="levels">
+				<option value="0" <?php selected( $levels, 0 ); ?>><?php esc_html_e( 'All colours', 'lumipix' ); ?></option>
+				<option value="4" <?php selected( $levels, 4 ); ?>><?php esc_html_e( 'Retro (64 colours)', 'lumipix' ); ?></option>
+				<option value="3" <?php selected( $levels, 3 ); ?>><?php esc_html_e( 'Limited (27 colours)', 'lumipix' ); ?></option>
+				<option value="2" <?php selected( $levels, 2 ); ?>><?php esc_html_e( 'Minimal (8 colours)', 'lumipix' ); ?></option>
+			</select>
+		</div>
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-output"><?php esc_html_e( 'Output size', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-output" data-opt="output">
+				<option value="full" <?php selected( $output, 'full' ); ?>><?php esc_html_e( 'Same as original', 'lumipix' ); ?></option>
+				<option value="small" <?php selected( $output, 'small' ); ?>><?php esc_html_e( 'One pixel per block', 'lumipix' ); ?></option>
+			</select>
+		</div>
+	</div>
+	<div class="field-row">
+		<div class="field">
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-to"><?php esc_html_e( 'Save as', 'lumipix' ); ?></label>
+			<select class="select" id="<?php echo esc_attr( $id ); ?>-to" data-opt="to">
+				<option value="image/png">PNG</option>
+				<option value="image/jpeg">JPG</option>
+			</select>
+		</div>
+		<div class="field" data-bg-field hidden>
+			<label class="field__label" for="<?php echo esc_attr( $id ); ?>-bg"><?php esc_html_e( 'Background', 'lumipix' ); ?></label>
+			<input class="input input--color" id="<?php echo esc_attr( $id ); ?>-bg" type="color" value="#ffffff" data-opt="background">
+		</div>
 	</div>
 	<?php
 }

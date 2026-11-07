@@ -37,6 +37,10 @@ Muitos sites entregam imagens em WebP. O problema aparece quando você salva uma
 
 A ferramenta de [JPG para PDF](tool:pt-image-to-pdf) combina até 20 imagens em um único documento, uma imagem por página, na ordem que você definir. Dá para escolher tamanho da página (A4, Carta ou igual à imagem), orientação, margem e qualidade. Cada imagem é ajustada à página e centralizada, sem distorção. É o caminho mais simples para enviar frente e verso de um documento ou várias páginas fotografadas com o celular.
 
+### Foto 3x4 para documentos
+
+Para [fazer foto 3x4 online](tool:pt-passport-size-photo), escolha uma foto do celular e a ferramenta recorta no tamanho exato de 3 x 4 cm, com 300 DPI para impressão. Dá para baixar uma foto única ou uma folha 10x15 com 8 cópias, pronta para revelar em qualquer laboratório.
+
 ### Remover fundo de foto com IA
 
 Para [remover fundo de imagem](tool:pt-background-remover), a Lumi Pix baixa um modelo de inteligência artificial para o navegador uma única vez e o executa no seu aparelho. A primeira foto demora um pouco mais por causa desse download; as seguintes são bem mais rápidas. Você pode manter o fundo transparente ou trocar por branco ou outra cor e baixar o resultado em resolução cheia, em PNG ou JPG, sem conta e sem marca d'água.

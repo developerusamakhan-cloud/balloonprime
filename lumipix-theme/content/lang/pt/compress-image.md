@@ -79,6 +79,8 @@ Deixe o campo vazio para o compressor decidir sozinho.
 
 **Um site lento.** Fotos de produto direto da câmera deixam qualquer página pesada. Defina uma largura máxima de 1600 pixels, um limite de 250 KB e processe a pasta em lotes de 20.
 
+**Uma foto 3x4 para cadastro.** Primeiro gere a imagem no tamanho certo com a ferramenta de [foto 3x4 online](tool:pt-passport-size-photo). Se o site ainda reclamar do peso, comprima aqui para o limite pedido, sem mudar as medidas.
+
 **Fotos para anúncio.** Muitos sites de anúncios limitam o tamanho das imagens. Confira o limite indicado no site, comprima para esse valor e as fotos sobem sem erro, mesmo pelos dados móveis.
 
 ## Comprimir ou redimensionar?

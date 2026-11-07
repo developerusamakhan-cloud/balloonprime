@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /** Bump when the bundled language pages change, so untouched pages are refreshed. */
-define( 'LUMIPIX_LANG_REV', 5 );
+define( 'LUMIPIX_LANG_REV', 6 );
 
 /**
  * Languages with their own pages.
