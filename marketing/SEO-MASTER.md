@@ -25,7 +25,7 @@ Update the "Log" and "Next actions" sections at the end of every work session. L
 |---|---|
 | Domain | https://testmatik.app (Hostinger, WordPress, Hostinger CDN) |
 | Theme | Custom `testmatik`, repo `developerusamakhan-cloud/balloonprime`, folder `testmatik/`, branch `ccr-a2f7fe03-qqgqms` |
-| Theme version live | 1.0.13 |
+| Theme version live | 1.0.15 |
 | SEO plugin | Rank Math (titles, sitemap `sitemap_index.xml`, IndexNow on) |
 | Multilingual | Polylang 3.9.1: tr default at root, pt in `/pt/`, pl in `/pl/`, no browser redirect |
 | Analytics | GA4 G-VVMQ6PHR40 (property 559438311) via Site Kit; consent mode v2 in theme |
@@ -156,3 +156,4 @@ Long-tail queue (one a day, live immediately): `marketing/longtail-plan-tr.md`.
 | 4 Nov | Team byline, real update date, methodology on every tool, team author schema |
 | 6 Nov | Long-tail research (14 guides, about 3,300 searches/mo); first 2 long-tail guides live with images, sent to IndexNow |
 | 7 Nov | Bilgisayar Testleri hub page /testler/ live (page 434), linked from menu, header, footer, homepage, breadcrumbs; sent to IndexNow |
+| 7 Nov | Hub page aligned with its tool grid; in-text links to /testler/ added on all 7 tool pages, 20 guides, home, About and Rehberler (30 items, varied anchors) plus a 'Tüm testleri gör' button on tool pages. Rule: every new page gets one in-text link to /testler/ |
