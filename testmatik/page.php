@@ -107,20 +107,25 @@ while ( have_posts() ) :
 
 	<?php else : ?>
 
+		<?php
+		$is_hub = 'testler' === get_post_field( 'post_name', get_the_ID() );
+		// The tools hub uses the full container so its heading, cards and text share one left edge.
+		$wrap = $is_hub ? 'container container--hub' : 'container container--prose';
+		?>
 		<section class="page-hero">
-			<div class="container container--prose">
+			<div class="<?php echo esc_attr( $wrap ); ?>">
 				<?php testmatik_breadcrumbs(); ?>
 				<h1 class="page-hero__title"><?php the_title(); ?></h1>
 				<?php if ( $intro ) : ?><p class="page-hero__lead"><?php echo esc_html( $intro ); ?></p><?php endif; ?>
 			</div>
 		</section>
-		<?php if ( 'testler' === get_post_field( 'post_name', get_the_ID() ) ) : ?>
+		<?php if ( $is_hub ) : ?>
 			<section class="section section--tight">
 				<div class="container"><?php echo testmatik_tool_hub_html(); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
 			</section>
 		<?php endif; ?>
 		<section class="section section--tight">
-			<div class="container container--prose">
+			<div class="<?php echo esc_attr( $wrap ); ?>">
 				<div class="prose">
 					<?php echo $html; // phpcs:ignore WordPress.Security.EscapeOutput -- post content. ?>
 				</div>

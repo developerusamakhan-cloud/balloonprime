@@ -687,3 +687,4 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .tool-hub__group { display: flex; flex-direction: column; gap: 14px; }
 .tool-hub__title { margin: 0; font-size: 21px; }
 .tool-hub-link { margin: 22px 0 0; text-align: center; }
+.container--hub .page-hero__lead, .container--hub .prose, .container--hub .faq { max-width: 820px; }
