@@ -678,3 +678,12 @@ code { font-family: var(--mono); font-size: .88em; padding: .1em .35em; backgrou
 .hero__title .accent, .logo__text span { background: var(--accent-text); -webkit-background-clip: text; background-clip: text; }
 .btn--primary { box-shadow: 0 6px 18px -8px rgba(4, 120, 87, .6); }
 .k.is-ok { background: #059669; border-color: #047857; }
+
+/* Tools hub page and links to it */
+.mega__all { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 8px 4px; font-weight: 700; font-size: 14.5px; color: var(--brand-text); text-decoration: none; }
+.mega__all:hover { text-decoration: underline; }
+.nav__link.is-current { color: var(--ink); }
+.tool-hub { display: flex; flex-direction: column; gap: 34px; margin: 8px 0 36px; }
+.tool-hub__group { display: flex; flex-direction: column; gap: 14px; }
+.tool-hub__title { margin: 0; font-size: 21px; }
+.tool-hub-link { margin: 22px 0 0; text-align: center; }

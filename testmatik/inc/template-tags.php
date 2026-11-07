@@ -47,6 +47,49 @@ function testmatik_page_url( $path ) {
 }
 
 /**
+ * URL of the page that lists every tool, or the homepage tools section until it exists.
+ *
+ * @return string
+ */
+function testmatik_tools_hub_url() {
+	$url = testmatik_page_url( 'testler' );
+	return $url ? $url : home_url( '/#testler' );
+}
+
+/**
+ * All tools grouped by category, for the tools hub page.
+ *
+ * @return string
+ */
+function testmatik_tool_hub_html() {
+	$groups = array();
+	foreach ( testmatik_tools() as $key => $tool ) {
+		if ( testmatik_tool_url( $key ) ) {
+			$groups[ $tool['category'] ][] = $key;
+		}
+	}
+	$labels = array(
+		'Klavye' => __( 'Klavye testleri', 'testmatik' ),
+		'Ekran'  => __( 'Ekran testleri', 'testmatik' ),
+		'Ses'    => __( 'Ses testleri', 'testmatik' ),
+		'Kamera' => __( 'Kamera testleri', 'testmatik' ),
+		'Mouse'  => __( 'Mouse testleri', 'testmatik' ),
+	);
+	ob_start();
+	echo '<div class="tool-hub">';
+	foreach ( $groups as $cat => $keys ) {
+		echo '<section class="tool-hub__group"><h2 class="tool-hub__title">' . esc_html( isset( $labels[ $cat ] ) ? $labels[ $cat ] : $cat ) . '</h2><div class="tool-grid">';
+		foreach ( $keys as $key ) {
+			testmatik_tool_card( $key );
+		}
+		echo '</div></section>';
+	}
+	echo '</div>';
+	return (string) ob_get_clean();
+}
+add_shortcode( 'testmatik_tool_hub', 'testmatik_tool_hub_html' );
+
+/**
  * Blog (Rehberler) URL.
  *
  * @return string
@@ -93,10 +136,12 @@ function testmatik_primary_nav() {
 						</a>
 					<?php endforeach; ?>
 				</div>
+				<a class="mega__all" href="<?php echo esc_url( testmatik_tools_hub_url() ); ?>"><?php esc_html_e( 'Tüm testleri gör', 'testmatik' ); ?><?php echo testmatik_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a>
 			</div>
 		</li>
 		<?php
 		$links = array(
+			array( testmatik_page_url( 'testler' ), __( 'Tüm testler', 'testmatik' ) ),
 			array( testmatik_blog_url(), __( 'Rehberler', 'testmatik' ) ),
 			array( testmatik_page_url( 'hakkimizda' ), __( 'Hakkımızda', 'testmatik' ) ),
 		);
@@ -105,7 +150,8 @@ function testmatik_primary_nav() {
 				continue;
 			}
 			?>
-			<li class="nav__item"><a class="nav__link" href="<?php echo esc_url( $l[0] ); ?>"><?php echo esc_html( $l[1] ); ?></a></li>
+			<?php $is_here = untrailingslashit( $l[0] ) === untrailingslashit( (string) get_permalink() ) && is_page(); ?>
+			<li class="nav__item"><a class="nav__link<?php echo $is_here ? ' is-current' : ''; ?>" href="<?php echo esc_url( $l[0] ); ?>"<?php echo $is_here ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $l[1] ); ?></a></li>
 		<?php endforeach; ?>
 	</ul>
 	<?php
@@ -130,7 +176,7 @@ function testmatik_breadcrumb_items() {
 		$items[] = array( get_the_title(), '' );
 	} elseif ( is_page() ) {
 		if ( testmatik_page_tool() ) {
-			$items[] = array( __( 'Testler', 'testmatik' ), home_url( '/#testler' ) );
+			$items[] = array( __( 'Testler', 'testmatik' ), testmatik_tools_hub_url() );
 		}
 		foreach ( array_reverse( get_post_ancestors( get_the_ID() ) ) as $anc ) {
 			$items[] = array( get_the_title( $anc ), get_permalink( $anc ) );

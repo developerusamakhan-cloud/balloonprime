@@ -221,6 +221,32 @@ add_action(
 			);
 		}
 
+		if ( is_page() && 'testler' === get_post_field( 'post_name', get_queried_object_id() ) ) {
+			$list = array();
+			$pos  = 0;
+			foreach ( testmatik_tools() as $tkey => $t ) {
+				$turl = testmatik_tool_url( $tkey );
+				if ( ! $turl ) {
+					continue;
+				}
+				$list[] = array(
+					'@type'    => 'ListItem',
+					'position' => ++$pos,
+					'name'     => $t['name'],
+					'url'      => $turl,
+				);
+			}
+			if ( $list ) {
+				$graph[] = array(
+					'@type'           => 'ItemList',
+					'@id'             => get_permalink() . '#tools',
+					'name'            => get_the_title(),
+					'numberOfItems'   => count( $list ),
+					'itemListElement' => $list,
+				);
+			}
+		}
+
 		if ( is_singular( 'post' ) && ! $plugin ) {
 			$id      = get_queried_object_id();
 			$article = array(

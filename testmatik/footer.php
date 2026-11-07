@@ -29,6 +29,7 @@ $legal  = array(
 					<?php foreach ( testmatik_tools() as $key => $tool ) : $u = testmatik_tool_url( $key ); ?>
 						<?php if ( $u ) : ?><li><a href="<?php echo esc_url( $u ); ?>"><?php echo esc_html( $tool['name'] ); ?></a></li><?php endif; ?>
 					<?php endforeach; ?>
+					<?php if ( testmatik_page_url( 'testler' ) ) : ?><li><a href="<?php echo esc_url( testmatik_page_url( 'testler' ) ); ?>"><strong><?php esc_html_e( 'Tüm testler', 'testmatik' ); ?></strong></a></li><?php endif; ?>
 				</ul>
 			</div>
 			<?php if ( $guides ) : ?>

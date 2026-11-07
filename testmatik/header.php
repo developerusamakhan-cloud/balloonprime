@@ -29,7 +29,7 @@ defined( 'ABSPATH' ) || exit;
 			</button>
 			<?php $first = testmatik_tool_url( 'klavye-testi' ); ?>
 			<?php if ( $first ) : ?>
-				<a class="btn btn--primary btn--sm site-header__cta" href="<?php echo esc_url( home_url( '/#testler' ) ); ?>"><?php esc_html_e( 'Test seç', 'testmatik' ); ?></a>
+				<a class="btn btn--primary btn--sm site-header__cta" href="<?php echo esc_url( testmatik_tools_hub_url() ); ?>"><?php esc_html_e( 'Test seç', 'testmatik' ); ?></a>
 			<?php endif; ?>
 			<button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" data-nav-toggle aria-label="<?php esc_attr_e( 'Menüyü aç', 'testmatik' ); ?>">
 				<span class="nav-toggle__open"><?php echo testmatik_icon( 'menu', 22 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>

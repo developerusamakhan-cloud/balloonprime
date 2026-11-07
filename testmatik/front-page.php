@@ -64,6 +64,7 @@ $tools   = testmatik_tools();
 			}
 			?>
 		</div>
+		<?php if ( testmatik_page_url( 'testler' ) ) : ?><p class="tool-hub-link"><a class="btn btn--ghost" href="<?php echo esc_url( testmatik_page_url( 'testler' ) ); ?>"><?php esc_html_e( 'Tüm testleri kategoriye göre gör', 'testmatik' ); ?><?php echo testmatik_icon( 'arrow', 16 ); // phpcs:ignore WordPress.Security.EscapeOutput ?></a></p><?php endif; ?>
 		<p class="finder-empty" data-finder-empty hidden><?php esc_html_e( 'Bu aramayla eşleşen bir test yok. “klavye”, “ekran” veya “ses” yazmayı deneyin.', 'testmatik' ); ?></p>
 	</div>
 </section>

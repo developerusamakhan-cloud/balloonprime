@@ -114,6 +114,11 @@ while ( have_posts() ) :
 				<?php if ( $intro ) : ?><p class="page-hero__lead"><?php echo esc_html( $intro ); ?></p><?php endif; ?>
 			</div>
 		</section>
+		<?php if ( 'testler' === get_post_field( 'post_name', get_the_ID() ) ) : ?>
+			<section class="section section--tight">
+				<div class="container"><?php echo testmatik_tool_hub_html(); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
+			</section>
+		<?php endif; ?>
 		<section class="section section--tight">
 			<div class="container container--prose">
 				<div class="prose">
