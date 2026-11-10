@@ -482,3 +482,101 @@ add_action(
 		}
 	}
 );
+
+/*
+ * Old WordPress sample URLs that Google saw before the site launched: send them to the
+ * closest real page instead of a 404.
+ */
+add_action(
+	'template_redirect',
+	function () {
+		if ( ! is_404() ) {
+			return;
+		}
+		$path = trim( (string) wp_parse_url( isset( $_SERVER['REQUEST_URI'] ) ? wp_unslash( $_SERVER['REQUEST_URI'] ) : '', PHP_URL_PATH ), '/' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		$map  = array(
+			'hello-world'    => '/',
+			'merhaba-dunya'  => '/',
+			'sample-page'    => '/',
+			'ornek-sayfa'    => '/',
+			'privacy-policy' => '/gizlilik-politikasi/',
+		);
+		if ( isset( $map[ $path ] ) ) {
+			wp_safe_redirect( home_url( $map[ $path ] ), 301 );
+			exit;
+		}
+	},
+	1
+);
+
+/**
+ * Languages that have at least one published post or page (Polylang). A language added
+ * for later work stays invisible until its first page goes live.
+ *
+ * @return string[] Language slugs.
+ */
+function testmatik_live_languages() {
+	static $live = null;
+	if ( null !== $live ) {
+		return $live;
+	}
+	$live = array();
+	if ( ! function_exists( 'pll_languages_list' ) ) {
+		return $live;
+	}
+	foreach ( pll_languages_list( array( 'fields' => 'slug' ) ) as $slug ) {
+		$found = get_posts(
+			array(
+				'post_type'      => array( 'post', 'page' ),
+				'post_status'    => 'publish',
+				'lang'           => '', // Count by the language taxonomy directly, not the current language.
+				'tax_query'      => array( array( 'taxonomy' => 'language', 'field' => 'slug', 'terms' => $slug ) ), // phpcs:ignore WordPress.DB.SlowDBQuery
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+				'no_found_rows'  => true,
+			)
+		);
+		if ( $found ) {
+			$live[] = $slug;
+		}
+	}
+	return $live;
+}
+
+// An empty language folder (/pt/, /pl/ before launch) is a 404, not a copy of a Turkish page.
+add_action(
+	'template_redirect',
+	function () {
+		if ( ! function_exists( 'pll_current_language' ) || ! function_exists( 'pll_default_language' ) ) {
+			return;
+		}
+		$lang = pll_current_language();
+		if ( ! $lang || pll_default_language() === $lang || in_array( $lang, testmatik_live_languages(), true ) ) {
+			return;
+		}
+		global $wp_query;
+		$wp_query->set_404();
+		status_header( 404 );
+		nocache_headers();
+	},
+	2
+);
+
+// No hreflang link to a language that has no pages yet.
+add_filter(
+	'pll_rel_hreflang_attributes',
+	function ( $hreflangs ) {
+		if ( ! function_exists( 'pll_default_language' ) || ! is_array( $hreflangs ) ) {
+			return $hreflangs;
+		}
+		$live = testmatik_live_languages();
+		foreach ( $hreflangs as $code => $url ) {
+			foreach ( pll_languages_list( array( 'fields' => 'slug' ) ) as $slug ) {
+				if ( pll_default_language() !== $slug && ! in_array( $slug, $live, true ) && false !== strpos( (string) $url, home_url( '/' . $slug . '/' ) ) ) {
+					unset( $hreflangs[ $code ] );
+				}
+			}
+		}
+		return $hreflangs;
+	}
+);
