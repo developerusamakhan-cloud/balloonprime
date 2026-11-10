@@ -25,7 +25,7 @@ Update the "Log" and "Next actions" sections at the end of every work session. L
 |---|---|
 | Domain | https://testmatik.app (Hostinger, WordPress, Hostinger CDN) |
 | Theme | Custom `testmatik`, repo `developerusamakhan-cloud/balloonprime`, folder `testmatik/`, branch `ccr-a2f7fe03-qqgqms` |
-| Theme version live | 1.0.15 |
+| Theme version live | 1.0.16 |
 | SEO plugin | Rank Math (titles, sitemap `sitemap_index.xml`, IndexNow on) |
 | Multilingual | Polylang 3.9.1: tr default at root, pt in `/pt/`, pl in `/pl/`, no browser redirect |
 | Analytics | GA4 G-VVMQ6PHR40 (property 559438311) via Site Kit; consent mode v2 in theme |
@@ -114,6 +114,7 @@ Long-tail queue (one a day, live immediately): `marketing/longtail-plan-tr.md`.
 | Oct 2026 | Long dashes and stock phrases in content | Writing habits | Grep for `–`, `—` and stock phrases before every publish |
 | Nov 2026 | 7 old posts had broken Article schema | Leftover Rank Math `rank_math_rich_snippet` meta without article type | Removed the meta; check schema after every deploy |
 | Nov 2026 | Rank Math printed author "admin" (Person) | WordPress user name | Theme filter replaces it with the team Organization |
+| 10 Nov | GSC: 2 pages 404, 1 "alternative canonical", page sitemap missing 2 URLs | Old WordPress sample URLs; empty Polylang /pt/ and /pl/ folders served Turkish pages; stale sitemap cache | 301 for sample URLs; empty languages return 404 and leave hreflang until they have content; cache cleared. Lesson: a new language must not go public before it has real pages |
 
 ---
 
@@ -140,6 +141,8 @@ Long-tail queue (one a day, live immediately): `marketing/longtail-plan-tr.md`.
 | Now | Send Bing and Yandex Webmaster verification codes | Owner | Pending |
 | Now | Confirm iletisim@testmatik.app receives mail | Owner | Pending |
 | Now | Send GSC screenshots: Performance (3 months, Queries) and Pages report | Owner | Pending |
+| Now | GSC Pages: "Validate fix" on "Not found (404)" and "Alternate page with proper canonical"; export the 22 "Crawled, currently not indexed" URLs | Owner | Pending |
+| When /pt/ has its first page | /pt/ and its hreflang turn on by themselves (theme checks for published content) | Claude | Automatic |
 
 ---
 
@@ -157,3 +160,4 @@ Long-tail queue (one a day, live immediately): `marketing/longtail-plan-tr.md`.
 | 6 Nov | Long-tail research (14 guides, about 3,300 searches/mo); first 2 long-tail guides live with images, sent to IndexNow |
 | 7 Nov | Bilgisayar Testleri hub page /testler/ live (page 434), linked from menu, header, footer, homepage, breadcrumbs; sent to IndexNow |
 | 7 Nov | Hub page aligned with its tool grid; in-text links to /testler/ added on all 7 tool pages, 20 guides, home, About and Rehberler (30 items, varied anchors) plus a 'Tüm testleri gör' button on tool pages. Rule: every new page gets one in-text link to /testler/ |
+| 10 Nov | GSC coverage fixes live (theme 1.0.16): /hello-world/, /sample-page/ 301 to home, /privacy-policy/ 301 to /gizlilik-politikasi/; /pt/ and /pl/ return 404; hreflang only tr; page sitemap has /klavye-hiz-testi/ and /testler/ (14 URLs); 4 URLs sent to IndexNow (200) |
